@@ -10,11 +10,9 @@ using System.Windows.Forms;
 
 namespace PBL3.Views.CommonForm
 {
-    public partial class HomeForm : Form
+    public partial class SignupForm : Form
     {
-        private Form activeForm = null;
-
-        public HomeForm()
+        public SignupForm()
         {
             InitializeComponent();
         }

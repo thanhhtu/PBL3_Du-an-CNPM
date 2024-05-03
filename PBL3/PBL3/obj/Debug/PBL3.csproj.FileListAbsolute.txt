@@ -7,3 +7,7 @@ D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.csproj.GenerateResource.cache
 D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.csproj.CoreCompileInputs.cache
 D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.exe
 D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.pdb
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\bin\Debug\FontAwesome.Sharp.dll
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.HomeForm.resources
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.csproj.CopyComplete
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.SignupForm.resources
