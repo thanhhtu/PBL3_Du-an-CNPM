@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -18,8 +17,11 @@ namespace PBL3.Views.CustomComponent
     {
         //Fields
         private int borderRadius = 10;
+        private float gradientAngle = 90F;
+        private Color gradientTopColor = Color.DodgerBlue;
+        private Color gradientBottonColor = Color.CadetBlue;
 
-        //Properties
+        #region -> Properties
         [Category("Custom panel")]
         public int BorderRadius
         {
@@ -30,6 +32,37 @@ namespace PBL3.Views.CustomComponent
                 this.Invalidate();
             }
         }
+        [Category("Custom panel")]
+        public float GradientAngle
+        {
+            get => gradientAngle;
+            set
+            {
+                gradientAngle = value;
+                this.Invalidate();
+            }
+        }
+        [Category("Custom panel")]
+        public Color GradientTopColor
+        {
+            get => gradientTopColor;
+            set
+            {
+                gradientTopColor = value;
+                this.Invalidate();
+            }
+        }
+        [Category("Custom panel")]
+        public Color GradientBottonColor
+        {
+            get => gradientBottonColor;
+            set
+            {
+                gradientBottonColor = value;
+                this.Invalidate();
+            }
+        }
+        #endregion
 
         //Constructor
         public CustomPanel()
@@ -55,7 +88,12 @@ namespace PBL3.Views.CustomComponent
         protected override void OnPaint(PaintEventArgs pevent)
         {
             base.OnPaint(pevent);
+
+            //Gradient
             pevent.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+            LinearGradientBrush brushArtan = new LinearGradientBrush(this.ClientRectangle, this.GradientTopColor, this.gradientBottonColor, this.gradientAngle);
+            Graphics graphicsArtan = pevent.Graphics;
+            graphicsArtan.FillRectangle(brushArtan, ClientRectangle);
 
             //BorderRadius
             RectangleF rectangleF = new RectangleF(0, 0, this.Width, this.Height);

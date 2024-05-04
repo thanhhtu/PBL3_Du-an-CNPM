@@ -4,7 +4,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -23,24 +22,17 @@ namespace PBL3.Views.CustomComponent
         [Category("Custom button")] //Group properties in a category
         public int BorderSize
         {
-            get 
-            { 
-                return borderSize; 
-            }
+            get => borderSize; 
             set
             {
                 borderSize = value;
                 this.Invalidate(); //Redraw the button to update the appearance
             }
         }
-
         [Category("Custom button")]
         public int BorderRadius
         {
-            get 
-            { 
-                return borderRadius; 
-            }
+            get => borderRadius; 
             set
             {
                 if (value <= this.Height) //To ensure that the button does not deform
@@ -54,41 +46,29 @@ namespace PBL3.Views.CustomComponent
                 this.Invalidate();
             }
         }
-
         [Category("Custom button")]
         public Color BorderColor
         {
-            get 
-            { 
-                return borderColor; 
-            }
+            get => borderColor; 
             set
             {
                 borderColor = value;
                 this.Invalidate();
             }
         }
-
         [Category("Custom button")]
         public Color BackgroundColor
         {
-            get
-            {
-                return this.BackColor;
-            }
+            get => this.BackColor;
             set
             {
                 this.BackColor = value;
             }
         }
-
         [Category("Custom button")]
         public Color TextColor
         {
-            get
-            {
-                return this.ForeColor;
-            }
+            get => this.ForeColor;
             set
             {
                 this.ForeColor = value;
@@ -176,19 +156,19 @@ namespace PBL3.Views.CustomComponent
             }
         }
 
-        protected override void OnHandleCreated(EventArgs e)
-        {
-            base.OnHandleCreated(e);
-            this.Parent.BackColorChanged += new EventHandler(Container_BackColorChanged);
-        }
+        //protected override void OnHandleCreated(EventArgs e)
+        //{
+        //    base.OnHandleCreated(e);
+        //    this.Parent.BackColorChanged += new EventHandler(Container_BackColorChanged);
+        //}
 
-        private void Container_BackColorChanged(object sender, EventArgs e)
-        {
-            if (this.DesignMode)
-            {
-                this.Invalidate();
-            }
-        }
+        //private void Container_BackColorChanged(object sender, EventArgs e)
+        //{
+        //    if (this.DesignMode)
+        //    {
+        //        this.Invalidate();
+        //    }
+        //}
         #endregion
     }
 }
