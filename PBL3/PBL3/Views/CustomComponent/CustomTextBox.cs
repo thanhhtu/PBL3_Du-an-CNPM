@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.ComponentModel;
 
 namespace PBL3.Views.CustomComponent
 {
@@ -41,7 +41,10 @@ namespace PBL3.Views.CustomComponent
         public Color BorderFocusColor
         {
             get => borderFocusColor; 
-            set { borderFocusColor = value; }
+            set 
+            { 
+                borderFocusColor = value; 
+            }
         }
         [Category("Custom Textbox")]
         public int BorderSize
@@ -74,7 +77,9 @@ namespace PBL3.Views.CustomComponent
             {
                 isPasswordChar = value;
                 if (!isPlaceholder)
+                {
                     textBox1.UseSystemPasswordChar = value;
+                }
             }
         }
         [Category("Custom Textbox")]
@@ -112,7 +117,9 @@ namespace PBL3.Views.CustomComponent
                 base.Font = value;
                 textBox1.Font = value;
                 if (this.DesignMode)
+                {
                     UpdateControlHeight();
+                }
             }
         }
         [Category("Custom Textbox")]
@@ -194,6 +201,7 @@ namespace PBL3.Views.CustomComponent
                     graph.SmoothingMode = SmoothingMode.AntiAlias;
                     penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
                     if (isFocused) penBorder.Color = borderFocusColor;
+
                     if (underlinedStyle) //Line Style
                     {
                         //Draw border smoothing

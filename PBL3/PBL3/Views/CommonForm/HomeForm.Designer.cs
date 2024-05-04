@@ -69,7 +69,7 @@
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.Gainsboro;
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(231)))), ((int)(((byte)(225)))));
             this.panelMenu.Controls.Add(this.signupBtn);
             this.panelMenu.Controls.Add(this.loginBtn);
             this.panelMenu.Controls.Add(this.homeBtn);

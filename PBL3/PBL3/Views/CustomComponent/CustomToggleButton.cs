@@ -7,7 +7,6 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.ComponentModel;
-using System.Windows.Controls.Primitives;
 
 namespace PBL3.Views.CustomComponent
 {
