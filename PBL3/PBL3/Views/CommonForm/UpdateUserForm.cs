@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PBL3.Views.CustomComponent
+namespace PBL3.Views.CommonForm
 {
-    public partial class CustomHouseInforComponent : UserControl
+    public partial class UpdateUserForm : Form
     {
-        public CustomHouseInforComponent()
+        public UpdateUserForm()
         {
             InitializeComponent();
         }

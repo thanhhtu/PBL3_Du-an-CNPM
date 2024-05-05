@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PBL3.Views.CommonForm
 {
-    public partial class HouseInforForm : Form
+    public partial class InforForm : Form
     {
-        public HouseInforForm()
+        public InforForm()
         {
             InitializeComponent();
         }

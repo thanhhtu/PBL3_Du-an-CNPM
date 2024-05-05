@@ -1,6 +1,6 @@
 ﻿namespace PBL3.Views.CommonForm
 {
-    partial class SigninForm
+    partial class SignInForm
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PBL3.Views.CommonForm
 {
-    public partial class SignupForm : Form
+    public partial class SignUpForm : Form
     {
-        public SignupForm()
+        public SignUpForm()
         {
             InitializeComponent();
         }

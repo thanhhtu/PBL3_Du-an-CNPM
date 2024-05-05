@@ -91,11 +91,11 @@
     <Compile Include="Views\CommonForm\HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\CommonForm\HouseInforForm.cs">
+    <Compile Include="Views\CommonForm\InforForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\CommonForm\HouseInforForm.Designer.cs">
-      <DependentUpon>HouseInforForm.cs</DependentUpon>
+    <Compile Include="Views\CommonForm\InforForm.Designer.cs">
+      <DependentUpon>InforForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\CommonForm\PromptDialogForm.cs">
       <SubType>Form</SubType>
@@ -103,38 +103,35 @@
     <Compile Include="Views\CommonForm\PromptDialogForm.Designer.cs">
       <DependentUpon>PromptDialogForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\CommonForm\SigninForm.cs">
+    <Compile Include="Views\CommonForm\SignInForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\CommonForm\SigninForm.Designer.cs">
-      <DependentUpon>SigninForm.cs</DependentUpon>
+    <Compile Include="Views\CommonForm\SignInForm.Designer.cs">
+      <DependentUpon>SignInForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\CommonForm\SignupForm.cs">
+    <Compile Include="Views\CommonForm\SignUpForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\CommonForm\SignupForm.Designer.cs">
-      <DependentUpon>SignupForm.cs</DependentUpon>
+    <Compile Include="Views\CommonForm\SignUpForm.Designer.cs">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\CommonForm\UpdateUserInforForm.cs">
+    <Compile Include="Views\CommonForm\UpdateUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\CommonForm\UpdateUserInforForm.Designer.cs">
-      <DependentUpon>UpdateUserInforForm.cs</DependentUpon>
+    <Compile Include="Views\CommonForm\UpdateUserForm.Designer.cs">
+      <DependentUpon>UpdateUserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\CommonForm\UserInforForm.cs">
+    <Compile Include="Views\CommonForm\UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\CommonForm\UserInforForm.Designer.cs">
-      <DependentUpon>UserInforForm.cs</DependentUpon>
+    <Compile Include="Views\CommonForm\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\CustomComponent\CustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Views\CustomComponent\CustomComboBox.cs">
       <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\CustomComponent\CustomComboBox.Designer.cs">
-      <DependentUpon>CustomComboBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\CustomComponent\CustomComment.cs">
       <SubType>UserControl</SubType>
@@ -145,11 +142,11 @@
     <Compile Include="Views\CustomComponent\CustomDateTimePicker.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Views\CustomComponent\CustomHouseInforComponent.cs">
+    <Compile Include="Views\CustomComponent\CustomInforComponent.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\CustomComponent\CustomHouseInforComponent.Designer.cs">
-      <DependentUpon>CustomHouseInforComponent.cs</DependentUpon>
+    <Compile Include="Views\CustomComponent\CustomInforComponent.Designer.cs">
+      <DependentUpon>CustomInforComponent.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\CustomComponent\CustomLinkLabel.cs">
       <SubType>UserControl</SubType>
@@ -212,14 +209,29 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\AdminForm\AdminHomeForm.resx">
+      <DependentUpon>AdminHomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminForm\InforManagementForm.resx">
+      <DependentUpon>InforManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CommonForm\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\CommonForm\SignupForm.resx">
-      <DependentUpon>SignupForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\CommonForm\SignUpForm.resx">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomComponent\CustomInforComponent.resx">
+      <DependentUpon>CustomInforComponent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CustomComponent\CustomTextbox.resx">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LandlordForm\LandlordHomeForm.resx">
+      <DependentUpon>LandlordHomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RenterForm\RenterHomeForm.resx">
+      <DependentUpon>RenterHomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -245,6 +257,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\bgrHome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\locationPin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\reverse.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

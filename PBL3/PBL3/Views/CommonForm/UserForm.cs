@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PBL3.Views.CommonForm
 {
-    public partial class UserInforForm : Form
+    public partial class UserForm : Form
     {
-        public UserInforForm()
+        public UserForm()
         {
             InitializeComponent();
         }
