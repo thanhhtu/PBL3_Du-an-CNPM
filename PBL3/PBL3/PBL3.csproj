@@ -215,17 +215,26 @@
     <EmbeddedResource Include="Views\AdminForm\InforManagementForm.resx">
       <DependentUpon>InforManagementForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminForm\UserManagementForm.resx">
+      <DependentUpon>UserManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CommonForm\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CommonForm\SignUpForm.resx">
       <DependentUpon>SignUpForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\CommonForm\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CustomComponent\CustomInforComponent.resx">
       <DependentUpon>CustomInforComponent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CustomComponent\CustomTextbox.resx">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LandlordForm\InforManagementForm.resx">
+      <DependentUpon>InforManagementForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\LandlordForm\LandlordHomeForm.resx">
       <DependentUpon>LandlordHomeForm.cs</DependentUpon>
@@ -269,6 +278,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\reverse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\bgr.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

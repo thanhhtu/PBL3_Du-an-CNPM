@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PBL3.Views.CommonForm;
-using PBL3.Views.LandlordForm;
+using PBL3.Views.AdminForm;
 
 namespace PBL3
 {
@@ -18,7 +18,7 @@ namespace PBL3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomeForm());
+            Application.Run(new InforManagementForm());
         }
     }
 }
