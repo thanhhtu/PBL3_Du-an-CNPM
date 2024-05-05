@@ -7,7 +7,15 @@
       "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\adminform\\adminhomeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|e:\\ki4\\pbl3\\pbl3_2\\pbl3_du-an-cnpm\\pbl3\\pbl3\\views\\commonform\\homeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|e:\\ki4\\pbl3\\pbl3_2\\pbl3_du-an-cnpm\\pbl3\\pbl3\\views\\adminform\\adminhomeform.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\adminform\\adminhomeform.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|e:\\ki4\\pbl3\\pbl3_2\\pbl3_du-an-cnpm\\pbl3\\pbl3\\views\\commonform\\homeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\homeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_2\\PBL3_Du-an-CNPM\\PBL3\\pbl3\\views\\commonform\\homeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\homeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -30,8 +38,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 220,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminHomeForm.resx",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_2\\PBL3_Du-an-CNPM\\PBL3\\PBL3\\Views\\AdminForm\\AdminHomeForm.resx",
+              "RelativeDocumentMoniker": "PBL3\\Views\\AdminForm\\AdminHomeForm.resx",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_2\\PBL3_Du-an-CNPM\\PBL3\\PBL3\\Views\\AdminForm\\AdminHomeForm.resx",
+              "RelativeToolTip": "PBL3\\Views\\AdminForm\\AdminHomeForm.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-05-05T14:17:38.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeForm.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_2\\PBL3_Du-an-CNPM\\PBL3\\PBL3\\Views\\CommonForm\\HomeForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\HomeForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_2\\PBL3_Du-an-CNPM\\PBL3\\PBL3\\Views\\CommonForm\\HomeForm.cs",
+              "RelativeToolTip": "PBL3\\Views\\CommonForm\\HomeForm.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAuwBcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T14:17:34.887Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -46,7 +79,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "HomeForm.cs [Design]",
               "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_2\\PBL3_Du-an-CNPM\\PBL3\\PBL3\\Views\\CommonForm\\HomeForm.cs",
               "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\HomeForm.cs",
@@ -58,7 +91,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "CustomRadioButton.cs",
               "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_2\\PBL3_Du-an-CNPM\\PBL3\\PBL3\\Views\\CustomComponent\\CustomRadioButton.cs",
               "RelativeDocumentMoniker": "PBL3\\Views\\CustomComponent\\CustomRadioButton.cs",
@@ -70,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "SignupForm.cs [Design]",
               "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_2\\PBL3_Du-an-CNPM\\PBL3\\PBL3\\Views\\CommonForm\\SignupForm.cs",
               "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\SignupForm.cs",
@@ -80,7 +113,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_2\\PBL3_Du-an-CNPM\\PBL3\\PBL3\\Program.cs",
               "RelativeDocumentMoniker": "PBL3\\Program.cs",
