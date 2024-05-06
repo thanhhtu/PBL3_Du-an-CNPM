@@ -167,7 +167,7 @@
             this.txtSearch.BorderColor = System.Drawing.Color.SteelBlue;
             this.txtSearch.BorderFocusColor = System.Drawing.Color.SlateBlue;
             this.txtSearch.BorderRadius = 6;
-            this.txtSearch.BorderSize = 2;
+            this.txtSearch.BorderSize = 3;
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtSearch.ForeColor = System.Drawing.Color.DimGray;
             this.txtSearch.Location = new System.Drawing.Point(29, 22);

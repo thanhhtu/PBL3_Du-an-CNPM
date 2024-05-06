@@ -245,6 +245,9 @@
     <EmbeddedResource Include="Views\LandlordForm\LandlordHomeForm.resx">
       <DependentUpon>LandlordHomeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\LandlordForm\PostInforForm.resx">
+      <DependentUpon>PostInforForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\RenterForm\RenterHomeForm.resx">
       <DependentUpon>RenterHomeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -287,6 +290,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\bgr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\image.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

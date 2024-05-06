@@ -35,6 +35,7 @@
             // 
             // customButton1
             // 
+            this.customButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.customButton1.BackColor = System.Drawing.Color.SteelBlue;
             this.customButton1.BackgroundColor = System.Drawing.Color.SteelBlue;
             this.customButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -54,6 +55,7 @@
             // 
             // customTextBox1
             // 
+            this.customTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.customTextBox1.BorderColor = System.Drawing.Color.SteelBlue;
             this.customTextBox1.BorderFocusColor = System.Drawing.Color.SlateBlue;
             this.customTextBox1.BorderRadius = 0;
