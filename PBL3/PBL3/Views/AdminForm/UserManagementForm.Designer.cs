@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.searchBtn = new PBL3.Views.CustomComponent.CustomButton();
-            this.reverseBtn = new PBL3.Views.CustomComponent.CustomButton();
-            this.sortCbb = new PBL3.Views.CustomComponents.CustomComboBox();
-            this.userRoleCbb = new PBL3.Views.CustomComponents.CustomComboBox();
+            this.btnSearch = new PBL3.Views.CustomComponent.CustomButton();
+            this.btnReverse = new PBL3.Views.CustomComponent.CustomButton();
+            this.cbbSort = new PBL3.Views.CustomComponents.CustomComboBox();
+            this.cbbUserRole = new PBL3.Views.CustomComponents.CustomComboBox();
             this.txtSearch = new PBL3.Views.CustomComponent.CustomTextBox();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.deleteUserBtn = new PBL3.Views.CustomComponent.CustomButton();
-            this.viewUserBtn = new PBL3.Views.CustomComponent.CustomButton();
+            this.btnDeleteUser = new PBL3.Views.CustomComponent.CustomButton();
+            this.btnViewUser = new PBL3.Views.CustomComponent.CustomButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
@@ -48,101 +48,92 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.panelMenu.Controls.Add(this.searchBtn);
-            this.panelMenu.Controls.Add(this.reverseBtn);
-            this.panelMenu.Controls.Add(this.sortCbb);
-            this.panelMenu.Controls.Add(this.userRoleCbb);
+            this.panelMenu.Controls.Add(this.btnSearch);
+            this.panelMenu.Controls.Add(this.btnReverse);
+            this.panelMenu.Controls.Add(this.cbbSort);
+            this.panelMenu.Controls.Add(this.cbbUserRole);
             this.panelMenu.Controls.Add(this.txtSearch);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(1411, 80);
-            this.panelMenu.TabIndex = 29;
+            this.panelMenu.TabIndex = 20;
             // 
-            // searchBtn
+            // btnSearch
             // 
-            this.searchBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.searchBtn.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.searchBtn.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.searchBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.searchBtn.BorderRadius = 30;
-            this.searchBtn.BorderSize = 0;
-            this.searchBtn.FlatAppearance.BorderSize = 0;
-            this.searchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBtn.ForeColor = System.Drawing.Color.Black;
-            this.searchBtn.Location = new System.Drawing.Point(1212, 14);
-            this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(159, 48);
-            this.searchBtn.TabIndex = 5;
-            this.searchBtn.Text = "Tìm kiếm";
-            this.searchBtn.TextColor = System.Drawing.Color.Black;
-            this.searchBtn.UseVisualStyleBackColor = false;
+            this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSearch.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnSearch.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.btnSearch.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSearch.BorderRadius = 30;
+            this.btnSearch.BorderSize = 0;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.Black;
+            this.btnSearch.Location = new System.Drawing.Point(1212, 14);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(159, 48);
+            this.btnSearch.TabIndex = 5;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.TextColor = System.Drawing.Color.Black;
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
-            // reverseBtn
+            // btnReverse
             // 
-            this.reverseBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.reverseBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.reverseBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.reverseBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.reverseBtn.BorderRadius = 0;
-            this.reverseBtn.BorderSize = 0;
-            this.reverseBtn.FlatAppearance.BorderSize = 0;
-            this.reverseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reverseBtn.ForeColor = System.Drawing.Color.White;
-            this.reverseBtn.Image = global::PBL3.Properties.Resources.reverse;
-            this.reverseBtn.Location = new System.Drawing.Point(1096, 14);
-            this.reverseBtn.Name = "reverseBtn";
-            this.reverseBtn.Size = new System.Drawing.Size(56, 48);
-            this.reverseBtn.TabIndex = 20;
-            this.reverseBtn.TextColor = System.Drawing.Color.White;
-            this.reverseBtn.UseVisualStyleBackColor = false;
+            this.btnReverse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.btnReverse.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.btnReverse.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnReverse.BorderRadius = 0;
+            this.btnReverse.BorderSize = 0;
+            this.btnReverse.FlatAppearance.BorderSize = 0;
+            this.btnReverse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReverse.ForeColor = System.Drawing.Color.White;
+            this.btnReverse.Image = global::PBL3.Properties.Resources.reverse;
+            this.btnReverse.Location = new System.Drawing.Point(1116, 14);
+            this.btnReverse.Name = "btnReverse";
+            this.btnReverse.Size = new System.Drawing.Size(56, 48);
+            this.btnReverse.TabIndex = 4;
+            this.btnReverse.TextColor = System.Drawing.Color.White;
+            this.btnReverse.UseVisualStyleBackColor = false;
             // 
-            // sortCbb
+            // cbbSort
             // 
-            this.sortCbb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.sortCbb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.sortCbb.BorderColor = System.Drawing.Color.SteelBlue;
-            this.sortCbb.BorderSize = 3;
-            this.sortCbb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.sortCbb.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.sortCbb.ForeColor = System.Drawing.Color.DimGray;
-            this.sortCbb.IconColor = System.Drawing.Color.SteelBlue;
-            this.sortCbb.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.sortCbb.ListTextColor = System.Drawing.Color.Black;
-            this.sortCbb.Location = new System.Drawing.Point(870, 18);
-            this.sortCbb.MinimumSize = new System.Drawing.Size(200, 30);
-            this.sortCbb.Name = "sortCbb";
-            this.sortCbb.Padding = new System.Windows.Forms.Padding(3);
-            this.sortCbb.Size = new System.Drawing.Size(220, 40);
-            this.sortCbb.TabIndex = 19;
-            this.sortCbb.Texts = "Sắp xếp theo";
+            this.cbbSort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.cbbSort.BorderColor = System.Drawing.Color.SteelBlue;
+            this.cbbSort.BorderSize = 3;
+            this.cbbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbSort.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.cbbSort.ForeColor = System.Drawing.Color.DimGray;
+            this.cbbSort.IconColor = System.Drawing.Color.SteelBlue;
+            this.cbbSort.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbbSort.ListTextColor = System.Drawing.Color.Black;
+            this.cbbSort.Location = new System.Drawing.Point(870, 20);
+            this.cbbSort.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbbSort.Name = "cbbSort";
+            this.cbbSort.Padding = new System.Windows.Forms.Padding(3);
+            this.cbbSort.Size = new System.Drawing.Size(240, 40);
+            this.cbbSort.TabIndex = 3;
+            this.cbbSort.Texts = "Sắp xếp theo";
             // 
-            // userRoleCbb
+            // cbbUserRole
             // 
-            this.userRoleCbb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.userRoleCbb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.userRoleCbb.BorderColor = System.Drawing.Color.SteelBlue;
-            this.userRoleCbb.BorderSize = 3;
-            this.userRoleCbb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.userRoleCbb.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.userRoleCbb.ForeColor = System.Drawing.Color.DimGray;
-            this.userRoleCbb.IconColor = System.Drawing.Color.SteelBlue;
-            this.userRoleCbb.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.userRoleCbb.ListTextColor = System.Drawing.Color.Black;
-            this.userRoleCbb.Location = new System.Drawing.Point(574, 18);
-            this.userRoleCbb.MinimumSize = new System.Drawing.Size(200, 30);
-            this.userRoleCbb.Name = "userRoleCbb";
-            this.userRoleCbb.Padding = new System.Windows.Forms.Padding(3);
-            this.userRoleCbb.Size = new System.Drawing.Size(248, 40);
-            this.userRoleCbb.TabIndex = 18;
-            this.userRoleCbb.Texts = "Chọn loại tài khoản";
+            this.cbbUserRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.cbbUserRole.BorderColor = System.Drawing.Color.SteelBlue;
+            this.cbbUserRole.BorderSize = 3;
+            this.cbbUserRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbUserRole.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.cbbUserRole.ForeColor = System.Drawing.Color.DimGray;
+            this.cbbUserRole.IconColor = System.Drawing.Color.SteelBlue;
+            this.cbbUserRole.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbbUserRole.ListTextColor = System.Drawing.Color.Black;
+            this.cbbUserRole.Location = new System.Drawing.Point(574, 20);
+            this.cbbUserRole.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbbUserRole.Name = "cbbUserRole";
+            this.cbbUserRole.Padding = new System.Windows.Forms.Padding(3);
+            this.cbbUserRole.Size = new System.Drawing.Size(240, 40);
+            this.cbbUserRole.TabIndex = 2;
+            this.cbbUserRole.Texts = "Chọn loại tài khoản";
             // 
             // txtSearch
             // 
@@ -165,7 +156,7 @@
             this.txtSearch.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtSearch.PlaceholderText = "Nhập nội dung cần tìm";
             this.txtSearch.Size = new System.Drawing.Size(480, 36);
-            this.txtSearch.TabIndex = 5;
+            this.txtSearch.TabIndex = 1;
             this.txtSearch.Texts = "";
             this.txtSearch.UnderlinedStyle = false;
             // 
@@ -185,59 +176,59 @@
             this.dgv.RowTemplate.Height = 24;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv.Size = new System.Drawing.Size(1411, 493);
-            this.dgv.TabIndex = 30;
+            this.dgv.TabIndex = 22;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.deleteUserBtn);
-            this.panel1.Controls.Add(this.viewUserBtn);
+            this.panel1.Controls.Add(this.btnDeleteUser);
+            this.panel1.Controls.Add(this.btnViewUser);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 573);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1411, 90);
-            this.panel1.TabIndex = 28;
+            this.panel1.TabIndex = 21;
             // 
-            // deleteUserBtn
+            // btnDeleteUser
             // 
-            this.deleteUserBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.deleteUserBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.deleteUserBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.deleteUserBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.deleteUserBtn.BorderRadius = 30;
-            this.deleteUserBtn.BorderSize = 0;
-            this.deleteUserBtn.FlatAppearance.BorderSize = 0;
-            this.deleteUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteUserBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteUserBtn.ForeColor = System.Drawing.Color.White;
-            this.deleteUserBtn.Location = new System.Drawing.Point(826, 11);
-            this.deleteUserBtn.Name = "deleteUserBtn";
-            this.deleteUserBtn.Size = new System.Drawing.Size(300, 56);
-            this.deleteUserBtn.TabIndex = 4;
-            this.deleteUserBtn.Text = "Xóa tài khoản người dùng";
-            this.deleteUserBtn.TextColor = System.Drawing.Color.White;
-            this.deleteUserBtn.UseVisualStyleBackColor = false;
+            this.btnDeleteUser.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDeleteUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDeleteUser.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDeleteUser.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDeleteUser.BorderRadius = 30;
+            this.btnDeleteUser.BorderSize = 0;
+            this.btnDeleteUser.FlatAppearance.BorderSize = 0;
+            this.btnDeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteUser.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteUser.Location = new System.Drawing.Point(826, 11);
+            this.btnDeleteUser.Name = "btnDeleteUser";
+            this.btnDeleteUser.Size = new System.Drawing.Size(300, 56);
+            this.btnDeleteUser.TabIndex = 7;
+            this.btnDeleteUser.Text = "Xóa tài khoản người dùng";
+            this.btnDeleteUser.TextColor = System.Drawing.Color.White;
+            this.btnDeleteUser.UseVisualStyleBackColor = false;
             // 
-            // viewUserBtn
+            // btnViewUser
             // 
-            this.viewUserBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.viewUserBtn.BackColor = System.Drawing.Color.SteelBlue;
-            this.viewUserBtn.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.viewUserBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.viewUserBtn.BorderRadius = 30;
-            this.viewUserBtn.BorderSize = 0;
-            this.viewUserBtn.FlatAppearance.BorderSize = 0;
-            this.viewUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewUserBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewUserBtn.ForeColor = System.Drawing.Color.White;
-            this.viewUserBtn.Location = new System.Drawing.Point(271, 11);
-            this.viewUserBtn.Name = "viewUserBtn";
-            this.viewUserBtn.Size = new System.Drawing.Size(286, 56);
-            this.viewUserBtn.TabIndex = 0;
-            this.viewUserBtn.Text = "Thông tin người dùng";
-            this.viewUserBtn.TextColor = System.Drawing.Color.White;
-            this.viewUserBtn.UseVisualStyleBackColor = false;
+            this.btnViewUser.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnViewUser.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnViewUser.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.btnViewUser.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnViewUser.BorderRadius = 30;
+            this.btnViewUser.BorderSize = 0;
+            this.btnViewUser.FlatAppearance.BorderSize = 0;
+            this.btnViewUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewUser.ForeColor = System.Drawing.Color.White;
+            this.btnViewUser.Location = new System.Drawing.Point(271, 11);
+            this.btnViewUser.Name = "btnViewUser";
+            this.btnViewUser.Size = new System.Drawing.Size(286, 56);
+            this.btnViewUser.TabIndex = 6;
+            this.btnViewUser.Text = "Thông tin người dùng";
+            this.btnViewUser.TextColor = System.Drawing.Color.White;
+            this.btnViewUser.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -271,15 +262,15 @@
         #endregion
 
         private System.Windows.Forms.Panel panelMenu;
-        private CustomComponent.CustomButton searchBtn;
-        private CustomComponent.CustomButton reverseBtn;
-        private CustomComponents.CustomComboBox sortCbb;
-        private CustomComponents.CustomComboBox userRoleCbb;
+        private CustomComponent.CustomButton btnSearch;
+        private CustomComponent.CustomButton btnReverse;
+        private CustomComponents.CustomComboBox cbbSort;
+        private CustomComponents.CustomComboBox cbbUserRole;
         private CustomComponent.CustomTextBox txtSearch;
         private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.Panel panel1;
-        private CustomComponent.CustomButton deleteUserBtn;
-        private CustomComponent.CustomButton viewUserBtn;
+        private CustomComponent.CustomButton btnDeleteUser;
+        private CustomComponent.CustomButton btnViewUser;
         private System.Windows.Forms.Panel panel2;
     }
 }

@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.searchBtn = new PBL3.Views.CustomComponent.CustomButton();
-            this.reverseBtn = new PBL3.Views.CustomComponent.CustomButton();
-            this.sortCbb = new PBL3.Views.CustomComponents.CustomComboBox();
-            this.postedFilterCbb = new PBL3.Views.CustomComponents.CustomComboBox();
+            this.btnSearch = new PBL3.Views.CustomComponent.CustomButton();
+            this.btnReverse = new PBL3.Views.CustomComponent.CustomButton();
+            this.cbbSort = new PBL3.Views.CustomComponents.CustomComboBox();
+            this.cbbPostedFilter = new PBL3.Views.CustomComponents.CustomComboBox();
             this.txtSearch = new PBL3.Views.CustomComponent.CustomTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.deleteInforBtn = new PBL3.Views.CustomComponent.CustomButton();
-            this.readInforBtn = new PBL3.Views.CustomComponent.CustomButton();
-            this.viewUserBtn = new PBL3.Views.CustomComponent.CustomButton();
+            this.btnDeleteInfor = new PBL3.Views.CustomComponent.CustomButton();
+            this.btnReadInfor = new PBL3.Views.CustomComponent.CustomButton();
+            this.btnViewUser = new PBL3.Views.CustomComponent.CustomButton();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
@@ -49,103 +49,95 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.panelMenu.Controls.Add(this.searchBtn);
-            this.panelMenu.Controls.Add(this.reverseBtn);
-            this.panelMenu.Controls.Add(this.sortCbb);
-            this.panelMenu.Controls.Add(this.postedFilterCbb);
+            this.panelMenu.Controls.Add(this.btnSearch);
+            this.panelMenu.Controls.Add(this.btnReverse);
+            this.panelMenu.Controls.Add(this.cbbSort);
+            this.panelMenu.Controls.Add(this.cbbPostedFilter);
             this.panelMenu.Controls.Add(this.txtSearch);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(1411, 80);
-            this.panelMenu.TabIndex = 26;
+            this.panelMenu.TabIndex = 20;
             // 
-            // searchBtn
+            // btnSearch
             // 
-            this.searchBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.searchBtn.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.searchBtn.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.searchBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.searchBtn.BorderRadius = 30;
-            this.searchBtn.BorderSize = 0;
-            this.searchBtn.FlatAppearance.BorderSize = 0;
-            this.searchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBtn.ForeColor = System.Drawing.Color.Black;
-            this.searchBtn.Location = new System.Drawing.Point(1212, 14);
-            this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(159, 48);
-            this.searchBtn.TabIndex = 5;
-            this.searchBtn.Text = "Tìm kiếm";
-            this.searchBtn.TextColor = System.Drawing.Color.Black;
-            this.searchBtn.UseVisualStyleBackColor = false;
+            this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSearch.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnSearch.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.btnSearch.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSearch.BorderRadius = 30;
+            this.btnSearch.BorderSize = 0;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.Black;
+            this.btnSearch.Location = new System.Drawing.Point(1212, 14);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(159, 48);
+            this.btnSearch.TabIndex = 5;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.TextColor = System.Drawing.Color.Black;
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
-            // reverseBtn
+            // btnReverse
             // 
-            this.reverseBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.reverseBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.reverseBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.reverseBtn.BorderRadius = 0;
-            this.reverseBtn.BorderSize = 0;
-            this.reverseBtn.FlatAppearance.BorderSize = 0;
-            this.reverseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reverseBtn.ForeColor = System.Drawing.Color.White;
-            this.reverseBtn.Image = global::PBL3.Properties.Resources.reverse;
-            this.reverseBtn.Location = new System.Drawing.Point(1096, 14);
-            this.reverseBtn.Name = "reverseBtn";
-            this.reverseBtn.Size = new System.Drawing.Size(56, 48);
-            this.reverseBtn.TabIndex = 20;
-            this.reverseBtn.TextColor = System.Drawing.Color.White;
-            this.reverseBtn.UseVisualStyleBackColor = false;
+            this.btnReverse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.btnReverse.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.btnReverse.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnReverse.BorderRadius = 0;
+            this.btnReverse.BorderSize = 0;
+            this.btnReverse.FlatAppearance.BorderSize = 0;
+            this.btnReverse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReverse.ForeColor = System.Drawing.Color.White;
+            this.btnReverse.Image = global::PBL3.Properties.Resources.reverse;
+            this.btnReverse.Location = new System.Drawing.Point(1116, 14);
+            this.btnReverse.Name = "btnReverse";
+            this.btnReverse.Size = new System.Drawing.Size(56, 48);
+            this.btnReverse.TabIndex = 4;
+            this.btnReverse.TextColor = System.Drawing.Color.White;
+            this.btnReverse.UseVisualStyleBackColor = false;
             // 
-            // sortCbb
+            // cbbSort
             // 
-            this.sortCbb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.sortCbb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.sortCbb.BorderColor = System.Drawing.Color.SteelBlue;
-            this.sortCbb.BorderSize = 3;
-            this.sortCbb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.sortCbb.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.sortCbb.ForeColor = System.Drawing.Color.DimGray;
-            this.sortCbb.IconColor = System.Drawing.Color.SteelBlue;
-            this.sortCbb.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.sortCbb.ListTextColor = System.Drawing.Color.Black;
-            this.sortCbb.Location = new System.Drawing.Point(870, 18);
-            this.sortCbb.MinimumSize = new System.Drawing.Size(200, 30);
-            this.sortCbb.Name = "sortCbb";
-            this.sortCbb.Padding = new System.Windows.Forms.Padding(3);
-            this.sortCbb.Size = new System.Drawing.Size(220, 40);
-            this.sortCbb.TabIndex = 19;
-            this.sortCbb.Texts = "Sắp xếp theo";
+            this.cbbSort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.cbbSort.BorderColor = System.Drawing.Color.SteelBlue;
+            this.cbbSort.BorderSize = 3;
+            this.cbbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbSort.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.cbbSort.ForeColor = System.Drawing.Color.DimGray;
+            this.cbbSort.IconColor = System.Drawing.Color.SteelBlue;
+            this.cbbSort.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbbSort.ListTextColor = System.Drawing.Color.Black;
+            this.cbbSort.Location = new System.Drawing.Point(870, 20);
+            this.cbbSort.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbbSort.Name = "cbbSort";
+            this.cbbSort.Padding = new System.Windows.Forms.Padding(3);
+            this.cbbSort.Size = new System.Drawing.Size(240, 40);
+            this.cbbSort.TabIndex = 3;
+            this.cbbSort.Texts = "Sắp xếp theo";
             // 
-            // postedFilterCbb
+            // cbbPostedFilter
             // 
-            this.postedFilterCbb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.postedFilterCbb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.postedFilterCbb.BorderColor = System.Drawing.Color.SteelBlue;
-            this.postedFilterCbb.BorderSize = 3;
-            this.postedFilterCbb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.postedFilterCbb.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.postedFilterCbb.ForeColor = System.Drawing.Color.DimGray;
-            this.postedFilterCbb.IconColor = System.Drawing.Color.SteelBlue;
-            this.postedFilterCbb.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.postedFilterCbb.ListTextColor = System.Drawing.Color.Black;
-            this.postedFilterCbb.Location = new System.Drawing.Point(602, 18);
-            this.postedFilterCbb.MinimumSize = new System.Drawing.Size(200, 30);
-            this.postedFilterCbb.Name = "postedFilterCbb";
-            this.postedFilterCbb.Padding = new System.Windows.Forms.Padding(3);
-            this.postedFilterCbb.Size = new System.Drawing.Size(220, 40);
-            this.postedFilterCbb.TabIndex = 18;
-            this.postedFilterCbb.Texts = "Chọn bộ lọc";
+            this.cbbPostedFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.cbbPostedFilter.BorderColor = System.Drawing.Color.SteelBlue;
+            this.cbbPostedFilter.BorderSize = 3;
+            this.cbbPostedFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbPostedFilter.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.cbbPostedFilter.ForeColor = System.Drawing.Color.DimGray;
+            this.cbbPostedFilter.IconColor = System.Drawing.Color.SteelBlue;
+            this.cbbPostedFilter.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbbPostedFilter.ListTextColor = System.Drawing.Color.Black;
+            this.cbbPostedFilter.Location = new System.Drawing.Point(574, 20);
+            this.cbbPostedFilter.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbbPostedFilter.Name = "cbbPostedFilter";
+            this.cbbPostedFilter.Padding = new System.Windows.Forms.Padding(3);
+            this.cbbPostedFilter.Size = new System.Drawing.Size(240, 40);
+            this.cbbPostedFilter.TabIndex = 2;
+            this.cbbPostedFilter.Texts = "Chọn bộ lọc";
             // 
             // txtSearch
             // 
-            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtSearch.AutoSize = true;
             this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.txtSearch.BorderColor = System.Drawing.Color.SteelBlue;
@@ -162,8 +154,8 @@
             this.txtSearch.PasswordChar = false;
             this.txtSearch.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtSearch.PlaceholderText = "Nhập nội dung cần tìm";
-            this.txtSearch.Size = new System.Drawing.Size(509, 36);
-            this.txtSearch.TabIndex = 5;
+            this.txtSearch.Size = new System.Drawing.Size(480, 36);
+            this.txtSearch.TabIndex = 1;
             this.txtSearch.Texts = "";
             this.txtSearch.UnderlinedStyle = false;
             // 
@@ -171,74 +163,74 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.deleteInforBtn);
-            this.panel1.Controls.Add(this.readInforBtn);
-            this.panel1.Controls.Add(this.viewUserBtn);
+            this.panel1.Controls.Add(this.btnDeleteInfor);
+            this.panel1.Controls.Add(this.btnReadInfor);
+            this.panel1.Controls.Add(this.btnViewUser);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 573);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1411, 90);
-            this.panel1.TabIndex = 25;
+            this.panel1.TabIndex = 21;
             // 
-            // deleteInforBtn
+            // btnDeleteInfor
             // 
-            this.deleteInforBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.deleteInforBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.deleteInforBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.deleteInforBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.deleteInforBtn.BorderRadius = 30;
-            this.deleteInforBtn.BorderSize = 0;
-            this.deleteInforBtn.FlatAppearance.BorderSize = 0;
-            this.deleteInforBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteInforBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteInforBtn.ForeColor = System.Drawing.Color.White;
-            this.deleteInforBtn.Location = new System.Drawing.Point(949, 11);
-            this.deleteInforBtn.Name = "deleteInforBtn";
-            this.deleteInforBtn.Size = new System.Drawing.Size(228, 56);
-            this.deleteInforBtn.TabIndex = 4;
-            this.deleteInforBtn.Text = "Xóa thông tin trọ";
-            this.deleteInforBtn.TextColor = System.Drawing.Color.White;
-            this.deleteInforBtn.UseVisualStyleBackColor = false;
+            this.btnDeleteInfor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDeleteInfor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDeleteInfor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDeleteInfor.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDeleteInfor.BorderRadius = 30;
+            this.btnDeleteInfor.BorderSize = 0;
+            this.btnDeleteInfor.FlatAppearance.BorderSize = 0;
+            this.btnDeleteInfor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteInfor.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteInfor.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteInfor.Location = new System.Drawing.Point(949, 11);
+            this.btnDeleteInfor.Name = "btnDeleteInfor";
+            this.btnDeleteInfor.Size = new System.Drawing.Size(228, 56);
+            this.btnDeleteInfor.TabIndex = 8;
+            this.btnDeleteInfor.Text = "Xóa thông tin trọ";
+            this.btnDeleteInfor.TextColor = System.Drawing.Color.White;
+            this.btnDeleteInfor.UseVisualStyleBackColor = false;
             // 
-            // readInforBtn
+            // btnReadInfor
             // 
-            this.readInforBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.readInforBtn.BackColor = System.Drawing.Color.SteelBlue;
-            this.readInforBtn.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.readInforBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.readInforBtn.BorderRadius = 30;
-            this.readInforBtn.BorderSize = 0;
-            this.readInforBtn.FlatAppearance.BorderSize = 0;
-            this.readInforBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.readInforBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.readInforBtn.ForeColor = System.Drawing.Color.White;
-            this.readInforBtn.Location = new System.Drawing.Point(574, 11);
-            this.readInforBtn.Name = "readInforBtn";
-            this.readInforBtn.Size = new System.Drawing.Size(228, 56);
-            this.readInforBtn.TabIndex = 3;
-            this.readInforBtn.Text = "Thông tin trọ";
-            this.readInforBtn.TextColor = System.Drawing.Color.White;
-            this.readInforBtn.UseVisualStyleBackColor = false;
+            this.btnReadInfor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnReadInfor.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnReadInfor.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.btnReadInfor.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnReadInfor.BorderRadius = 30;
+            this.btnReadInfor.BorderSize = 0;
+            this.btnReadInfor.FlatAppearance.BorderSize = 0;
+            this.btnReadInfor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReadInfor.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReadInfor.ForeColor = System.Drawing.Color.White;
+            this.btnReadInfor.Location = new System.Drawing.Point(574, 11);
+            this.btnReadInfor.Name = "btnReadInfor";
+            this.btnReadInfor.Size = new System.Drawing.Size(228, 56);
+            this.btnReadInfor.TabIndex = 7;
+            this.btnReadInfor.Text = "Thông tin trọ";
+            this.btnReadInfor.TextColor = System.Drawing.Color.White;
+            this.btnReadInfor.UseVisualStyleBackColor = false;
             // 
-            // viewUserBtn
+            // btnViewUser
             // 
-            this.viewUserBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.viewUserBtn.BackColor = System.Drawing.Color.SteelBlue;
-            this.viewUserBtn.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.viewUserBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.viewUserBtn.BorderRadius = 30;
-            this.viewUserBtn.BorderSize = 0;
-            this.viewUserBtn.FlatAppearance.BorderSize = 0;
-            this.viewUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewUserBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewUserBtn.ForeColor = System.Drawing.Color.White;
-            this.viewUserBtn.Location = new System.Drawing.Point(164, 11);
-            this.viewUserBtn.Name = "viewUserBtn";
-            this.viewUserBtn.Size = new System.Drawing.Size(228, 56);
-            this.viewUserBtn.TabIndex = 0;
-            this.viewUserBtn.Text = "Thông tin chủ trọ";
-            this.viewUserBtn.TextColor = System.Drawing.Color.White;
-            this.viewUserBtn.UseVisualStyleBackColor = false;
+            this.btnViewUser.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnViewUser.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnViewUser.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.btnViewUser.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnViewUser.BorderRadius = 30;
+            this.btnViewUser.BorderSize = 0;
+            this.btnViewUser.FlatAppearance.BorderSize = 0;
+            this.btnViewUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewUser.ForeColor = System.Drawing.Color.White;
+            this.btnViewUser.Location = new System.Drawing.Point(164, 11);
+            this.btnViewUser.Name = "btnViewUser";
+            this.btnViewUser.Size = new System.Drawing.Size(228, 56);
+            this.btnViewUser.TabIndex = 6;
+            this.btnViewUser.Text = "Thông tin chủ trọ";
+            this.btnViewUser.TextColor = System.Drawing.Color.White;
+            this.btnViewUser.UseVisualStyleBackColor = false;
             // 
             // dgv
             // 
@@ -256,7 +248,7 @@
             this.dgv.RowTemplate.Height = 24;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv.Size = new System.Drawing.Size(1411, 493);
-            this.dgv.TabIndex = 27;
+            this.dgv.TabIndex = 22;
             // 
             // panel2
             // 
@@ -290,16 +282,16 @@
         #endregion
 
         private System.Windows.Forms.Panel panelMenu;
-        private CustomComponent.CustomButton searchBtn;
-        private CustomComponent.CustomButton reverseBtn;
-        private CustomComponents.CustomComboBox sortCbb;
-        private CustomComponents.CustomComboBox postedFilterCbb;
-        private CustomComponent.CustomTextBox txtSearch;
         private System.Windows.Forms.Panel panel1;
-        private CustomComponent.CustomButton deleteInforBtn;
-        private CustomComponent.CustomButton readInforBtn;
-        private CustomComponent.CustomButton viewUserBtn;
+        private CustomComponent.CustomButton btnDeleteInfor;
+        private CustomComponent.CustomButton btnReadInfor;
+        private CustomComponent.CustomButton btnViewUser;
         private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.Panel panel2;
+        private CustomComponent.CustomButton btnSearch;
+        private CustomComponent.CustomButton btnReverse;
+        private CustomComponents.CustomComboBox cbbSort;
+        private CustomComponents.CustomComboBox cbbPostedFilter;
+        private CustomComponent.CustomTextBox txtSearch;
     }
 }

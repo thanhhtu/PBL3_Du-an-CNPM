@@ -15,11 +15,11 @@ namespace PBL3.Views.CustomComponents
     public class CustomComboBox : UserControl
     {
         //Fields
-        private Color backColor = Color.WhiteSmoke;
-        private Color iconColor = Color.MediumSlateBlue;
+        private Color backColor = Color.FromArgb(238, 247, 255);
+        private Color iconColor = Color.SteelBlue;
         private Color listBackColor = Color.FromArgb(230, 228, 245);
-        private Color listTextColor = Color.DimGray;
-        private Color borderColor = Color.MediumSlateBlue;
+        private Color listTextColor = Color.Black;
+        private Color borderColor = Color.SteelBlue;
         private int borderSize = 3;
 
         //Items
@@ -268,8 +268,8 @@ namespace PBL3.Views.CustomComponents
             this.Controls.Add(btnIcon); //1
             this.Controls.Add(cmbList); //0
             AdjustComboBoxDimensions();
-            this.MinimumSize = new Size(300, 52);
-            this.Size = new Size(200, 30);
+            this.MinimumSize = new Size(200, 40);
+            this.Size = new Size(200, 40);
             this.ForeColor = Color.DimGray;
             this.Padding = new Padding(borderSize);//Border Size
             this.Font = new Font(this.Font.Name, 10F);

@@ -31,9 +31,9 @@
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.signUpBtn = new FontAwesome.Sharp.IconButton();
-            this.signInBtn = new FontAwesome.Sharp.IconButton();
-            this.homeBtn = new FontAwesome.Sharp.IconButton();
+            this.btnSignUp = new FontAwesome.Sharp.IconButton();
+            this.btnSignIn = new FontAwesome.Sharp.IconButton();
+            this.btnHome = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelChildForm.SuspendLayout();
@@ -71,9 +71,9 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.Gainsboro;
-            this.panelMenu.Controls.Add(this.signUpBtn);
-            this.panelMenu.Controls.Add(this.signInBtn);
-            this.panelMenu.Controls.Add(this.homeBtn);
+            this.panelMenu.Controls.Add(this.btnSignUp);
+            this.panelMenu.Controls.Add(this.btnSignIn);
+            this.panelMenu.Controls.Add(this.btnHome);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -82,77 +82,77 @@
             this.panelMenu.Size = new System.Drawing.Size(244, 675);
             this.panelMenu.TabIndex = 3;
             // 
-            // signUpBtn
+            // btnSignUp
             // 
-            this.signUpBtn.BackColor = System.Drawing.Color.Gainsboro;
-            this.signUpBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.signUpBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.signUpBtn.FlatAppearance.BorderSize = 0;
-            this.signUpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signUpBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.signUpBtn.IconChar = FontAwesome.Sharp.IconChar.SignIn;
-            this.signUpBtn.IconColor = System.Drawing.Color.DimGray;
-            this.signUpBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.signUpBtn.IconSize = 45;
-            this.signUpBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.signUpBtn.Location = new System.Drawing.Point(0, 313);
-            this.signUpBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.signUpBtn.Name = "signUpBtn";
-            this.signUpBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.signUpBtn.Size = new System.Drawing.Size(244, 65);
-            this.signUpBtn.TabIndex = 3;
-            this.signUpBtn.Text = "Đăng ký";
-            this.signUpBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.signUpBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.signUpBtn.UseVisualStyleBackColor = false;
+            this.btnSignUp.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSignUp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSignUp.FlatAppearance.BorderSize = 0;
+            this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignUp.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSignUp.IconChar = FontAwesome.Sharp.IconChar.SignIn;
+            this.btnSignUp.IconColor = System.Drawing.Color.DimGray;
+            this.btnSignUp.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSignUp.IconSize = 45;
+            this.btnSignUp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSignUp.Location = new System.Drawing.Point(0, 313);
+            this.btnSignUp.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnSignUp.Size = new System.Drawing.Size(244, 65);
+            this.btnSignUp.TabIndex = 3;
+            this.btnSignUp.Text = "Đăng ký";
+            this.btnSignUp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSignUp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSignUp.UseVisualStyleBackColor = false;
             // 
-            // signInBtn
+            // btnSignIn
             // 
-            this.signInBtn.BackColor = System.Drawing.Color.Gainsboro;
-            this.signInBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.signInBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.signInBtn.FlatAppearance.BorderSize = 0;
-            this.signInBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signInBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.signInBtn.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
-            this.signInBtn.IconColor = System.Drawing.Color.DimGray;
-            this.signInBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.signInBtn.IconSize = 45;
-            this.signInBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.signInBtn.Location = new System.Drawing.Point(0, 248);
-            this.signInBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.signInBtn.Name = "signInBtn";
-            this.signInBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.signInBtn.Size = new System.Drawing.Size(244, 65);
-            this.signInBtn.TabIndex = 2;
-            this.signInBtn.Text = "Đăng nhập";
-            this.signInBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.signInBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.signInBtn.UseVisualStyleBackColor = false;
+            this.btnSignIn.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnSignIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSignIn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSignIn.FlatAppearance.BorderSize = 0;
+            this.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignIn.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSignIn.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
+            this.btnSignIn.IconColor = System.Drawing.Color.DimGray;
+            this.btnSignIn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSignIn.IconSize = 45;
+            this.btnSignIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSignIn.Location = new System.Drawing.Point(0, 248);
+            this.btnSignIn.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSignIn.Name = "btnSignIn";
+            this.btnSignIn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnSignIn.Size = new System.Drawing.Size(244, 65);
+            this.btnSignIn.TabIndex = 2;
+            this.btnSignIn.Text = "Đăng nhập";
+            this.btnSignIn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSignIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSignIn.UseVisualStyleBackColor = false;
             // 
-            // homeBtn
+            // btnHome
             // 
-            this.homeBtn.BackColor = System.Drawing.Color.Gainsboro;
-            this.homeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.homeBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.homeBtn.FlatAppearance.BorderSize = 0;
-            this.homeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.homeBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.homeBtn.IconChar = FontAwesome.Sharp.IconChar.House;
-            this.homeBtn.IconColor = System.Drawing.Color.DimGray;
-            this.homeBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.homeBtn.IconSize = 45;
-            this.homeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.homeBtn.Location = new System.Drawing.Point(0, 183);
-            this.homeBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.homeBtn.Name = "homeBtn";
-            this.homeBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.homeBtn.Size = new System.Drawing.Size(244, 65);
-            this.homeBtn.TabIndex = 1;
-            this.homeBtn.Text = "Trang chủ";
-            this.homeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.homeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.homeBtn.UseVisualStyleBackColor = false;
+            this.btnHome.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.btnHome.IconChar = FontAwesome.Sharp.IconChar.House;
+            this.btnHome.IconColor = System.Drawing.Color.DimGray;
+            this.btnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnHome.IconSize = 45;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(0, 183);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnHome.Size = new System.Drawing.Size(244, 65);
+            this.btnHome.TabIndex = 1;
+            this.btnHome.Text = "Trang chủ";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHome.UseVisualStyleBackColor = false;
             // 
             // panelLogo
             // 
@@ -204,8 +204,8 @@
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private FontAwesome.Sharp.IconButton homeBtn;
-        private FontAwesome.Sharp.IconButton signInBtn;
-        private FontAwesome.Sharp.IconButton signUpBtn;
+        private FontAwesome.Sharp.IconButton btnHome;
+        private FontAwesome.Sharp.IconButton btnSignIn;
+        private FontAwesome.Sharp.IconButton btnSignUp;
     }
 }

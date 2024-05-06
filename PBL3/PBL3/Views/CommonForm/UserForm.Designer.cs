@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.customPanel1 = new PBL3.Views.CustomComponent.CustomPanel();
-            this.label_Fullname = new System.Windows.Forms.Label();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.labelAddress = new System.Windows.Forms.Label();
+            this.labelPhone = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label_Phone = new System.Windows.Forms.Label();
-            this.label_Email = new System.Windows.Forms.Label();
-            this.label_Address = new System.Windows.Forms.Label();
+            this.labelFullname = new System.Windows.Forms.Label();
             this.customPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,11 +42,11 @@
             this.customPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.customPanel1.BackColor = System.Drawing.Color.White;
             this.customPanel1.BorderRadius = 35;
-            this.customPanel1.Controls.Add(this.label_Email);
-            this.customPanel1.Controls.Add(this.label_Address);
-            this.customPanel1.Controls.Add(this.label_Phone);
+            this.customPanel1.Controls.Add(this.labelEmail);
+            this.customPanel1.Controls.Add(this.labelAddress);
+            this.customPanel1.Controls.Add(this.labelPhone);
             this.customPanel1.Controls.Add(this.label1);
-            this.customPanel1.Controls.Add(this.label_Fullname);
+            this.customPanel1.Controls.Add(this.labelFullname);
             this.customPanel1.ForeColor = System.Drawing.Color.Black;
             this.customPanel1.GradientAngle = 90F;
             this.customPanel1.GradientBottonColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
@@ -56,17 +56,41 @@
             this.customPanel1.Size = new System.Drawing.Size(748, 381);
             this.customPanel1.TabIndex = 1;
             // 
-            // label_Fullname
+            // labelEmail
             // 
-            this.label_Fullname.AutoSize = true;
-            this.label_Fullname.BackColor = System.Drawing.Color.Transparent;
-            this.label_Fullname.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label_Fullname.ForeColor = System.Drawing.Color.Black;
-            this.label_Fullname.Location = new System.Drawing.Point(119, 121);
-            this.label_Fullname.Name = "label_Fullname";
-            this.label_Fullname.Size = new System.Drawing.Size(106, 28);
-            this.label_Fullname.TabIndex = 2;
-            this.label_Fullname.Text = "Họ và tên:";
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.BackColor = System.Drawing.Color.Transparent;
+            this.labelEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.labelEmail.ForeColor = System.Drawing.Color.Black;
+            this.labelEmail.Location = new System.Drawing.Point(119, 172);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(65, 28);
+            this.labelEmail.TabIndex = 9;
+            this.labelEmail.Text = "Email:";
+            // 
+            // labelAddress
+            // 
+            this.labelAddress.AutoSize = true;
+            this.labelAddress.BackColor = System.Drawing.Color.Transparent;
+            this.labelAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.labelAddress.ForeColor = System.Drawing.Color.Black;
+            this.labelAddress.Location = new System.Drawing.Point(119, 277);
+            this.labelAddress.Name = "labelAddress";
+            this.labelAddress.Size = new System.Drawing.Size(78, 28);
+            this.labelAddress.TabIndex = 8;
+            this.labelAddress.Text = "Địa chỉ:";
+            // 
+            // labelPhone
+            // 
+            this.labelPhone.AutoSize = true;
+            this.labelPhone.BackColor = System.Drawing.Color.Transparent;
+            this.labelPhone.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.labelPhone.ForeColor = System.Drawing.Color.Black;
+            this.labelPhone.Location = new System.Drawing.Point(119, 223);
+            this.labelPhone.Name = "labelPhone";
+            this.labelPhone.Size = new System.Drawing.Size(138, 28);
+            this.labelPhone.TabIndex = 7;
+            this.labelPhone.Text = "Số điện thoại:";
             // 
             // label1
             // 
@@ -83,41 +107,17 @@
             this.label1.Text = "THÔNG TIN CÁ NHÂN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label_Phone
+            // labelFullname
             // 
-            this.label_Phone.AutoSize = true;
-            this.label_Phone.BackColor = System.Drawing.Color.Transparent;
-            this.label_Phone.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label_Phone.ForeColor = System.Drawing.Color.Black;
-            this.label_Phone.Location = new System.Drawing.Point(119, 223);
-            this.label_Phone.Name = "label_Phone";
-            this.label_Phone.Size = new System.Drawing.Size(138, 28);
-            this.label_Phone.TabIndex = 7;
-            this.label_Phone.Text = "Số điện thoại:";
-            // 
-            // label_Email
-            // 
-            this.label_Email.AutoSize = true;
-            this.label_Email.BackColor = System.Drawing.Color.Transparent;
-            this.label_Email.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label_Email.ForeColor = System.Drawing.Color.Black;
-            this.label_Email.Location = new System.Drawing.Point(119, 172);
-            this.label_Email.Name = "label_Email";
-            this.label_Email.Size = new System.Drawing.Size(65, 28);
-            this.label_Email.TabIndex = 9;
-            this.label_Email.Text = "Email:";
-            // 
-            // label_Address
-            // 
-            this.label_Address.AutoSize = true;
-            this.label_Address.BackColor = System.Drawing.Color.Transparent;
-            this.label_Address.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label_Address.ForeColor = System.Drawing.Color.Black;
-            this.label_Address.Location = new System.Drawing.Point(119, 277);
-            this.label_Address.Name = "label_Address";
-            this.label_Address.Size = new System.Drawing.Size(78, 28);
-            this.label_Address.TabIndex = 8;
-            this.label_Address.Text = "Địa chỉ:";
+            this.labelFullname.AutoSize = true;
+            this.labelFullname.BackColor = System.Drawing.Color.Transparent;
+            this.labelFullname.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.labelFullname.ForeColor = System.Drawing.Color.Black;
+            this.labelFullname.Location = new System.Drawing.Point(119, 121);
+            this.labelFullname.Name = "labelFullname";
+            this.labelFullname.Size = new System.Drawing.Size(106, 28);
+            this.labelFullname.TabIndex = 2;
+            this.labelFullname.Text = "Họ và tên:";
             // 
             // UserForm
             // 
@@ -140,10 +140,10 @@
         #endregion
 
         private CustomComponent.CustomPanel customPanel1;
-        private System.Windows.Forms.Label label_Fullname;
+        private System.Windows.Forms.Label labelFullname;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label_Email;
-        private System.Windows.Forms.Label label_Address;
-        private System.Windows.Forms.Label label_Phone;
+        private System.Windows.Forms.Label labelEmail;
+        private System.Windows.Forms.Label labelAddress;
+        private System.Windows.Forms.Label labelPhone;
     }
 }

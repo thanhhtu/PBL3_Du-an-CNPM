@@ -31,17 +31,17 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.signOutBtn = new FontAwesome.Sharp.IconButton();
+            this.btnSignOut = new FontAwesome.Sharp.IconButton();
             this.panelUserSubmenu = new System.Windows.Forms.Panel();
-            this.changePwdBtn = new FontAwesome.Sharp.IconButton();
-            this.userChangeBtn = new FontAwesome.Sharp.IconButton();
-            this.idBtn = new FontAwesome.Sharp.IconButton();
-            this.userBtn = new FontAwesome.Sharp.IconButton();
-            this.inforManagementBtn = new FontAwesome.Sharp.IconButton();
-            this.homeBtn = new FontAwesome.Sharp.IconButton();
+            this.btnChangePwd = new FontAwesome.Sharp.IconButton();
+            this.btnUserChange = new FontAwesome.Sharp.IconButton();
+            this.btnId = new FontAwesome.Sharp.IconButton();
+            this.btnUser = new FontAwesome.Sharp.IconButton();
+            this.btnInforManagement = new FontAwesome.Sharp.IconButton();
+            this.btnHome = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label_UserFullname = new System.Windows.Forms.Label();
+            this.labelUserFullname = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -85,11 +85,11 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.Gainsboro;
-            this.panelMenu.Controls.Add(this.signOutBtn);
+            this.panelMenu.Controls.Add(this.btnSignOut);
             this.panelMenu.Controls.Add(this.panelUserSubmenu);
-            this.panelMenu.Controls.Add(this.userBtn);
-            this.panelMenu.Controls.Add(this.inforManagementBtn);
-            this.panelMenu.Controls.Add(this.homeBtn);
+            this.panelMenu.Controls.Add(this.btnUser);
+            this.panelMenu.Controls.Add(this.btnInforManagement);
+            this.panelMenu.Controls.Add(this.btnHome);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -98,35 +98,35 @@
             this.panelMenu.Size = new System.Drawing.Size(244, 675);
             this.panelMenu.TabIndex = 5;
             // 
-            // signOutBtn
+            // btnSignOut
             // 
-            this.signOutBtn.BackColor = System.Drawing.Color.Gainsboro;
-            this.signOutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.signOutBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.signOutBtn.FlatAppearance.BorderSize = 0;
-            this.signOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signOutBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.signOutBtn.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
-            this.signOutBtn.IconColor = System.Drawing.Color.DimGray;
-            this.signOutBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.signOutBtn.IconSize = 45;
-            this.signOutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.signOutBtn.Location = new System.Drawing.Point(0, 539);
-            this.signOutBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.signOutBtn.Name = "signOutBtn";
-            this.signOutBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.signOutBtn.Size = new System.Drawing.Size(244, 65);
-            this.signOutBtn.TabIndex = 5;
-            this.signOutBtn.Text = "Đăng xuất";
-            this.signOutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.signOutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.signOutBtn.UseVisualStyleBackColor = false;
+            this.btnSignOut.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnSignOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSignOut.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSignOut.FlatAppearance.BorderSize = 0;
+            this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignOut.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSignOut.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.btnSignOut.IconColor = System.Drawing.Color.DimGray;
+            this.btnSignOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSignOut.IconSize = 45;
+            this.btnSignOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSignOut.Location = new System.Drawing.Point(0, 539);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnSignOut.Size = new System.Drawing.Size(244, 65);
+            this.btnSignOut.TabIndex = 5;
+            this.btnSignOut.Text = "Đăng xuất";
+            this.btnSignOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSignOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSignOut.UseVisualStyleBackColor = false;
             // 
             // panelUserSubmenu
             // 
-            this.panelUserSubmenu.Controls.Add(this.changePwdBtn);
-            this.panelUserSubmenu.Controls.Add(this.userChangeBtn);
-            this.panelUserSubmenu.Controls.Add(this.idBtn);
+            this.panelUserSubmenu.Controls.Add(this.btnChangePwd);
+            this.panelUserSubmenu.Controls.Add(this.btnUserChange);
+            this.panelUserSubmenu.Controls.Add(this.btnId);
             this.panelUserSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelUserSubmenu.Location = new System.Drawing.Point(0, 374);
             this.panelUserSubmenu.Margin = new System.Windows.Forms.Padding(2);
@@ -134,140 +134,140 @@
             this.panelUserSubmenu.Size = new System.Drawing.Size(244, 165);
             this.panelUserSubmenu.TabIndex = 4;
             // 
-            // changePwdBtn
+            // btnChangePwd
             // 
-            this.changePwdBtn.BackColor = System.Drawing.Color.LightBlue;
-            this.changePwdBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.changePwdBtn.FlatAppearance.BorderSize = 0;
-            this.changePwdBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.changePwdBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.changePwdBtn.IconChar = FontAwesome.Sharp.IconChar.Key;
-            this.changePwdBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.changePwdBtn.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.changePwdBtn.IconSize = 35;
-            this.changePwdBtn.Location = new System.Drawing.Point(0, 108);
-            this.changePwdBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.changePwdBtn.Name = "changePwdBtn";
-            this.changePwdBtn.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.changePwdBtn.Size = new System.Drawing.Size(244, 54);
-            this.changePwdBtn.TabIndex = 8;
-            this.changePwdBtn.Text = "Đổi mật khẩu";
-            this.changePwdBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.changePwdBtn.UseVisualStyleBackColor = false;
+            this.btnChangePwd.BackColor = System.Drawing.Color.LightBlue;
+            this.btnChangePwd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnChangePwd.FlatAppearance.BorderSize = 0;
+            this.btnChangePwd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChangePwd.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnChangePwd.IconChar = FontAwesome.Sharp.IconChar.Key;
+            this.btnChangePwd.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnChangePwd.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnChangePwd.IconSize = 35;
+            this.btnChangePwd.Location = new System.Drawing.Point(0, 108);
+            this.btnChangePwd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnChangePwd.Name = "btnChangePwd";
+            this.btnChangePwd.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnChangePwd.Size = new System.Drawing.Size(244, 54);
+            this.btnChangePwd.TabIndex = 8;
+            this.btnChangePwd.Text = "Đổi mật khẩu";
+            this.btnChangePwd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnChangePwd.UseVisualStyleBackColor = false;
             // 
-            // userChangeBtn
+            // btnUserChange
             // 
-            this.userChangeBtn.BackColor = System.Drawing.Color.LightBlue;
-            this.userChangeBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.userChangeBtn.FlatAppearance.BorderSize = 0;
-            this.userChangeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.userChangeBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.userChangeBtn.IconChar = FontAwesome.Sharp.IconChar.SquarePen;
-            this.userChangeBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.userChangeBtn.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.userChangeBtn.IconSize = 35;
-            this.userChangeBtn.Location = new System.Drawing.Point(0, 54);
-            this.userChangeBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.userChangeBtn.Name = "userChangeBtn";
-            this.userChangeBtn.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.userChangeBtn.Size = new System.Drawing.Size(244, 54);
-            this.userChangeBtn.TabIndex = 7;
-            this.userChangeBtn.Text = "Đổi thông tin cá nhân";
-            this.userChangeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.userChangeBtn.UseVisualStyleBackColor = false;
+            this.btnUserChange.BackColor = System.Drawing.Color.LightBlue;
+            this.btnUserChange.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUserChange.FlatAppearance.BorderSize = 0;
+            this.btnUserChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUserChange.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnUserChange.IconChar = FontAwesome.Sharp.IconChar.SquarePen;
+            this.btnUserChange.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnUserChange.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnUserChange.IconSize = 35;
+            this.btnUserChange.Location = new System.Drawing.Point(0, 54);
+            this.btnUserChange.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUserChange.Name = "btnUserChange";
+            this.btnUserChange.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.btnUserChange.Size = new System.Drawing.Size(244, 54);
+            this.btnUserChange.TabIndex = 7;
+            this.btnUserChange.Text = "Đổi thông tin cá nhân";
+            this.btnUserChange.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUserChange.UseVisualStyleBackColor = false;
             // 
-            // idBtn
+            // btnId
             // 
-            this.idBtn.BackColor = System.Drawing.Color.LightBlue;
-            this.idBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.idBtn.FlatAppearance.BorderSize = 0;
-            this.idBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.idBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.idBtn.IconChar = FontAwesome.Sharp.IconChar.Portrait;
-            this.idBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.idBtn.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.idBtn.IconSize = 35;
-            this.idBtn.Location = new System.Drawing.Point(0, 0);
-            this.idBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.idBtn.Name = "idBtn";
-            this.idBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.idBtn.Size = new System.Drawing.Size(244, 54);
-            this.idBtn.TabIndex = 6;
-            this.idBtn.Text = "Thông tin cá nhân";
-            this.idBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.idBtn.UseVisualStyleBackColor = false;
+            this.btnId.BackColor = System.Drawing.Color.LightBlue;
+            this.btnId.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnId.FlatAppearance.BorderSize = 0;
+            this.btnId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnId.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnId.IconChar = FontAwesome.Sharp.IconChar.Portrait;
+            this.btnId.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnId.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnId.IconSize = 35;
+            this.btnId.Location = new System.Drawing.Point(0, 0);
+            this.btnId.Margin = new System.Windows.Forms.Padding(2);
+            this.btnId.Name = "btnId";
+            this.btnId.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnId.Size = new System.Drawing.Size(244, 54);
+            this.btnId.TabIndex = 6;
+            this.btnId.Text = "Thông tin cá nhân";
+            this.btnId.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnId.UseVisualStyleBackColor = false;
             // 
-            // userBtn
+            // btnUser
             // 
-            this.userBtn.BackColor = System.Drawing.Color.Gainsboro;
-            this.userBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.userBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.userBtn.FlatAppearance.BorderSize = 0;
-            this.userBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.userBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.userBtn.IconChar = FontAwesome.Sharp.IconChar.UserGear;
-            this.userBtn.IconColor = System.Drawing.Color.DimGray;
-            this.userBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.userBtn.IconSize = 45;
-            this.userBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.userBtn.Location = new System.Drawing.Point(0, 309);
-            this.userBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.userBtn.Name = "userBtn";
-            this.userBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.userBtn.Size = new System.Drawing.Size(244, 65);
-            this.userBtn.TabIndex = 3;
-            this.userBtn.Text = "Cá nhân";
-            this.userBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.userBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.userBtn.UseVisualStyleBackColor = false;
+            this.btnUser.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUser.FlatAppearance.BorderSize = 0;
+            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUser.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.btnUser.IconChar = FontAwesome.Sharp.IconChar.UserGear;
+            this.btnUser.IconColor = System.Drawing.Color.DimGray;
+            this.btnUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUser.IconSize = 45;
+            this.btnUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUser.Location = new System.Drawing.Point(0, 309);
+            this.btnUser.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnUser.Size = new System.Drawing.Size(244, 65);
+            this.btnUser.TabIndex = 3;
+            this.btnUser.Text = "Cá nhân";
+            this.btnUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUser.UseVisualStyleBackColor = false;
             // 
-            // inforManagementBtn
+            // btnInforManagement
             // 
-            this.inforManagementBtn.BackColor = System.Drawing.Color.Gainsboro;
-            this.inforManagementBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.inforManagementBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.inforManagementBtn.FlatAppearance.BorderSize = 0;
-            this.inforManagementBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inforManagementBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.inforManagementBtn.IconChar = FontAwesome.Sharp.IconChar.BookOpen;
-            this.inforManagementBtn.IconColor = System.Drawing.Color.DimGray;
-            this.inforManagementBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.inforManagementBtn.IconSize = 45;
-            this.inforManagementBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.inforManagementBtn.Location = new System.Drawing.Point(0, 244);
-            this.inforManagementBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.inforManagementBtn.Name = "inforManagementBtn";
-            this.inforManagementBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.inforManagementBtn.Size = new System.Drawing.Size(244, 65);
-            this.inforManagementBtn.TabIndex = 2;
-            this.inforManagementBtn.Text = "Quản lý thông tin trọ";
-            this.inforManagementBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.inforManagementBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.inforManagementBtn.UseVisualStyleBackColor = false;
+            this.btnInforManagement.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnInforManagement.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInforManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInforManagement.FlatAppearance.BorderSize = 0;
+            this.btnInforManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInforManagement.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.btnInforManagement.IconChar = FontAwesome.Sharp.IconChar.BookOpen;
+            this.btnInforManagement.IconColor = System.Drawing.Color.DimGray;
+            this.btnInforManagement.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnInforManagement.IconSize = 45;
+            this.btnInforManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInforManagement.Location = new System.Drawing.Point(0, 244);
+            this.btnInforManagement.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInforManagement.Name = "btnInforManagement";
+            this.btnInforManagement.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnInforManagement.Size = new System.Drawing.Size(244, 65);
+            this.btnInforManagement.TabIndex = 2;
+            this.btnInforManagement.Text = "Quản lý thông tin trọ";
+            this.btnInforManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInforManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInforManagement.UseVisualStyleBackColor = false;
             // 
-            // homeBtn
+            // btnHome
             // 
-            this.homeBtn.BackColor = System.Drawing.Color.Gainsboro;
-            this.homeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.homeBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.homeBtn.FlatAppearance.BorderSize = 0;
-            this.homeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.homeBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.homeBtn.IconChar = FontAwesome.Sharp.IconChar.House;
-            this.homeBtn.IconColor = System.Drawing.Color.DimGray;
-            this.homeBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.homeBtn.IconSize = 45;
-            this.homeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.homeBtn.Location = new System.Drawing.Point(0, 179);
-            this.homeBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.homeBtn.Name = "homeBtn";
-            this.homeBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.homeBtn.Size = new System.Drawing.Size(244, 65);
-            this.homeBtn.TabIndex = 1;
-            this.homeBtn.Text = "Trang chủ";
-            this.homeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.homeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.homeBtn.UseVisualStyleBackColor = false;
+            this.btnHome.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.btnHome.IconChar = FontAwesome.Sharp.IconChar.House;
+            this.btnHome.IconColor = System.Drawing.Color.DimGray;
+            this.btnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnHome.IconSize = 45;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(0, 179);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnHome.Size = new System.Drawing.Size(244, 65);
+            this.btnHome.TabIndex = 1;
+            this.btnHome.Text = "Trang chủ";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHome.UseVisualStyleBackColor = false;
             // 
             // panelLogo
             // 
@@ -283,7 +283,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label_UserFullname);
+            this.panel2.Controls.Add(this.labelUserFullname);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 100);
@@ -291,19 +291,19 @@
             this.panel2.Size = new System.Drawing.Size(244, 79);
             this.panel2.TabIndex = 4;
             // 
-            // label_UserFullname
+            // labelUserFullname
             // 
-            this.label_UserFullname.BackColor = System.Drawing.Color.Gainsboro;
-            this.label_UserFullname.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label_UserFullname.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label_UserFullname.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_UserFullname.ForeColor = System.Drawing.Color.Black;
-            this.label_UserFullname.Location = new System.Drawing.Point(0, 44);
-            this.label_UserFullname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label_UserFullname.Name = "label_UserFullname";
-            this.label_UserFullname.Size = new System.Drawing.Size(242, 34);
-            this.label_UserFullname.TabIndex = 9;
-            this.label_UserFullname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelUserFullname.BackColor = System.Drawing.Color.Gainsboro;
+            this.labelUserFullname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelUserFullname.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelUserFullname.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUserFullname.ForeColor = System.Drawing.Color.Black;
+            this.labelUserFullname.Location = new System.Drawing.Point(0, 44);
+            this.labelUserFullname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelUserFullname.Name = "labelUserFullname";
+            this.labelUserFullname.Size = new System.Drawing.Size(242, 34);
+            this.labelUserFullname.TabIndex = 9;
+            this.labelUserFullname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -371,19 +371,19 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Panel panelMenu;
-        private FontAwesome.Sharp.IconButton userBtn;
-        private FontAwesome.Sharp.IconButton inforManagementBtn;
-        private FontAwesome.Sharp.IconButton homeBtn;
+        private FontAwesome.Sharp.IconButton btnUser;
+        private FontAwesome.Sharp.IconButton btnInforManagement;
+        private FontAwesome.Sharp.IconButton btnHome;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label_UserFullname;
+        private System.Windows.Forms.Label labelUserFullname;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private FontAwesome.Sharp.IconButton signOutBtn;
+        private FontAwesome.Sharp.IconButton btnSignOut;
         private System.Windows.Forms.Panel panelUserSubmenu;
-        private FontAwesome.Sharp.IconButton userChangeBtn;
-        private FontAwesome.Sharp.IconButton idBtn;
-        private FontAwesome.Sharp.IconButton changePwdBtn;
+        private FontAwesome.Sharp.IconButton btnUserChange;
+        private FontAwesome.Sharp.IconButton btnId;
+        private FontAwesome.Sharp.IconButton btnChangePwd;
     }
 }
