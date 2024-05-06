@@ -218,8 +218,14 @@
     <EmbeddedResource Include="Views\AdminForm\UserManagementForm.resx">
       <DependentUpon>UserManagementForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\CommonForm\DashboardForm.resx">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CommonForm\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CommonForm\PromptDialogForm.resx">
+      <DependentUpon>PromptDialogForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CommonForm\SignUpForm.resx">
       <DependentUpon>SignUpForm.cs</DependentUpon>

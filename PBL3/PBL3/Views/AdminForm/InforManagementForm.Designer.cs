@@ -175,9 +175,9 @@
             this.panel1.Controls.Add(this.readInforBtn);
             this.panel1.Controls.Add(this.viewUserBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 563);
+            this.panel1.Location = new System.Drawing.Point(0, 573);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1411, 100);
+            this.panel1.Size = new System.Drawing.Size(1411, 90);
             this.panel1.TabIndex = 25;
             // 
             // deleteInforBtn
@@ -192,7 +192,7 @@
             this.deleteInforBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteInforBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteInforBtn.ForeColor = System.Drawing.Color.White;
-            this.deleteInforBtn.Location = new System.Drawing.Point(949, 16);
+            this.deleteInforBtn.Location = new System.Drawing.Point(949, 11);
             this.deleteInforBtn.Name = "deleteInforBtn";
             this.deleteInforBtn.Size = new System.Drawing.Size(228, 56);
             this.deleteInforBtn.TabIndex = 4;
@@ -212,7 +212,7 @@
             this.readInforBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.readInforBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.readInforBtn.ForeColor = System.Drawing.Color.White;
-            this.readInforBtn.Location = new System.Drawing.Point(574, 16);
+            this.readInforBtn.Location = new System.Drawing.Point(574, 11);
             this.readInforBtn.Name = "readInforBtn";
             this.readInforBtn.Size = new System.Drawing.Size(228, 56);
             this.readInforBtn.TabIndex = 3;
@@ -232,7 +232,7 @@
             this.viewUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewUserBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewUserBtn.ForeColor = System.Drawing.Color.White;
-            this.viewUserBtn.Location = new System.Drawing.Point(164, 16);
+            this.viewUserBtn.Location = new System.Drawing.Point(164, 11);
             this.viewUserBtn.Name = "viewUserBtn";
             this.viewUserBtn.Size = new System.Drawing.Size(228, 56);
             this.viewUserBtn.TabIndex = 0;
@@ -255,7 +255,7 @@
             this.dgv.RowHeadersWidth = 51;
             this.dgv.RowTemplate.Height = 24;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(1411, 483);
+            this.dgv.Size = new System.Drawing.Size(1411, 493);
             this.dgv.TabIndex = 27;
             // 
             // panel2
@@ -264,7 +264,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 80);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1411, 483);
+            this.panel2.Size = new System.Drawing.Size(1411, 493);
             this.panel2.TabIndex = 28;
             // 
             // InforManagementForm

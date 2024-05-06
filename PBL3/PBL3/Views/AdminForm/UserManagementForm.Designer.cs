@@ -81,6 +81,9 @@
             // 
             // reverseBtn
             // 
+            this.reverseBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.reverseBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.reverseBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.reverseBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -181,7 +184,7 @@
             this.dgv.RowHeadersWidth = 51;
             this.dgv.RowTemplate.Height = 24;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(1411, 483);
+            this.dgv.Size = new System.Drawing.Size(1411, 493);
             this.dgv.TabIndex = 30;
             // 
             // panel1
@@ -191,9 +194,9 @@
             this.panel1.Controls.Add(this.deleteUserBtn);
             this.panel1.Controls.Add(this.viewUserBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 563);
+            this.panel1.Location = new System.Drawing.Point(0, 573);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1411, 100);
+            this.panel1.Size = new System.Drawing.Size(1411, 90);
             this.panel1.TabIndex = 28;
             // 
             // deleteUserBtn
@@ -208,7 +211,7 @@
             this.deleteUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteUserBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteUserBtn.ForeColor = System.Drawing.Color.White;
-            this.deleteUserBtn.Location = new System.Drawing.Point(823, 16);
+            this.deleteUserBtn.Location = new System.Drawing.Point(826, 11);
             this.deleteUserBtn.Name = "deleteUserBtn";
             this.deleteUserBtn.Size = new System.Drawing.Size(300, 56);
             this.deleteUserBtn.TabIndex = 4;
@@ -228,7 +231,7 @@
             this.viewUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewUserBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewUserBtn.ForeColor = System.Drawing.Color.White;
-            this.viewUserBtn.Location = new System.Drawing.Point(274, 16);
+            this.viewUserBtn.Location = new System.Drawing.Point(271, 11);
             this.viewUserBtn.Name = "viewUserBtn";
             this.viewUserBtn.Size = new System.Drawing.Size(286, 56);
             this.viewUserBtn.TabIndex = 0;
@@ -242,7 +245,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 80);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1411, 483);
+            this.panel2.Size = new System.Drawing.Size(1411, 493);
             this.panel2.TabIndex = 31;
             // 
             // UserManagementForm
