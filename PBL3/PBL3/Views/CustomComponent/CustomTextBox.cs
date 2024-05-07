@@ -17,7 +17,7 @@ namespace PBL3.Views.CustomComponent
         //Fields
         private Color borderColor = Color.SteelBlue;
         private Color borderFocusColor = Color.SlateBlue;
-        private int borderSize = 3;
+        private int borderSize = 2;
         private bool underlinedStyle = false;
         private bool isFocused = false;
         private int borderRadius = 6;

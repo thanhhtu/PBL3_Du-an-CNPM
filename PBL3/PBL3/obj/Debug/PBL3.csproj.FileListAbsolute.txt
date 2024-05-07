@@ -47,3 +47,4 @@ D:\DOWNLOADSNEW\backupPBL_2\PBL3\PBL3\obj\Debug\PBL3.pdb
 D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.DashboardForm.resources
 D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.PromptDialogForm.resources
 D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.LandlordForm.PostInforForm.resources
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.ChangePwdForm.resources

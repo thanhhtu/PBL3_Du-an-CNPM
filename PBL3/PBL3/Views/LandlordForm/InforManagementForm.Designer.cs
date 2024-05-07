@@ -124,7 +124,7 @@
             // 
             this.cbbSort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.cbbSort.BorderColor = System.Drawing.Color.SteelBlue;
-            this.cbbSort.BorderSize = 3;
+            this.cbbSort.BorderSize = 2;
             this.cbbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSort.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.cbbSort.ForeColor = System.Drawing.Color.DimGray;
@@ -134,7 +134,7 @@
             this.cbbSort.Location = new System.Drawing.Point(841, 18);
             this.cbbSort.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbbSort.Name = "cbbSort";
-            this.cbbSort.Padding = new System.Windows.Forms.Padding(3);
+            this.cbbSort.Padding = new System.Windows.Forms.Padding(2);
             this.cbbSort.Size = new System.Drawing.Size(220, 40);
             this.cbbSort.TabIndex = 3;
             this.cbbSort.Texts = "Sắp xếp theo";
@@ -143,7 +143,7 @@
             // 
             this.cbbPostedFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.cbbPostedFilter.BorderColor = System.Drawing.Color.SteelBlue;
-            this.cbbPostedFilter.BorderSize = 3;
+            this.cbbPostedFilter.BorderSize = 2;
             this.cbbPostedFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbPostedFilter.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.cbbPostedFilter.ForeColor = System.Drawing.Color.DimGray;
@@ -153,7 +153,7 @@
             this.cbbPostedFilter.Location = new System.Drawing.Point(569, 18);
             this.cbbPostedFilter.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbbPostedFilter.Name = "cbbPostedFilter";
-            this.cbbPostedFilter.Padding = new System.Windows.Forms.Padding(3);
+            this.cbbPostedFilter.Padding = new System.Windows.Forms.Padding(2);
             this.cbbPostedFilter.Size = new System.Drawing.Size(220, 40);
             this.cbbPostedFilter.TabIndex = 2;
             this.cbbPostedFilter.Texts = "Chọn bộ lọc";
@@ -167,7 +167,7 @@
             this.txtSearch.BorderColor = System.Drawing.Color.SteelBlue;
             this.txtSearch.BorderFocusColor = System.Drawing.Color.SlateBlue;
             this.txtSearch.BorderRadius = 6;
-            this.txtSearch.BorderSize = 3;
+            this.txtSearch.BorderSize = 2;
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtSearch.ForeColor = System.Drawing.Color.DimGray;
             this.txtSearch.Location = new System.Drawing.Point(29, 22);

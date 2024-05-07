@@ -274,32 +274,15 @@
     <Folder Include="DTO\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\background.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\bgrHome.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\locationPin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\reverse.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\bgr.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\image.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Images\show.png" />
-    <None Include="Resources\show.png" />
+    <None Include="Resources\reverse.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\locationPin.png" />
+    <None Include="Resources\image.jpg" />
+    <None Include="Resources\bgrWithLogo.png" />
+    <None Include="Resources\bgrHome.png" />
+    <None Include="Resources\bgr.png" />
+    <None Include="Resources\background.png" />
+    <None Include="Resources\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

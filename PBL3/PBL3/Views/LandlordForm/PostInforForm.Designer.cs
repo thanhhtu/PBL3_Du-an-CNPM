@@ -210,7 +210,7 @@
             this.txtDetailAddress.BorderColor = System.Drawing.Color.SteelBlue;
             this.txtDetailAddress.BorderFocusColor = System.Drawing.Color.SlateBlue;
             this.txtDetailAddress.BorderRadius = 6;
-            this.txtDetailAddress.BorderSize = 3;
+            this.txtDetailAddress.BorderSize = 2;
             this.txtDetailAddress.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtDetailAddress.Location = new System.Drawing.Point(237, 111);
             this.txtDetailAddress.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -229,7 +229,7 @@
             // 
             this.cbbWard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.cbbWard.BorderColor = System.Drawing.Color.SteelBlue;
-            this.cbbWard.BorderSize = 3;
+            this.cbbWard.BorderSize = 2;
             this.cbbWard.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.cbbWard.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.cbbWard.ForeColor = System.Drawing.Color.DimGray;
@@ -239,7 +239,7 @@
             this.cbbWard.Location = new System.Drawing.Point(762, 50);
             this.cbbWard.MinimumSize = new System.Drawing.Size(200, 40);
             this.cbbWard.Name = "cbbWard";
-            this.cbbWard.Padding = new System.Windows.Forms.Padding(3);
+            this.cbbWard.Padding = new System.Windows.Forms.Padding(2);
             this.cbbWard.Size = new System.Drawing.Size(313, 40);
             this.cbbWard.TabIndex = 7;
             this.cbbWard.Texts = "";
@@ -248,7 +248,7 @@
             // 
             this.cbbDistrict.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.cbbDistrict.BorderColor = System.Drawing.Color.SteelBlue;
-            this.cbbDistrict.BorderSize = 3;
+            this.cbbDistrict.BorderSize = 2;
             this.cbbDistrict.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbDistrict.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.cbbDistrict.ForeColor = System.Drawing.Color.DimGray;
@@ -258,7 +258,7 @@
             this.cbbDistrict.Location = new System.Drawing.Point(237, 50);
             this.cbbDistrict.MinimumSize = new System.Drawing.Size(200, 40);
             this.cbbDistrict.Name = "cbbDistrict";
-            this.cbbDistrict.Padding = new System.Windows.Forms.Padding(3);
+            this.cbbDistrict.Padding = new System.Windows.Forms.Padding(2);
             this.cbbDistrict.Size = new System.Drawing.Size(313, 40);
             this.cbbDistrict.TabIndex = 6;
             this.cbbDistrict.Texts = "";
@@ -462,7 +462,7 @@
             this.customTextBox1.BorderColor = System.Drawing.Color.SteelBlue;
             this.customTextBox1.BorderFocusColor = System.Drawing.Color.SlateBlue;
             this.customTextBox1.BorderRadius = 6;
-            this.customTextBox1.BorderSize = 3;
+            this.customTextBox1.BorderSize = 2;
             this.customTextBox1.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.customTextBox1.Location = new System.Drawing.Point(762, 105);
             this.customTextBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -498,9 +498,9 @@
             this.txtPrice.BorderColor = System.Drawing.Color.SteelBlue;
             this.txtPrice.BorderFocusColor = System.Drawing.Color.SlateBlue;
             this.txtPrice.BorderRadius = 6;
-            this.txtPrice.BorderSize = 3;
+            this.txtPrice.BorderSize = 2;
             this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtPrice.Location = new System.Drawing.Point(237, 105);
+            this.txtPrice.Location = new System.Drawing.Point(237, 98);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtPrice.Multiline = false;
             this.txtPrice.Name = "txtPrice";
@@ -519,7 +519,7 @@
             this.txtArea.BorderColor = System.Drawing.Color.SteelBlue;
             this.txtArea.BorderFocusColor = System.Drawing.Color.SlateBlue;
             this.txtArea.BorderRadius = 6;
-            this.txtArea.BorderSize = 3;
+            this.txtArea.BorderSize = 2;
             this.txtArea.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtArea.Location = new System.Drawing.Point(237, 160);
             this.txtArea.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -540,7 +540,7 @@
             this.txtDescribe.BorderColor = System.Drawing.Color.SteelBlue;
             this.txtDescribe.BorderFocusColor = System.Drawing.Color.SlateBlue;
             this.txtDescribe.BorderRadius = 6;
-            this.txtDescribe.BorderSize = 3;
+            this.txtDescribe.BorderSize = 2;
             this.txtDescribe.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtDescribe.Location = new System.Drawing.Point(237, 215);
             this.txtDescribe.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -561,7 +561,7 @@
             this.txtTitle.BorderColor = System.Drawing.Color.SteelBlue;
             this.txtTitle.BorderFocusColor = System.Drawing.Color.SlateBlue;
             this.txtTitle.BorderRadius = 6;
-            this.txtTitle.BorderSize = 3;
+            this.txtTitle.BorderSize = 2;
             this.txtTitle.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtTitle.Location = new System.Drawing.Point(237, 50);
             this.txtTitle.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);

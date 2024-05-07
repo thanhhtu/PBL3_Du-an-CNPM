@@ -101,7 +101,7 @@
             // 
             this.cbbSort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.cbbSort.BorderColor = System.Drawing.Color.SteelBlue;
-            this.cbbSort.BorderSize = 3;
+            this.cbbSort.BorderSize = 2;
             this.cbbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSort.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.cbbSort.ForeColor = System.Drawing.Color.DimGray;
@@ -111,7 +111,7 @@
             this.cbbSort.Location = new System.Drawing.Point(870, 20);
             this.cbbSort.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbbSort.Name = "cbbSort";
-            this.cbbSort.Padding = new System.Windows.Forms.Padding(3);
+            this.cbbSort.Padding = new System.Windows.Forms.Padding(2);
             this.cbbSort.Size = new System.Drawing.Size(240, 40);
             this.cbbSort.TabIndex = 3;
             this.cbbSort.Texts = "Sắp xếp theo";
@@ -120,7 +120,7 @@
             // 
             this.cbbUserRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.cbbUserRole.BorderColor = System.Drawing.Color.SteelBlue;
-            this.cbbUserRole.BorderSize = 3;
+            this.cbbUserRole.BorderSize = 2;
             this.cbbUserRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbUserRole.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.cbbUserRole.ForeColor = System.Drawing.Color.DimGray;
@@ -130,7 +130,7 @@
             this.cbbUserRole.Location = new System.Drawing.Point(574, 20);
             this.cbbUserRole.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbbUserRole.Name = "cbbUserRole";
-            this.cbbUserRole.Padding = new System.Windows.Forms.Padding(3);
+            this.cbbUserRole.Padding = new System.Windows.Forms.Padding(2);
             this.cbbUserRole.Size = new System.Drawing.Size(240, 40);
             this.cbbUserRole.TabIndex = 2;
             this.cbbUserRole.Texts = "Chọn loại tài khoản";
@@ -144,7 +144,7 @@
             this.txtSearch.BorderColor = System.Drawing.Color.SteelBlue;
             this.txtSearch.BorderFocusColor = System.Drawing.Color.SlateBlue;
             this.txtSearch.BorderRadius = 6;
-            this.txtSearch.BorderSize = 3;
+            this.txtSearch.BorderSize = 2;
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtSearch.ForeColor = System.Drawing.Color.DimGray;
             this.txtSearch.Location = new System.Drawing.Point(36, 22);

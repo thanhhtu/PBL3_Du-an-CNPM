@@ -20,7 +20,7 @@ namespace PBL3.Views.CustomComponents
         private Color listBackColor = Color.FromArgb(230, 228, 245);
         private Color listTextColor = Color.Black;
         private Color borderColor = Color.SteelBlue;
-        private int borderSize = 3;
+        private int borderSize = 2;
 
         //Items
         public ComboBox cmbList;
