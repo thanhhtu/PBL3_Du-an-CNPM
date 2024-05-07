@@ -169,6 +169,12 @@
     <Compile Include="Views\CustomComponent\CustomToggleButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Views\LandlordForm\InforLanlordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LandlordForm\InforLanlordForm.Designer.cs">
+      <DependentUpon>InforLanlordForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\LandlordForm\InforManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,20 +233,38 @@
     <EmbeddedResource Include="Views\CommonForm\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\CommonForm\InforForm.resx">
+      <DependentUpon>InforForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CommonForm\PromptDialogForm.resx">
       <DependentUpon>PromptDialogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CommonForm\SigninForm.resx">
+      <DependentUpon>SignInForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CommonForm\SignUpForm.resx">
       <DependentUpon>SignUpForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\CommonForm\UpdateUserForm.resx">
+      <DependentUpon>UpdateUserForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CommonForm\UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomComponent\CustomComment.resx">
+      <DependentUpon>CustomComment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CustomComponent\CustomInforComponent.resx">
       <DependentUpon>CustomInforComponent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomComponent\CustomLinkLabel.resx">
+      <DependentUpon>CustomLinkLabel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CustomComponent\CustomTextbox.resx">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LandlordForm\InforLanlordForm.resx">
+      <DependentUpon>InforLanlordForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\LandlordForm\InforManagementForm.resx">
       <DependentUpon>InforManagementForm.cs</DependentUpon>
@@ -250,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\LandlordForm\PostInforForm.resx">
       <DependentUpon>PostInforForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LandlordForm\UpdateInforForm.resx">
+      <DependentUpon>UpdateInforForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\RenterForm\RenterHomeForm.resx">
       <DependentUpon>RenterHomeForm.cs</DependentUpon>
@@ -283,6 +310,27 @@
     <None Include="Resources\bgr.png" />
     <None Include="Resources\background.png" />
     <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anhtro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notshow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hidePass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showPass.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

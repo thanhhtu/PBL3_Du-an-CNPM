@@ -16,5 +16,35 @@ namespace PBL3.Views.CommonForm
         {
             InitializeComponent();
         }
+
+        private void customPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SignUpForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

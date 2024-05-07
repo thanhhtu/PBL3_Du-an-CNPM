@@ -18,7 +18,7 @@ namespace PBL3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PostInforForm());
+            Application.Run(new InforForm());
         }
     }
 }

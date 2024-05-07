@@ -66,8 +66,9 @@
             this.panel1.Controls.Add(this.cbbDistrict);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1764, 130);
+            this.panel1.Size = new System.Drawing.Size(1203, 106);
             this.panel1.TabIndex = 20;
             // 
             // cbbSort
@@ -81,11 +82,12 @@
             this.cbbSort.IconColor = System.Drawing.Color.SteelBlue;
             this.cbbSort.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbbSort.ListTextColor = System.Drawing.Color.Black;
-            this.cbbSort.Location = new System.Drawing.Point(62, 15);
-            this.cbbSort.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbbSort.Location = new System.Drawing.Point(46, 12);
+            this.cbbSort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbSort.MinimumSize = new System.Drawing.Size(150, 24);
             this.cbbSort.Name = "cbbSort";
             this.cbbSort.Padding = new System.Windows.Forms.Padding(2);
-            this.cbbSort.Size = new System.Drawing.Size(255, 40);
+            this.cbbSort.Size = new System.Drawing.Size(191, 32);
             this.cbbSort.TabIndex = 1;
             this.cbbSort.Texts = "Sắp xếp theo";
             // 
@@ -100,11 +102,12 @@
             this.cbbPageNumber.IconColor = System.Drawing.Color.SteelBlue;
             this.cbbPageNumber.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbbPageNumber.ListTextColor = System.Drawing.Color.Black;
-            this.cbbPageNumber.Location = new System.Drawing.Point(362, 15);
-            this.cbbPageNumber.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbbPageNumber.Location = new System.Drawing.Point(272, 12);
+            this.cbbPageNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbPageNumber.MinimumSize = new System.Drawing.Size(150, 24);
             this.cbbPageNumber.Name = "cbbPageNumber";
             this.cbbPageNumber.Padding = new System.Windows.Forms.Padding(2);
-            this.cbbPageNumber.Size = new System.Drawing.Size(255, 40);
+            this.cbbPageNumber.Size = new System.Drawing.Size(191, 32);
             this.cbbPageNumber.TabIndex = 2;
             this.cbbPageNumber.Texts = "Trang";
             // 
@@ -120,9 +123,10 @@
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.ForeColor = System.Drawing.Color.Black;
-            this.btnReset.Location = new System.Drawing.Point(1522, 66);
+            this.btnReset.Location = new System.Drawing.Point(1081, 54);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(180, 50);
+            this.btnReset.Size = new System.Drawing.Size(135, 41);
             this.btnReset.TabIndex = 8;
             this.btnReset.Text = "Đặt lại";
             this.btnReset.TextColor = System.Drawing.Color.Black;
@@ -140,9 +144,10 @@
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch.Location = new System.Drawing.Point(1309, 66);
+            this.btnSearch.Location = new System.Drawing.Point(921, 54);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(180, 50);
+            this.btnSearch.Size = new System.Drawing.Size(135, 41);
             this.btnSearch.TabIndex = 7;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.TextColor = System.Drawing.Color.Black;
@@ -159,11 +164,12 @@
             this.cbbArea.IconColor = System.Drawing.Color.SteelBlue;
             this.cbbArea.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbbArea.ListTextColor = System.Drawing.Color.Black;
-            this.cbbArea.Location = new System.Drawing.Point(962, 74);
-            this.cbbArea.MinimumSize = new System.Drawing.Size(200, 40);
+            this.cbbArea.Location = new System.Drawing.Point(722, 60);
+            this.cbbArea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbArea.MinimumSize = new System.Drawing.Size(150, 32);
             this.cbbArea.Name = "cbbArea";
             this.cbbArea.Padding = new System.Windows.Forms.Padding(2);
-            this.cbbArea.Size = new System.Drawing.Size(255, 40);
+            this.cbbArea.Size = new System.Drawing.Size(191, 32);
             this.cbbArea.TabIndex = 6;
             this.cbbArea.Texts = "Chọn diện tích";
             // 
@@ -178,11 +184,12 @@
             this.cbbPrice.IconColor = System.Drawing.Color.SteelBlue;
             this.cbbPrice.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbbPrice.ListTextColor = System.Drawing.Color.Black;
-            this.cbbPrice.Location = new System.Drawing.Point(662, 74);
-            this.cbbPrice.MinimumSize = new System.Drawing.Size(200, 40);
+            this.cbbPrice.Location = new System.Drawing.Point(496, 60);
+            this.cbbPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbPrice.MinimumSize = new System.Drawing.Size(150, 32);
             this.cbbPrice.Name = "cbbPrice";
             this.cbbPrice.Padding = new System.Windows.Forms.Padding(2);
-            this.cbbPrice.Size = new System.Drawing.Size(255, 40);
+            this.cbbPrice.Size = new System.Drawing.Size(191, 32);
             this.cbbPrice.TabIndex = 5;
             this.cbbPrice.Texts = "Chọn giá";
             // 
@@ -197,11 +204,12 @@
             this.cbbWard.IconColor = System.Drawing.Color.SteelBlue;
             this.cbbWard.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbbWard.ListTextColor = System.Drawing.Color.Black;
-            this.cbbWard.Location = new System.Drawing.Point(362, 74);
-            this.cbbWard.MinimumSize = new System.Drawing.Size(200, 40);
+            this.cbbWard.Location = new System.Drawing.Point(272, 60);
+            this.cbbWard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbWard.MinimumSize = new System.Drawing.Size(150, 32);
             this.cbbWard.Name = "cbbWard";
             this.cbbWard.Padding = new System.Windows.Forms.Padding(2);
-            this.cbbWard.Size = new System.Drawing.Size(255, 40);
+            this.cbbWard.Size = new System.Drawing.Size(191, 32);
             this.cbbWard.TabIndex = 4;
             this.cbbWard.Texts = "Chọn phường";
             // 
@@ -216,11 +224,12 @@
             this.cbbDistrict.IconColor = System.Drawing.Color.SteelBlue;
             this.cbbDistrict.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbbDistrict.ListTextColor = System.Drawing.Color.Black;
-            this.cbbDistrict.Location = new System.Drawing.Point(62, 74);
-            this.cbbDistrict.MinimumSize = new System.Drawing.Size(200, 40);
+            this.cbbDistrict.Location = new System.Drawing.Point(46, 60);
+            this.cbbDistrict.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbDistrict.MinimumSize = new System.Drawing.Size(150, 32);
             this.cbbDistrict.Name = "cbbDistrict";
             this.cbbDistrict.Padding = new System.Windows.Forms.Padding(2);
-            this.cbbDistrict.Size = new System.Drawing.Size(255, 40);
+            this.cbbDistrict.Size = new System.Drawing.Size(191, 32);
             this.cbbDistrict.TabIndex = 3;
             this.cbbDistrict.Texts = "Chọn quận";
             // 
@@ -234,9 +243,10 @@
             this.panel2.Controls.Add(this.customInforComponent1);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 130);
+            this.panel2.Location = new System.Drawing.Point(0, 106);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1764, 467);
+            this.panel2.Size = new System.Drawing.Size(1203, 379);
             this.panel2.TabIndex = 13;
             // 
             // customInforComponent5
@@ -247,13 +257,13 @@
             this.customInforComponent5.DescLabel = "Mô tả:";
             this.customInforComponent5.Dock = System.Windows.Forms.DockStyle.Top;
             this.customInforComponent5.HomeLink = "Tên nhà";
-            this.customInforComponent5.Location = new System.Drawing.Point(0, 1256);
+            this.customInforComponent5.Location = new System.Drawing.Point(0, 1020);
             this.customInforComponent5.Margin = new System.Windows.Forms.Padding(2);
             this.customInforComponent5.MoneyLabel = "Số tiền: ";
             this.customInforComponent5.Name = "customInforComponent5";
             this.customInforComponent5.PictureBox = ((System.Drawing.Image)(resources.GetObject("customInforComponent5.PictureBox")));
             this.customInforComponent5.PostID = "postID";
-            this.customInforComponent5.Size = new System.Drawing.Size(1743, 314);
+            this.customInforComponent5.Size = new System.Drawing.Size(1186, 256);
             this.customInforComponent5.TabIndex = 24;
             // 
             // customInforComponent4
@@ -264,13 +274,13 @@
             this.customInforComponent4.DescLabel = "Mô tả:";
             this.customInforComponent4.Dock = System.Windows.Forms.DockStyle.Top;
             this.customInforComponent4.HomeLink = "Tên nhà";
-            this.customInforComponent4.Location = new System.Drawing.Point(0, 942);
+            this.customInforComponent4.Location = new System.Drawing.Point(0, 764);
             this.customInforComponent4.Margin = new System.Windows.Forms.Padding(2);
             this.customInforComponent4.MoneyLabel = "Số tiền: ";
             this.customInforComponent4.Name = "customInforComponent4";
             this.customInforComponent4.PictureBox = ((System.Drawing.Image)(resources.GetObject("customInforComponent4.PictureBox")));
             this.customInforComponent4.PostID = "postID";
-            this.customInforComponent4.Size = new System.Drawing.Size(1743, 314);
+            this.customInforComponent4.Size = new System.Drawing.Size(1186, 256);
             this.customInforComponent4.TabIndex = 16;
             // 
             // customInforComponent3
@@ -281,13 +291,13 @@
             this.customInforComponent3.DescLabel = "Mô tả:";
             this.customInforComponent3.Dock = System.Windows.Forms.DockStyle.Top;
             this.customInforComponent3.HomeLink = "Tên nhà";
-            this.customInforComponent3.Location = new System.Drawing.Point(0, 628);
+            this.customInforComponent3.Location = new System.Drawing.Point(0, 508);
             this.customInforComponent3.Margin = new System.Windows.Forms.Padding(2);
             this.customInforComponent3.MoneyLabel = "Số tiền: ";
             this.customInforComponent3.Name = "customInforComponent3";
             this.customInforComponent3.PictureBox = ((System.Drawing.Image)(resources.GetObject("customInforComponent3.PictureBox")));
             this.customInforComponent3.PostID = "postID";
-            this.customInforComponent3.Size = new System.Drawing.Size(1743, 314);
+            this.customInforComponent3.Size = new System.Drawing.Size(1186, 256);
             this.customInforComponent3.TabIndex = 16;
             // 
             // customInforComponent2
@@ -298,13 +308,13 @@
             this.customInforComponent2.DescLabel = "Mô tả:";
             this.customInforComponent2.Dock = System.Windows.Forms.DockStyle.Top;
             this.customInforComponent2.HomeLink = "Tên nhà";
-            this.customInforComponent2.Location = new System.Drawing.Point(0, 314);
+            this.customInforComponent2.Location = new System.Drawing.Point(0, 252);
             this.customInforComponent2.Margin = new System.Windows.Forms.Padding(2);
             this.customInforComponent2.MoneyLabel = "Số tiền: ";
             this.customInforComponent2.Name = "customInforComponent2";
             this.customInforComponent2.PictureBox = ((System.Drawing.Image)(resources.GetObject("customInforComponent2.PictureBox")));
             this.customInforComponent2.PostID = "postID";
-            this.customInforComponent2.Size = new System.Drawing.Size(1743, 314);
+            this.customInforComponent2.Size = new System.Drawing.Size(1186, 256);
             this.customInforComponent2.TabIndex = 23;
             // 
             // customInforComponent1
@@ -321,7 +331,7 @@
             this.customInforComponent1.Name = "customInforComponent1";
             this.customInforComponent1.PictureBox = ((System.Drawing.Image)(resources.GetObject("customInforComponent1.PictureBox")));
             this.customInforComponent1.PostID = "postID";
-            this.customInforComponent1.Size = new System.Drawing.Size(1743, 314);
+            this.customInforComponent1.Size = new System.Drawing.Size(1186, 252);
             this.customInforComponent1.TabIndex = 22;
             // 
             // panel3
@@ -330,9 +340,10 @@
             this.panel3.Controls.Add(this.btnNextPage);
             this.panel3.Controls.Add(this.btnPrevPage);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 1570);
+            this.panel3.Location = new System.Drawing.Point(0, 1276);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1743, 80);
+            this.panel3.Size = new System.Drawing.Size(1186, 65);
             this.panel3.TabIndex = 21;
             // 
             // btnNextPage
@@ -347,9 +358,10 @@
             this.btnNextPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNextPage.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNextPage.ForeColor = System.Drawing.Color.White;
-            this.btnNextPage.Location = new System.Drawing.Point(1201, 14);
+            this.btnNextPage.Location = new System.Drawing.Point(841, 11);
+            this.btnNextPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNextPage.Name = "btnNextPage";
-            this.btnNextPage.Size = new System.Drawing.Size(200, 50);
+            this.btnNextPage.Size = new System.Drawing.Size(150, 41);
             this.btnNextPage.TabIndex = 15;
             this.btnNextPage.Text = "Trang sau";
             this.btnNextPage.TextColor = System.Drawing.Color.White;
@@ -367,9 +379,10 @@
             this.btnPrevPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrevPage.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrevPage.ForeColor = System.Drawing.Color.White;
-            this.btnPrevPage.Location = new System.Drawing.Point(299, 14);
+            this.btnPrevPage.Location = new System.Drawing.Point(164, 11);
+            this.btnPrevPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPrevPage.Name = "btnPrevPage";
-            this.btnPrevPage.Size = new System.Drawing.Size(200, 50);
+            this.btnPrevPage.Size = new System.Drawing.Size(150, 41);
             this.btnPrevPage.TabIndex = 14;
             this.btnPrevPage.Text = "Trang trước";
             this.btnPrevPage.TextColor = System.Drawing.Color.White;
@@ -377,12 +390,13 @@
             // 
             // DashboardForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1764, 597);
+            this.ClientSize = new System.Drawing.Size(1203, 485);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.MinimumSize = new System.Drawing.Size(1034, 626);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(780, 516);
             this.Name = "DashboardForm";
             this.Text = "DashboardForm";
             this.panel1.ResumeLayout(false);

@@ -16,5 +16,10 @@ namespace PBL3.Views.CommonForm
         {
             InitializeComponent();
         }
+
+        private void customPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

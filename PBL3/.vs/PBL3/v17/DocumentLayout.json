@@ -1,22 +1,229 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\ki4\\pbl3\\pbl3_2\\PBL3\\",
+  "WorkspaceRootPath": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|e:\\ki4\\pbl3\\pbl3_2\\pbl3\\pbl3\\views\\commonform\\homeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\homeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\commonform\\updateuserform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\updateuserform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_2\\PBL3\\pbl3\\views\\customcomponent\\customradiobutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\customcomponent\\customradiobutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_2\\PBL3\\pbl3\\views\\commonform\\signupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\commonform\\signupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\signupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_2\\PBL3\\pbl3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\commonform\\signinform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\signinform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\commonform\\promptdialogform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\promptdialogform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|e:\\ki4\\pbl3\\pbl3_1\\pbl3\\pbl3\\views\\commonform\\inforform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\inforform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\commonform\\homeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\homeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\commonform\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\commonform\\changepwdform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\changepwdform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\adminform\\usermanagementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\adminform\\usermanagementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\adminform\\informanagementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\adminform\\informanagementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\adminform\\adminhomeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\adminform\\adminhomeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\commonform\\inforform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\inforform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\customcomponent\\customcomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\customcomponent\\customcomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\customcomponent\\customcomment.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\customcomponent\\customcomment.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\customcomponent\\customcomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\customcomponent\\customcomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\customcomponent\\customlinklabel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\customcomponent\\customlinklabel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\customcomponent\\customlinklabel.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\customcomponent\\customlinklabel.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\customcomponent\\customlinklabel.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\customcomponent\\customlinklabel.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\customcomponent\\custominforcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\customcomponent\\custominforcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\customcomponent\\customdatetimepicker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\customcomponent\\customdatetimepicker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\customcomponent\\customlinklabel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\customcomponent\\customlinklabel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\landlordform\\inforlanlordform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\landlordform\\inforlanlordform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\commonform\\signupform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\signupform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\customcomponent\\custompanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\customcomponent\\custompanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\commonform\\updateuserform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\updateuserform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\commonform\\changepwdform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\changepwdform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\customcomponent\\customcombobox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\customcomponent\\customcombobox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\customcomponent\\custombutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\customcomponent\\custombutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\commonform\\signinform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\signinform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\commonform\\signinform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\signinform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\customcomponent\\customcombobox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\customcomponent\\customcombobox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\landlordform\\informanagementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\landlordform\\informanagementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\landlordform\\landlordhomeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\landlordform\\landlordhomeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\landlordform\\postinforform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\landlordform\\postinforform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\landlordform\\updateinforform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\landlordform\\updateinforform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\commonform\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\renterform\\renterhomeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\renterform\\renterhomeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\landlordform\\inforlanlordform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\landlordform\\inforlanlordform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\landlordform\\postinforform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\landlordform\\postinforform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\commonform\\dashboardform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\dashboardform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\commonform\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\commonform\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\commonform\\signupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\signupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\customcomponent\\customtextbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\customcomponent\\customtextbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\customcomponent\\customtogglebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\customcomponent\\customtogglebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\customcomponent\\custombutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\customcomponent\\custombutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\commonform\\signupform.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\signupform.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\commonform\\changepwdform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\changepwdform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|PBL3||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\resources\\anhtro.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\resources\\anhtro.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\commonform\\changepwdform.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\commonform\\changepwdform.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\landlordform\\updateinforform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\landlordform\\updateinforform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\landlordform\\postinforform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\landlordform\\postinforform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|E:\\ki4\\pbl3\\pbl3_1\\PBL3\\pbl3\\views\\customcomponent\\customradiobutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA34A9F-615B-435F-83F6-8AF3BC7F0A40}|PBL3\\PBL3.csproj|solutionrelative:pbl3\\views\\customcomponent\\customradiobutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,15 +233,75 @@
       "DocumentGroups": [
         {
           "DockedWidth": 220,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PromptDialogForm.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\PromptDialogForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\PromptDialogForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\PromptDialogForm.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\CommonForm\\PromptDialogForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T07:01:20.721Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SignInForm.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\SigninForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\SigninForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\SigninForm.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\CommonForm\\SigninForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T07:01:21.577Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SignUpForm.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\SignupForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\SignupForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\SignupForm.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\CommonForm\\SignupForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T11:26:32.341Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UpdateUserForm.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\UpdateUserForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\UpdateUserForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\UpdateUserForm.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\CommonForm\\UpdateUserForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T07:01:23.083Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InforForm.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\InforForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\InforForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\InforForm.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\CommonForm\\InforForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T07:41:46.231Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "HomeForm.cs [Design]",
-              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_2\\PBL3\\PBL3\\Views\\CommonForm\\HomeForm.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\HomeForm.cs",
               "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\HomeForm.cs",
-              "ToolTip": "E:\\ki4\\pbl3\\pbl3_2\\PBL3\\PBL3\\Views\\CommonForm\\HomeForm.cs [Design]",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\HomeForm.cs [Design]",
               "RelativeToolTip": "PBL3\\Views\\CommonForm\\HomeForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-04T11:26:32.303Z",
@@ -42,37 +309,598 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
+              "Title": "DashboardForm.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\DashboardForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\DashboardForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\DashboardForm.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\CommonForm\\DashboardForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T07:01:18.842Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ChangePwdForm.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\ChangePwdForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\ChangePwdForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\ChangePwdForm.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\CommonForm\\ChangePwdForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T07:00:08.335Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserManagementForm.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\AdminForm\\UserManagementForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\AdminForm\\UserManagementForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\AdminForm\\UserManagementForm.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\AdminForm\\UserManagementForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T08:46:24.154Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "InforManagementForm.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\AdminForm\\InforManagementForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\AdminForm\\InforManagementForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\AdminForm\\InforManagementForm.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\AdminForm\\InforManagementForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T08:46:22.086Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AdminHomeForm.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\AdminForm\\AdminHomeForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\AdminForm\\AdminHomeForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\AdminForm\\AdminHomeForm.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\AdminForm\\AdminHomeForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T08:46:21.347Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Program.cs",
+              "RelativeDocumentMoniker": "PBL3\\Program.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Program.cs",
+              "RelativeToolTip": "PBL3\\Program.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAABQAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T11:26:32.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "InforForm.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\InforForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\InforForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\InforForm.cs",
+              "RelativeToolTip": "PBL3\\Views\\CommonForm\\InforForm.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAuwB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T11:24:08.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CustomComment.Designer.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomComment.Designer.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CustomComponent\\CustomComment.Designer.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomComment.Designer.cs",
+              "RelativeToolTip": "PBL3\\Views\\CustomComponent\\CustomComment.Designer.cs",
+              "ViewState": "AQIAAGcAAAAAAAAAAAAuwHYAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T17:50:39.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CustomComment.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomComment.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CustomComponent\\CustomComment.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomComment.cs",
+              "RelativeToolTip": "PBL3\\Views\\CustomComponent\\CustomComment.cs",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAcwGIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T11:46:10.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CustomComment.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomComment.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CustomComponent\\CustomComment.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomComment.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\CustomComponent\\CustomComment.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T11:17:16.17Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CustomLinkLabel.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomLinkLabel.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CustomComponent\\CustomLinkLabel.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomLinkLabel.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\CustomComponent\\CustomLinkLabel.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T19:04:08.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CustomLinkLabel.resx",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomLinkLabel.resx",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CustomComponent\\CustomLinkLabel.resx",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomLinkLabel.resx",
+              "RelativeToolTip": "PBL3\\Views\\CustomComponent\\CustomLinkLabel.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-05-07T19:12:21.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CustomLinkLabel.Designer.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomLinkLabel.Designer.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CustomComponent\\CustomLinkLabel.Designer.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomLinkLabel.Designer.cs",
+              "RelativeToolTip": "PBL3\\Views\\CustomComponent\\CustomLinkLabel.Designer.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAqwD8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T19:05:52.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CustomInforComponent.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomInforComponent.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CustomComponent\\CustomInforComponent.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomInforComponent.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\CustomComponent\\CustomInforComponent.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T11:17:19.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CustomDateTimePicker.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomDateTimePicker.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CustomComponent\\CustomDateTimePicker.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomDateTimePicker.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\CustomComponent\\CustomDateTimePicker.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T11:17:18.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CustomLinkLabel.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomLinkLabel.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CustomComponent\\CustomLinkLabel.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomLinkLabel.cs",
+              "RelativeToolTip": "PBL3\\Views\\CustomComponent\\CustomLinkLabel.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwB4AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T19:04:42.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "InforLanlordForm.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\LandlordForm\\InforLanlordForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\LandlordForm\\InforLanlordForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\LandlordForm\\InforLanlordForm.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\LandlordForm\\InforLanlordForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T10:20:42.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "SignUpForm.Designer.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\SignupForm.Designer.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\SignupForm.Designer.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\SignupForm.Designer.cs",
+              "RelativeToolTip": "PBL3\\Views\\CommonForm\\SignupForm.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T08:23:26.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CustomPanel.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomPanel.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CustomComponent\\CustomPanel.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomPanel.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\CustomComponent\\CustomPanel.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T18:42:47.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "UpdateUserForm.Designer.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\UpdateUserForm.Designer.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\UpdateUserForm.Designer.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\UpdateUserForm.Designer.cs",
+              "RelativeToolTip": "PBL3\\Views\\CommonForm\\UpdateUserForm.Designer.cs",
+              "ViewState": "AQIAAAkBAAAAAAAAAAAuwBcBAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T10:08:16.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ChangePwdForm.Designer.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\ChangePwdForm.Designer.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\ChangePwdForm.Designer.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\ChangePwdForm.Designer.cs",
+              "RelativeToolTip": "PBL3\\Views\\CommonForm\\ChangePwdForm.Designer.cs",
+              "ViewState": "AQIAADIBAAAAAAAAAAAuwEIBAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T07:12:28.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "SignInForm.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\SigninForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\SigninForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\SigninForm.cs",
+              "RelativeToolTip": "PBL3\\Views\\CommonForm\\SigninForm.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAuwBUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T11:16:58.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CustomButton.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomButton.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CustomComponent\\CustomButton.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomButton.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\CustomComponent\\CustomButton.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T09:02:07.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CustomComboBox.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomComboBox.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CustomComponent\\CustomComboBox.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomComboBox.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\CustomComponent\\CustomComboBox.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T11:16:07.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "SignInForm.Designer.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\SigninForm.Designer.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\SigninForm.Designer.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\SigninForm.Designer.cs",
+              "RelativeToolTip": "PBL3\\Views\\CommonForm\\SigninForm.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T11:16:27.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "CustomComboBox.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomComboBox.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CustomComponent\\CustomComboBox.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomComboBox.cs",
+              "RelativeToolTip": "PBL3\\Views\\CustomComponent\\CustomComboBox.cs",
+              "ViewState": "AQIAAKYAAAAAAAAAAAAUwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T11:16:19.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "InforManagementForm.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\LandlordForm\\InforManagementForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\LandlordForm\\InforManagementForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\LandlordForm\\InforManagementForm.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\LandlordForm\\InforManagementForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T07:01:30.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "LandlordHomeForm.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\LandlordForm\\LandlordHomeForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\LandlordForm\\LandlordHomeForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\LandlordForm\\LandlordHomeForm.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\LandlordForm\\LandlordHomeForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T07:01:31.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "PostInforForm.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\LandlordForm\\PostInforForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\LandlordForm\\PostInforForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\LandlordForm\\PostInforForm.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\LandlordForm\\PostInforForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T07:01:32.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "UpdateInforForm.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\LandlordForm\\UpdateInforForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\LandlordForm\\UpdateInforForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\LandlordForm\\UpdateInforForm.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\LandlordForm\\UpdateInforForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T07:01:37.261Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "UserForm.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\UserForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\UserForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\UserForm.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\CommonForm\\UserForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T07:01:24.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "RenterHomeForm.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\RenterForm\\RenterHomeForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\RenterForm\\RenterHomeForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\RenterForm\\RenterHomeForm.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\RenterForm\\RenterHomeForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T10:51:42.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "InforLanlordForm.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\LandlordForm\\InforLanlordForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\LandlordForm\\InforLanlordForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\LandlordForm\\InforLanlordForm.cs",
+              "RelativeToolTip": "PBL3\\Views\\LandlordForm\\InforLanlordForm.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAcwBUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T10:35:28.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "PostInforForm.Designer.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\LandlordForm\\PostInforForm.Designer.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\LandlordForm\\PostInforForm.Designer.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\LandlordForm\\PostInforForm.Designer.cs",
+              "RelativeToolTip": "PBL3\\Views\\LandlordForm\\PostInforForm.Designer.cs",
+              "ViewState": "AQIAAJMAAAAAAAAAAAAuwJsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T07:02:27.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "DashboardForm.Designer.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\DashboardForm.Designer.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\DashboardForm.Designer.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\DashboardForm.Designer.cs",
+              "RelativeToolTip": "PBL3\\Views\\CommonForm\\DashboardForm.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T10:30:26.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "DashboardForm.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\DashboardForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\DashboardForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\DashboardForm.cs",
+              "RelativeToolTip": "PBL3\\Views\\CommonForm\\DashboardForm.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAuwBIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T10:21:10.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "UserForm.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\UserForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\UserForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\UserForm.cs",
+              "RelativeToolTip": "PBL3\\Views\\CommonForm\\UserForm.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAuwBUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T10:19:58.09Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "SignUpForm.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\SignupForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\SignupForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\SignupForm.cs",
+              "RelativeToolTip": "PBL3\\Views\\CommonForm\\SignupForm.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAuwBUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T08:20:56.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "CustomTextBox.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomTextBox.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CustomComponent\\CustomTextBox.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomTextBox.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\CustomComponent\\CustomTextBox.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T09:26:26.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "CustomToggleButton.cs [Design]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomToggleButton.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CustomComponent\\CustomToggleButton.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomToggleButton.cs [Design]",
+              "RelativeToolTip": "PBL3\\Views\\CustomComponent\\CustomToggleButton.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T09:26:25.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "CustomButton.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomButton.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CustomComponent\\CustomButton.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomButton.cs",
+              "RelativeToolTip": "PBL3\\Views\\CustomComponent\\CustomButton.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T09:02:09.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "SignUpForm.resx",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\SignupForm.resx",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\SignupForm.resx",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\SignupForm.resx",
+              "RelativeToolTip": "PBL3\\Views\\CommonForm\\SignupForm.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-05-07T08:24:01.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ChangePwdForm.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\ChangePwdForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\ChangePwdForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\ChangePwdForm.cs",
+              "RelativeToolTip": "PBL3\\Views\\CommonForm\\ChangePwdForm.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAuwBMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T07:36:21.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "PBL3\\Properties\\Resources.resx",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Properties\\Resources.resx",
+              "RelativeToolTip": "PBL3\\Properties\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-05-07T07:32:57.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "PBL3",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\PBL3.csproj",
+              "RelativeDocumentMoniker": "PBL3\\PBL3.csproj",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\PBL3.csproj",
+              "RelativeToolTip": "PBL3\\PBL3.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-07T07:32:55.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "anhtro.jpg - Bitmap [960x960, 24 bit, JPG]",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Resources\\anhtro.jpg",
+              "RelativeDocumentMoniker": "PBL3\\Resources\\anhtro.jpg",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Resources\\anhtro.jpg - Bitmap [960x960, 24 bit, JPG]",
+              "RelativeToolTip": "PBL3\\Resources\\anhtro.jpg - Bitmap [960x960, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2024-05-07T07:18:56.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "ChangePwdForm.resx",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\ChangePwdForm.resx",
+              "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\ChangePwdForm.resx",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CommonForm\\ChangePwdForm.resx",
+              "RelativeToolTip": "PBL3\\Views\\CommonForm\\ChangePwdForm.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-05-07T07:17:56.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "UpdateInforForm.Designer.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\LandlordForm\\UpdateInforForm.Designer.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\LandlordForm\\UpdateInforForm.Designer.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\LandlordForm\\UpdateInforForm.Designer.cs",
+              "RelativeToolTip": "PBL3\\Views\\LandlordForm\\UpdateInforForm.Designer.cs",
+              "ViewState": "AQIAABsCAAAAAAAAAAAuwDECAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T07:03:41.291Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "PostInforForm.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\LandlordForm\\PostInforForm.cs",
+              "RelativeDocumentMoniker": "PBL3\\Views\\LandlordForm\\PostInforForm.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\LandlordForm\\PostInforForm.cs",
+              "RelativeToolTip": "PBL3\\Views\\LandlordForm\\PostInforForm.cs",
+              "ViewState": "AQIAAKgAAAAAAAAAAAAcwA0AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T07:01:59.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
               "Title": "CustomRadioButton.cs",
-              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_2\\PBL3\\PBL3\\Views\\CustomComponent\\CustomRadioButton.cs",
+              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomRadioButton.cs",
               "RelativeDocumentMoniker": "PBL3\\Views\\CustomComponent\\CustomRadioButton.cs",
-              "ToolTip": "E:\\ki4\\pbl3\\pbl3_2\\PBL3\\PBL3\\Views\\CustomComponent\\CustomRadioButton.cs",
+              "ToolTip": "E:\\ki4\\pbl3\\pbl3_1\\PBL3\\PBL3\\Views\\CustomComponent\\CustomRadioButton.cs",
               "RelativeToolTip": "PBL3\\Views\\CustomComponent\\CustomRadioButton.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000587|",
               "WhenOpened": "2024-05-04T11:26:32.34Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SignupForm.cs [Design]",
-              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_2\\PBL3\\PBL3\\Views\\CommonForm\\SignupForm.cs",
-              "RelativeDocumentMoniker": "PBL3\\Views\\CommonForm\\SignupForm.cs",
-              "ToolTip": "D:\\IT\\GIT\\PBL3_Du-an-CNPM\\PBL3\\PBL3\\Views\\CommonForm\\SignupForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
-              "WhenOpened": "2024-05-04T11:26:32.341Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\ki4\\pbl3\\pbl3_2\\PBL3\\PBL3\\Program.cs",
-              "RelativeDocumentMoniker": "PBL3\\Program.cs",
-              "ToolTip": "E:\\ki4\\pbl3\\pbl3_2\\PBL3\\PBL3\\Program.cs",
-              "RelativeToolTip": "PBL3\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T11:26:32.342Z"
             }
           ]
         }

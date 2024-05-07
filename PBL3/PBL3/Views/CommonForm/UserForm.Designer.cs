@@ -51,9 +51,10 @@
             this.customPanel1.GradientAngle = 90F;
             this.customPanel1.GradientBottonColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.customPanel1.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.customPanel1.Location = new System.Drawing.Point(78, 50);
+            this.customPanel1.Location = new System.Drawing.Point(58, 41);
+            this.customPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.customPanel1.Name = "customPanel1";
-            this.customPanel1.Size = new System.Drawing.Size(748, 381);
+            this.customPanel1.Size = new System.Drawing.Size(561, 310);
             this.customPanel1.TabIndex = 1;
             // 
             // labelEmail
@@ -62,9 +63,10 @@
             this.labelEmail.BackColor = System.Drawing.Color.Transparent;
             this.labelEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.labelEmail.ForeColor = System.Drawing.Color.Black;
-            this.labelEmail.Location = new System.Drawing.Point(119, 172);
+            this.labelEmail.Location = new System.Drawing.Point(89, 140);
+            this.labelEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(65, 28);
+            this.labelEmail.Size = new System.Drawing.Size(52, 21);
             this.labelEmail.TabIndex = 9;
             this.labelEmail.Text = "Email:";
             // 
@@ -74,9 +76,10 @@
             this.labelAddress.BackColor = System.Drawing.Color.Transparent;
             this.labelAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.labelAddress.ForeColor = System.Drawing.Color.Black;
-            this.labelAddress.Location = new System.Drawing.Point(119, 277);
+            this.labelAddress.Location = new System.Drawing.Point(89, 225);
+            this.labelAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAddress.Name = "labelAddress";
-            this.labelAddress.Size = new System.Drawing.Size(78, 28);
+            this.labelAddress.Size = new System.Drawing.Size(62, 21);
             this.labelAddress.TabIndex = 8;
             this.labelAddress.Text = "Địa chỉ:";
             // 
@@ -86,9 +89,10 @@
             this.labelPhone.BackColor = System.Drawing.Color.Transparent;
             this.labelPhone.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.labelPhone.ForeColor = System.Drawing.Color.Black;
-            this.labelPhone.Location = new System.Drawing.Point(119, 223);
+            this.labelPhone.Location = new System.Drawing.Point(89, 181);
+            this.labelPhone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPhone.Name = "labelPhone";
-            this.labelPhone.Size = new System.Drawing.Size(138, 28);
+            this.labelPhone.Size = new System.Drawing.Size(110, 21);
             this.labelPhone.TabIndex = 7;
             this.labelPhone.Text = "Số điện thoại:";
             // 
@@ -102,10 +106,11 @@
             this.label1.Location = new System.Drawing.Point(-2, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(748, 83);
+            this.label1.Size = new System.Drawing.Size(561, 67);
             this.label1.TabIndex = 6;
             this.label1.Text = "THÔNG TIN CÁ NHÂN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // labelFullname
             // 
@@ -113,22 +118,24 @@
             this.labelFullname.BackColor = System.Drawing.Color.Transparent;
             this.labelFullname.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.labelFullname.ForeColor = System.Drawing.Color.Black;
-            this.labelFullname.Location = new System.Drawing.Point(119, 121);
+            this.labelFullname.Location = new System.Drawing.Point(89, 98);
+            this.labelFullname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelFullname.Name = "labelFullname";
-            this.labelFullname.Size = new System.Drawing.Size(106, 28);
+            this.labelFullname.Size = new System.Drawing.Size(84, 21);
             this.labelFullname.TabIndex = 2;
             this.labelFullname.Text = "Họ và tên:";
             // 
             // UserForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::PBL3.Properties.Resources.bgr;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(901, 492);
+            this.ClientSize = new System.Drawing.Size(676, 400);
             this.Controls.Add(this.customPanel1);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UserForm";
             this.Text = "UserForm";
             this.customPanel1.ResumeLayout(false);
