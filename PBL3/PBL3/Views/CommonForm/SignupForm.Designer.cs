@@ -285,7 +285,7 @@
             // 
             this.btnSignIn.BackColor = System.Drawing.Color.SteelBlue;
             this.btnSignIn.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.btnSignIn.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.btnSignIn.BorderColor = System.Drawing.Color.SteelBlue;
             this.btnSignIn.BorderRadius = 20;
             this.btnSignIn.BorderSize = 0;
             this.btnSignIn.FlatAppearance.BorderSize = 0;
