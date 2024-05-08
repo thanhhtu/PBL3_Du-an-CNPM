@@ -28,18 +28,19 @@ namespace PBL3.DTO
         [StringLength(20)]
         public string Phone { get; set; }
 
-        [Required]
-        public int AddressID { get; set; }
 
-        [Required]
         [StringLength(20)]
         public string IDcard { get; set; }
 
-        [Required]
-        public int AccountID { get; set; }
+       
 
+        [Required]
+        public int AddressID { get; set; }
         [ForeignKey("AddressID")]
         public virtual Address Address { get; set; }
+
+        [Required]
+        public int AccountID { get; set; }
 
         [ForeignKey("AccountID")]
         public virtual Account Account { get; set; }

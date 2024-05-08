@@ -15,12 +15,13 @@ namespace PBL3.DTO
         [Required]
         public int AddressID { get; set; }
 
-        [Required]
-        public int WardID { get; set; }
+        
 
         [Required]
         [StringLength(100)]
         public string DetailAddress { get; set; }
+        [Required]
+        public int WardID { get; set; }
 
         [ForeignKey("WardID")]
         public virtual Ward Ward { get; set; }

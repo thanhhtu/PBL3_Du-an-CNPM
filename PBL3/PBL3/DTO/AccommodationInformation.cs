@@ -20,7 +20,7 @@ namespace PBL3.DTO
         [StringLength(200)]
         public string Title { get; set; }
 
-        [Required]
+       
         public string Description { get; set; }
 
         [Required]
@@ -39,15 +39,13 @@ namespace PBL3.DTO
 
         public bool? LivingWithOwner { get; set; }
 
-        [Required]
-        public int Deposit { get; set; }
+        public int? Deposit { get; set; }
 
         public int? UserID { get; set; }
         [ForeignKey("UserID")]
         public virtual User User { get; set; }
 
-        [Required]
-        public int AddressID { get; set; }
+        public int? AddressID { get; set; }
 
         [ForeignKey("AddressID")]
         public virtual Address Address { get; set; }

@@ -16,11 +16,10 @@ namespace PBL3.DTO
         public int ImageID { get; set; }
 
         [Required]
-        public int InforID { get; set; }
-
-        [Required]
         [StringLength(200)]
         public string ImagePath { get; set; }
+        [Required]
+        public int InforID { get; set; }
 
         [ForeignKey("InforID")]
         public virtual AccommodationInformation AccommodationInformation { get; set; }

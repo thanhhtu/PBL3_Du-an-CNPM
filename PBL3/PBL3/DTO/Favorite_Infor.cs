@@ -11,14 +11,16 @@ namespace PBL3.DTO
     [Table("Favorite_Infor")]
     public class Favorite_Infor
     {
-        [Key, Column(Order = 0)]
-        [ForeignKey("User")]
+        [Key]
+        [Required]
+        public int ID { get; set; }
+        [Required]
         public int UserID { get; set; }
+        [ForeignKey("UserID")]
         public virtual User User { get; set; }
-
-        [Key, Column(Order = 1)]
-        [ForeignKey("AccommodationInformationID")]
+        [Required]
         public int InforID { get; set; }
+        [ForeignKey("InforID")]
         public virtual AccommodationInformation AccommodationInformation { get; set; }
 
         public virtual ICollection<User> Users { get; set; }
