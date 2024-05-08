@@ -61,7 +61,8 @@
             this.labelEmail = new System.Windows.Forms.Label();
             this.txtEmail = new PBL3.Views.CustomComponent.CustomTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.iconToolStripButton1 = new FontAwesome.Sharp.IconToolStripButton();
+            this.LabelSignUp = new System.Windows.Forms.LinkLabel();
+            this.label10 = new System.Windows.Forms.Label();
             this.customPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -73,6 +74,8 @@
             // 
             this.customPanel1.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.customPanel1.BorderRadius = 30;
+            this.customPanel1.Controls.Add(this.LabelSignUp);
+            this.customPanel1.Controls.Add(this.label10);
             this.customPanel1.Controls.Add(this.btnHideConfirmPwd);
             this.customPanel1.Controls.Add(this.panel1);
             this.customPanel1.Controls.Add(this.btnShowConfirmPwd);
@@ -105,9 +108,9 @@
             this.customPanel1.GradientBottonColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.customPanel1.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.customPanel1.Location = new System.Drawing.Point(180, 15);
-            this.customPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.customPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.customPanel1.Name = "customPanel1";
-            this.customPanel1.Size = new System.Drawing.Size(768, 1071);
+            this.customPanel1.Size = new System.Drawing.Size(768, 1108);
             this.customPanel1.TabIndex = 9;
             this.customPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.customPanel1_Paint);
             // 
@@ -124,7 +127,7 @@
             this.btnHideConfirmPwd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.btnHideConfirmPwd.Image = global::PBL3.Properties.Resources.hidePass;
             this.btnHideConfirmPwd.Location = new System.Drawing.Point(631, 416);
-            this.btnHideConfirmPwd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHideConfirmPwd.Margin = new System.Windows.Forms.Padding(4);
             this.btnHideConfirmPwd.Name = "btnHideConfirmPwd";
             this.btnHideConfirmPwd.Size = new System.Drawing.Size(46, 25);
             this.btnHideConfirmPwd.TabIndex = 24;
@@ -141,15 +144,15 @@
             this.panel1.Location = new System.Drawing.Point(210, 770);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(521, 216);
+            this.panel1.Size = new System.Drawing.Size(529, 216);
             this.panel1.TabIndex = 28;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox2.Image = global::PBL3.Properties.Resources.anhtro;
-            this.pictureBox2.Location = new System.Drawing.Point(306, 18);
+            this.pictureBox2.Image = global::PBL3.Properties.Resources.image;
+            this.pictureBox2.Location = new System.Drawing.Point(292, 11);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(179, 148);
@@ -170,7 +173,7 @@
             this.btnUpdateImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateImg.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateImg.ForeColor = System.Drawing.Color.Black;
-            this.btnUpdateImg.Location = new System.Drawing.Point(176, 170);
+            this.btnUpdateImg.Location = new System.Drawing.Point(180, 170);
             this.btnUpdateImg.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateImg.Name = "btnUpdateImg";
             this.btnUpdateImg.Size = new System.Drawing.Size(166, 38);
@@ -183,8 +186,8 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::PBL3.Properties.Resources.anhtro;
-            this.pictureBox1.Location = new System.Drawing.Point(52, 11);
+            this.pictureBox1.Image = global::PBL3.Properties.Resources.image;
+            this.pictureBox1.Location = new System.Drawing.Point(56, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(182, 148);
@@ -206,7 +209,7 @@
             this.btnShowConfirmPwd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.btnShowConfirmPwd.Image = global::PBL3.Properties.Resources.showPass;
             this.btnShowConfirmPwd.Location = new System.Drawing.Point(685, 415);
-            this.btnShowConfirmPwd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnShowConfirmPwd.Margin = new System.Windows.Forms.Padding(4);
             this.btnShowConfirmPwd.Name = "btnShowConfirmPwd";
             this.btnShowConfirmPwd.Size = new System.Drawing.Size(45, 25);
             this.btnShowConfirmPwd.TabIndex = 23;
@@ -226,7 +229,7 @@
             this.btnHidePass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.btnHidePass.Image = global::PBL3.Properties.Resources.hidePass;
             this.btnHidePass.Location = new System.Drawing.Point(632, 349);
-            this.btnHidePass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHidePass.Margin = new System.Windows.Forms.Padding(4);
             this.btnHidePass.Name = "btnHidePass";
             this.btnHidePass.Size = new System.Drawing.Size(46, 25);
             this.btnHidePass.TabIndex = 22;
@@ -240,12 +243,12 @@
             this.label9.BackColor = System.Drawing.Color.AliceBlue;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(20, 796);
+            this.label9.Location = new System.Drawing.Point(20, 815);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(151, 15);
+            this.label9.Size = new System.Drawing.Size(148, 15);
             this.label9.TabIndex = 27;
-            this.label9.Text = "* Dành cho người cho thuê";
+            this.label9.Text = "*Dành cho người cho thuê";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // btnShowPwd
@@ -261,7 +264,7 @@
             this.btnShowPwd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.btnShowPwd.Image = global::PBL3.Properties.Resources.showPass;
             this.btnShowPwd.Location = new System.Drawing.Point(685, 348);
-            this.btnShowPwd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnShowPwd.Margin = new System.Windows.Forms.Padding(4);
             this.btnShowPwd.Name = "btnShowPwd";
             this.btnShowPwd.Size = new System.Drawing.Size(45, 25);
             this.btnShowPwd.TabIndex = 21;
@@ -291,14 +294,14 @@
             this.btnSignIn.FlatAppearance.BorderSize = 0;
             this.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignIn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSignIn.ForeColor = System.Drawing.Color.Black;
+            this.btnSignIn.ForeColor = System.Drawing.Color.White;
             this.btnSignIn.Location = new System.Drawing.Point(264, 1008);
-            this.btnSignIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSignIn.Margin = new System.Windows.Forms.Padding(4);
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.Size = new System.Drawing.Size(225, 46);
             this.btnSignIn.TabIndex = 12;
             this.btnSignIn.Text = "Đăng kí";
-            this.btnSignIn.TextColor = System.Drawing.Color.Black;
+            this.btnSignIn.TextColor = System.Drawing.Color.White;
             this.btnSignIn.UseVisualStyleBackColor = false;
             // 
             // label7
@@ -321,10 +324,10 @@
             this.groupBox1.Controls.Add(this.radioBtbRenter);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.groupBox1.Location = new System.Drawing.Point(210, 638);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(521, 104);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(531, 104);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bạn đăng kí trở thành:";
@@ -334,7 +337,7 @@
             this.radiBtnLandlord.AutoSize = true;
             this.radiBtnLandlord.ForeColor = System.Drawing.Color.Black;
             this.radiBtnLandlord.Location = new System.Drawing.Point(316, 44);
-            this.radiBtnLandlord.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radiBtnLandlord.Margin = new System.Windows.Forms.Padding(4);
             this.radiBtnLandlord.Name = "radiBtnLandlord";
             this.radiBtnLandlord.Size = new System.Drawing.Size(170, 32);
             this.radiBtnLandlord.TabIndex = 1;
@@ -347,7 +350,7 @@
             this.radioBtbRenter.AutoSize = true;
             this.radioBtbRenter.ForeColor = System.Drawing.Color.Black;
             this.radioBtbRenter.Location = new System.Drawing.Point(54, 44);
-            this.radioBtbRenter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioBtbRenter.Margin = new System.Windows.Forms.Padding(4);
             this.radioBtbRenter.Name = "radioBtbRenter";
             this.radioBtbRenter.Size = new System.Drawing.Size(133, 32);
             this.radioBtbRenter.TabIndex = 0;
@@ -654,7 +657,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(-1, 0);
+            this.label1.Location = new System.Drawing.Point(2, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(769, 58);
@@ -662,14 +665,34 @@
             this.label1.Text = "ĐĂNG KÍ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // iconToolStripButton1
+            // LabelSignUp
             // 
-            this.iconToolStripButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconToolStripButton1.IconColor = System.Drawing.Color.Black;
-            this.iconToolStripButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconToolStripButton1.Name = "iconToolStripButton1";
-            this.iconToolStripButton1.Size = new System.Drawing.Size(23, 23);
-            this.iconToolStripButton1.Text = "iconToolStripButton1";
+            this.LabelSignUp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LabelSignUp.AutoSize = true;
+            this.LabelSignUp.BackColor = System.Drawing.Color.Transparent;
+            this.LabelSignUp.DisabledLinkColor = System.Drawing.Color.DodgerBlue;
+            this.LabelSignUp.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
+            this.LabelSignUp.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.LabelSignUp.Location = new System.Drawing.Point(630, 1071);
+            this.LabelSignUp.Name = "LabelSignUp";
+            this.LabelSignUp.Size = new System.Drawing.Size(111, 19);
+            this.LabelSignUp.TabIndex = 30;
+            this.LabelSignUp.TabStop = true;
+            this.LabelSignUp.Text = "Đăng nhập ngay";
+            this.LabelSignUp.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.AliceBlue;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.Gray;
+            this.label10.Location = new System.Drawing.Point(520, 1070);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(113, 19);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "Đã có tài khoản?";
             // 
             // SignUpForm
             // 
@@ -680,7 +703,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::PBL3.Properties.Resources.bgr;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1184, 471);
+            this.ClientSize = new System.Drawing.Size(1184, 619);
             this.Controls.Add(this.customPanel1);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -725,7 +748,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.RadioButton radiBtnLandlord;
         private System.Windows.Forms.RadioButton radioBtbRenter;
-        private FontAwesome.Sharp.IconToolStripButton iconToolStripButton1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel1;
@@ -736,5 +758,7 @@
         private CustomComponent.CustomButton btnShowConfirmPwd;
         private CustomComponent.CustomButton btnHidePass;
         private CustomComponent.CustomButton btnShowPwd;
+        private System.Windows.Forms.LinkLabel LabelSignUp;
+        private System.Windows.Forms.Label label10;
     }
 }
