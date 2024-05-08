@@ -1,4 +1,5 @@
-﻿using PBL3.Views.AdminForm;
+﻿using PBL3.BLL;
+using PBL3.Views.AdminForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,7 @@ namespace PBL3.Views.CommonForm
         public HomeForm()
         {
             InitializeComponent();
+            Infor.Instance.LoadApp();
         }
     }
 }

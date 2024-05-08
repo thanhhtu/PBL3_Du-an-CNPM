@@ -81,3 +81,7 @@ E:\ki4\pbl3\pbl3_1\PBL3\PBL3\bin\Debug\FontAwesome.Sharp.dll
 E:\ki4\pbl3\pbl3_1\PBL3\PBL3\obj\Debug\PBL3.csproj.Up2Date
 E:\ki4\pbl3\pbl3_1\PBL3\PBL3\obj\Debug\PBL3.exe
 E:\ki4\pbl3\pbl3_1\PBL3\PBL3\obj\Debug\PBL3.pdb
+E:\ki4\pbl3\pbl3_1\PBL3\PBL3\bin\Debug\EntityFramework.dll
+E:\ki4\pbl3\pbl3_1\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.dll
+E:\ki4\pbl3\pbl3_1\PBL3\PBL3\bin\Debug\EntityFramework.xml
+E:\ki4\pbl3\pbl3_1\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.xml

@@ -91,7 +91,7 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(855, 42);
+            this.label1.Size = new System.Drawing.Size(872, 42);
             this.label1.TabIndex = 7;
             this.label1.Text = "THÔNG TIN PHÒNG TRỌ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -105,7 +105,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 42);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(855, 129);
+            this.panel1.Size = new System.Drawing.Size(872, 129);
             this.panel1.TabIndex = 8;
             // 
             // pictureBox4
@@ -151,7 +151,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 216);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(855, 46);
+            this.panel2.Size = new System.Drawing.Size(872, 46);
             this.panel2.TabIndex = 10;
             // 
             // panel3
@@ -167,7 +167,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(855, 40);
+            this.panel3.Size = new System.Drawing.Size(872, 40);
             this.panel3.TabIndex = 15;
             // 
             // label4
@@ -327,7 +327,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 308);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(855, 57);
+            this.panel5.Size = new System.Drawing.Size(872, 57);
             this.panel5.TabIndex = 12;
             // 
             // txtDesInfor
@@ -350,7 +350,7 @@
             this.txtDesInfor.PasswordChar = false;
             this.txtDesInfor.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtDesInfor.PlaceholderText = "Thông tin chi tiết trọ ....";
-            this.txtDesInfor.Size = new System.Drawing.Size(853, 55);
+            this.txtDesInfor.Size = new System.Drawing.Size(870, 55);
             this.txtDesInfor.TabIndex = 24;
             this.txtDesInfor.Texts = "";
             this.txtDesInfor.UnderlinedStyle = false;
@@ -363,7 +363,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 365);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(855, 46);
+            this.panel6.Size = new System.Drawing.Size(872, 46);
             this.panel6.TabIndex = 13;
             // 
             // btnNextCmt
@@ -415,7 +415,7 @@
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(855, 42);
+            this.label2.Size = new System.Drawing.Size(872, 42);
             this.label2.TabIndex = 8;
             this.label2.Text = "BÌNH LUẬN";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -429,7 +429,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 411);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(855, 140);
+            this.panel7.Size = new System.Drawing.Size(872, 140);
             this.panel7.TabIndex = 14;
             // 
             // customComment3
@@ -439,8 +439,9 @@
             this.customComment3.Dock = System.Windows.Forms.DockStyle.Top;
             this.customComment3.editCommentID = -1;
             this.customComment3.Location = new System.Drawing.Point(0, 100);
+            this.customComment3.Margin = new System.Windows.Forms.Padding(4);
             this.customComment3.Name = "customComment3";
-            this.customComment3.Size = new System.Drawing.Size(838, 50);
+            this.customComment3.Size = new System.Drawing.Size(855, 50);
             this.customComment3.TabIndex = 2;
             this.customComment3.Username = "Tên người dùng";
             // 
@@ -451,8 +452,9 @@
             this.customComment2.Dock = System.Windows.Forms.DockStyle.Top;
             this.customComment2.editCommentID = -1;
             this.customComment2.Location = new System.Drawing.Point(0, 50);
+            this.customComment2.Margin = new System.Windows.Forms.Padding(4);
             this.customComment2.Name = "customComment2";
-            this.customComment2.Size = new System.Drawing.Size(838, 50);
+            this.customComment2.Size = new System.Drawing.Size(855, 50);
             this.customComment2.TabIndex = 1;
             this.customComment2.Username = "Tên người dùng";
             // 
@@ -463,8 +465,9 @@
             this.customComment1.Dock = System.Windows.Forms.DockStyle.Top;
             this.customComment1.editCommentID = -1;
             this.customComment1.Location = new System.Drawing.Point(0, 0);
+            this.customComment1.Margin = new System.Windows.Forms.Padding(4);
             this.customComment1.Name = "customComment1";
-            this.customComment1.Size = new System.Drawing.Size(838, 50);
+            this.customComment1.Size = new System.Drawing.Size(855, 50);
             this.customComment1.TabIndex = 0;
             this.customComment1.Username = "Tên người dùng";
             // 
@@ -475,7 +478,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel8.Location = new System.Drawing.Point(0, 551);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(855, 100);
+            this.panel8.Size = new System.Drawing.Size(872, 100);
             this.panel8.TabIndex = 15;
             // 
             // btnUpComment
@@ -534,7 +537,7 @@
             this.customPanel1.GradientTopColor = System.Drawing.Color.Transparent;
             this.customPanel1.Location = new System.Drawing.Point(0, 171);
             this.customPanel1.Name = "customPanel1";
-            this.customPanel1.Size = new System.Drawing.Size(855, 45);
+            this.customPanel1.Size = new System.Drawing.Size(872, 45);
             this.customPanel1.TabIndex = 9;
             // 
             // labelNameInfor
@@ -547,7 +550,7 @@
             this.labelNameInfor.Location = new System.Drawing.Point(0, 0);
             this.labelNameInfor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNameInfor.Name = "labelNameInfor";
-            this.labelNameInfor.Size = new System.Drawing.Size(853, 43);
+            this.labelNameInfor.Size = new System.Drawing.Size(870, 43);
             this.labelNameInfor.TabIndex = 7;
             this.labelNameInfor.Text = "tên của thông tin trọ";
             this.labelNameInfor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -584,7 +587,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 262);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(855, 46);
+            this.panel4.Size = new System.Drawing.Size(872, 46);
             this.panel4.TabIndex = 11;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -594,7 +597,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(872, 612);
+            this.ClientSize = new System.Drawing.Size(889, 612);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
