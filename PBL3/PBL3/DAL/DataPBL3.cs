@@ -18,7 +18,7 @@ namespace PBL3.DAL
         // If you wish to target a different database and/or database provider, modify the 'MyData' 
         // connection string in the application configuration file.
         public DataPBL3()
-            : base("Data Source=AITRAN\\MSSQLSERVER02;Initial Catalog=DataPBL3;Integrated Security=True")
+            : base("Data Source=THANHTULAPTOP\\SQLEXPRESS;Initial Catalog=DataPBL3;Integrated Security=True")
         {
             Database.SetInitializer<DataPBL3>(new CreateDB());
         }
@@ -37,6 +37,6 @@ namespace PBL3.DAL
         public virtual DbSet<Ward> Wards { get; set; }
         public virtual DbSet<District> Districts { get; set; }
         public virtual DbSet<Address> Addresses { get; set; }
-        public virtual DbSet<Favorite_Infor> Favorite_Infors { get; set; }
+        public virtual DbSet<FavoriteInfor> FavoriteInfors { get; set; }
     }
 }

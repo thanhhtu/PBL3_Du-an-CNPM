@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.customPanel1 = new PBL3.Views.CustomComponent.CustomPanel();
+            this.LabelSignUp = new System.Windows.Forms.LinkLabel();
+            this.label10 = new System.Windows.Forms.Label();
             this.btnHideConfirmPwd = new PBL3.Views.CustomComponent.CustomButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -61,8 +63,6 @@
             this.labelEmail = new System.Windows.Forms.Label();
             this.txtEmail = new PBL3.Views.CustomComponent.CustomTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.LabelSignUp = new System.Windows.Forms.LinkLabel();
-            this.label10 = new System.Windows.Forms.Label();
             this.customPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -113,6 +113,35 @@
             this.customPanel1.Size = new System.Drawing.Size(768, 1108);
             this.customPanel1.TabIndex = 9;
             this.customPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.customPanel1_Paint);
+            // 
+            // LabelSignUp
+            // 
+            this.LabelSignUp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LabelSignUp.AutoSize = true;
+            this.LabelSignUp.BackColor = System.Drawing.Color.Transparent;
+            this.LabelSignUp.DisabledLinkColor = System.Drawing.Color.DodgerBlue;
+            this.LabelSignUp.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
+            this.LabelSignUp.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.LabelSignUp.Location = new System.Drawing.Point(630, 1070);
+            this.LabelSignUp.Name = "LabelSignUp";
+            this.LabelSignUp.Size = new System.Drawing.Size(111, 19);
+            this.LabelSignUp.TabIndex = 30;
+            this.LabelSignUp.TabStop = true;
+            this.LabelSignUp.Text = "Đăng nhập ngay";
+            this.LabelSignUp.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.AliceBlue;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.Gray;
+            this.label10.Location = new System.Drawing.Point(520, 1070);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(113, 19);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "Đã có tài khoản?";
             // 
             // btnHideConfirmPwd
             // 
@@ -664,35 +693,6 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "ĐĂNG KÍ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LabelSignUp
-            // 
-            this.LabelSignUp.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LabelSignUp.AutoSize = true;
-            this.LabelSignUp.BackColor = System.Drawing.Color.Transparent;
-            this.LabelSignUp.DisabledLinkColor = System.Drawing.Color.DodgerBlue;
-            this.LabelSignUp.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
-            this.LabelSignUp.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.LabelSignUp.Location = new System.Drawing.Point(630, 1071);
-            this.LabelSignUp.Name = "LabelSignUp";
-            this.LabelSignUp.Size = new System.Drawing.Size(111, 19);
-            this.LabelSignUp.TabIndex = 30;
-            this.LabelSignUp.TabStop = true;
-            this.LabelSignUp.Text = "Đăng nhập ngay";
-            this.LabelSignUp.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.AliceBlue;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.Gray;
-            this.label10.Location = new System.Drawing.Point(520, 1070);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(113, 19);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "Đã có tài khoản?";
             // 
             // SignUpForm
             // 

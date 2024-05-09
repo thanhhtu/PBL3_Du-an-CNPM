@@ -222,16 +222,16 @@ namespace PBL3.DAL
                 new Comment {CommentID = 5, InforID = 3, UserID = 1, Content = "Huhu", CreatedAt = DateTime.Now},
                 new Comment {CommentID = 6, InforID = 3, UserID = 3, Content = "HicHic", CreatedAt = DateTime.Now},
             });
-            context.Favorite_Infors.AddRange(new Favorite_Infor[]
+            context.FavoriteInfors.AddRange(new FavoriteInfor[]
             {
-                new Favorite_Infor{ UserID = 2, InforID = 1},
-                new Favorite_Infor{ UserID = 2, InforID = 2},
-                new Favorite_Infor{ UserID = 2, InforID = 3},
-                new Favorite_Infor{ UserID = 3, InforID = 4},
-                new Favorite_Infor{ UserID = 3, InforID = 5},
-                new Favorite_Infor{ UserID = 4, InforID = 6},
-                new Favorite_Infor{ UserID = 4, InforID = 7},
-                new Favorite_Infor{ UserID = 4, InforID = 8},
+                new FavoriteInfor{ UserID = 2, InforID = 1},
+                new FavoriteInfor{ UserID = 2, InforID = 2},
+                new FavoriteInfor{ UserID = 2, InforID = 3},
+                new FavoriteInfor{ UserID = 3, InforID = 4},
+                new FavoriteInfor{ UserID = 3, InforID = 5},
+                new FavoriteInfor{ UserID = 4, InforID = 6},
+                new FavoriteInfor{ UserID = 4, InforID = 7},
+                new FavoriteInfor{ UserID = 4, InforID = 8},
             });
             context.ImageOfUsers.AddRange(new ImageOfUser[]
             {

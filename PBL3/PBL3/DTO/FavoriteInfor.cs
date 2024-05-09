@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace PBL3.DTO
 {
-    [Table("Favorite_Infor")]
-    public class Favorite_Infor
+    [Table("FavoriteInfor")]
+    public class FavoriteInfor
     {
         [Key]
         [Required]
-        public int ID { get; set; }
+        public int IDFavoriteInfor { get; set; }
         [Required]
         public int UserID { get; set; }
         [ForeignKey("UserID")]
@@ -27,7 +27,7 @@ namespace PBL3.DTO
 
         public virtual ICollection<AccommodationInformation> AccommodationInformations { get; set; }
 
-        public Favorite_Infor()
+        public FavoriteInfor()
         {
             this.Users = new HashSet<User>();
             this.AccommodationInformations = new HashSet<AccommodationInformation>();

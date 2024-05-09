@@ -85,3 +85,14 @@ E:\ki4\pbl3\pbl3_1\PBL3\PBL3\bin\Debug\EntityFramework.dll
 E:\ki4\pbl3\pbl3_1\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.dll
 E:\ki4\pbl3\pbl3_1\PBL3\PBL3\bin\Debug\EntityFramework.xml
 E:\ki4\pbl3\pbl3_1\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.xml
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\bin\Debug\EntityFramework.dll
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.dll
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\bin\Debug\EntityFramework.xml
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.xml
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.InforForm.resources
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.SignInForm.resources
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.UpdateUserForm.resources
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.CustomComponents.CustomComment.resources
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.CustomComponents.CustomLinkLabel.resources
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.LandlordForm.InforLanlordForm.resources
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.LandlordForm.UpdateInforForm.resources

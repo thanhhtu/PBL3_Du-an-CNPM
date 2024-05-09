@@ -71,7 +71,7 @@
     <Compile Include="DTO\Address.cs" />
     <Compile Include="DTO\Comment.cs" />
     <Compile Include="DTO\District.cs" />
-    <Compile Include="DTO\Favorite_Infor.cs" />
+    <Compile Include="DTO\FavoriteInfor.cs" />
     <Compile Include="DTO\ImageOfUser.cs" />
     <Compile Include="DTO\Image.cs" />
     <Compile Include="DTO\Role.cs" />

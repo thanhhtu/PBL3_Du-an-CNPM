@@ -61,7 +61,7 @@
             this.customPanel1.GradientBottonColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.customPanel1.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.customPanel1.Location = new System.Drawing.Point(181, 76);
-            this.customPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.customPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.customPanel1.Name = "customPanel1";
             this.customPanel1.Size = new System.Drawing.Size(704, 401);
             this.customPanel1.TabIndex = 8;
@@ -80,7 +80,7 @@
             this.btnHidePwd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.btnHidePwd.Image = global::PBL3.Properties.Resources.hidePass;
             this.btnHidePwd.Location = new System.Drawing.Point(557, 212);
-            this.btnHidePwd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHidePwd.Margin = new System.Windows.Forms.Padding(4);
             this.btnHidePwd.Name = "btnHidePwd";
             this.btnHidePwd.Size = new System.Drawing.Size(49, 25);
             this.btnHidePwd.TabIndex = 24;
@@ -100,7 +100,7 @@
             this.btnShowPwd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.btnShowPwd.Image = global::PBL3.Properties.Resources.showPass;
             this.btnShowPwd.Location = new System.Drawing.Point(615, 210);
-            this.btnShowPwd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnShowPwd.Margin = new System.Windows.Forms.Padding(4);
             this.btnShowPwd.Name = "btnShowPwd";
             this.btnShowPwd.Size = new System.Drawing.Size(48, 25);
             this.btnShowPwd.TabIndex = 23;
@@ -148,7 +148,7 @@
             this.btnSignIn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnSignIn.ForeColor = System.Drawing.Color.Black;
             this.btnSignIn.Location = new System.Drawing.Point(245, 283);
-            this.btnSignIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSignIn.Margin = new System.Windows.Forms.Padding(4);
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.Size = new System.Drawing.Size(211, 47);
             this.btnSignIn.TabIndex = 12;
@@ -252,7 +252,7 @@
             this.ClientSize = new System.Drawing.Size(1101, 574);
             this.Controls.Add(this.customPanel1);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SignInForm";
             this.Text = "SigninForm";
             this.customPanel1.ResumeLayout(false);
