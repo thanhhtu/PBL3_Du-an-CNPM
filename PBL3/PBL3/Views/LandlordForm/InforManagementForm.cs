@@ -14,6 +14,10 @@ namespace PBL3.Views.LandlordForm
     {
         public delegate void showPostDetail(Form childForm);
         public showPostDetail showPost;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
         public InforManagementForm()
         {
             InitializeComponent();

@@ -1,7 +1,11 @@
 ﻿using PBL3.BLL;
+<<<<<<< HEAD
 using PBL3.DTO;
 using PBL3.Views.CommonForm;
 using PBL3.Views.LandlordForm;
+=======
+using PBL3.Views.CommonForm;
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,7 +31,11 @@ namespace PBL3.Views.AdminForm
 
         private void ReloadUserFullName()
         {
+<<<<<<< HEAD
             labelUserFullname.Text = UserBLL.Instance.GetUserFullname(LoginInfor.UserID).ToString();
+=======
+            labelUserFullname.Text = UserBLL.Instance.GetUserFullname(SignInInfor.UserID).ToString();
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
         }
 
         //Tắt form hiện tại đang hiển thị trên childPanel và hiển thị form tương ứng được truyền vào là đối số
@@ -69,7 +77,11 @@ namespace PBL3.Views.AdminForm
         private void btnHome_Click(object sender, EventArgs e)
         {
             DashboardForm form = new DashboardForm();
+<<<<<<< HEAD
             form.showInfo = OpenHouseInfo;
+=======
+            form.showPost = OpenHouseInfo;
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
             OpenChildForm(form);
         }
 
@@ -88,7 +100,11 @@ namespace PBL3.Views.AdminForm
         private void btnSignOut_Click(object sender, EventArgs e)
         {
             //Reset lại SignInInfor
+<<<<<<< HEAD
             LoginInfor.UserID = -1;
+=======
+            SignInInfor.UserID = -1;
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
 
             //Hiển thị lại HomeForm
             this.Hide();

@@ -14,10 +14,15 @@ namespace PBL3.DTO
         [Key]
         [Required]
         public int IDFavoriteInfor { get; set; }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
         [Required]
         public int UserID { get; set; }
         [ForeignKey("UserID")]
         public virtual User User { get; set; }
+
         [Required]
         public int InforID { get; set; }
         [ForeignKey("InforID")]

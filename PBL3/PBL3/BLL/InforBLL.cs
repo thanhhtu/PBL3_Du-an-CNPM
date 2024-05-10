@@ -1,17 +1,31 @@
+<<<<<<< HEAD
 ﻿using PBL3.DAL;
 using PBL3.DTO;
 using PBL3.DTO.ViewDTO;
 using System;
+=======
+﻿using System;
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+<<<<<<< HEAD
 
 namespace PBL3.BLL
 {
     internal class InforBLL
     {
         #region ->Singleton Pattern
+=======
+using PBL3.DTO;
+using PBL3.DAL;
+
+namespace PBL3.BLL
+{
+    public class InforBLL
+    {
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
         private static DataPBL3 db;
         private static InforBLL _Instance;
         public static InforBLL Instance
@@ -33,6 +47,7 @@ namespace PBL3.BLL
             //tác động lên db để thao tác ban đầu mượt hơn
             db.AccommodationInformations.Count();
         }
+<<<<<<< HEAD
         #endregion
         public List<AccommodationInformation> SearchPost(int searchCase, int inputID, int lPrice, int rPrice, float lSquareArea, float rSquareArea)
         {
@@ -158,4 +173,7 @@ namespace PBL3.BLL
         }
     }
 
+=======
+    }
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
 }

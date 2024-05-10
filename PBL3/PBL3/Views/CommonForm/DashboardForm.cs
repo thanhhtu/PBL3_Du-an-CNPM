@@ -594,5 +594,8 @@ namespace PBL3.Views.CommonForm
                 showInfo(form);
             }
         }
+
+        public delegate void showPostDetail(Form childForm);
+        public showPostDetail showPost;
     }
 }

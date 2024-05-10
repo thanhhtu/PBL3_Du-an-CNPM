@@ -96,6 +96,7 @@ D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.CustomComponents.Custom
 D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.CustomComponents.CustomLinkLabel.resources
 D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.LandlordForm.InforLanlordForm.resources
 D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.LandlordForm.UpdateInforForm.resources
+<<<<<<< HEAD
 C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\PBL3.exe.config
 C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\PBL3.exe
 C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\PBL3.pdb
@@ -194,3 +195,17 @@ C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\bin\Debug\System.Memory.xml
 C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.csproj.Up2Date
+=======
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\bin\Debug\K4os.Hash.xxHash.dll
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\bin\Debug\Microsoft.Bcl.HashCode.dll
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\bin\Debug\System.Buffers.dll
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\bin\Debug\System.Memory.dll
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\bin\Debug\System.Numerics.Vectors.dll
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\bin\Debug\K4os.Hash.xxHash.xml
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\bin\Debug\Microsoft.Bcl.HashCode.xml
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\bin\Debug\System.Buffers.xml
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\bin\Debug\System.Memory.xml
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\bin\Debug\System.Numerics.Vectors.xml
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3

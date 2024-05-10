@@ -124,6 +124,7 @@ namespace PBL3.BLL
             }
             return false;
         }
+<<<<<<< HEAD
         public void published(int accountID)
         {
             Account acc = db.Accounts.Where(a => a.AccountID == accountID).FirstOrDefault();
@@ -139,5 +140,7 @@ namespace PBL3.BLL
         {
             return db.Accounts.FirstOrDefault(account => account.AccountID == accID).PublishedAt;
         }
+=======
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
     }
 }

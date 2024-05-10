@@ -28,7 +28,11 @@ namespace PBL3.Views.RenterForm
 
         private void ReloadUserFullName()
         {
+<<<<<<< HEAD
             labelUserFullname.Text = UserBLL.Instance.GetUserFullname(LoginInfor.UserID).ToString();
+=======
+            labelUserFullname.Text = UserBLL.Instance.GetUserFullname(SignInInfor.UserID).ToString();
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
         }
 
         //Tắt form hiện tại đang hiển thị trên childPanel và hiển thị form tương ứng được truyền vào là đối số
@@ -93,7 +97,11 @@ namespace PBL3.Views.RenterForm
         {
             HideSubmenu();
             DashboardForm form = new DashboardForm();
+<<<<<<< HEAD
             form.showInfo = OpenHouseInfo;
+=======
+            form.showPost = OpenHouseInfo;
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
             OpenChildForm(form);
         }
 
@@ -104,7 +112,11 @@ namespace PBL3.Views.RenterForm
 
         private void btnId_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             OpenChildForm(new UserForm(LoginInfor.UserID));
+=======
+            OpenChildForm(new UserForm(SignInInfor.UserID));
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
         }
 
         private void btnUserChange_Click(object sender, EventArgs e)
@@ -123,7 +135,11 @@ namespace PBL3.Views.RenterForm
         {
             HideSubmenu();
             //Reset lại SignInInfor
+<<<<<<< HEAD
             LoginInfor.UserID = -1;
+=======
+            SignInInfor.UserID = -1;
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
 
             //Hiển thị lại HomeForm
             this.Hide();
@@ -131,6 +147,10 @@ namespace PBL3.Views.RenterForm
             form.ShowDialog();
             this.Close();
         }
+<<<<<<< HEAD
         #endregion
+=======
+       #endregion
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
     }
 }

@@ -10,7 +10,11 @@ namespace PBL3.BLL
 {
     public class DistrictBLL
     {
+<<<<<<< HEAD
         #region ->Singleton Pattern
+=======
+        #region -> Singleton Pattern
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
         private static DataPBL3 db;
         private static DistrictBLL _Instance;
         public static DistrictBLL Instance
@@ -32,14 +36,25 @@ namespace PBL3.BLL
         public District GetDistrictByDistrictID(int inputDistrictID)
         {
             District result = new District();
+<<<<<<< HEAD
             result = db.Districts.FirstOrDefault(p => p.DistrictID == inputDistrictID);
             return result;
         }
+=======
+            result = db.Districts.FirstOrDefault(p => p.DistrictID == inputDistrictID); //tham số truyền vào là 1 lamda method
+            return result;
+        }
+
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
         public List<District> GetAllDistricts()
         {
             List<District> result = db.Districts.ToList();
             return result;
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
         //Lấy ra tất cả các phường thuộc quận
         public List<Ward> GetWardsInDistrict(int inputDistrictID)
         {

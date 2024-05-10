@@ -39,15 +39,24 @@ namespace PBL3.Views.CommonForm
             }
 
             //Nếu là người cho thuê kiểm tra có được duyệt tài khoản chưa
+<<<<<<< HEAD
             if (role == 2 && AccountBLL.Instance.IsAcceptedAccount(AccountBLL.Instance.GetAccountID(username, password)) == false)
+=======
+            if(role == 2 && AccountBLL.Instance.IsAcceptedAccount(AccountBLL.Instance.GetAccountID(username, password)) == false)
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
             {
                 MessageBox.Show("Tài khoản của bạn chưa được Admin duyệt. Xin vui lòng thử lại sau!");
                 return;
             }
 
             //Gán thông tin người dùng cho SignInInforBLL để tạo phiên làm việc với user
+<<<<<<< HEAD
             LoginInfor.UserID = UserBLL.Instance.GetUserIDByAccountID(AccountBLL.Instance.GetAccountID(username, password));
 
+=======
+            SignInInfor.UserID = UserBLL.Instance.GetUserIDByAccountID(AccountBLL.Instance.GetAccountID(username, password));
+            
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
             //Thông tin nhập đúng thì sẽ dựa trên role của người dùng sẽ mở form tương ứng
             hideParentForm();
             if (role == 1)

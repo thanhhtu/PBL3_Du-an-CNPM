@@ -217,6 +217,7 @@ namespace PBL3.Views.CommonForm
         {
 
         }
+<<<<<<< HEAD
 
         private void btnUpComment_Click(object sender, EventArgs e)
         {
@@ -357,5 +358,7 @@ namespace PBL3.Views.CommonForm
             InforBLL.Instance.AddFavourite_Infor(UserID, InforID);
         }
     }   
+=======
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
     }
 

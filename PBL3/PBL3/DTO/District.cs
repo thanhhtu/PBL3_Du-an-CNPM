@@ -19,7 +19,9 @@ namespace PBL3.DTO
         [Required]
         [StringLength(50)]
         public string DistrictName { get; set; }
+
         public virtual ICollection<Ward> Wards { get; set; }
+
         public District()
         {
             this.Wards = new HashSet<Ward>();

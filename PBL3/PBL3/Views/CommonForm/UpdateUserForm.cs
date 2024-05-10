@@ -16,9 +16,15 @@ namespace PBL3.Views.CommonForm
 {
     public partial class UpdateUserForm : Form
     {
+<<<<<<< HEAD
 
         public delegate void MyDel();
         public MyDel ReloadInformation;
+=======
+        public delegate void MyDel();
+        public MyDel ReloadInformation;
+
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
         public UpdateUserForm()
         {
             InitializeComponent();
@@ -26,6 +32,7 @@ namespace PBL3.Views.CommonForm
             LoadUserInformation();
         }
 
+<<<<<<< HEAD
         #region ->Load CBB
         public void ResetCBB()
         {
@@ -210,5 +217,8 @@ namespace PBL3.Views.CommonForm
                 cbbWard.SelectedItem = AllWard;
             }
         }
+=======
+
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
     }
 }

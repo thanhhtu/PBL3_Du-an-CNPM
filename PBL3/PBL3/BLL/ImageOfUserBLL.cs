@@ -7,7 +7,10 @@ using PBL3.DTO;
 using PBL3.DAL;
 using System.IO;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using PBL3.DTO.ViewDTO;
+=======
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
 
 namespace PBL3.BLL
 {
@@ -52,6 +55,7 @@ namespace PBL3.BLL
             string appPath = Path.GetFullPath(Path.Combine(path, @"..\..\")) + @"Resources\landlord" + userID.ToString();
             return appPath;
         }
+<<<<<<< HEAD
         public List<InforDTGViewDTO> GetDTGView(int searchFilter, int sortCase, bool checkAscending, string searchChars, int userID = -1)
         {
             List<InforDTGViewDTO> result = new List<InforDTGViewDTO>();
@@ -78,6 +82,8 @@ namespace PBL3.BLL
             //List<InforDTGViewDTO> result = Infor.Instance.SortResult(sortCase, checkAscending, temp);
             return result;
         }
+=======
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
 
         #region -> Add/Delete ImageOfUser
         public void AddImageOfUser(string imagePath, int userID)
@@ -104,5 +110,8 @@ namespace PBL3.BLL
         }
         #endregion
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
 }

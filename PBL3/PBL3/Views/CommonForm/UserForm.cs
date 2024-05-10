@@ -14,6 +14,7 @@ namespace PBL3.Views.CommonForm
 {
     public partial class UserForm : Form
     {
+<<<<<<< HEAD
 
             //Form hiển thị thông tin cá nhân
             public UserForm(int userID)
@@ -31,4 +32,11 @@ namespace PBL3.Views.CommonForm
             }
         }
 
+=======
+        public UserForm(int userID)
+        {
+            InitializeComponent();
+        }
+    }
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
 }

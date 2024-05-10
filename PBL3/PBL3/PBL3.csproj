@@ -69,6 +69,11 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
+=======
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -84,12 +89,20 @@
   <ItemGroup>
     <Compile Include="BLL\AccountBLL.cs" />
     <Compile Include="BLL\AddressBLL.cs" />
+<<<<<<< HEAD
     <Compile Include="BLL\CommentBLL.cs" />
     <Compile Include="BLL\DistrictBLL.cs" />
     <Compile Include="BLL\ImageBLL.cs" />
     <Compile Include="BLL\ImageOfUserBLL.cs" />
     <Compile Include="BLL\InforBLL.cs" />
     <Compile Include="BLL\PwdHashing.cs" />
+=======
+    <Compile Include="BLL\DistrictBLL.cs" />
+    <Compile Include="BLL\ImageOfUserBLL.cs" />
+    <Compile Include="BLL\InforBLL.cs" />
+    <Compile Include="BLL\PwdHashing.cs" />
+    <Compile Include="DTO\SignInInfor.cs" />
+>>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
     <Compile Include="BLL\UserBLL.cs" />
     <Compile Include="BLL\WardBLL.cs" />
     <Compile Include="DAL\CreateDB.cs" />
