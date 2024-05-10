@@ -12,6 +12,9 @@ namespace PBL3.Views.AdminForm
 {
     public partial class InforManagementForm : Form
     {
+        public delegate void showPostDetail(Form childForm);
+        public showPostDetail showPost;
+
         public InforManagementForm()
         {
             InitializeComponent();

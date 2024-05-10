@@ -12,14 +12,9 @@ namespace PBL3.Views.CommonForm
 {
     public partial class UserForm : Form
     {
-        public UserForm()
+        public UserForm(int userID)
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

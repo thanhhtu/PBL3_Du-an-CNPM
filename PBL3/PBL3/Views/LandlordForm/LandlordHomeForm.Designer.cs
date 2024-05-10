@@ -121,6 +121,7 @@
             this.btnSignOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSignOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSignOut.UseVisualStyleBackColor = false;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
             // 
             // panelUserSubmenu
             // 
@@ -154,6 +155,7 @@
             this.btnChangePwd.Text = "Đổi mật khẩu";
             this.btnChangePwd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChangePwd.UseVisualStyleBackColor = false;
+            this.btnChangePwd.Click += new System.EventHandler(this.btnChangePwd_Click);
             // 
             // btnUserChange
             // 
@@ -175,6 +177,7 @@
             this.btnUserChange.Text = "Đổi thông tin cá nhân";
             this.btnUserChange.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUserChange.UseVisualStyleBackColor = false;
+            this.btnUserChange.Click += new System.EventHandler(this.btnUserChange_Click);
             // 
             // btnId
             // 
@@ -196,6 +199,7 @@
             this.btnId.Text = "Thông tin cá nhân";
             this.btnId.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnId.UseVisualStyleBackColor = false;
+            this.btnId.Click += new System.EventHandler(this.btnId_Click);
             // 
             // btnUser
             // 
@@ -220,6 +224,7 @@
             this.btnUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUser.UseVisualStyleBackColor = false;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // btnInforManagement
             // 
@@ -244,6 +249,7 @@
             this.btnInforManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInforManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInforManagement.UseVisualStyleBackColor = false;
+            this.btnInforManagement.Click += new System.EventHandler(this.btnInforManagement_Click);
             // 
             // btnHome
             // 
@@ -268,6 +274,7 @@
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panelLogo
             // 
