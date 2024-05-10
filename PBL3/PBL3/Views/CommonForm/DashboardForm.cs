@@ -16,5 +16,8 @@ namespace PBL3.Views.CommonForm
         {
             InitializeComponent();
         }
+
+        public delegate void showPostDetail(Form childForm);
+        public showPostDetail showPost;
     }
 }

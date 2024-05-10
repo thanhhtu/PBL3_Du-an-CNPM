@@ -21,15 +21,5 @@ namespace PBL3.Views.CommonForm
         {
 
         }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnNextCmt_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

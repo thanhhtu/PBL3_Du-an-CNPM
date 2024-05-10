@@ -21,7 +21,6 @@ namespace PBL3.DTO
 
         [Required]
         public int DistrictID { get; set; }
-
         [ForeignKey("DistrictID")]
         public virtual District District { get; set; }
  

@@ -28,11 +28,8 @@ namespace PBL3.DTO
         [StringLength(20)]
         public string Phone { get; set; }
 
-
         [StringLength(20)]
         public string IDcard { get; set; }
-
-       
 
         [Required]
         public int AddressID { get; set; }
@@ -41,9 +38,9 @@ namespace PBL3.DTO
 
         [Required]
         public int AccountID { get; set; }
-
         [ForeignKey("AccountID")]
         public virtual Account Account { get; set; }
+
         public virtual ICollection<Comment> Comments { get; set; }
 
         public User()

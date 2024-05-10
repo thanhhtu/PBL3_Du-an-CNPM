@@ -10,29 +10,26 @@ using System.Threading.Tasks;
 using System.Windows.Markup;
 using System.Windows.Media;
 using System.Xml.Linq;
-//using PBL3.BLL;
 using PBL3.DTO;
+
 namespace PBL3.DAL
 {
-    public class CreateDB :
-    // CreateDatabaseIfNotExists<MyData>
-    //DropCreateDatabaseIfModelChanges<MyData>
-    DropCreateDatabaseAlways<DataPBL3>
+    public class CreateDB : DropCreateDatabaseAlways<DataPBL3>
     {
         protected override void Seed(DataPBL3 context)
         {
             context.Roles.AddRange(new Role[]
             {
                 new Role {RoleID = 1, RoleName = "Admin"},
-                new Role {RoleID = 2, RoleName = "Host"},
+                new Role {RoleID = 2, RoleName = "Landlord"},
                 new Role {RoleID = 3, RoleName = "Renter"}
             });
             context.Accounts.AddRange(new Account[]
             {
-                new Account {AccountID = 1, RoleID = 1, Username = "Admin1", Pwd = "123456", CreatedAt = DateTime.Now, BeingPublished = true, PublishedAt = DateTime.Now},
-                new Account {AccountID = 2, RoleID = 2, Username = "Landlord1", Pwd = "123456", CreatedAt = DateTime.Now, BeingPublished = true, PublishedAt = DateTime.Now},
-                new Account {AccountID = 3, RoleID = 2, Username = "Landlord2", Pwd = "123456", CreatedAt = DateTime.Now, BeingPublished = true, PublishedAt = DateTime.Now},
-                new Account {AccountID = 4, RoleID = 3, Username = "Renter1", Pwd = "123456", CreatedAt = DateTime.Now, BeingPublished = true, PublishedAt = DateTime.Now},
+                new Account {AccountID = 1, RoleID = 1, Username = "Admin1", Pwd = "DeHOn0UsIwM=", CreatedAt = DateTime.Now, BeingPublished = true, PublishedAt = DateTime.Now},
+                new Account {AccountID = 2, RoleID = 2, Username = "Landlord1", Pwd = "DeHOn0UsIwM=", CreatedAt = DateTime.Now, BeingPublished = true, PublishedAt = DateTime.Now},
+                new Account {AccountID = 3, RoleID = 2, Username = "Landlord2", Pwd = "DeHOn0UsIwM=", CreatedAt = DateTime.Now, BeingPublished = false, PublishedAt = DateTime.Now},
+                new Account {AccountID = 4, RoleID = 3, Username = "Renter1", Pwd = "DeHOn0UsIwM=", CreatedAt = DateTime.Now, BeingPublished = true, PublishedAt = DateTime.Now},
             });
             context.Districts.AddRange(new District[]
             {
@@ -235,10 +232,11 @@ namespace PBL3.DAL
             });
             context.ImageOfUsers.AddRange(new ImageOfUser[]
             {
-                new ImageOfUser { ImageOfUserID = 1, UserID = 1, ImagePath = @"abc.jpg"},
-                new ImageOfUser { ImageOfUserID = 2, UserID = 2, ImagePath = @"abc.jpg"},
-                new ImageOfUser { ImageOfUserID = 3, UserID = 3, ImagePath = @"abc.jpg"},
-                new ImageOfUser { ImageOfUserID = 4, UserID = 4, ImagePath = @"abc.jpg"}, 
+                new ImageOfUser { ImageOfUserID = 1, UserID = 2, ImagePath = @"landlord1.jpg"},
+                new ImageOfUser { ImageOfUserID = 2, UserID = 2, ImagePath = @"landlord2.jpg"},
+
+                new ImageOfUser { ImageOfUserID = 3, UserID = 3, ImagePath = @"landlord1.jpg"},
+                new ImageOfUser { ImageOfUserID = 4, UserID = 3, ImagePath = @"landlord2.jpg"},
             });
         }
     }

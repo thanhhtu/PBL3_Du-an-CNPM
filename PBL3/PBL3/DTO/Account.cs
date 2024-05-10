@@ -13,7 +13,10 @@ namespace PBL3.DTO
         [Required]
         public int AccountID { get; set; }
 
-        
+        [Required]
+        public int RoleID { get; set; }
+        [ForeignKey("RoleID")]
+        public virtual Role Role { get; set; }
 
         [Required]
         public string Username { get; set; }
@@ -22,17 +25,10 @@ namespace PBL3.DTO
         public string Pwd { get; set; }
 
         [Required]
-        public DateTime? CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
 
-        
         public bool?  BeingPublished { get; set; }
 
         public DateTime? PublishedAt { get; set; }
-
-        [Required]
-        public int RoleID { get; set; }
-
-        [ForeignKey("RoleID")]
-        public virtual Role Role { get; set; }
     }
 }
