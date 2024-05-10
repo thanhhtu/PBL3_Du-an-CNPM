@@ -85,3 +85,112 @@ E:\ki4\pbl3\pbl3_1\PBL3\PBL3\bin\Debug\EntityFramework.dll
 E:\ki4\pbl3\pbl3_1\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.dll
 E:\ki4\pbl3\pbl3_1\PBL3\PBL3\bin\Debug\EntityFramework.xml
 E:\ki4\pbl3\pbl3_1\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.xml
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\bin\Debug\EntityFramework.dll
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.dll
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\bin\Debug\EntityFramework.xml
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.xml
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.InforForm.resources
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.SignInForm.resources
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.UpdateUserForm.resources
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.CustomComponents.CustomComment.resources
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.CustomComponents.CustomLinkLabel.resources
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.LandlordForm.InforLanlordForm.resources
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.LandlordForm.UpdateInforForm.resources
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\PBL3.exe.config
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\PBL3.exe
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\PBL3.pdb
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Properties.Resources.resources
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.AdminForm.AdminHomeForm.resources
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.AdminForm.UserManagementForm.resources
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.ChangePwdForm.resources
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.DashboardForm.resources
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.HomeForm.resources
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.InforForm.resources
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.PromptDialogForm.resources
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.SignInForm.resources
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.SignUpForm.resources
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.UpdateUserForm.resources
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.UserForm.resources
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CustomComponents.CustomComment.resources
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CustomComponent.CustomInforComponent.resources
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CustomComponents.CustomLinkLabel.resources
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CustomComponent.CustomTextBox.resources
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.LandlordForm.InforLanlordForm.resources
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.LandlordForm.InforManagementForm.resources
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.LandlordForm.LandlordHomeForm.resources
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.LandlordForm.PostInforForm.resources
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.LandlordForm.UpdateInforForm.resources
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.RenterForm.RenterHomeForm.resources
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.csproj.GenerateResource.cache
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.csproj.Up2Date
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.exe
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.pdb
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.AdminForm.InforManamentForm.resources
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\System.Buffers.dll
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\System.Memory.dll
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\System.Buffers.xml
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\System.Memory.xml
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.csproj.AssemblyReference.cache
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Properties.Resources.resources
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.AdminForm.AdminHomeForm.resources
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.AdminForm.InforManamentForm.resources
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.AdminForm.UserManagementForm.resources
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.ChangePwdForm.resources
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.DashboardForm.resources
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.HomeForm.resources
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.InforForm.resources
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.PromptDialogForm.resources
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.SignInForm.resources
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.SignUpForm.resources
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.UpdateUserForm.resources
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.UserForm.resources
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CustomComponents.CustomComment.resources
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CustomComponent.CustomInforComponent.resources
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CustomComponents.CustomLinkLabel.resources
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.CustomComponent.CustomTextBox.resources
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.LandlordForm.InforLanlordForm.resources
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.LandlordForm.InforManagementForm.resources
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.LandlordForm.LandlordHomeForm.resources
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.LandlordForm.PostInforForm.resources
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.LandlordForm.UpdateInforForm.resources
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.Views.RenterForm.RenterHomeForm.resources
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.csproj.GenerateResource.cache
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.csproj.CoreCompileInputs.cache
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.exe
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.pdb
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\bin\Debug\PBL3.exe.config
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\bin\Debug\PBL3.exe
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\bin\Debug\PBL3.pdb
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\bin\Debug\EntityFramework.dll
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\bin\Debug\System.Buffers.dll
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\bin\Debug\System.Memory.dll
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\bin\Debug\EntityFramework.xml
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\bin\Debug\System.Buffers.xml
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\bin\Debug\System.Memory.xml
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\LAPTOP GIGABYTE\Downloads\pbl 95\PBL3\PBL3\obj\Debug\PBL3.csproj.Up2Date

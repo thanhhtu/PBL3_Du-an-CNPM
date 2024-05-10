@@ -7,10 +7,12 @@ using System.Threading.Tasks;
 
 namespace PBL3.BLL
 {
-    internal class PwdHashing
+    public class PwdHashing
     {
         static string key { get; set; } = "A!9HHhi%XjjYY4YP2@Nob009X";
-        public static string EncodePasswordToBase64(string password)
+
+        //Sử dụng TripleDES (Triple Data Encryption Standard) và MD5 (Message Digest Algorithm 5) để hashing mật khẩu
+        public static string EncodePwdToBase64(string password)
         {
             using (var md5 = new MD5CryptoServiceProvider())
             {
@@ -29,7 +31,8 @@ namespace PBL3.BLL
                 }
             }
         }
-        public static string DecodePasswordFromBase64(string encodedString)
+
+        public static string DecodePwdFromBase64(string encodedString)
         {
             using (var md5 = new MD5CryptoServiceProvider())
             {

@@ -12,6 +12,8 @@ namespace PBL3.Views.LandlordForm
 {
     public partial class InforManagementForm : Form
     {
+        public delegate void showPostDetail(Form childForm);
+        public showPostDetail showPost;
         public InforManagementForm()
         {
             InitializeComponent();

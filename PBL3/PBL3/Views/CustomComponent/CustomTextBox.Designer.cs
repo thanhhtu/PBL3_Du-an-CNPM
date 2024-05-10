@@ -38,7 +38,7 @@
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.textBox1.Location = new System.Drawing.Point(7, 7);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(214, 18);
+            this.textBox1.Size = new System.Drawing.Size(214, 23);
             this.textBox1.TabIndex = 0;
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
@@ -49,7 +49,7 @@
             // 
             // CustomTextBox
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.textBox1);
             this.Font = new System.Drawing.Font("Segoe UI", 13F);

@@ -10,29 +10,26 @@ using System.Threading.Tasks;
 using System.Windows.Markup;
 using System.Windows.Media;
 using System.Xml.Linq;
-//using PBL3.BLL;
 using PBL3.DTO;
+
 namespace PBL3.DAL
 {
-    public class CreateDB :
-    // CreateDatabaseIfNotExists<MyData>
-    //DropCreateDatabaseIfModelChanges<MyData>
-    DropCreateDatabaseAlways<DataPBL3>
+    public class CreateDB : DropCreateDatabaseAlways<DataPBL3>
     {
         protected override void Seed(DataPBL3 context)
         {
             context.Roles.AddRange(new Role[]
             {
                 new Role {RoleID = 1, RoleName = "Admin"},
-                new Role {RoleID = 2, RoleName = "Host"},
+                new Role {RoleID = 2, RoleName = "Landlord"},
                 new Role {RoleID = 3, RoleName = "Renter"}
             });
             context.Accounts.AddRange(new Account[]
             {
-                new Account {AccountID = 1, RoleID = 1, Username = "Admin1", Pwd = "123456", CreatedAt = DateTime.Now, BeingPublished = true, PublishedAt = DateTime.Now},
-                new Account {AccountID = 2, RoleID = 2, Username = "Landlord1", Pwd = "123456", CreatedAt = DateTime.Now, BeingPublished = true, PublishedAt = DateTime.Now},
-                new Account {AccountID = 3, RoleID = 2, Username = "Landlord2", Pwd = "123456", CreatedAt = DateTime.Now, BeingPublished = true, PublishedAt = DateTime.Now},
-                new Account {AccountID = 4, RoleID = 3, Username = "Renter1", Pwd = "123456", CreatedAt = DateTime.Now, BeingPublished = true, PublishedAt = DateTime.Now},
+                new Account {AccountID = 1, RoleID = 1, Username = "Admin1", Pwd = "DeHOn0UsIwM=", CreatedAt = DateTime.Now, BeingPublished = true, PublishedAt = DateTime.Now},
+                new Account {AccountID = 2, RoleID = 2, Username = "Landlord1", Pwd = "DeHOn0UsIwM=", CreatedAt = DateTime.Now, BeingPublished = true, PublishedAt = DateTime.Now},
+                new Account {AccountID = 3, RoleID = 2, Username = "Landlord2", Pwd = "DeHOn0UsIwM=", CreatedAt = DateTime.Now, BeingPublished = false, PublishedAt = DateTime.Now},
+                new Account {AccountID = 4, RoleID = 3, Username = "Renter1", Pwd = "DeHOn0UsIwM=", CreatedAt = DateTime.Now, BeingPublished = true, PublishedAt = DateTime.Now},
             });
             context.Districts.AddRange(new District[]
             {
@@ -182,36 +179,36 @@ namespace PBL3.DAL
             context.Images.AddRange(new Image[] //1 bài Infor có đúng 3 ảnh
             {
                 new Image { ImageID = 1, InforID = 1, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 2, InforID = 1, ImagePath = @"\phongtro2.jpg"},
-                new Image { ImageID = 3, InforID = 1, ImagePath = @"\phongtro3.jpg"},
+                new Image { ImageID = 2, InforID = 1, ImagePath = @"\phongtro1.jpg"},
+                new Image { ImageID = 3, InforID = 1, ImagePath = @"\phongtro1.jpg"},
 
-                new Image { ImageID = 4, InforID = 2, ImagePath = @"\phongtro2.jpg"},
-                new Image { ImageID = 5, InforID = 2, ImagePath = @"\phongtro3.jpg"},
+                new Image { ImageID = 4, InforID = 2, ImagePath = @"\phongtro1.jpg"},
+                new Image { ImageID = 5, InforID = 2, ImagePath = @"\phongtro1.jpg"},
                 new Image { ImageID = 6, InforID = 2, ImagePath = @"\phongtro1.jpg"},
 
                 new Image { ImageID = 7, InforID = 3, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 8, InforID = 3, ImagePath = @"\phongtro2.jpg"},
-                new Image { ImageID = 9, InforID = 3, ImagePath = @"\phongtro3.jpg"},
+                new Image { ImageID = 8, InforID = 3, ImagePath = @"\phongtro1.jpg"},
+                new Image { ImageID = 9, InforID = 3, ImagePath = @"\phongtro1.jpg"},
 
                 new Image { ImageID = 10, InforID = 4, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 11, InforID = 4, ImagePath = @"\phongtro2.jpg"},
-                new Image { ImageID = 12, InforID = 4, ImagePath = @"\phongtro3.jpg"},
+                new Image { ImageID = 11, InforID = 4, ImagePath = @"\phongtro1.jpg"},
+                new Image { ImageID = 12, InforID = 4, ImagePath = @"\phongtro1.jpg"},
 
                 new Image { ImageID = 13, InforID = 5, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 14, InforID = 5, ImagePath = @"\phongtro2.jpg"},
-                new Image { ImageID = 15, InforID = 5, ImagePath = @"\phongtro3.jpg"},
+                new Image { ImageID = 14, InforID = 5, ImagePath = @"\phongtro1.jpg"},
+                new Image { ImageID = 15, InforID = 5, ImagePath = @"\phongtro1.jpg"},
 
                 new Image { ImageID = 16, InforID = 6, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 17, InforID = 6, ImagePath = @"\phongtro2.jpg"},
-                new Image { ImageID = 18, InforID = 6, ImagePath = @"\phongtro3.jpg"},
+                new Image { ImageID = 17, InforID = 6, ImagePath = @"\phongtro1.jpg"},
+                new Image { ImageID = 18, InforID = 6, ImagePath = @"\phongtro1.jpg"},
 
                 new Image { ImageID = 19, InforID = 7, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 20, InforID = 7, ImagePath = @"\phongtro2.jpg"},
-                new Image { ImageID = 21, InforID = 7, ImagePath = @"\phongtro3.jpg"},
+                new Image { ImageID = 20, InforID = 7, ImagePath = @"\phongtro1.jpg"},
+                new Image { ImageID = 21, InforID = 7, ImagePath = @"\phongtro1.jpg"},
 
                 new Image { ImageID = 22, InforID = 8, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 23, InforID = 8, ImagePath = @"\phongtro2.jpg"},
-                new Image { ImageID = 24, InforID = 8, ImagePath = @"\phongtro3.jpg"},
+                new Image { ImageID = 23, InforID = 8, ImagePath = @"\phongtro1.jpg"},
+                new Image { ImageID = 24, InforID = 8, ImagePath = @"\phongtro1.jpg"},
             });
             context.Comments.AddRange(new Comment[]
             {
@@ -222,23 +219,24 @@ namespace PBL3.DAL
                 new Comment {CommentID = 5, InforID = 3, UserID = 1, Content = "Huhu", CreatedAt = DateTime.Now},
                 new Comment {CommentID = 6, InforID = 3, UserID = 3, Content = "HicHic", CreatedAt = DateTime.Now},
             });
-            context.Favorite_Infors.AddRange(new Favorite_Infor[]
+            context.FavoriteInfors.AddRange(new FavoriteInfor[]
             {
-                new Favorite_Infor{ UserID = 2, InforID = 1},
-                new Favorite_Infor{ UserID = 2, InforID = 2},
-                new Favorite_Infor{ UserID = 2, InforID = 3},
-                new Favorite_Infor{ UserID = 3, InforID = 4},
-                new Favorite_Infor{ UserID = 3, InforID = 5},
-                new Favorite_Infor{ UserID = 4, InforID = 6},
-                new Favorite_Infor{ UserID = 4, InforID = 7},
-                new Favorite_Infor{ UserID = 4, InforID = 8},
+                new FavoriteInfor{ UserID = 2, InforID = 1},
+                new FavoriteInfor{ UserID = 2, InforID = 2},
+                new FavoriteInfor{ UserID = 2, InforID = 3},
+                new FavoriteInfor{ UserID = 3, InforID = 4},
+                new FavoriteInfor{ UserID = 3, InforID = 5},
+                new FavoriteInfor{ UserID = 4, InforID = 6},
+                new FavoriteInfor{ UserID = 4, InforID = 7},
+                new FavoriteInfor{ UserID = 4, InforID = 8},
             });
             context.ImageOfUsers.AddRange(new ImageOfUser[]
             {
-                new ImageOfUser { ImageOfUserID = 1, UserID = 1, ImagePath = @"abc.jpg"},
-                new ImageOfUser { ImageOfUserID = 2, UserID = 2, ImagePath = @"abc.jpg"},
-                new ImageOfUser { ImageOfUserID = 3, UserID = 3, ImagePath = @"abc.jpg"},
-                new ImageOfUser { ImageOfUserID = 4, UserID = 4, ImagePath = @"abc.jpg"}, 
+                new ImageOfUser { ImageOfUserID = 1, UserID = 2, ImagePath = @"landlord1.jpg"},
+                new ImageOfUser { ImageOfUserID = 2, UserID = 2, ImagePath = @"landlord2.jpg"},
+
+                new ImageOfUser { ImageOfUserID = 3, UserID = 3, ImagePath = @"landlord1.jpg"},
+                new ImageOfUser { ImageOfUserID = 4, UserID = 3, ImagePath = @"landlord2.jpg"},
             });
         }
     }

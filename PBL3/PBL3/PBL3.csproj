@@ -45,11 +45,30 @@
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -63,19 +82,34 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\Infor.cs" />
+    <Compile Include="BLL\AccountBLL.cs" />
+    <Compile Include="BLL\AddressBLL.cs" />
+    <Compile Include="BLL\CommentBLL.cs" />
+    <Compile Include="BLL\DistrictBLL.cs" />
+    <Compile Include="BLL\ImageBLL.cs" />
+    <Compile Include="BLL\ImageOfUserBLL.cs" />
+    <Compile Include="BLL\InforBLL.cs" />
+    <Compile Include="BLL\PwdHashing.cs" />
+    <Compile Include="BLL\UserBLL.cs" />
+    <Compile Include="BLL\WardBLL.cs" />
     <Compile Include="DAL\CreateDB.cs" />
     <Compile Include="DAL\DataPBL3.cs" />
     <Compile Include="DTO\AccommodationInformation.cs" />
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\Address.cs" />
+    <Compile Include="DTO\CBBItem.cs" />
     <Compile Include="DTO\Comment.cs" />
     <Compile Include="DTO\District.cs" />
-    <Compile Include="DTO\Favorite_Infor.cs" />
+    <Compile Include="DTO\FavoriteInfor.cs" />
     <Compile Include="DTO\ImageOfUser.cs" />
     <Compile Include="DTO\Image.cs" />
+    <Compile Include="DTO\LoginInfor.cs" />
     <Compile Include="DTO\Role.cs" />
     <Compile Include="DTO\User.cs" />
+    <Compile Include="DTO\VIEW DTO\CommentViewDTO.cs" />
+    <Compile Include="DTO\VIEW DTO\InforDTGViewDTO.cs" />
+    <Compile Include="DTO\VIEW DTO\InforViewDTO.cs" />
+    <Compile Include="DTO\VIEW DTO\UserViewDTO.cs" />
     <Compile Include="DTO\Ward.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

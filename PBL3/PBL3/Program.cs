@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PBL3.Views.AdminForm;
 using PBL3.Views.CommonForm;
-using PBL3.Views.LandlordForm;
+
 
 namespace PBL3
 {

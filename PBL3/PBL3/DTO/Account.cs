@@ -22,7 +22,7 @@ namespace PBL3.DTO
         public string Pwd { get; set; }
 
         [Required]
-        public DateTime? CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
 
         
         public bool?  BeingPublished { get; set; }

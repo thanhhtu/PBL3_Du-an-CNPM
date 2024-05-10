@@ -37,6 +37,6 @@ namespace PBL3.DAL
         public virtual DbSet<Ward> Wards { get; set; }
         public virtual DbSet<District> Districts { get; set; }
         public virtual DbSet<Address> Addresses { get; set; }
-        public virtual DbSet<Favorite_Infor> Favorite_Infors { get; set; }
+        public virtual DbSet<FavoriteInfor> FavoriteInfors { get; set; }
     }
 }

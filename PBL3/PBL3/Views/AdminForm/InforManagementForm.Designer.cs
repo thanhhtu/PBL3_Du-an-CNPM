@@ -1,6 +1,6 @@
 ﻿namespace PBL3.Views.AdminForm
 {
-    partial class InforManagementForm
+    partial class InforManamentForm
     {
         /// <summary>
         /// Required designer variable.
@@ -39,6 +39,7 @@
             this.btnReadInfor = new PBL3.Views.CustomComponent.CustomButton();
             this.btnViewUser = new PBL3.Views.CustomComponent.CustomButton();
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -79,6 +80,7 @@
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.TextColor = System.Drawing.Color.Black;
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnReverse
             // 
@@ -97,6 +99,7 @@
             this.btnReverse.TabIndex = 4;
             this.btnReverse.TextColor = System.Drawing.Color.White;
             this.btnReverse.UseVisualStyleBackColor = false;
+            this.btnReverse.Click += new System.EventHandler(this.btnReverse_Click);
             // 
             // cbbSort
             // 
@@ -116,6 +119,7 @@
             this.cbbSort.Size = new System.Drawing.Size(240, 40);
             this.cbbSort.TabIndex = 3;
             this.cbbSort.Texts = "Sắp xếp theo";
+            this.cbbSort.OnSelectionChangedCommited += new System.EventHandler(this.cbbSort_OnSelectionChangedCommited);
             // 
             // cbbPostedFilter
             // 
@@ -126,6 +130,11 @@
             this.cbbPostedFilter.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.cbbPostedFilter.ForeColor = System.Drawing.Color.DimGray;
             this.cbbPostedFilter.IconColor = System.Drawing.Color.SteelBlue;
+            this.cbbPostedFilter.Items.AddRange(new object[] {
+            "Tất cả",
+            "Trọ đã cho thuê",
+            "Trọ chưa cho thuê",
+            "Trọ đã chỉnh sửa"});
             this.cbbPostedFilter.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbbPostedFilter.ListTextColor = System.Drawing.Color.Black;
             this.cbbPostedFilter.Location = new System.Drawing.Point(574, 20);
@@ -135,6 +144,7 @@
             this.cbbPostedFilter.Size = new System.Drawing.Size(240, 40);
             this.cbbPostedFilter.TabIndex = 2;
             this.cbbPostedFilter.Texts = "Chọn bộ lọc";
+            this.cbbPostedFilter.OnSelectionChangedCommited += new System.EventHandler(this.cbbPostedFilter_OnSelectionChangedCommited);
             // 
             // txtSearch
             // 
@@ -184,13 +194,14 @@
             this.btnDeleteInfor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteInfor.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteInfor.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteInfor.Location = new System.Drawing.Point(949, 11);
+            this.btnDeleteInfor.Location = new System.Drawing.Point(981, 11);
             this.btnDeleteInfor.Name = "btnDeleteInfor";
             this.btnDeleteInfor.Size = new System.Drawing.Size(228, 56);
             this.btnDeleteInfor.TabIndex = 8;
-            this.btnDeleteInfor.Text = "Xóa thông tin trọ";
+            this.btnDeleteInfor.Text = "Xóa trọ";
             this.btnDeleteInfor.TextColor = System.Drawing.Color.White;
             this.btnDeleteInfor.UseVisualStyleBackColor = false;
+            this.btnDeleteInfor.Click += new System.EventHandler(this.btnDeleteInfor_Click);
             // 
             // btnReadInfor
             // 
@@ -211,6 +222,7 @@
             this.btnReadInfor.Text = "Thông tin trọ";
             this.btnReadInfor.TextColor = System.Drawing.Color.White;
             this.btnReadInfor.UseVisualStyleBackColor = false;
+            this.btnReadInfor.Click += new System.EventHandler(this.btnReadInfor_Click);
             // 
             // btnViewUser
             // 
@@ -231,15 +243,18 @@
             this.btnViewUser.Text = "Thông tin chủ trọ";
             this.btnViewUser.TextColor = System.Drawing.Color.White;
             this.btnViewUser.UseVisualStyleBackColor = false;
+            this.btnViewUser.Click += new System.EventHandler(this.btnViewUser_Click);
             // 
             // dgv
             // 
             this.dgv.AllowUserToAddRows = false;
-            this.dgv.AllowUserToDeleteRows = false;
             this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.dgv.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT});
             this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv.Location = new System.Drawing.Point(0, 0);
             this.dgv.Name = "dgv";
@@ -249,6 +264,15 @@
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv.Size = new System.Drawing.Size(1411, 493);
             this.dgv.TabIndex = 22;
+            this.dgv.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgv_RowPostPaint);
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.MinimumWidth = 6;
+            this.STT.Name = "STT";
+            this.STT.ReadOnly = true;
+            this.STT.Width = 63;
             // 
             // panel2
             // 
@@ -259,7 +283,7 @@
             this.panel2.Size = new System.Drawing.Size(1411, 493);
             this.panel2.TabIndex = 28;
             // 
-            // InforManagementForm
+            // InforManamentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -268,7 +292,7 @@
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
-            this.Name = "InforManagementForm";
+            this.Name = "InforManamentForm";
             this.Text = "InforManagementForm";
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
@@ -293,5 +317,6 @@
         private CustomComponents.CustomComboBox cbbSort;
         private CustomComponents.CustomComboBox cbbPostedFilter;
         private CustomComponent.CustomTextBox txtSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
     }
 }

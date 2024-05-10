@@ -44,6 +44,7 @@
             // 
             // customPanel1
             // 
+            this.customPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.customPanel1.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.customPanel1.BorderRadius = 30;
             this.customPanel1.Controls.Add(this.btnHidePwd);
@@ -61,11 +62,10 @@
             this.customPanel1.GradientBottonColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.customPanel1.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.customPanel1.Location = new System.Drawing.Point(181, 76);
-            this.customPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.customPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.customPanel1.Name = "customPanel1";
             this.customPanel1.Size = new System.Drawing.Size(704, 401);
             this.customPanel1.TabIndex = 8;
-            this.customPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.customPanel1_Paint);
             // 
             // btnHidePwd
             // 
@@ -79,13 +79,14 @@
             this.btnHidePwd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHidePwd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.btnHidePwd.Image = global::PBL3.Properties.Resources.hidePass;
-            this.btnHidePwd.Location = new System.Drawing.Point(557, 212);
-            this.btnHidePwd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHidePwd.Location = new System.Drawing.Point(600, 210);
+            this.btnHidePwd.Margin = new System.Windows.Forms.Padding(4);
             this.btnHidePwd.Name = "btnHidePwd";
             this.btnHidePwd.Size = new System.Drawing.Size(49, 25);
             this.btnHidePwd.TabIndex = 24;
             this.btnHidePwd.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.btnHidePwd.UseVisualStyleBackColor = false;
+            this.btnHidePwd.Click += new System.EventHandler(this.btnHidePwd_Click);
             // 
             // btnShowPwd
             // 
@@ -99,13 +100,14 @@
             this.btnShowPwd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowPwd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.btnShowPwd.Image = global::PBL3.Properties.Resources.showPass;
-            this.btnShowPwd.Location = new System.Drawing.Point(615, 210);
-            this.btnShowPwd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnShowPwd.Location = new System.Drawing.Point(601, 210);
+            this.btnShowPwd.Margin = new System.Windows.Forms.Padding(4);
             this.btnShowPwd.Name = "btnShowPwd";
             this.btnShowPwd.Size = new System.Drawing.Size(48, 25);
             this.btnShowPwd.TabIndex = 23;
             this.btnShowPwd.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.btnShowPwd.UseVisualStyleBackColor = false;
+            this.btnShowPwd.Click += new System.EventHandler(this.btnShowPwd_Click);
             // 
             // LabelSignUp
             // 
@@ -122,6 +124,7 @@
             this.LabelSignUp.TabStop = true;
             this.LabelSignUp.Text = "Đăng ký ngay";
             this.LabelSignUp.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
+            this.LabelSignUp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LabelSignUp_LinkClicked);
             // 
             // label2
             // 
@@ -148,13 +151,14 @@
             this.btnSignIn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnSignIn.ForeColor = System.Drawing.Color.Black;
             this.btnSignIn.Location = new System.Drawing.Point(245, 283);
-            this.btnSignIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSignIn.Margin = new System.Windows.Forms.Padding(4);
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.Size = new System.Drawing.Size(211, 47);
             this.btnSignIn.TabIndex = 12;
             this.btnSignIn.Text = "Đăng nhập";
             this.btnSignIn.TextColor = System.Drawing.Color.Black;
             this.btnSignIn.UseVisualStyleBackColor = false;
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
             // labelPass
             // 
@@ -184,7 +188,7 @@
             this.txtPwd.Multiline = false;
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.Padding = new System.Windows.Forms.Padding(11, 6, 11, 6);
-            this.txtPwd.PasswordChar = false;
+            this.txtPwd.PasswordChar = true;
             this.txtPwd.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtPwd.PlaceholderText = "Nhập mật khẩu";
             this.txtPwd.Size = new System.Drawing.Size(489, 45);
@@ -236,7 +240,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(0, -6);
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(704, 81);
             this.label1.TabIndex = 6;
@@ -252,7 +256,7 @@
             this.ClientSize = new System.Drawing.Size(1101, 574);
             this.Controls.Add(this.customPanel1);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SignInForm";
             this.Text = "SigninForm";
             this.customPanel1.ResumeLayout(false);
