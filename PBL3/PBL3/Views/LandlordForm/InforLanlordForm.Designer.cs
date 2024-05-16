@@ -143,7 +143,7 @@
             this.customInforComponent2.DescLabel = "Mô tả:";
             this.customInforComponent2.HomeLink = "Tên nhà";
             this.customInforComponent2.Location = new System.Drawing.Point(-2, 228);
-            this.customInforComponent2.Margin = new System.Windows.Forms.Padding(2);
+            this.customInforComponent2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.customInforComponent2.MoneyLabel = "Số tiền: ";
             this.customInforComponent2.Name = "customInforComponent2";
             this.customInforComponent2.PictureBox = ((System.Drawing.Image)(resources.GetObject("customInforComponent2.PictureBox")));
@@ -159,7 +159,7 @@
             this.customInforComponent1.DescLabel = "Mô tả:";
             this.customInforComponent1.HomeLink = "Tên nhà";
             this.customInforComponent1.Location = new System.Drawing.Point(0, 2);
-            this.customInforComponent1.Margin = new System.Windows.Forms.Padding(2);
+            this.customInforComponent1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.customInforComponent1.MoneyLabel = "Số tiền: ";
             this.customInforComponent1.Name = "customInforComponent1";
             this.customInforComponent1.PictureBox = ((System.Drawing.Image)(resources.GetObject("customInforComponent1.PictureBox")));

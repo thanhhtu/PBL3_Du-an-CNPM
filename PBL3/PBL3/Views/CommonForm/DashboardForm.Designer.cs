@@ -383,6 +383,7 @@
             this.btnNextPage.Text = "Trang sau";
             this.btnNextPage.TextColor = System.Drawing.Color.White;
             this.btnNextPage.UseVisualStyleBackColor = false;
+            this.btnNextPage.Click += new System.EventHandler(this.btnNextPage_Click);
             // 
             // panel3
             // 
@@ -416,6 +417,7 @@
             this.btnPrevPage.Text = "Trang trước";
             this.btnPrevPage.TextColor = System.Drawing.Color.White;
             this.btnPrevPage.UseVisualStyleBackColor = false;
+            this.btnPrevPage.Click += new System.EventHandler(this.btnPrevPage_Click);
             // 
             // DashboardForm
             // 
