@@ -47,6 +47,7 @@
             // 
             // customPanel1
             // 
+            this.customPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.customPanel1.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.customPanel1.BorderRadius = 30;
             this.customPanel1.Controls.Add(this.btnCancel);
@@ -66,30 +67,30 @@
             this.customPanel1.GradientAngle = 90F;
             this.customPanel1.GradientBottonColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.customPanel1.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.customPanel1.Location = new System.Drawing.Point(157, 26);
+            this.customPanel1.Location = new System.Drawing.Point(159, 48);
             this.customPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.customPanel1.Name = "customPanel1";
-            this.customPanel1.Size = new System.Drawing.Size(788, 513);
+            this.customPanel1.Size = new System.Drawing.Size(788, 549);
             this.customPanel1.TabIndex = 10;
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnCancel.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCancel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnCancel.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.btnCancel.BorderRadius = 20;
             this.btnCancel.BorderSize = 0;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel.Location = new System.Drawing.Point(504, 448);
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(504, 471);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(240, 46);
+            this.btnCancel.Size = new System.Drawing.Size(204, 46);
             this.btnCancel.TabIndex = 24;
             this.btnCancel.Text = "Hủy";
-            this.btnCancel.TextColor = System.Drawing.Color.Black;
+            this.btnCancel.TextColor = System.Drawing.Color.White;
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -104,10 +105,10 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.ForeColor = System.Drawing.Color.Black;
-            this.btnUpdate.Location = new System.Drawing.Point(208, 448);
+            this.btnUpdate.Location = new System.Drawing.Point(228, 471);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(240, 46);
+            this.btnUpdate.Size = new System.Drawing.Size(208, 46);
             this.btnUpdate.TabIndex = 12;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.TextColor = System.Drawing.Color.Black;
@@ -124,7 +125,7 @@
             this.txtDetailedAddress.BorderSize = 2;
             this.txtDetailedAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDetailedAddress.ForeColor = System.Drawing.Color.DimGray;
-            this.txtDetailedAddress.Location = new System.Drawing.Point(208, 334);
+            this.txtDetailedAddress.Location = new System.Drawing.Point(208, 357);
             this.txtDetailedAddress.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
             this.txtDetailedAddress.Multiline = true;
             this.txtDetailedAddress.Name = "txtDetailedAddress";
@@ -148,7 +149,7 @@
             this.cbbWard.IconColor = System.Drawing.Color.SteelBlue;
             this.cbbWard.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbbWard.ListTextColor = System.Drawing.Color.Black;
-            this.cbbWard.Location = new System.Drawing.Point(489, 266);
+            this.cbbWard.Location = new System.Drawing.Point(489, 289);
             this.cbbWard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbWard.MinimumSize = new System.Drawing.Size(200, 39);
             this.cbbWard.Name = "cbbWard";
@@ -168,7 +169,7 @@
             this.cbbDistrict.IconColor = System.Drawing.Color.SteelBlue;
             this.cbbDistrict.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbbDistrict.ListTextColor = System.Drawing.Color.Black;
-            this.cbbDistrict.Location = new System.Drawing.Point(208, 266);
+            this.cbbDistrict.Location = new System.Drawing.Point(208, 289);
             this.cbbDistrict.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbDistrict.MinimumSize = new System.Drawing.Size(200, 39);
             this.cbbDistrict.Name = "cbbDistrict";
@@ -184,7 +185,7 @@
             this.labelAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.labelAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.labelAddress.ForeColor = System.Drawing.Color.Black;
-            this.labelAddress.Location = new System.Drawing.Point(19, 266);
+            this.labelAddress.Location = new System.Drawing.Point(19, 289);
             this.labelAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAddress.Name = "labelAddress";
             this.labelAddress.Size = new System.Drawing.Size(78, 28);
@@ -197,7 +198,7 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(19, 75);
+            this.label3.Location = new System.Drawing.Point(19, 98);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 28);
@@ -214,7 +215,7 @@
             this.txtFullName.BorderSize = 2;
             this.txtFullName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFullName.ForeColor = System.Drawing.Color.DimGray;
-            this.txtFullName.Location = new System.Drawing.Point(208, 75);
+            this.txtFullName.Location = new System.Drawing.Point(208, 98);
             this.txtFullName.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtFullName.Multiline = false;
             this.txtFullName.Name = "txtFullName";
@@ -233,7 +234,7 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(19, 206);
+            this.label2.Location = new System.Drawing.Point(19, 229);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(138, 28);
@@ -250,7 +251,7 @@
             this.txtNumber.BorderSize = 2;
             this.txtNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumber.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNumber.Location = new System.Drawing.Point(208, 206);
+            this.txtNumber.Location = new System.Drawing.Point(208, 229);
             this.txtNumber.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
             this.txtNumber.Multiline = false;
             this.txtNumber.Name = "txtNumber";
@@ -269,7 +270,7 @@
             this.labelEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.labelEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.labelEmail.ForeColor = System.Drawing.Color.Black;
-            this.labelEmail.Location = new System.Drawing.Point(19, 140);
+            this.labelEmail.Location = new System.Drawing.Point(19, 163);
             this.labelEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(65, 28);
@@ -286,7 +287,7 @@
             this.txtEmail.BorderSize = 2;
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.txtEmail.Location = new System.Drawing.Point(208, 140);
+            this.txtEmail.Location = new System.Drawing.Point(208, 163);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
             this.txtEmail.Multiline = false;
             this.txtEmail.Name = "txtEmail";
@@ -308,7 +309,7 @@
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(788, 57);
+            this.label1.Size = new System.Drawing.Size(788, 76);
             this.label1.TabIndex = 6;
             this.label1.Text = "CẬP NHẬT THÔNG TIN CÁ NHÂN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

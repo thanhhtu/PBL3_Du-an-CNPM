@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.customPanel1 = new PBL3.Views.CustomComponent.CustomPanel();
-            this.btnShowConfirmPwd = new PBL3.Views.CustomComponent.CustomButton();
-            this.btnShowNewPwd = new PBL3.Views.CustomComponent.CustomButton();
-            this.btnShowOldPwd = new PBL3.Views.CustomComponent.CustomButton();
             this.btnHideConfirmPwd = new PBL3.Views.CustomComponent.CustomButton();
             this.btnHideNewPwd = new PBL3.Views.CustomComponent.CustomButton();
             this.btnHideOldPass = new PBL3.Views.CustomComponent.CustomButton();
@@ -44,16 +41,17 @@
             this.txtOldPass = new PBL3.Views.CustomComponent.CustomTextBox();
             this.labelOldPass = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnShowOldPwd = new PBL3.Views.CustomComponent.CustomButton();
+            this.btnShowNewPwd = new PBL3.Views.CustomComponent.CustomButton();
+            this.btnShowConfirmPwd = new PBL3.Views.CustomComponent.CustomButton();
             this.customPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // customPanel1
             // 
+            this.customPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.customPanel1.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.customPanel1.BorderRadius = 30;
-            this.customPanel1.Controls.Add(this.btnShowConfirmPwd);
-            this.customPanel1.Controls.Add(this.btnShowNewPwd);
-            this.customPanel1.Controls.Add(this.btnShowOldPwd);
             this.customPanel1.Controls.Add(this.btnHideConfirmPwd);
             this.customPanel1.Controls.Add(this.btnHideNewPwd);
             this.customPanel1.Controls.Add(this.btnHideOldPass);
@@ -66,6 +64,9 @@
             this.customPanel1.Controls.Add(this.txtOldPass);
             this.customPanel1.Controls.Add(this.labelOldPass);
             this.customPanel1.Controls.Add(this.label1);
+            this.customPanel1.Controls.Add(this.btnShowOldPwd);
+            this.customPanel1.Controls.Add(this.btnShowNewPwd);
+            this.customPanel1.Controls.Add(this.btnShowConfirmPwd);
             this.customPanel1.ForeColor = System.Drawing.Color.White;
             this.customPanel1.GradientAngle = 90F;
             this.customPanel1.GradientBottonColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
@@ -75,69 +76,6 @@
             this.customPanel1.Name = "customPanel1";
             this.customPanel1.Size = new System.Drawing.Size(704, 401);
             this.customPanel1.TabIndex = 7;
-            // 
-            // btnShowConfirmPwd
-            // 
-            this.btnShowConfirmPwd.BackColor = System.Drawing.Color.Transparent;
-            this.btnShowConfirmPwd.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnShowConfirmPwd.BorderColor = System.Drawing.Color.Transparent;
-            this.btnShowConfirmPwd.BorderRadius = 0;
-            this.btnShowConfirmPwd.BorderSize = 0;
-            this.btnShowConfirmPwd.FlatAppearance.BorderSize = 0;
-            this.btnShowConfirmPwd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowConfirmPwd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowConfirmPwd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.btnShowConfirmPwd.Image = global::PBL3.Properties.Resources.showPass;
-            this.btnShowConfirmPwd.Location = new System.Drawing.Point(596, 246);
-            this.btnShowConfirmPwd.Margin = new System.Windows.Forms.Padding(4);
-            this.btnShowConfirmPwd.Name = "btnShowConfirmPwd";
-            this.btnShowConfirmPwd.Size = new System.Drawing.Size(48, 25);
-            this.btnShowConfirmPwd.TabIndex = 19;
-            this.btnShowConfirmPwd.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.btnShowConfirmPwd.UseVisualStyleBackColor = false;
-            this.btnShowConfirmPwd.Click += new System.EventHandler(this.btnShowConfirmPwd_Click);
-            // 
-            // btnShowNewPwd
-            // 
-            this.btnShowNewPwd.BackColor = System.Drawing.Color.Transparent;
-            this.btnShowNewPwd.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnShowNewPwd.BorderColor = System.Drawing.Color.Transparent;
-            this.btnShowNewPwd.BorderRadius = 0;
-            this.btnShowNewPwd.BorderSize = 0;
-            this.btnShowNewPwd.FlatAppearance.BorderSize = 0;
-            this.btnShowNewPwd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowNewPwd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowNewPwd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.btnShowNewPwd.Image = global::PBL3.Properties.Resources.showPass;
-            this.btnShowNewPwd.Location = new System.Drawing.Point(596, 185);
-            this.btnShowNewPwd.Margin = new System.Windows.Forms.Padding(4);
-            this.btnShowNewPwd.Name = "btnShowNewPwd";
-            this.btnShowNewPwd.Size = new System.Drawing.Size(48, 25);
-            this.btnShowNewPwd.TabIndex = 15;
-            this.btnShowNewPwd.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.btnShowNewPwd.UseVisualStyleBackColor = false;
-            this.btnShowNewPwd.Click += new System.EventHandler(this.btnShowNewPwd_Click);
-            // 
-            // btnShowOldPwd
-            // 
-            this.btnShowOldPwd.BackColor = System.Drawing.Color.Transparent;
-            this.btnShowOldPwd.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnShowOldPwd.BorderColor = System.Drawing.Color.Transparent;
-            this.btnShowOldPwd.BorderRadius = 0;
-            this.btnShowOldPwd.BorderSize = 0;
-            this.btnShowOldPwd.FlatAppearance.BorderSize = 0;
-            this.btnShowOldPwd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowOldPwd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowOldPwd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.btnShowOldPwd.Image = global::PBL3.Properties.Resources.showPass;
-            this.btnShowOldPwd.Location = new System.Drawing.Point(596, 128);
-            this.btnShowOldPwd.Margin = new System.Windows.Forms.Padding(4);
-            this.btnShowOldPwd.Name = "btnShowOldPwd";
-            this.btnShowOldPwd.Size = new System.Drawing.Size(48, 25);
-            this.btnShowOldPwd.TabIndex = 16;
-            this.btnShowOldPwd.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.btnShowOldPwd.UseVisualStyleBackColor = false;
-            this.btnShowOldPwd.Click += new System.EventHandler(this.btnShowOldPwd_Click);
             // 
             // btnHideConfirmPwd
             // 
@@ -366,6 +304,69 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "ĐỔI MẬT KHẨU";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnShowOldPwd
+            // 
+            this.btnShowOldPwd.BackColor = System.Drawing.Color.Transparent;
+            this.btnShowOldPwd.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnShowOldPwd.BorderColor = System.Drawing.Color.Transparent;
+            this.btnShowOldPwd.BorderRadius = 0;
+            this.btnShowOldPwd.BorderSize = 0;
+            this.btnShowOldPwd.FlatAppearance.BorderSize = 0;
+            this.btnShowOldPwd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowOldPwd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowOldPwd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.btnShowOldPwd.Image = global::PBL3.Properties.Resources.showPass;
+            this.btnShowOldPwd.Location = new System.Drawing.Point(596, 128);
+            this.btnShowOldPwd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnShowOldPwd.Name = "btnShowOldPwd";
+            this.btnShowOldPwd.Size = new System.Drawing.Size(48, 25);
+            this.btnShowOldPwd.TabIndex = 16;
+            this.btnShowOldPwd.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.btnShowOldPwd.UseVisualStyleBackColor = false;
+            this.btnShowOldPwd.Click += new System.EventHandler(this.btnShowOldPwd_Click);
+            // 
+            // btnShowNewPwd
+            // 
+            this.btnShowNewPwd.BackColor = System.Drawing.Color.Transparent;
+            this.btnShowNewPwd.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnShowNewPwd.BorderColor = System.Drawing.Color.Transparent;
+            this.btnShowNewPwd.BorderRadius = 0;
+            this.btnShowNewPwd.BorderSize = 0;
+            this.btnShowNewPwd.FlatAppearance.BorderSize = 0;
+            this.btnShowNewPwd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowNewPwd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowNewPwd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.btnShowNewPwd.Image = global::PBL3.Properties.Resources.showPass;
+            this.btnShowNewPwd.Location = new System.Drawing.Point(596, 185);
+            this.btnShowNewPwd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnShowNewPwd.Name = "btnShowNewPwd";
+            this.btnShowNewPwd.Size = new System.Drawing.Size(48, 25);
+            this.btnShowNewPwd.TabIndex = 15;
+            this.btnShowNewPwd.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.btnShowNewPwd.UseVisualStyleBackColor = false;
+            this.btnShowNewPwd.Click += new System.EventHandler(this.btnShowNewPwd_Click);
+            // 
+            // btnShowConfirmPwd
+            // 
+            this.btnShowConfirmPwd.BackColor = System.Drawing.Color.Transparent;
+            this.btnShowConfirmPwd.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnShowConfirmPwd.BorderColor = System.Drawing.Color.Transparent;
+            this.btnShowConfirmPwd.BorderRadius = 0;
+            this.btnShowConfirmPwd.BorderSize = 0;
+            this.btnShowConfirmPwd.FlatAppearance.BorderSize = 0;
+            this.btnShowConfirmPwd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowConfirmPwd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowConfirmPwd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.btnShowConfirmPwd.Image = global::PBL3.Properties.Resources.showPass;
+            this.btnShowConfirmPwd.Location = new System.Drawing.Point(596, 246);
+            this.btnShowConfirmPwd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnShowConfirmPwd.Name = "btnShowConfirmPwd";
+            this.btnShowConfirmPwd.Size = new System.Drawing.Size(48, 25);
+            this.btnShowConfirmPwd.TabIndex = 19;
+            this.btnShowConfirmPwd.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.btnShowConfirmPwd.UseVisualStyleBackColor = false;
+            this.btnShowConfirmPwd.Click += new System.EventHandler(this.btnShowConfirmPwd_Click);
             // 
             // ChangePwdForm
             // 

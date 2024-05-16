@@ -27,14 +27,14 @@ namespace PBL3.Views.CommonForm
         private int totalPage; //Số trang tổng cộng
         private int skipNum = 4; //Một lần chỉ có thể load được 4 comment
        // private int load 
-        public InforForm(int infoID, bool HideRating = true)
+        public InforForm(int infoID, bool HideCmt = true)
         {
             InforID = infoID;
             InitializeComponent();
             InitializeFormInfomation();
             InitializeImage();
             LoadComment();
-            if (HideRating) //Ẩn cmt
+            if (HideCmt) //Ẩn cmt
             {
                panel8.Visible = true;
             }
@@ -265,6 +265,7 @@ namespace PBL3.Views.CommonForm
                 form.ShowDialog();
             }
         }
+
         public delegate void back();
         public back goback;
 
@@ -273,8 +274,6 @@ namespace PBL3.Views.CommonForm
             this.Dispose();
             goback();
         }
-
-
 
         private void buttonNotHeart_Click(object sender, EventArgs e)
         {

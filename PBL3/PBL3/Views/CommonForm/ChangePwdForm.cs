@@ -68,57 +68,56 @@ namespace PBL3.Views.CommonForm
 
         private void btnShowOldPwd_Click(object sender, EventArgs e)
         {
-            if (txtOldPass.PasswordChar == true)
+            if (txtOldPass.PasswordChar == false)
             {
                 btnHideOldPass.BringToFront();
-                txtOldPass.PasswordChar = false;
+                txtOldPass.PasswordChar = true;
             }
-        }
+        }//
 
         private void btnHideOldPass_Click(object sender, EventArgs e)
         {
-            if (txtOldPass.PasswordChar == false)
+            if (txtOldPass.PasswordChar == true)
             {
                 btnShowOldPwd.BringToFront();
-                txtOldPass.PasswordChar = true;
+                txtOldPass.PasswordChar = false;
             }
         }
 
         private void btnShowNewPwd_Click(object sender, EventArgs e)
         {
-            if (txtNewPass.PasswordChar == true)
+            if (txtNewPass.PasswordChar == false)
             {
                 btnHideNewPwd.BringToFront();
-                txtNewPass.PasswordChar = false;
+                txtNewPass.PasswordChar = true;
             }
         }
 
         private void btnHideNewPwd_Click(object sender, EventArgs e)
         {
-            if (txtNewPass.PasswordChar == false)
+            if (txtNewPass.PasswordChar == true)
             {
                 btnShowNewPwd.BringToFront();
-                txtNewPass.PasswordChar = true;
+                txtNewPass.PasswordChar = false;
             }
         }
 
         private void btnShowConfirmPwd_Click(object sender, EventArgs e)
         {
-            if (txtConfirmPass.PasswordChar == true)
+            if (txtConfirmPass.PasswordChar == false)
             {
                 btnHideConfirmPwd.BringToFront();
-                txtConfirmPass.PasswordChar = false;
+                txtConfirmPass.PasswordChar = true;
             }
         }
 
         private void btnHideConfirmPwd_Click(object sender, EventArgs e)
         {
-            if (txtConfirmPass.PasswordChar == false)
+            if (txtConfirmPass.PasswordChar == true)
             {
                 btnShowConfirmPwd.BringToFront();
-                txtConfirmPass.PasswordChar = true;
+                txtConfirmPass.PasswordChar = false;
             }
         }
-
     }
 }

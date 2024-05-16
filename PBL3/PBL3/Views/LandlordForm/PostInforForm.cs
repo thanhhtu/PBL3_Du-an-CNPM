@@ -131,36 +131,19 @@ namespace PBL3.Views.LandlordForm
         }
 
         //Kiểm tra số tiền có phải số dương không
-        public bool CheckValidPrice()
+        public bool CheckValidMoney(string price, string deposit)
         {
-            double x;
-            bool check = double.TryParse(txtPrice.Texts, out x);
-            if (!check)
+            double x, y;
+            bool checkPrice = double.TryParse(price, out x);
+            bool checkDeposit = double.TryParse(deposit, out y);
+            if (!checkPrice || !checkDeposit)
             {
-                MessageBox.Show("Vui lòng nhập giá tiền là một số nguyên!");
+                MessageBox.Show("Vui lòng nhập giá tiền (tiền thuê và tiền đặt cọc) là một số nguyên!");
                 return true;
             }
-            if (x <= 0)
+            if (x <= 0 || y < 0)
             {
-                MessageBox.Show("Vui lòng nhập giá tiền là một số nguyên dương!");
-                return true;
-            }
-            return false;
-        }
-
-        //Kiểm tra số tiền cọc có phải số dương không
-        public bool CheckValidDeposit()
-        {
-            double x;
-            bool check = double.TryParse(txtDeposit.Texts, out x);
-            if (!check)
-            {
-                MessageBox.Show("Vui lòng nhập tiền cọc là một số nguyên!");
-                return true;
-            }
-            if (x <= 0)
-            {
-                MessageBox.Show("Vui lòng nhập tiền cọc là một số nguyên dương!");
+                MessageBox.Show("Vui lòng nhập giá tiền (tiền thuê và tiền đặt cọc) là một số nguyên dương!");
                 return true;
             }
             return false;
@@ -234,8 +217,7 @@ namespace PBL3.Views.LandlordForm
             //Validation
             if (CheckEmpty()) return;
             if (CheckFailImage()) return;
-            if (CheckValidPrice()) return;
-            if (CheckValidDeposit()) return;
+            if (CheckValidMoney(txtPrice.Texts, txtDeposit.Texts)) return;
             if (CheckValidArea()) return;
 
             //Thêm address
