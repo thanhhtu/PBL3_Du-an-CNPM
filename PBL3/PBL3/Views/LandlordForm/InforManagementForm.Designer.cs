@@ -151,7 +151,7 @@
             this.cbbSort.Size = new System.Drawing.Size(243, 39);
             this.cbbSort.TabIndex = 3;
             this.cbbSort.Texts = "Sắp xếp theo";
-            this.cbbSort.OnSelectionChangedCommited += new System.EventHandler(this.cbbSort_OnSelectionChangedCommited);
+            this.cbbSort.OnSelectedIndexChanged += new System.EventHandler(this.cbbSort_OnSelectedIndexChanged);
             // 
             // cbbPostedFilter
             // 

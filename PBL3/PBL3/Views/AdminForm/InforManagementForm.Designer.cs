@@ -1,6 +1,6 @@
 ﻿namespace PBL3.Views.AdminForm
 {
-    partial class InforManamentForm
+    partial class InforManagementForm
     {
         /// <summary>
         /// Required designer variable.
@@ -104,12 +104,17 @@
             // cbbSort
             // 
             this.cbbSort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.cbbSort.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.cbbSort.BorderColor = System.Drawing.Color.SteelBlue;
             this.cbbSort.BorderSize = 2;
             this.cbbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSort.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.cbbSort.ForeColor = System.Drawing.Color.DimGray;
             this.cbbSort.IconColor = System.Drawing.Color.SteelBlue;
+            this.cbbSort.Items.AddRange(new object[] {
+            "Thời gian tạo",
+            "Thời gian chỉnh sửa",
+            "Số bình luận"});
             this.cbbSort.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbbSort.ListTextColor = System.Drawing.Color.Black;
             this.cbbSort.Location = new System.Drawing.Point(870, 20);
@@ -131,10 +136,10 @@
             this.cbbPostedFilter.ForeColor = System.Drawing.Color.DimGray;
             this.cbbPostedFilter.IconColor = System.Drawing.Color.SteelBlue;
             this.cbbPostedFilter.Items.AddRange(new object[] {
-            "Tất cả",
+            "Tất cả thông tin trọ",
+            "Trọ chưa được cho thuê",
             "Trọ đã cho thuê",
-            "Trọ chưa cho thuê",
-            "Trọ đã chỉnh sửa"});
+            "Thông tin trọ đã có chỉnh sửa"});
             this.cbbPostedFilter.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbbPostedFilter.ListTextColor = System.Drawing.Color.Black;
             this.cbbPostedFilter.Location = new System.Drawing.Point(574, 20);
@@ -283,7 +288,7 @@
             this.panel2.Size = new System.Drawing.Size(1411, 493);
             this.panel2.TabIndex = 28;
             // 
-            // InforManamentForm
+            // InforManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -292,7 +297,7 @@
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
-            this.Name = "InforManamentForm";
+            this.Name = "InforManagementForm";
             this.Text = "InforManagementForm";
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();

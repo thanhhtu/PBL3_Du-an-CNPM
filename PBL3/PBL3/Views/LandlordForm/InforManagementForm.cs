@@ -151,7 +151,7 @@ namespace PBL3.Views.LandlordForm
             else return;
         }
 
-        private void cbbSort_OnSelectionChangedCommited(object sender, EventArgs e)
+        private void cbbSort_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             checkAscending = true;
             ShowDTG();

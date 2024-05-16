@@ -17,7 +17,7 @@ namespace PBL3.DTO.ViewDTO
         public int NumberOfInfor { get; set; }
         public int NumberOfComment { get; set; }
         public DateTime? JoinedAt { get; set; }
-        public bool? BeingPublished { get; set; }
+        public String BeingPublished { get; set; }
         public DateTime? PublishedAt { get; set; }
     }
 }

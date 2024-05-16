@@ -138,42 +138,42 @@ namespace PBL3.DAL
                 new AccommodationInformation {InforID = 1, UserID = 2, AddressID = 1, Title = "Cho thuê trọ gần Đại Học Bách Khoa", Description = "Trọ mới xây, an toàn, đẹp, mát mẻ",
                             Price = 1300000, SquareArea = 22.5, BeingRented = true,
                             CreatedTime = DateTime.Now, ModifiedTime = null,
-                            LivingWithOwner = null, Deposit = 100
+                            LivingWithOwner = true, Deposit = 100
                 },
                 new AccommodationInformation {InforID = 2, UserID = 2, AddressID = 2, Title = "Cho thuê trọ tại ĐH KT ĐN", Description = "Trọ an toàn, đẹp",
                             Price = 2100000, SquareArea = 15, BeingRented = false,
                             CreatedTime = DateTime.Now, ModifiedTime = null,
-                            LivingWithOwner = null, Deposit = 0
+                            LivingWithOwner = false, Deposit = 0
                 },
                 new AccommodationInformation {InforID = 3, UserID = 2, AddressID = 3, Title = "Cho thuê trọ gần ĐH SP DN", Description = "Trọ gần trường, an ninh, nhiều bạn nữ",
                             Price = 1200000, SquareArea = 23, BeingRented = false,
                             CreatedTime = DateTime.Now, ModifiedTime = null,
-                            LivingWithOwner = null, Deposit = 0
+                            LivingWithOwner = false, Deposit = 0
                 },
                 new AccommodationInformation {InforID = 4, UserID = 2, AddressID = 4, Title = "Trọ gần Co.op Mart", Description = "Trọ gần Co.op mart, sạch sẽ, an ninh",
                             Price = 1500000, SquareArea = 20, BeingRented = false,
                             CreatedTime = DateTime.Now, ModifiedTime = null,
-                            LivingWithOwner = null, Deposit = 400
+                            LivingWithOwner = false, Deposit = 400
                 },
                 new AccommodationInformation {InforID = 5, UserID = 3, AddressID = 5, Title = "Cho thuê trọ Hòa Nhơn, Hòa Vang", Description = "Trọ gần bệnh viện, trường học",
                             Price = 900000, SquareArea = 17.5, BeingRented = false,
                             CreatedTime = DateTime.Now, ModifiedTime = null,
-                            LivingWithOwner = null, Deposit = 500
+                            LivingWithOwner = false, Deposit = 500
                 },
                 new AccommodationInformation {InforID = 6, UserID = 3, AddressID = 6, Title = "Trọ gần ĐH Duy Tân Hòa Khánh Nam", Description = "Trọ một bên trường, tiện cho việc đi lại",
                             Price = 1400000, SquareArea = 15.5, BeingRented = false,
                             CreatedTime = DateTime.Now, ModifiedTime = null,
-                            LivingWithOwner = null, Deposit = 600
+                            LivingWithOwner = false, Deposit = 600
                 },
                 new AccommodationInformation {InforID = 7, UserID = 3, AddressID = 7, Title = "Trọ kiệt Nguyễn Văn Linh", Description = "Trọ ở trung tâm, đảm bảo an ninh trật tự",
                             Price = 700000, SquareArea = 10.5, BeingRented = false,
                             CreatedTime = DateTime.Now, ModifiedTime = null,
-                            LivingWithOwner = null, Deposit = 200
+                            LivingWithOwner = false, Deposit = 200
                 },
                 new AccommodationInformation {InforID = 8, UserID = 3, AddressID = 8, Title = "Trọ cần cầu Sông Hàn", Description = "Trọ ở gần cầu sông Hàn, view đẹp",
                             Price = 1100000, SquareArea = 10.5, BeingRented = false,
                             CreatedTime = DateTime.Now, ModifiedTime = null,
-                            LivingWithOwner = null, Deposit = 100
+                            LivingWithOwner = false, Deposit = 100
                 }
             });
             context.Images.AddRange(new Image[] //1 bài Infor có đúng 3 ảnh

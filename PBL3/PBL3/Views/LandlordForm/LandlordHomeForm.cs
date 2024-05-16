@@ -26,6 +26,7 @@ namespace PBL3.Views.LandlordForm
             panelUserSubmenu.Visible = false; //Ban đầu không hiện chi tiết menu con
         }
 
+        #region -> Load form & show submenu
         private void ReloadUserFullName()
         {
             labelUserFullname.Text = UserBLL.Instance.GetUserFullname(LoginInfor.UserID).ToString();
@@ -87,6 +88,7 @@ namespace PBL3.Views.LandlordForm
                 panel.Visible = false;
             }
         }
+        #endregion
 
         #region -> Click Components
         private void btnHome_Click(object sender, EventArgs e)

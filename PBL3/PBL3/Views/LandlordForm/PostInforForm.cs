@@ -112,7 +112,7 @@ namespace PBL3.Views.LandlordForm
         #region -> Validate
         public bool CheckEmpty()
         {
-            if (cbbWard.SelectedIndex == 0 || txtDetailAddress.Texts == "" || txtTitle.Texts == "" || txtPrice.Texts == "" || txtArea.Texts == "")
+            if (cbbWard.SelectedIndex == 0 || txtDetailAddress.Texts == "" || txtTitle.Texts == "" || txtPrice.Texts == "" || txtArea.Texts == "" || !radioBtnLiveWithOwner.Checked && !radioBtnNotLiveWithOwner.Checked)
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ các thông tin!");
                 return true;
@@ -143,6 +143,24 @@ namespace PBL3.Views.LandlordForm
             if (x <= 0)
             {
                 MessageBox.Show("Vui lòng nhập giá tiền là một số nguyên dương!");
+                return true;
+            }
+            return false;
+        }
+
+        //Kiểm tra số tiền cọc có phải số dương không
+        public bool CheckValidDeposit()
+        {
+            double x;
+            bool check = double.TryParse(txtDeposit.Texts, out x);
+            if (!check)
+            {
+                MessageBox.Show("Vui lòng nhập tiền cọc là một số nguyên!");
+                return true;
+            }
+            if (x <= 0)
+            {
+                MessageBox.Show("Vui lòng nhập tiền cọc là một số nguyên dương!");
                 return true;
             }
             return false;
@@ -202,7 +220,7 @@ namespace PBL3.Views.LandlordForm
                 }
                 catch (Exception exp)
                 {
-                    MessageBox.Show("Lỗi không thể mở file " + exp.Message);
+                    MessageBox.Show("Lỗi không thể mở file: " + exp.Message);
                 }
             }
             else
@@ -217,6 +235,7 @@ namespace PBL3.Views.LandlordForm
             if (CheckEmpty()) return;
             if (CheckFailImage()) return;
             if (CheckValidPrice()) return;
+            if (CheckValidDeposit()) return;
             if (CheckValidArea()) return;
 
             //Thêm address
@@ -229,9 +248,6 @@ namespace PBL3.Views.LandlordForm
 
             string description = txtDetailAddress.Texts;
             int deposit = Convert.ToInt32(txtDeposit.Texts);
-            bool liveWithOwner = false;
-            if (radioBtnLiveWithOwner.Checked) liveWithOwner = true;
-            else liveWithOwner = false;
 
             //Thêm infor
             AccommodationInformation infor = new AccommodationInformation()
@@ -243,7 +259,7 @@ namespace PBL3.Views.LandlordForm
                 SquareArea = Convert.ToDouble(txtArea.Texts),
                 Description = description,
                 Deposit = deposit,
-                LivingWithOwner = liveWithOwner,
+                LivingWithOwner = radioBtnLiveWithOwner.Checked,
                 BeingRented = false,
                 CreatedTime = DateTime.Now
             };
@@ -251,8 +267,7 @@ namespace PBL3.Views.LandlordForm
 
             //Thêm img
             string imagePathStorage = ImageBLL.Instance.GetImageStoragePathsOfPost(inforID);
-            if (!Directory.Exists(imagePathStorage))
-                Directory.CreateDirectory(imagePathStorage);
+            if (!Directory.Exists(imagePathStorage)) Directory.CreateDirectory(imagePathStorage);
             for (int i = 0; i < 3; i++)
             {
                 File.Copy(imagePathList[i], imagePathStorage + @"\" + imageFileName[i]);

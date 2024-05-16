@@ -1,8 +1,4 @@
-﻿using PBL3.BLL;
-using PBL3.DTO;
-using PBL3.Views.CommonForm;
-using PBL3.Views.LandlordForm;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PBL3.BLL;
+using PBL3.DTO;
+using PBL3.Views.CommonForm;
 
 namespace PBL3.Views.AdminForm
 {

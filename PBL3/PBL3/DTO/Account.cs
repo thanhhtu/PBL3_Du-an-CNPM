@@ -22,7 +22,8 @@ namespace PBL3.DTO
         [Required]
         public DateTime CreatedAt { get; set; }
 
-        public bool?  BeingPublished { get; set; }
+        //[Required]
+        public bool  BeingPublished { get; set; }
 
         public DateTime? PublishedAt { get; set; }
 

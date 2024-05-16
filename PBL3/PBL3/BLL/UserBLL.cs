@@ -123,7 +123,7 @@ namespace PBL3.BLL
                     {
                         foreach (var i in data)
                         {
-                            if ((i.BeingPublished == true) && (i.Rolename == rolename) && (i.Address.Contains(searchChars) || i.Fullname.Contains(searchChars) || i.Phone.Contains(searchChars) || i.Email.Contains(searchChars)))
+                            if ((i.BeingPublished == "Đã Duyệt") && (i.Rolename == rolename) && (i.Address.Contains(searchChars) || i.Fullname.Contains(searchChars) || i.Phone.Contains(searchChars) || i.Email.Contains(searchChars)))
                             {
                                 result.Add(i);
                             }
@@ -135,7 +135,7 @@ namespace PBL3.BLL
                 {
                     foreach (var i in data)
                     {
-                        if ((i.BeingPublished == false) && (i.Rolename == rolename) && (i.Address.Contains(searchChars) || i.Fullname.Contains(searchChars) || i.Phone.Contains(searchChars) || i.Email.Contains(searchChars)))
+                        if ((i.BeingPublished == "Chưa Duyệt") && (i.Rolename == rolename) && (i.Address.Contains(searchChars) || i.Fullname.Contains(searchChars) || i.Phone.Contains(searchChars) || i.Email.Contains(searchChars)))
                         {
                             result.Add(i);
                         }

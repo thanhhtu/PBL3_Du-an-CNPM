@@ -36,7 +36,8 @@ namespace PBL3.DTO
 
         public DateTime? ModifiedTime { get; set; }
 
-        public bool? LivingWithOwner { get; set; }
+        [Required]
+        public bool LivingWithOwner { get; set; }
 
         public int Deposit { get; set; }
 

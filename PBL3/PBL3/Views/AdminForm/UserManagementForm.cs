@@ -39,7 +39,7 @@ namespace PBL3.Views.AdminForm
                 "Thời gian tạo tài khoản",
                 "Trạng thái duyệt",
                 "Thời gian duyệt"
-                
+
             };
             for (int i = 0; i < dgv.Columns.Count; i++)
             {

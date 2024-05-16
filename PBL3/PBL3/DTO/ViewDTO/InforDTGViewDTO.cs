@@ -15,7 +15,7 @@ namespace PBL3.DTO.ViewDTO
         public string Title { get; set; }
         public string Address { get; set; }
         public int NumberOfComment { get; set; }
-        public bool BeingRented { get; set; }
+        public String BeingRented { get; set; }
         public DateTime CreatedTime { get; set; }
         public DateTime? ModifiedTime { get; set; }
     }

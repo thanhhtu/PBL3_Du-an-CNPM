@@ -132,11 +132,13 @@ namespace PBL3.BLL
             db.SaveChanges();
         }
 
-        public bool? GetBeingPublished(int accID)
+        public string GetBeingPublished(int accID)
         {
-            return db.Accounts.FirstOrDefault(account => account.AccountID == accID).BeingPublished;
+            bool a = db.Accounts.FirstOrDefault(account => account.AccountID == accID).BeingPublished;
+            if (a) return "Đã Duyệt";
+            else return "Chưa Duyệt";
         }
-         
+
         public DateTime? GetPublishedAt(int accID)
         {
             return db.Accounts.FirstOrDefault(account => account.AccountID == accID).PublishedAt;

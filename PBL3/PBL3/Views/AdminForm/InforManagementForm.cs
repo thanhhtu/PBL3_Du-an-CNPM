@@ -14,7 +14,7 @@ using PBL3.Views.CommonForm;
 namespace PBL3.Views.AdminForm
 
 {
-    public partial class InforManamentForm : Form
+    public partial class InforManagementForm : Form
     {
         public delegate void showPostDetail(Form childForm);
         public showPostDetail showPost;
@@ -27,15 +27,15 @@ namespace PBL3.Views.AdminForm
         }
         #endregion
         private static bool checkAscending = true; //kiểm tra sort ascending hay descending
-        public InforManamentForm()
+        public InforManagementForm()
         {
-            InitializeComponent(); 
+            InitializeComponent();
             cbbSort.SelectedIndex = 0;
             cbbPostedFilter.SelectedIndex = 0;
             ShowDTG();
         }
 
-        /*public void LoadHeader()
+        public void LoadHeader()
         {
             //Load lại tên các cột
             var headername = new List<string>()
@@ -49,22 +49,25 @@ namespace PBL3.Views.AdminForm
                 "Số bình luận",
                 "Trạng thái thuê",
                 "Tạo lúc",
-                "Chỉnh sửa lúc"
+                "Thời gian chỉnh sửa"
             };
             for (int i = 0; i < dgv.Columns.Count; i++)
             {
                 dgv.Columns[i].HeaderText = headername[i];
             }
+            dgv.Columns["InforID"].Visible = false;
+            dgv.Columns["UserID"].Visible = false;
+            dgv.Columns["Username"].Visible = false;
 
-        }*/
+        }
         public void ShowDTG()
         {
             //Hiển thị thông tin lên DTG theo các filter, search, sort
             int searchFilter = cbbPostedFilter.SelectedIndex;
             string searchChars = txtSearch.Texts;
             int sortCase = cbbSort.SelectedIndex;
-          //  dgv.DataSource = InforBLL.Instance.GetDTGView(searchFilter, sortCase, checkAscending, searchChars);
-            //LoadHeader();
+            dgv.DataSource = InforBLL.Instance.GetDTGView(searchFilter, sortCase, checkAscending, searchChars);
+            LoadHeader();
         }
 
 
@@ -94,28 +97,24 @@ namespace PBL3.Views.AdminForm
         private void cbbSort_OnSelectionChangedCommited(object sender, EventArgs e)
         {
 
-                checkAscending = true;
-                ShowDTG();
-            
+            checkAscending = true;
+            ShowDTG();
+
         }
 
         private void btnDeleteInfor_Click(object sender, EventArgs e)
         {
-            //Xóa bài đăng
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xoá? Sau khi xoá không thể thực hiện lại",
-                "Xác nhận",
-                MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xoá? Sau khi xoá không thể thực hiện lại!", "Xác nhận", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 foreach (DataGridViewRow row in dgv.SelectedRows)
                 {
-                    /*Infor.Instance.DeletePost(Convert.ToInt32(row.Cells["PostID"].Value.ToString()));*/
+                    InforBLL.Instance.DeleteInfor(Convert.ToInt32(row.Cells["InforID"].Value.ToString()));
                 }
                 MessageBox.Show("Xoá thành công!");
                 ShowDTG();
             }
-            else
-                return;
+            else return;
         }
 
         private void btnReverse_Click(object sender, EventArgs e)
@@ -133,20 +132,19 @@ namespace PBL3.Views.AdminForm
         {
             if (dgv.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Hãy chọn 1 bài đăng!");
+                MessageBox.Show("Hãy chọn 1 thông tin trọ!");
                 return;
             }
             else if (dgv.SelectedRows.Count > 1)
             {
-                MessageBox.Show("Chỉ được xem mỗi lần 1 bài đăng");
+                MessageBox.Show("Chỉ được xem mỗi lần 1 thông tin trọ!");
                 return;
             }
-            int postID = Convert.ToInt32(dgv.SelectedRows[0].Cells["PostID"].Value.ToString());
-            /*bool isPosted = Infor.Instance.CheckPosted(postID);*/
-            //nếu bài đã post thì cho hiện cmt và rating, ngược lại ẩn cmt và rating
-            /*Userfo form = new HouseInformationForm(Convert.ToInt32(postID), !isPosted);*/
-  /*          form.goback = ReOpen;
-            showPost(form);*/
+
+            int inforID = Convert.ToInt32(dgv.SelectedRows[0].Cells["InforID"].Value.ToString());
+            InforForm form = new InforForm(Convert.ToInt32(inforID), true);
+            form.goback = ReOpen;
+            showPost(form);
         }
 
         private void cbbPostedFilter_OnSelectionChangedCommited(object sender, EventArgs e)

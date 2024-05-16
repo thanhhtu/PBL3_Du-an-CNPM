@@ -51,7 +51,9 @@ namespace PBL3.BLL
             post.Title = editedInfor.Title;
             post.Description = editedInfor.Description;
             post.Price = editedInfor.Price;
+            post.Deposit = editedInfor.Deposit;
             post.SquareArea = editedInfor.SquareArea;
+            post.LivingWithOwner = editedInfor.LivingWithOwner;
             post.BeingRented = editedInfor.BeingRented;
             post.ModifiedTime = editedInfor.ModifiedTime;
             db.SaveChanges();
@@ -102,7 +104,7 @@ namespace PBL3.BLL
                 Address = AddressBLL.Instance.GetFullAddress(info.AddressID),
                 UserID = info.UserID,
                 ImagePaths = ImageBLL.Instance.GetImagePaths(info.InforID),
-                LivingWithOwner = info.LivingWithOwner.HasValue ? info.LivingWithOwner.Value : false,
+                LivingWithOwner = info.LivingWithOwner,
                 Deposit = info.Deposit
             };
         }
@@ -244,7 +246,7 @@ namespace PBL3.BLL
                         Title = infor.Title,
                         Address = AddressBLL.Instance.GetFullAddress(infor.AddressID),
                         NumberOfComment = InforBLL.Instance.GetNumOfCommentInPost(infor.InforID),
-                        BeingRented = infor.BeingRented,
+                        BeingRented = InforBLL.Instance.CheckRented(infor.InforID),
                         CreatedTime = infor.CreatedTime,
                         ModifiedTime = infor.ModifiedTime
                     }));
@@ -261,7 +263,7 @@ namespace PBL3.BLL
                         Title = infor.Title,
                         Address = AddressBLL.Instance.GetFullAddress(infor.AddressID),
                         NumberOfComment = InforBLL.Instance.GetNumOfCommentInPost(infor.InforID),
-                        BeingRented = infor.BeingRented,
+                        BeingRented = InforBLL.Instance.CheckRented(infor.InforID),
                         CreatedTime = infor.CreatedTime,
                         ModifiedTime = infor.ModifiedTime
                     }));
@@ -287,7 +289,7 @@ namespace PBL3.BLL
                         Title = infor.Title,
                         Address = AddressBLL.Instance.GetFullAddress(infor.AddressID),
                         NumberOfComment = InforBLL.Instance.GetNumOfCommentInPost(infor.InforID),
-                        BeingRented = infor.BeingRented,
+                        BeingRented = InforBLL.Instance.CheckRented(infor.InforID),
                         CreatedTime = infor.CreatedTime,
                         ModifiedTime = infor.ModifiedTime
                     }));
@@ -304,7 +306,7 @@ namespace PBL3.BLL
                         Title = infor.Title,
                         Address = AddressBLL.Instance.GetFullAddress(infor.AddressID),
                         NumberOfComment = InforBLL.Instance.GetNumOfCommentInPost(infor.InforID),
-                        BeingRented = infor.BeingRented,
+                        BeingRented = InforBLL.Instance.CheckRented(infor.InforID),
                         CreatedTime = infor.CreatedTime,
                         ModifiedTime = infor.ModifiedTime
                     }));
@@ -329,7 +331,8 @@ namespace PBL3.BLL
                         Title = infor.Title,
                         Address = AddressBLL.Instance.GetFullAddress(infor.AddressID),
                         NumberOfComment = InforBLL.Instance.GetNumOfCommentInPost(infor.InforID),
-                        BeingRented = infor.BeingRented,
+                        // dat sua
+                        BeingRented = InforBLL.Instance.CheckRented(infor.InforID),
                         CreatedTime = infor.CreatedTime,
                         ModifiedTime = infor.ModifiedTime
                     }));
@@ -347,7 +350,7 @@ namespace PBL3.BLL
                         Title = post.Title,
                         Address = AddressBLL.Instance.GetFullAddress(post.AddressID),
                         NumberOfComment = InforBLL.Instance.GetNumOfCommentInPost(post.InforID),
-                        BeingRented = post.BeingRented,
+                        BeingRented = InforBLL.Instance.CheckRented(post.InforID),
                         CreatedTime = post.CreatedTime,
                         ModifiedTime = post.ModifiedTime
                     }));
@@ -396,10 +399,13 @@ namespace PBL3.BLL
         }
         #endregion
 
-        public bool CheckRented(int inforID)
+        public string CheckRented(int inforID)
         {
-            return db.AccommodationInformations.FirstOrDefault(p => p.InforID == inforID).BeingRented;
+            bool a = db.AccommodationInformations.FirstOrDefault(p => p.InforID == inforID).BeingRented;
+            if (a) return "Đã thuê";
+            else return "Chưa thuê";
         }
+
 
         public string GetPublishedTime(int inforID)
         {
@@ -413,7 +419,7 @@ namespace PBL3.BLL
             return db.AccommodationInformations.FirstOrDefault(i => i.InforID == inforID).AddressID;
         }
         
-        public bool? CheckLivingwOwwer(int inforID)
+        public bool CheckLivingwOwwer(int inforID)
         {
             return db.AccommodationInformations.FirstOrDefault(i => i.InforID == inforID).LivingWithOwner;
         }
