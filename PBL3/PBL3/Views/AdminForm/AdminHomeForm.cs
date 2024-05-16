@@ -1,5 +1,7 @@
 ﻿using PBL3.BLL;
+using PBL3.DTO;
 using PBL3.Views.CommonForm;
+using PBL3.Views.LandlordForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,7 +27,7 @@ namespace PBL3.Views.AdminForm
 
         private void ReloadUserFullName()
         {
-            labelUserFullname.Text = UserBLL.Instance.GetUserFullname(SignInInfor.UserID).ToString();
+            labelUserFullname.Text = UserBLL.Instance.GetUserFullname(LoginInfor.UserID).ToString();
         }
 
         //Tắt form hiện tại đang hiển thị trên childPanel và hiển thị form tương ứng được truyền vào là đối số
@@ -67,7 +69,7 @@ namespace PBL3.Views.AdminForm
         private void btnHome_Click(object sender, EventArgs e)
         {
             DashboardForm form = new DashboardForm();
-            form.showPost = OpenHouseInfo;
+            form.showInfo = OpenHouseInfo;
             OpenChildForm(form);
         }
 
@@ -86,7 +88,7 @@ namespace PBL3.Views.AdminForm
         private void btnSignOut_Click(object sender, EventArgs e)
         {
             //Reset lại SignInInfor
-            SignInInfor.UserID = -1;
+            LoginInfor.UserID = -1;
 
             //Hiển thị lại HomeForm
             this.Hide();

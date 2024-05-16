@@ -14,7 +14,7 @@ namespace PBL3.DTO
         public int RoleID { get; set; }
 
         [Required]
-        public string RoleName { get; set; } 
+        public string RoleName { get; set; }
 
         //đoạn dưới ni A có: để định nghĩa một mối quan hệ 1 - nhiều giữa 2 bảng role với accounts
         public virtual ICollection<Account> Accounts { get; set; }

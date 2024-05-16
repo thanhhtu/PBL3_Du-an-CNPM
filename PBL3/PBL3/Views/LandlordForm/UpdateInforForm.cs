@@ -12,7 +12,7 @@ namespace PBL3.Views.LandlordForm
 {
     public partial class UpdateInforForm : Form
     {
-        public UpdateInforForm()
+        public UpdateInforForm(int postID)
         {
             InitializeComponent();
         }

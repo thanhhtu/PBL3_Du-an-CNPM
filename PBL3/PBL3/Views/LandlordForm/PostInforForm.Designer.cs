@@ -32,7 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnUploadImg = new PBL3.Views.CustomComponent.CustomButton();
+            this.btnAddImg = new PBL3.Views.CustomComponent.CustomButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -46,12 +46,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnUploadInfor = new PBL3.Views.CustomComponent.CustomButton();
+            this.btnPostInfor = new PBL3.Views.CustomComponent.CustomButton();
             this.btnCancel = new PBL3.Views.CustomComponent.CustomButton();
             this.radioBtnNotLiveWithOwner = new PBL3.Views.CustomComponent.CustomRadioButton();
             this.radioBtnLiveWithOwner = new PBL3.Views.CustomComponent.CustomRadioButton();
             this.label10 = new System.Windows.Forms.Label();
-            this.customTextBox1 = new PBL3.Views.CustomComponent.CustomTextBox();
+            this.txtDeposit = new PBL3.Views.CustomComponent.CustomTextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtPrice = new PBL3.Views.CustomComponent.CustomTextBox();
             this.txtArea = new PBL3.Views.CustomComponent.CustomTextBox();
@@ -112,7 +112,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btnUploadImg);
+            this.panel1.Controls.Add(this.btnAddImg);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -122,26 +122,27 @@
             this.panel1.Size = new System.Drawing.Size(838, 275);
             this.panel1.TabIndex = 11;
             // 
-            // btnUploadImg
+            // btnAddImg
             // 
-            this.btnUploadImg.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnUploadImg.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnUploadImg.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.btnUploadImg.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnUploadImg.BorderRadius = 25;
-            this.btnUploadImg.BorderSize = 0;
-            this.btnUploadImg.FlatAppearance.BorderSize = 0;
-            this.btnUploadImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUploadImg.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUploadImg.ForeColor = System.Drawing.Color.Black;
-            this.btnUploadImg.Location = new System.Drawing.Point(315, 203);
-            this.btnUploadImg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnUploadImg.Name = "btnUploadImg";
-            this.btnUploadImg.Size = new System.Drawing.Size(205, 50);
-            this.btnUploadImg.TabIndex = 11;
-            this.btnUploadImg.Text = "Thêm ảnh";
-            this.btnUploadImg.TextColor = System.Drawing.Color.Black;
-            this.btnUploadImg.UseVisualStyleBackColor = false;
+            this.btnAddImg.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddImg.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnAddImg.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.btnAddImg.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAddImg.BorderRadius = 25;
+            this.btnAddImg.BorderSize = 0;
+            this.btnAddImg.FlatAppearance.BorderSize = 0;
+            this.btnAddImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddImg.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddImg.ForeColor = System.Drawing.Color.Black;
+            this.btnAddImg.Location = new System.Drawing.Point(315, 203);
+            this.btnAddImg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddImg.Name = "btnAddImg";
+            this.btnAddImg.Size = new System.Drawing.Size(205, 50);
+            this.btnAddImg.TabIndex = 11;
+            this.btnAddImg.Text = "Thêm ảnh";
+            this.btnAddImg.TextColor = System.Drawing.Color.Black;
+            this.btnAddImg.UseVisualStyleBackColor = false;
+            this.btnAddImg.Click += new System.EventHandler(this.btnAddImg_Click);
             // 
             // pictureBox3
             // 
@@ -191,13 +192,14 @@
             this.diaChiGroupBox.Controls.Add(this.label5);
             this.diaChiGroupBox.Controls.Add(this.label4);
             this.diaChiGroupBox.Controls.Add(this.label2);
+            this.diaChiGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.diaChiGroupBox.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
             this.diaChiGroupBox.ForeColor = System.Drawing.Color.SteelBlue;
-            this.diaChiGroupBox.Location = new System.Drawing.Point(0, 73);
+            this.diaChiGroupBox.Location = new System.Drawing.Point(0, 70);
             this.diaChiGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.diaChiGroupBox.Name = "diaChiGroupBox";
             this.diaChiGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.diaChiGroupBox.Size = new System.Drawing.Size(1145, 213);
+            this.diaChiGroupBox.Size = new System.Drawing.Size(1162, 222);
             this.diaChiGroupBox.TabIndex = 14;
             this.diaChiGroupBox.TabStop = false;
             this.diaChiGroupBox.Text = "Địa chỉ";
@@ -262,6 +264,7 @@
             this.cbbDistrict.Size = new System.Drawing.Size(313, 39);
             this.cbbDistrict.TabIndex = 6;
             this.cbbDistrict.Texts = "";
+            this.cbbDistrict.OnSelectionChangedCommited += new System.EventHandler(this.cbbDistrict_OnSelectionChangedCommited);
             // 
             // label4
             // 
@@ -336,12 +339,12 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.groupBox1.Controls.Add(this.btnUploadInfor);
+            this.groupBox1.Controls.Add(this.btnPostInfor);
             this.groupBox1.Controls.Add(this.btnCancel);
             this.groupBox1.Controls.Add(this.radioBtnNotLiveWithOwner);
             this.groupBox1.Controls.Add(this.radioBtnLiveWithOwner);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.customTextBox1);
+            this.groupBox1.Controls.Add(this.txtDeposit);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.txtPrice);
             this.groupBox1.Controls.Add(this.txtArea);
@@ -353,37 +356,39 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
             this.groupBox1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.groupBox1.Location = new System.Drawing.Point(0, 283);
+            this.groupBox1.Location = new System.Drawing.Point(0, 292);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(1145, 694);
+            this.groupBox1.Size = new System.Drawing.Size(1162, 694);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin mô tả";
             // 
-            // btnUploadInfor
+            // btnPostInfor
             // 
-            this.btnUploadInfor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnUploadInfor.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnUploadInfor.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.btnUploadInfor.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnUploadInfor.BorderRadius = 30;
-            this.btnUploadInfor.BorderSize = 0;
-            this.btnUploadInfor.FlatAppearance.BorderSize = 0;
-            this.btnUploadInfor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUploadInfor.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUploadInfor.ForeColor = System.Drawing.Color.White;
-            this.btnUploadInfor.Location = new System.Drawing.Point(349, 630);
-            this.btnUploadInfor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnUploadInfor.Name = "btnUploadInfor";
-            this.btnUploadInfor.Size = new System.Drawing.Size(200, 50);
-            this.btnUploadInfor.TabIndex = 23;
-            this.btnUploadInfor.Text = "Đăng";
-            this.btnUploadInfor.TextColor = System.Drawing.Color.White;
-            this.btnUploadInfor.UseVisualStyleBackColor = false;
+            this.btnPostInfor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPostInfor.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnPostInfor.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.btnPostInfor.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnPostInfor.BorderRadius = 30;
+            this.btnPostInfor.BorderSize = 0;
+            this.btnPostInfor.FlatAppearance.BorderSize = 0;
+            this.btnPostInfor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPostInfor.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPostInfor.ForeColor = System.Drawing.Color.White;
+            this.btnPostInfor.Location = new System.Drawing.Point(358, 630);
+            this.btnPostInfor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPostInfor.Name = "btnPostInfor";
+            this.btnPostInfor.Size = new System.Drawing.Size(200, 50);
+            this.btnPostInfor.TabIndex = 23;
+            this.btnPostInfor.Text = "Đăng";
+            this.btnPostInfor.TextColor = System.Drawing.Color.White;
+            this.btnPostInfor.UseVisualStyleBackColor = false;
+            this.btnPostInfor.Click += new System.EventHandler(this.btnPostInfor_Click);
             // 
             // btnCancel
             // 
@@ -397,7 +402,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(700, 630);
+            this.btnCancel.Location = new System.Drawing.Point(709, 630);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(200, 50);
@@ -405,6 +410,7 @@
             this.btnCancel.Text = "Hủy";
             this.btnCancel.TextColor = System.Drawing.Color.White;
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // radioBtnNotLiveWithOwner
             // 
@@ -454,26 +460,26 @@
             this.label10.TabIndex = 19;
             this.label10.Text = "Trọ chung chủ: ";
             // 
-            // customTextBox1
+            // txtDeposit
             // 
-            this.customTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.customTextBox1.BorderColor = System.Drawing.Color.SteelBlue;
-            this.customTextBox1.BorderFocusColor = System.Drawing.Color.SlateBlue;
-            this.customTextBox1.BorderRadius = 6;
-            this.customTextBox1.BorderSize = 2;
-            this.customTextBox1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.customTextBox1.Location = new System.Drawing.Point(763, 105);
-            this.customTextBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.customTextBox1.Multiline = false;
-            this.customTextBox1.Name = "customTextBox1";
-            this.customTextBox1.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.customTextBox1.PasswordChar = false;
-            this.customTextBox1.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.customTextBox1.PlaceholderText = "";
-            this.customTextBox1.Size = new System.Drawing.Size(313, 38);
-            this.customTextBox1.TabIndex = 18;
-            this.customTextBox1.Texts = "";
-            this.customTextBox1.UnderlinedStyle = false;
+            this.txtDeposit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.txtDeposit.BorderColor = System.Drawing.Color.SteelBlue;
+            this.txtDeposit.BorderFocusColor = System.Drawing.Color.SlateBlue;
+            this.txtDeposit.BorderRadius = 6;
+            this.txtDeposit.BorderSize = 2;
+            this.txtDeposit.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtDeposit.Location = new System.Drawing.Point(763, 105);
+            this.txtDeposit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtDeposit.Multiline = false;
+            this.txtDeposit.Name = "txtDeposit";
+            this.txtDeposit.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtDeposit.PasswordChar = false;
+            this.txtDeposit.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.txtDeposit.PlaceholderText = "";
+            this.txtDeposit.Size = new System.Drawing.Size(313, 38);
+            this.txtDeposit.TabIndex = 18;
+            this.txtDeposit.Texts = "";
+            this.txtDeposit.UnderlinedStyle = false;
             // 
             // label12
             // 
@@ -583,7 +589,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1147, 70);
+            this.label3.Size = new System.Drawing.Size(1162, 70);
             this.label3.TabIndex = 16;
             this.label3.Text = "ĐĂNG THÔNG TIN TRỌ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -592,13 +598,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1147, 976);
+            this.ClientSize = new System.Drawing.Size(1162, 986);
             this.Controls.Add(this.diaChiGroupBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label3);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(1162, 848);
+            this.MaximumSize = new System.Drawing.Size(1180, 1033);
+            this.MinimumSize = new System.Drawing.Size(1162, 846);
             this.Name = "PostInforForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InforPostingForm";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -634,15 +642,15 @@
         private CustomComponent.CustomTextBox txtArea;
         private CustomComponent.CustomTextBox txtDescribe;
         private CustomComponent.CustomTextBox txtTitle;
-        private CustomComponent.CustomTextBox customTextBox1;
+        private CustomComponent.CustomTextBox txtDeposit;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
         private CustomComponent.CustomRadioButton radioBtnLiveWithOwner;
         private CustomComponent.CustomRadioButton radioBtnNotLiveWithOwner;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private CustomComponent.CustomButton btnUploadImg;
-        private CustomComponent.CustomButton btnUploadInfor;
+        private CustomComponent.CustomButton btnAddImg;
+        private CustomComponent.CustomButton btnPostInfor;
         private CustomComponent.CustomButton btnCancel;
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PBL3.BLL;
+using PBL3.DTO;
 using PBL3.Views.CommonForm;
 using PBL3.Views.LandlordForm;
 
@@ -27,7 +28,7 @@ namespace PBL3.Views.LandlordForm
 
         private void ReloadUserFullName()
         {
-            labelUserFullname.Text = UserBLL.Instance.GetUserFullname(SignInInfor.UserID).ToString();
+            labelUserFullname.Text = UserBLL.Instance.GetUserFullname(LoginInfor.UserID).ToString();
         }
 
         //Tắt form hiện tại đang hiển thị trên childPanel và hiển thị form tương ứng được truyền vào là đối số
@@ -37,7 +38,7 @@ namespace PBL3.Views.LandlordForm
 
             activeForm = form;
 
-            //set properties cho form truyền vào
+            //Set properties cho form truyền vào
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
@@ -87,19 +88,19 @@ namespace PBL3.Views.LandlordForm
             }
         }
 
-        #region -> Click Button
+        #region -> Click Components
         private void btnHome_Click(object sender, EventArgs e)
         {
             HideSubmenu();
             DashboardForm form = new DashboardForm();
-            form.showPost = OpenHouseInfo;
+            form.showInfo = OpenHouseInfo;
             OpenChildForm(form);
         }
 
         private void btnInforManagement_Click(object sender, EventArgs e)
         {
             HideSubmenu();
-            InforManagementForm form = new InforManagementForm();
+            LandlordForm.InforManagementForm form = new LandlordForm.InforManagementForm();
             OpenChildForm(form);
             form.showPost = OpenHouseInfo;
         }
@@ -111,7 +112,7 @@ namespace PBL3.Views.LandlordForm
 
         private void btnId_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new UserForm(SignInInfor.UserID));
+            OpenChildForm(new UserForm(LoginInfor.UserID));
         }
 
         private void btnUserChange_Click(object sender, EventArgs e)
@@ -130,7 +131,7 @@ namespace PBL3.Views.LandlordForm
         {
             HideSubmenu();
             //Reset lại SignInInfor
-            SignInInfor.UserID = -1;
+            LoginInfor.UserID = -1;
 
             //Hiển thị lại HomeForm
             this.Hide();

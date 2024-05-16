@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.customPanel1 = new PBL3.Views.CustomComponent.CustomPanel();
+            this.btnCancel = new PBL3.Views.CustomComponent.CustomButton();
             this.btnUpdate = new PBL3.Views.CustomComponent.CustomButton();
             this.txtDetailedAddress = new PBL3.Views.CustomComponent.CustomTextBox();
             this.cbbWard = new PBL3.Views.CustomComponents.CustomComboBox();
@@ -48,6 +49,7 @@
             // 
             this.customPanel1.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.customPanel1.BorderRadius = 30;
+            this.customPanel1.Controls.Add(this.btnCancel);
             this.customPanel1.Controls.Add(this.btnUpdate);
             this.customPanel1.Controls.Add(this.txtDetailedAddress);
             this.customPanel1.Controls.Add(this.cbbWard);
@@ -64,10 +66,32 @@
             this.customPanel1.GradientAngle = 90F;
             this.customPanel1.GradientBottonColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.customPanel1.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.customPanel1.Location = new System.Drawing.Point(118, 21);
+            this.customPanel1.Location = new System.Drawing.Point(157, 26);
+            this.customPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.customPanel1.Name = "customPanel1";
-            this.customPanel1.Size = new System.Drawing.Size(591, 417);
+            this.customPanel1.Size = new System.Drawing.Size(788, 513);
             this.customPanel1.TabIndex = 10;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnCancel.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.btnCancel.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.btnCancel.BorderRadius = 20;
+            this.btnCancel.BorderSize = 0;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ForeColor = System.Drawing.Color.Black;
+            this.btnCancel.Location = new System.Drawing.Point(504, 448);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(240, 46);
+            this.btnCancel.TabIndex = 24;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.TextColor = System.Drawing.Color.Black;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnUpdate
             // 
@@ -80,13 +104,15 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.ForeColor = System.Drawing.Color.Black;
-            this.btnUpdate.Location = new System.Drawing.Point(210, 358);
+            this.btnUpdate.Location = new System.Drawing.Point(208, 448);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(180, 37);
+            this.btnUpdate.Size = new System.Drawing.Size(240, 46);
             this.btnUpdate.TabIndex = 12;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.TextColor = System.Drawing.Color.Black;
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtDetailedAddress
             // 
@@ -98,15 +124,15 @@
             this.txtDetailedAddress.BorderSize = 2;
             this.txtDetailedAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDetailedAddress.ForeColor = System.Drawing.Color.DimGray;
-            this.txtDetailedAddress.Location = new System.Drawing.Point(174, 271);
-            this.txtDetailedAddress.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.txtDetailedAddress.Location = new System.Drawing.Point(208, 334);
+            this.txtDetailedAddress.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
             this.txtDetailedAddress.Multiline = true;
             this.txtDetailedAddress.Name = "txtDetailedAddress";
-            this.txtDetailedAddress.Padding = new System.Windows.Forms.Padding(20, 4, 7, 4);
+            this.txtDetailedAddress.Padding = new System.Windows.Forms.Padding(27, 5, 9, 5);
             this.txtDetailedAddress.PasswordChar = false;
             this.txtDetailedAddress.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtDetailedAddress.PlaceholderText = "";
-            this.txtDetailedAddress.Size = new System.Drawing.Size(384, 61);
+            this.txtDetailedAddress.Size = new System.Drawing.Size(536, 75);
             this.txtDetailedAddress.TabIndex = 23;
             this.txtDetailedAddress.Texts = "";
             this.txtDetailedAddress.UnderlinedStyle = false;
@@ -122,12 +148,12 @@
             this.cbbWard.IconColor = System.Drawing.Color.SteelBlue;
             this.cbbWard.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbbWard.ListTextColor = System.Drawing.Color.Black;
-            this.cbbWard.Location = new System.Drawing.Point(383, 216);
-            this.cbbWard.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbWard.MinimumSize = new System.Drawing.Size(150, 32);
+            this.cbbWard.Location = new System.Drawing.Point(489, 266);
+            this.cbbWard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbWard.MinimumSize = new System.Drawing.Size(200, 39);
             this.cbbWard.Name = "cbbWard";
-            this.cbbWard.Padding = new System.Windows.Forms.Padding(2);
-            this.cbbWard.Size = new System.Drawing.Size(177, 35);
+            this.cbbWard.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbWard.Size = new System.Drawing.Size(255, 43);
             this.cbbWard.TabIndex = 22;
             this.cbbWard.Texts = "Phường";
             // 
@@ -142,14 +168,15 @@
             this.cbbDistrict.IconColor = System.Drawing.Color.SteelBlue;
             this.cbbDistrict.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbbDistrict.ListTextColor = System.Drawing.Color.Black;
-            this.cbbDistrict.Location = new System.Drawing.Point(176, 216);
-            this.cbbDistrict.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbDistrict.MinimumSize = new System.Drawing.Size(150, 32);
+            this.cbbDistrict.Location = new System.Drawing.Point(208, 266);
+            this.cbbDistrict.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbDistrict.MinimumSize = new System.Drawing.Size(200, 39);
             this.cbbDistrict.Name = "cbbDistrict";
-            this.cbbDistrict.Padding = new System.Windows.Forms.Padding(2);
-            this.cbbDistrict.Size = new System.Drawing.Size(181, 35);
+            this.cbbDistrict.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbDistrict.Size = new System.Drawing.Size(237, 43);
             this.cbbDistrict.TabIndex = 21;
             this.cbbDistrict.Texts = "Quận";
+            this.cbbDistrict.OnSelectionChangedCommited += new System.EventHandler(this.cbbDistrict_OnSelectionChangedCommited);
             // 
             // labelAddress
             // 
@@ -157,9 +184,10 @@
             this.labelAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.labelAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.labelAddress.ForeColor = System.Drawing.Color.Black;
-            this.labelAddress.Location = new System.Drawing.Point(14, 216);
+            this.labelAddress.Location = new System.Drawing.Point(19, 266);
+            this.labelAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAddress.Name = "labelAddress";
-            this.labelAddress.Size = new System.Drawing.Size(62, 21);
+            this.labelAddress.Size = new System.Drawing.Size(78, 28);
             this.labelAddress.TabIndex = 20;
             this.labelAddress.Text = "Địa chỉ:";
             // 
@@ -169,9 +197,10 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(14, 61);
+            this.label3.Location = new System.Drawing.Point(19, 75);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 21);
+            this.label3.Size = new System.Drawing.Size(106, 28);
             this.label3.TabIndex = 13;
             this.label3.Text = "Họ và tên:";
             // 
@@ -185,15 +214,15 @@
             this.txtFullName.BorderSize = 2;
             this.txtFullName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFullName.ForeColor = System.Drawing.Color.DimGray;
-            this.txtFullName.Location = new System.Drawing.Point(176, 61);
-            this.txtFullName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtFullName.Location = new System.Drawing.Point(208, 75);
+            this.txtFullName.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtFullName.Multiline = false;
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Padding = new System.Windows.Forms.Padding(20, 4, 7, 4);
+            this.txtFullName.Padding = new System.Windows.Forms.Padding(27, 5, 9, 5);
             this.txtFullName.PasswordChar = false;
             this.txtFullName.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtFullName.PlaceholderText = "";
-            this.txtFullName.Size = new System.Drawing.Size(382, 30);
+            this.txtFullName.Size = new System.Drawing.Size(536, 39);
             this.txtFullName.TabIndex = 12;
             this.txtFullName.Texts = "";
             this.txtFullName.UnderlinedStyle = false;
@@ -204,9 +233,10 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(14, 167);
+            this.label2.Location = new System.Drawing.Point(19, 206);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 21);
+            this.label2.Size = new System.Drawing.Size(138, 28);
             this.label2.TabIndex = 11;
             this.label2.Text = "Số điện thoại:";
             // 
@@ -220,15 +250,15 @@
             this.txtNumber.BorderSize = 2;
             this.txtNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumber.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNumber.Location = new System.Drawing.Point(176, 167);
-            this.txtNumber.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.txtNumber.Location = new System.Drawing.Point(208, 206);
+            this.txtNumber.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
             this.txtNumber.Multiline = false;
             this.txtNumber.Name = "txtNumber";
-            this.txtNumber.Padding = new System.Windows.Forms.Padding(20, 4, 7, 4);
+            this.txtNumber.Padding = new System.Windows.Forms.Padding(27, 5, 9, 5);
             this.txtNumber.PasswordChar = false;
             this.txtNumber.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtNumber.PlaceholderText = "";
-            this.txtNumber.Size = new System.Drawing.Size(382, 30);
+            this.txtNumber.Size = new System.Drawing.Size(536, 39);
             this.txtNumber.TabIndex = 10;
             this.txtNumber.Texts = "";
             this.txtNumber.UnderlinedStyle = false;
@@ -239,9 +269,10 @@
             this.labelEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.labelEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.labelEmail.ForeColor = System.Drawing.Color.Black;
-            this.labelEmail.Location = new System.Drawing.Point(14, 114);
+            this.labelEmail.Location = new System.Drawing.Point(19, 140);
+            this.labelEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(52, 21);
+            this.labelEmail.Size = new System.Drawing.Size(65, 28);
             this.labelEmail.TabIndex = 9;
             this.labelEmail.Text = "Email:";
             // 
@@ -255,15 +286,15 @@
             this.txtEmail.BorderSize = 2;
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.txtEmail.Location = new System.Drawing.Point(176, 114);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.txtEmail.Location = new System.Drawing.Point(208, 140);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
             this.txtEmail.Multiline = false;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Padding = new System.Windows.Forms.Padding(20, 4, 7, 4);
+            this.txtEmail.Padding = new System.Windows.Forms.Padding(27, 5, 9, 5);
             this.txtEmail.PasswordChar = false;
             this.txtEmail.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtEmail.PlaceholderText = "";
-            this.txtEmail.Size = new System.Drawing.Size(382, 30);
+            this.txtEmail.Size = new System.Drawing.Size(536, 39);
             this.txtEmail.TabIndex = 8;
             this.txtEmail.Texts = "";
             this.txtEmail.UnderlinedStyle = false;
@@ -276,20 +307,20 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(591, 46);
+            this.label1.Size = new System.Drawing.Size(788, 57);
             this.label1.TabIndex = 6;
             this.label1.Text = "CẬP NHẬT THÔNG TIN CÁ NHÂN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UpdateUserForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PBL3.Properties.Resources.bgr;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1162, 652);
             this.Controls.Add(this.customPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UpdateUserForm";
             this.Text = "UpdateUserInforForm";
             this.customPanel1.ResumeLayout(false);
@@ -313,5 +344,6 @@
         private System.Windows.Forms.Label labelEmail;
         private CustomComponent.CustomTextBox txtEmail;
         private System.Windows.Forms.Label label1;
+        private CustomComponent.CustomButton btnCancel;
     }
 }

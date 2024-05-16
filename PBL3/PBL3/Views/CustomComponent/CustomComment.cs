@@ -96,6 +96,16 @@ namespace PBL3.Views.CustomComponents
 
         }
 
+        private void editLinkLabel__LinkLabelClicked_1(object sender, EventArgs e)
+        {
+            if (_EditEventHandler != null)
+                _EditEventHandler.Invoke(sender, e);
+        }
 
+        private void deleteLinkLabel__LinkLabelClicked_1(object sender, EventArgs e)
+        {
+            if (_DeleteEventHandler != null)
+                _DeleteEventHandler.Invoke(sender, e);
+        }
     }
 }

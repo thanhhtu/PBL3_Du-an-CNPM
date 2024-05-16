@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using PBL3.DAL;
 using PBL3.DTO;
 
@@ -10,7 +11,7 @@ namespace PBL3.BLL
 {
     public class AddressBLL
     {
-        #region ->Singleton Pattern
+        #region -> Singleton Pattern
         private static DataPBL3 db;
         private static AddressBLL _Instance;
         public static AddressBLL Instance
@@ -29,6 +30,30 @@ namespace PBL3.BLL
         }
         #endregion
 
+        #region -> Add/Update/Delete address
+        public int AddAddress(Address newAddress)
+        {
+            db.Addresses.Add(newAddress);
+            db.SaveChanges();
+            return newAddress.AddressID;
+        }
+
+        public void UpdateAddress(int addressID, Address addInfo)
+        {
+            Address address = db.Addresses.FirstOrDefault(a => a.AddressID == addressID);
+            address.WardID = addInfo.WardID;
+            address.DetailAddress = addInfo.DetailAddress;
+            db.SaveChanges();
+        }
+
+        public void DeleteAddress(int? addressID)
+        {
+            var addr = db.Addresses.FirstOrDefault(a => a.AddressID == addressID);
+            db.Addresses.Remove(addr);
+            db.SaveChanges();
+        }
+        #endregion
+
         public string GetFullAddress(int? addressID)
         {
             if (addressID == null) return "";
@@ -38,10 +63,12 @@ namespace PBL3.BLL
             string fullAddress = addr.DetailAddress + ", " + ward.WardName + ", " + dis.DistrictName;
             return fullAddress;
         }
+
         public string GetDetailAddress(int? addressID)
         {
             return db.Addresses.FirstOrDefault(a => a.AddressID == addressID).DetailAddress;
         }
+
         public int GetWardIDByAddressID(int? addressID)
         {
             if (addressID == null) return 0;
@@ -52,6 +79,7 @@ namespace PBL3.BLL
                 return addr.WardID;
             }
         }
+
         public int GetDistrictIDByAddressID(int? addressID)
         {
             if (addressID == null) return 0;
@@ -63,27 +91,5 @@ namespace PBL3.BLL
                 return ward.DistrictID;
             }
         }
-
-        #region ->Add/Update/Delete Address
-        public int AddAddress(Address newAddress)
-        {
-            db.Addresses.Add(newAddress);
-            db.SaveChanges();
-            return newAddress.AddressID;
-        }
-        public void UpdateAddress(int addressID, Address addInfo)
-        {
-            Address address = db.Addresses.FirstOrDefault(a => a.AddressID == addressID);
-            address.WardID = addInfo.WardID;
-            address.DetailAddress = addInfo.DetailAddress;
-            db.SaveChanges();
-        }
-        public void DeleteAddress(int? addressID)
-        {
-            var addr = db.Addresses.FirstOrDefault(a => a.AddressID == addressID);
-            db.Addresses.Remove(addr);
-            db.SaveChanges();
-        }
-        #endregion
     }
 }

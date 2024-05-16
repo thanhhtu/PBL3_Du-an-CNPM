@@ -7,6 +7,7 @@ using PBL3.DTO;
 using PBL3.DAL;
 using System.IO;
 using System.Windows.Forms;
+using PBL3.DTO.ViewDTO;
 
 namespace PBL3.BLL
 {
@@ -30,27 +31,6 @@ namespace PBL3.BLL
             db = new DataPBL3();
         }
         #endregion
-
-        public List<string> GetImageOfUserPaths(int userID)
-        {
-            //Lấy ảnh dựa trên userID
-            List<string> ls = new List<string>();
-            var imageOfUsers = db.ImageOfUsers.Where(i => i.UserID == userID);
-            imageOfUsers.ToList().ForEach(i => ls.Add(i.ImagePath));
-            return ls.Take(3).ToList();
-        }
-
-        public string GetImageOfUserStoragePathsOfPost(int? userID)
-        {
-            //Lấy đường dẫn của thư mục lưu trữ ảnh của người dùng có UserID
-            if (userID == null)
-            {
-                return "";
-            }
-            string path = Path.GetDirectoryName(Application.ExecutablePath);
-            string appPath = Path.GetFullPath(Path.Combine(path, @"..\..\")) + @"Resources\landlord" + userID.ToString();
-            return appPath;
-        }
 
         #region -> Add/Delete ImageOfUser
         public void AddImageOfUser(string imagePath, int userID)
@@ -76,5 +56,27 @@ namespace PBL3.BLL
             Directory.Delete(appPath);
         }
         #endregion
+
+        public List<string> GetImageOfUserPaths(int userID)
+        {
+            //Lấy ảnh dựa trên userID
+            List<string> ls = new List<string>();
+            var imageOfUsers = db.ImageOfUsers.Where(i => i.UserID == userID);
+            imageOfUsers.ToList().ForEach(i => ls.Add(i.ImagePath));
+            return ls.Take(3).ToList();
+        }
+
+        //Lấy đường dẫn tới folder chứa image dựa trên InforID
+        public string GetImageOfUserStoragePath(int? userID)
+        {
+            if (userID == null)
+            {
+                return "";
+            }
+            string path = Path.GetDirectoryName(Application.ExecutablePath);
+            string appPath = Path.GetFullPath(Path.Combine(path, @"..\..\")) 
+                            + @"Resources\Landlord" + userID.ToString();
+            return appPath;
+        }
     }
 }

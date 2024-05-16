@@ -94,5 +94,11 @@ namespace PBL3.Views.CustomComponent
             if (_OnLabelClicked != null)
                 _OnLabelClicked.Invoke(sender, e);
         }
+
+        private void tenNhaLinkLabel_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (_OnLabelClicked != null)
+                _OnLabelClicked.Invoke(sender, e);
+        }
     }
 }

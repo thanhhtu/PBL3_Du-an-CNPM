@@ -79,7 +79,7 @@ namespace PBL3.Views.CommonForm
         private void btnHome_Click(object sender, EventArgs e)
         {
             DashboardForm form = new DashboardForm();
-            form.showPost = OpenHouseInfo;
+            form.showInfo = OpenHouseInfo;
             OpenChildForm(form);
         }
 

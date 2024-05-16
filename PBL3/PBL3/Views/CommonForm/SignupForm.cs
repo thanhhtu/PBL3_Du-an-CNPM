@@ -77,7 +77,7 @@ namespace PBL3.Views.CommonForm
         //Nếu người dùng chọn quận cụ thể -> hiện tất cả phường thuộc quận đó
         private void cbbDistrict_OnSelectionChangedCommited(object sender, EventArgs e)
         {
-            
+
             if (((CBBItem)cbbDistrict.SelectedItem).Value == 0)
             {
                 LoadCBB();
@@ -94,7 +94,7 @@ namespace PBL3.Views.CommonForm
                 cbbWard.Items.Add(AllWard);
 
                 int districtID = ((CBBItem)cbbDistrict.SelectedItem).Value;
-                
+
                 //Hiện tất cả các phường thuộc 1 quận
                 var WardInDistrict = DistrictBLL.Instance.GetWardsInDistrict(districtID);
                 foreach (var i in WardInDistrict)
@@ -198,7 +198,7 @@ namespace PBL3.Views.CommonForm
         #region -> Show/Hide Password
         private void btnHidePwd_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnShowPwd_Click(object sender, EventArgs e)
@@ -329,7 +329,7 @@ namespace PBL3.Views.CommonForm
             });
 
             string cccd = "00000";
-            if(radioBtnLandlord.Checked == true)
+            if (radioBtnLandlord.Checked == true)
             {
                 cccd = txtCCCD.Texts;
             }
@@ -348,7 +348,7 @@ namespace PBL3.Views.CommonForm
             //Thêm img
             if (radioBtnLandlord.Checked == true)
             {
-                string imagePathStorage = ImageOfUserBLL.Instance.GetImageOfUserStoragePathsOfPost(userID);
+                string imagePathStorage = ImageOfUserBLL.Instance.GetImageOfUserStoragePath(userID);
                 if (!Directory.Exists(imagePathStorage))
                 {
                     Directory.CreateDirectory(imagePathStorage);
@@ -361,7 +361,7 @@ namespace PBL3.Views.CommonForm
                 }
             }
 
-            if(radioBtnLandlord.Checked == true)
+            if (radioBtnLandlord.Checked == true)
             {
                 MessageBox.Show("Đăng ký thành công! Admin sẽ xét duyệt tài khoản chủ trọ của bạn trong thời gian sớm nhất!");
             }

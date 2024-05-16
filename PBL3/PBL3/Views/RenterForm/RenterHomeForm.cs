@@ -1,5 +1,4 @@
-﻿using PBL3.Views.CommonForm;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,7 +27,7 @@ namespace PBL3.Views.RenterForm
 
         private void ReloadUserFullName()
         {
-            labelUserFullname.Text = UserBLL.Instance.GetUserFullname(SignInInfor.UserID).ToString();
+            labelUserFullname.Text = UserBLL.Instance.GetUserFullname(LoginInfor.UserID).ToString();
         }
 
         //Tắt form hiện tại đang hiển thị trên childPanel và hiển thị form tương ứng được truyền vào là đối số
@@ -93,7 +92,7 @@ namespace PBL3.Views.RenterForm
         {
             HideSubmenu();
             DashboardForm form = new DashboardForm();
-            form.showPost = OpenHouseInfo;
+            form.showInfo = OpenHouseInfo;
             OpenChildForm(form);
         }
 
@@ -104,7 +103,7 @@ namespace PBL3.Views.RenterForm
 
         private void btnId_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new UserForm(SignInInfor.UserID));
+            OpenChildForm(new UserForm(LoginInfor.UserID));
         }
 
         private void btnUserChange_Click(object sender, EventArgs e)
@@ -123,7 +122,7 @@ namespace PBL3.Views.RenterForm
         {
             HideSubmenu();
             //Reset lại SignInInfor
-            SignInInfor.UserID = -1;
+            LoginInfor.UserID = -1;
 
             //Hiển thị lại HomeForm
             this.Hide();
@@ -131,6 +130,6 @@ namespace PBL3.Views.RenterForm
             form.ShowDialog();
             this.Close();
         }
-       #endregion
+        #endregion
     }
 }

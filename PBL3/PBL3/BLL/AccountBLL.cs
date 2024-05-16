@@ -29,10 +29,10 @@ namespace PBL3.BLL
         }
         #endregion
 
-        #region -> Change Pwd and Add/Delete/Accept Account
+        #region -> Change password and Add/Delete/Accept account
         public void ChangePassword(int accountID, string newPassword)
         {
-            Account acc = db.Accounts.Where(a => a.AccountID == accountID).FirstOrDefault();
+            Account acc = db.Accounts.FirstOrDefault(a => a.AccountID == accountID);
             acc.Pwd = PwdHashing.EncodePwdToBase64(newPassword);
             db.SaveChanges();
         }
@@ -123,6 +123,23 @@ namespace PBL3.BLL
                 }
             }
             return false;
+        }
+
+        public void Published(int accountID)
+        {
+            Account acc = db.Accounts.Where(a => a.AccountID == accountID).FirstOrDefault();
+            acc.BeingPublished = true;
+            db.SaveChanges();
+        }
+
+        public bool? GetBeingPublished(int accID)
+        {
+            return db.Accounts.FirstOrDefault(account => account.AccountID == accID).BeingPublished;
+        }
+         
+        public DateTime? GetPublishedAt(int accID)
+        {
+            return db.Accounts.FirstOrDefault(account => account.AccountID == accID).PublishedAt;
         }
     }
 }

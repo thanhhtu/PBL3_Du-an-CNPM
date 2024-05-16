@@ -16,7 +16,7 @@ namespace PBL3.DTO
 
         [Required]
         public int UserID { get; set; }
-        [ForeignKey("UserID")]
+        [ForeignKey("UserID")]        
         public virtual User User { get; set; }
 
         [Required]

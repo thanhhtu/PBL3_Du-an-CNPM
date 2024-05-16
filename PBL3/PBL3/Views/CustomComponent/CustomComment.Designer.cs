@@ -50,6 +50,7 @@ namespace PBL3.Views.CustomComponents
             this.deleteLinkLabel.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.deleteLinkLabel.Size = new System.Drawing.Size(71, 26);
             this.deleteLinkLabel.TabIndex = 1;
+            this.deleteLinkLabel._LinkLabelClicked += new System.EventHandler(this.deleteLinkLabel__LinkLabelClicked_1);
             // 
             // editLinkLabel
             // 
@@ -63,6 +64,7 @@ namespace PBL3.Views.CustomComponents
             this.editLinkLabel.Name = "editLinkLabel";
             this.editLinkLabel.Size = new System.Drawing.Size(71, 26);
             this.editLinkLabel.TabIndex = 0;
+            this.editLinkLabel._LinkLabelClicked += new System.EventHandler(this.editLinkLabel__LinkLabelClicked_1);
             // 
             // textBox1
             // 

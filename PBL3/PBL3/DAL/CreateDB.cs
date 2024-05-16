@@ -14,7 +14,7 @@ using PBL3.DTO;
 
 namespace PBL3.DAL
 {
-    public class CreateDB : DropCreateDatabaseAlways<DataPBL3>
+    public class CreateDB : DropCreateDatabaseAlways<DataPBL3> //CreateDatabaseIfNotExists<MyData>
     {
         protected override void Seed(DataPBL3 context)
         {
@@ -136,7 +136,7 @@ namespace PBL3.DAL
             context.AccommodationInformations.AddRange(new AccommodationInformation[]
             {
                 new AccommodationInformation {InforID = 1, UserID = 2, AddressID = 1, Title = "Cho thuê trọ gần Đại Học Bách Khoa", Description = "Trọ mới xây, an toàn, đẹp, mát mẻ",
-                            Price = 1300000, SquareArea = 22.5, BeingRented = false,
+                            Price = 1300000, SquareArea = 22.5, BeingRented = true,
                             CreatedTime = DateTime.Now, ModifiedTime = null,
                             LivingWithOwner = null, Deposit = 100
                 },
@@ -179,36 +179,36 @@ namespace PBL3.DAL
             context.Images.AddRange(new Image[] //1 bài Infor có đúng 3 ảnh
             {
                 new Image { ImageID = 1, InforID = 1, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 2, InforID = 1, ImagePath = @"\phongtro2.jpg"},
-                new Image { ImageID = 3, InforID = 1, ImagePath = @"\phongtro3.jpg"},
+                new Image { ImageID = 2, InforID = 1, ImagePath = @"\phongtro1.jpg"},
+                new Image { ImageID = 3, InforID = 1, ImagePath = @"\phongtro1.jpg"},
 
-                new Image { ImageID = 4, InforID = 2, ImagePath = @"\phongtro2.jpg"},
-                new Image { ImageID = 5, InforID = 2, ImagePath = @"\phongtro3.jpg"},
+                new Image { ImageID = 4, InforID = 2, ImagePath = @"\phongtro1.jpg"},
+                new Image { ImageID = 5, InforID = 2, ImagePath = @"\phongtro1.jpg"},
                 new Image { ImageID = 6, InforID = 2, ImagePath = @"\phongtro1.jpg"},
 
                 new Image { ImageID = 7, InforID = 3, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 8, InforID = 3, ImagePath = @"\phongtro2.jpg"},
-                new Image { ImageID = 9, InforID = 3, ImagePath = @"\phongtro3.jpg"},
+                new Image { ImageID = 8, InforID = 3, ImagePath = @"\phongtro1.jpg"},
+                new Image { ImageID = 9, InforID = 3, ImagePath = @"\phongtro1.jpg"},
 
                 new Image { ImageID = 10, InforID = 4, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 11, InforID = 4, ImagePath = @"\phongtro2.jpg"},
-                new Image { ImageID = 12, InforID = 4, ImagePath = @"\phongtro3.jpg"},
+                new Image { ImageID = 11, InforID = 4, ImagePath = @"\phongtro1.jpg"},
+                new Image { ImageID = 12, InforID = 4, ImagePath = @"\phongtro1.jpg"},
 
                 new Image { ImageID = 13, InforID = 5, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 14, InforID = 5, ImagePath = @"\phongtro2.jpg"},
-                new Image { ImageID = 15, InforID = 5, ImagePath = @"\phongtro3.jpg"},
+                new Image { ImageID = 14, InforID = 5, ImagePath = @"\phongtro1.jpg"},
+                new Image { ImageID = 15, InforID = 5, ImagePath = @"\phongtro1.jpg"},
 
                 new Image { ImageID = 16, InforID = 6, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 17, InforID = 6, ImagePath = @"\phongtro2.jpg"},
-                new Image { ImageID = 18, InforID = 6, ImagePath = @"\phongtro3.jpg"},
+                new Image { ImageID = 17, InforID = 6, ImagePath = @"\phongtro1.jpg"},
+                new Image { ImageID = 18, InforID = 6, ImagePath = @"\phongtro1.jpg"},
 
                 new Image { ImageID = 19, InforID = 7, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 20, InforID = 7, ImagePath = @"\phongtro2.jpg"},
-                new Image { ImageID = 21, InforID = 7, ImagePath = @"\phongtro3.jpg"},
+                new Image { ImageID = 20, InforID = 7, ImagePath = @"\phongtro1.jpg"},
+                new Image { ImageID = 21, InforID = 7, ImagePath = @"\phongtro1.jpg"},
 
                 new Image { ImageID = 22, InforID = 8, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 23, InforID = 8, ImagePath = @"\phongtro2.jpg"},
-                new Image { ImageID = 24, InforID = 8, ImagePath = @"\phongtro3.jpg"},
+                new Image { ImageID = 23, InforID = 8, ImagePath = @"\phongtro1.jpg"},
+                new Image { ImageID = 24, InforID = 8, ImagePath = @"\phongtro1.jpg"},
             });
             context.Comments.AddRange(new Comment[]
             {

@@ -32,7 +32,7 @@ namespace PBL3.BLL
         public District GetDistrictByDistrictID(int inputDistrictID)
         {
             District result = new District();
-            result = db.Districts.FirstOrDefault(p => p.DistrictID == inputDistrictID); //tham số truyền vào là 1 lamda method
+            result = db.Districts.FirstOrDefault(p => p.DistrictID == inputDistrictID);
             return result;
         }
 
