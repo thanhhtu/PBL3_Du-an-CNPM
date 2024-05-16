@@ -28,7 +28,6 @@ namespace PBL3.Views.AdminForm
         private void ReloadUserFullName()
         {
             labelUserFullname.Text = UserBLL.Instance.GetUserFullname(LoginInfor.UserID).ToString();
->>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
         }
 
         //Tắt form hiện tại đang hiển thị trên childPanel và hiển thị form tương ứng được truyền vào là đối số
@@ -71,7 +70,6 @@ namespace PBL3.Views.AdminForm
         {
             DashboardForm form = new DashboardForm();
             form.showInfo = OpenHouseInfo;
->>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
             OpenChildForm(form);
         }
 

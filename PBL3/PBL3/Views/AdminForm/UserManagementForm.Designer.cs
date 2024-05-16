@@ -39,7 +39,6 @@
             this.cbbUserRole = new PBL3.Views.CustomComponents.CustomComboBox();
             this.txtSearch = new PBL3.Views.CustomComponent.CustomTextBox();
             this.AcceptHost = new PBL3.Views.CustomComponent.CustomButton();
-            this.AcceptHost = new PBL3.Views.CustomComponent.CustomButton();
             this.btnDeleteUser = new PBL3.Views.CustomComponent.CustomButton();
             this.btnViewUser = new PBL3.Views.CustomComponent.CustomButton();
             this.panelMenu.SuspendLayout();
@@ -227,27 +226,6 @@
             this.txtSearch.TabIndex = 1;
             this.txtSearch.Texts = "";
             this.txtSearch.UnderlinedStyle = false;
-            // 
-            // AcceptHost
-            // 
-            this.AcceptHost.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AcceptHost.BackColor = System.Drawing.Color.SteelBlue;
-            this.AcceptHost.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.AcceptHost.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.AcceptHost.BorderRadius = 30;
-            this.AcceptHost.BorderSize = 0;
-            this.AcceptHost.FlatAppearance.BorderSize = 0;
-            this.AcceptHost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AcceptHost.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AcceptHost.ForeColor = System.Drawing.Color.White;
-            this.AcceptHost.Location = new System.Drawing.Point(627, 11);
-            this.AcceptHost.Name = "AcceptHost";
-            this.AcceptHost.Size = new System.Drawing.Size(286, 56);
-            this.AcceptHost.TabIndex = 8;
-            this.AcceptHost.Text = "Duyệt Chủ Trọ";
-            this.AcceptHost.TextColor = System.Drawing.Color.White;
-            this.AcceptHost.UseVisualStyleBackColor = false;
-            this.AcceptHost.Click += new System.EventHandler(this.AcceptHost_Click);
             // 
             // AcceptHost
             // 

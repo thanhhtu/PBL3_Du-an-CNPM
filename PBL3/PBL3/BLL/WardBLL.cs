@@ -10,11 +10,7 @@ namespace PBL3.BLL
 {
     public class WardBLL
     {
-<<<<<<< HEAD
-        #region ->Singleton Pattern
-=======
         #region -> Singleton Pattern
->>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
         private static DataPBL3 db;
         private static WardBLL _Instance;
         public static WardBLL Instance

@@ -90,7 +90,6 @@
     <Compile Include="BLL\ImageOfUserBLL.cs" />
     <Compile Include="BLL\InforBLL.cs" />
     <Compile Include="BLL\PwdHashing.cs" />
->>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
     <Compile Include="BLL\UserBLL.cs" />
     <Compile Include="BLL\WardBLL.cs" />
     <Compile Include="DAL\CreateDB.cs" />

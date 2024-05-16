@@ -21,7 +21,6 @@ namespace PBL3.Views.AdminForm
         #region ->Delegate mở lại form
 
         public void ReOpen()
->>>>>>> 91489400e0d8a430db531856d0096fb90957b6f3
         {
             this.Show();
             ShowDTG();
