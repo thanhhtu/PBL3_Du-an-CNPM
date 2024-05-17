@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using PBL3.BLL;
 using PBL3.DTO;
 using PBL3.DTO.ViewDTO;
+using PBL3.Views.CustomComponents;
 //using PBL3.DTO.ViewDTO;
 
 namespace PBL3.Views.CommonForm
@@ -36,7 +37,7 @@ namespace PBL3.Views.CommonForm
             LoadCBB();
             SearchFunction();
             LoadCBBPageNum();
-
+            HideAdd_DeleteFavouriteInfor();
         }
         #region-> LoadCBB quận + phường
         // Mặc định: Load quận trước (phường: hiện tất cả
@@ -54,11 +55,11 @@ namespace PBL3.Views.CommonForm
             cbbSort.SelectedIndex = -1;
             cbbArea.SelectedIndex = -1;
             cbbArea.SelectedIndex = -1;
-            
+
             //CBB Item được định nghĩa ở DTO
             CBBItem AllDistricts = new CBBItem
             {
-                Value =0,
+                Value = 0,
                 Text = "Tất cả quận"
             };
             CBBItem AllWards = new CBBItem
@@ -117,7 +118,7 @@ namespace PBL3.Views.CommonForm
         }
         #endregion
 
-        #region -> Load CBB số trang
+        #region Load CBB số trang
         public void LoadCBBPageNum()
         {
             cbbPageNumber.Items.Clear();
@@ -154,7 +155,6 @@ namespace PBL3.Views.CommonForm
         }
 
         #endregion
-
         #region ->Load Dashboard
         private void DisablePostViewWhenNotFound(int postNum)
         {
@@ -227,7 +227,7 @@ namespace PBL3.Views.CommonForm
                     houseInfoComponent1.PictureBox = image1;
                 }
             }
-            if (postView.Count > 0  && houseInfoComponent2.Visible)
+            if (postView.Count > 0 && houseInfoComponent2.Visible)
             {
                 houseInfoComponent2.DescLabel = "Miêu tả : " + postView[1].Description;
                 houseInfoComponent2.AddressLabel = "Địa chỉ : " + postView[1].Address;
@@ -333,10 +333,10 @@ namespace PBL3.Views.CommonForm
             LoadCBBPageNum();
             if (sorting)
             {
-               SortFunction();
+                SortFunction();
                 return;
             }
-           SearchFunction();
+            SearchFunction();
         }
 
         private void btnNextPage_Click(object sender, EventArgs e)
@@ -354,7 +354,7 @@ namespace PBL3.Views.CommonForm
                 SortFunction();
                 return;
             }
-                SearchFunction();
+            SearchFunction();
         }
         public List<AccommodationInformation> GetSearchPost()
         {
@@ -509,7 +509,7 @@ namespace PBL3.Views.CommonForm
         }
         private void houseInfoComponent1__OnLabelClicked(object sender, EventArgs e)
         {
-            if (houseInfoComponent1!=null)
+            if (houseInfoComponent1 != null)
             {
                 if (LoginInfor.UserID == -1)
                 {
@@ -524,7 +524,7 @@ namespace PBL3.Views.CommonForm
                     //InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent1.PostID), true);
                     form.goback = ReOpen;
                     showInfo(form);
-                } 
+                }
             }
         }
 
@@ -594,6 +594,15 @@ namespace PBL3.Views.CommonForm
                 form.goback = ReOpen;
                 showInfo(form);
             }
+        }
+        // ẩn các trái tim // aitran
+        private void HideAdd_DeleteFavouriteInfor()
+        {
+            houseInfoComponent1.HideUtilityPanel();
+            houseInfoComponent2.HideUtilityPanel();
+            houseInfoComponent3.HideUtilityPanel();
+            houseInfoComponent4.HideUtilityPanel();
+            houseInfoComponent5.HideUtilityPanel();
         }
     }
 }

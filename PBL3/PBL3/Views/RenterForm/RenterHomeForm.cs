@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBL3.Views.CommonForm;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +11,9 @@ using System.Windows.Forms;
 using PBL3.BLL;
 using PBL3.DTO;
 using PBL3.Views.CommonForm;
+using PBL3.Views.RenterForm;
+using PBL3.Views.LandlordForm;
+
 
 namespace PBL3.Views.RenterForm
 {
@@ -25,7 +29,6 @@ namespace PBL3.Views.RenterForm
             panelUserSubmenu.Visible = false; //Ban đầu không hiện chi tiết menu con
         }
 
-        #region -> Load form & show submenu
         private void ReloadUserFullName()
         {
             labelUserFullname.Text = UserBLL.Instance.GetUserFullname(LoginInfor.UserID).ToString();
@@ -87,7 +90,6 @@ namespace PBL3.Views.RenterForm
                 panel.Visible = false;
             }
         }
-        #endregion
 
         #region -> Click Button
         private void btnHome_Click(object sender, EventArgs e)
@@ -105,7 +107,11 @@ namespace PBL3.Views.RenterForm
 
         private void btnId_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new UserForm(LoginInfor.UserID));
+            // OpenChildForm(new UserInforForm(LoginInfor.UserID));
+            HideSubmenu();
+            UserInforForm form = new UserInforForm(LoginInfor.UserID);
+            form.showInfo = OpenHouseInfo;
+            OpenChildForm(form);
         }
 
         private void btnUserChange_Click(object sender, EventArgs e)

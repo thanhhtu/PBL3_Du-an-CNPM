@@ -118,7 +118,7 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(849, 57);
+            this.label1.Size = new System.Drawing.Size(866, 57);
             this.label1.TabIndex = 6;
             this.label1.Text = "THÔNG TIN CÁ NHÂN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -132,7 +132,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(230, 91);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(619, 363);
+            this.panel1.Size = new System.Drawing.Size(636, 363);
             this.panel1.TabIndex = 10;
             // 
             // customInforComponent2
@@ -177,7 +177,7 @@
             this.label2.Location = new System.Drawing.Point(230, 57);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(619, 34);
+            this.label2.Size = new System.Drawing.Size(636, 34);
             this.label2.TabIndex = 15;
             this.label2.Text = "Các trọ đang cho thuê";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -188,7 +188,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(866, 446);
+            this.ClientSize = new System.Drawing.Size(883, 446);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);

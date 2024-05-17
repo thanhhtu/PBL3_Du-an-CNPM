@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panelHide = new System.Windows.Forms.Panel();
+            this.btnDeleteFavour = new PBL3.Views.CustomComponent.CustomButton();
             this.postID = new System.Windows.Forms.Label();
             this.tenNhaLinkLabel = new System.Windows.Forms.LinkLabel();
             this.mieuTaLabel = new System.Windows.Forms.Label();
@@ -38,6 +40,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            this.panelHide.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -46,6 +49,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.panelHide);
             this.panel2.Controls.Add(this.postID);
             this.panel2.Controls.Add(this.tenNhaLinkLabel);
             this.panel2.Controls.Add(this.mieuTaLabel);
@@ -59,6 +63,36 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(533, 255);
             this.panel2.TabIndex = 10;
+            // 
+            // panelHide
+            // 
+            this.panelHide.Controls.Add(this.btnDeleteFavour);
+            this.panelHide.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelHide.Location = new System.Drawing.Point(0, 215);
+            this.panelHide.Name = "panelHide";
+            this.panelHide.Size = new System.Drawing.Size(529, 36);
+            this.panelHide.TabIndex = 37;
+            // 
+            // btnDeleteFavour
+            // 
+            this.btnDeleteFavour.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteFavour.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnDeleteFavour.BorderColor = System.Drawing.Color.Transparent;
+            this.btnDeleteFavour.BorderRadius = 0;
+            this.btnDeleteFavour.BorderSize = 0;
+            this.btnDeleteFavour.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnDeleteFavour.FlatAppearance.BorderSize = 0;
+            this.btnDeleteFavour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteFavour.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteFavour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.btnDeleteFavour.Image = global::PBL3.Properties.Resources.heart_full;
+            this.btnDeleteFavour.Location = new System.Drawing.Point(475, 0);
+            this.btnDeleteFavour.Name = "btnDeleteFavour";
+            this.btnDeleteFavour.Size = new System.Drawing.Size(54, 36);
+            this.btnDeleteFavour.TabIndex = 35;
+            this.btnDeleteFavour.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.btnDeleteFavour.UseVisualStyleBackColor = false;
+            this.btnDeleteFavour.Click += new System.EventHandler(this.btnDeleteFavour_Click);
             // 
             // postID
             // 
@@ -173,6 +207,7 @@
             this.Size = new System.Drawing.Size(770, 255);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panelHide.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -190,5 +225,7 @@
         private System.Windows.Forms.Label tienLabel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private CustomButton btnDeleteFavour;
+        private System.Windows.Forms.Panel panelHide;
     }
 }

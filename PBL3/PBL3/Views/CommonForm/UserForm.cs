@@ -27,7 +27,7 @@ namespace PBL3.Views.CommonForm
                 labelFullname.Text += user.FullName;
                 labelPhone.Text += user.Phone;
                 labelEmail.Text += user.Email;
-                labelAddress.Text += AddressBLL.Instance.GetFullAddress(user.AddressID);
+                richTxtAddress.Text += AddressBLL.Instance.GetFullAddress(user.AddressID);
             }
         }
 

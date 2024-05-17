@@ -69,6 +69,8 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -86,6 +88,7 @@
     <Compile Include="BLL\AddressBLL.cs" />
     <Compile Include="BLL\CommentBLL.cs" />
     <Compile Include="BLL\DistrictBLL.cs" />
+    <Compile Include="BLL\FavoriteInforBLL.cs" />
     <Compile Include="BLL\ImageBLL.cs" />
     <Compile Include="BLL\ImageOfUserBLL.cs" />
     <Compile Include="BLL\InforBLL.cs" />
@@ -263,6 +266,12 @@
     <Compile Include="Views\RenterForm\RenterHomeForm.Designer.cs">
       <DependentUpon>RenterHomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\RenterForm\UserInforForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RenterForm\UserInforForm.Designer.cs">
+      <DependentUpon>UserInforForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -339,6 +348,9 @@
     <EmbeddedResource Include="Views\RenterForm\RenterHomeForm.resx">
       <DependentUpon>RenterHomeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\RenterForm\UserInforForm.resx">
+      <DependentUpon>UserInforForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -353,7 +365,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\heart.png" />
+    <None Include="Resources\heart1.png" />
+    <Content Include="Resources\heart_full.jpg" />
+    <None Include="Resources\heart_full1.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\reverse.png" />
     <None Include="Resources\logo.png" />
