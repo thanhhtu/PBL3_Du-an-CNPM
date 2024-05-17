@@ -338,11 +338,11 @@
             this.txtDeposit.BorderRadius = 6;
             this.txtDeposit.BorderSize = 2;
             this.txtDeposit.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtDeposit.Location = new System.Drawing.Point(763, 105);
+            this.txtDeposit.Location = new System.Drawing.Point(763, 98);
             this.txtDeposit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtDeposit.Multiline = false;
             this.txtDeposit.Name = "txtDeposit";
-            this.txtDeposit.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtDeposit.Padding = new System.Windows.Forms.Padding(15, 5, 9, 5);
             this.txtDeposit.PasswordChar = false;
             this.txtDeposit.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtDeposit.PlaceholderText = "";
@@ -363,7 +363,7 @@
             this.txtPrice.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtPrice.Multiline = false;
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtPrice.Padding = new System.Windows.Forms.Padding(15, 5, 9, 5);
             this.txtPrice.PasswordChar = false;
             this.txtPrice.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtPrice.PlaceholderText = "";
@@ -384,7 +384,7 @@
             this.txtArea.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtArea.Multiline = false;
             this.txtArea.Name = "txtArea";
-            this.txtArea.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtArea.Padding = new System.Windows.Forms.Padding(15, 5, 9, 5);
             this.txtArea.PasswordChar = false;
             this.txtArea.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtArea.PlaceholderText = "";
@@ -405,7 +405,7 @@
             this.txtDescribe.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtDescribe.Multiline = true;
             this.txtDescribe.Name = "txtDescribe";
-            this.txtDescribe.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtDescribe.Padding = new System.Windows.Forms.Padding(15, 5, 9, 5);
             this.txtDescribe.PasswordChar = false;
             this.txtDescribe.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtDescribe.PlaceholderText = "";
@@ -426,7 +426,7 @@
             this.txtTitle.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtTitle.Multiline = false;
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtTitle.Padding = new System.Windows.Forms.Padding(15, 5, 9, 5);
             this.txtTitle.PasswordChar = false;
             this.txtTitle.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtTitle.PlaceholderText = "";
@@ -552,7 +552,7 @@
             this.txtDetailAddress.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtDetailAddress.Multiline = true;
             this.txtDetailAddress.Name = "txtDetailAddress";
-            this.txtDetailAddress.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtDetailAddress.Padding = new System.Windows.Forms.Padding(15, 5, 9, 5);
             this.txtDetailAddress.PasswordChar = false;
             this.txtDetailAddress.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtDetailAddress.PlaceholderText = "";

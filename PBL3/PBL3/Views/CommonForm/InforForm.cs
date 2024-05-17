@@ -26,17 +26,17 @@ namespace PBL3.Views.CommonForm
         private int currentCommentPage = 0; //Trang hiện tại của phần comment
         private int totalPage; //Số trang tổng cộng
         private int skipNum = 4; //Một lần chỉ có thể load được 4 comment
-       // private int load 
-        public InforForm(int infoID, bool HideCmt = true)
+                                 // private int load 
+        public InforForm(int infoID, bool HideRating = true)
         {
             InforID = infoID;
             InitializeComponent();
             InitializeFormInfomation();
             InitializeImage();
             LoadComment();
-            if (HideCmt) //Ẩn cmt
+            if (HideRating) //Ẩn cmt
             {
-               panel8.Visible = true;
+                panel8.Visible = true;
             }
         }
         private void InitializeImage()
@@ -91,19 +91,30 @@ namespace PBL3.Views.CommonForm
             //Khởi tạo thông tin ban đầu của form
             InforViewDTO info = InforBLL.Instance.GetInforByID(InforID);
             labelAddress.Text = info.Address;
-            labelSquareArea.Text ="Diện tích: " + info.SquareArea.ToString() + " m\u00b2";
+            labelSquareArea.Text = "Diện tích: " + info.SquareArea.ToString() + " m\u00b2";
             labelNameInfor.Text = info.Title;
-            labelMoney.Text = "Số tiền: " + info.Price.ToString()+ "/Tháng";
+            labelMoney.Text = "Số tiền: " + info.Price.ToString() + "/Tháng";
             txtDesInfor.Text = info.Description;
-            labelCreateTime.Text = "Ngày đăng: "+ InforBLL.Instance.GetPublishedTime(InforID);
+            labelCreateTime.Text = "Ngày đăng: " + InforBLL.Instance.GetPublishedTime(InforID);
             UserID = info.UserID.GetValueOrDefault();
             labelDeposit.Text = "Tiền đặt cọc:  " + info.Deposit.ToString();
             txtDesInfor.Texts = "Mô tả:  " + info.Description.ToString();
-            if (info.LivingWithOwner) { checkBoxLivewOwner.Checked = true;}
-            else {
+            if (info.LivingWithOwner) { checkBoxLivewOwner.Checked = true; }
+            else
+            {
                 checkBoxLivewOwner.Visible = false;
                 labelLiving.Text = "Không sống chung chủ";
             }
+            //aitrancute đã thêm
+            bool isInFavorite = FavoriteInforBLL.Instance.IsInFavorite(LoginInfor.UserID, InforID);
+            if (isInFavorite)
+            {
+                btnDeleteFavour.BringToFront(); // Nếu có, hiển thị nút xóa yêu thích
+            }
+            else
+            {
+                btnAddFavour.BringToFront(); // Nếu không, hiển thị nút thêm yêu thích
+            } //end
         }
         //Hàm được sử dụng để giấu đi phần edit và
         //delete comment nếu như comment đó không phải là của user này
@@ -152,7 +163,7 @@ namespace PBL3.Views.CommonForm
         {
             HideCommentUtilityFunction();
             DisplayAllCommentComponent();
-           // panel8.Visible = false;
+            // panel8.Visible = false;
             totalCommentNum = CommentBLL.Instance.GetNumberOfComments(InforID);
             if (totalCommentNum == 0)
             {
@@ -231,7 +242,7 @@ namespace PBL3.Views.CommonForm
                 CommentBLL.Instance.AddComment(LoginInfor.UserID, InforID, txtComment.Texts);
                 txtComment.Texts = "";
             }
-           else
+            else
                 MessageBox.Show("Vui lòng nhập comment!");
             LoadComment();
         }
@@ -258,14 +269,9 @@ namespace PBL3.Views.CommonForm
 
         private void btnInforLandLord_Click(object sender, EventArgs e)
         {
-            if (LoginInfor.UserID == -1) { MessageBox.Show("Bạn phải đăng nhập mới xem được thông tin chủ trọ."); }
-            else
-            {
-                UserForm form = new UserForm(UserID);
-                form.ShowDialog();
-            }
+            UserForm form = new UserForm(UserID);
+            form.ShowDialog();
         }
-
         public delegate void back();
         public back goback;
 
@@ -275,11 +281,6 @@ namespace PBL3.Views.CommonForm
             goback();
         }
 
-        private void buttonNotHeart_Click(object sender, EventArgs e)
-        {
-            btnHeart.BringToFront();
-            InforBLL.Instance.AddFavouriteInfor(LoginInfor.UserID, InforID);
-        }
         private void btnUpComment_Click_1(object sender, EventArgs e)
         {
             //Đăng cmt
@@ -300,19 +301,6 @@ namespace PBL3.Views.CommonForm
 
         private void deleteCommentEventHandler(object sender, EventArgs e)
         {
-            LinkLabel linkLabel = (LinkLabel)sender;
-            CustomLinkLabel customLinkLabel = (CustomLinkLabel)linkLabel.Parent;
-            int commentID = customLinkLabel.ID;
-            if (commentID != -1)
-            {
-                CommentBLL.Instance.DeleteCommentByID(commentID);
-                LoadComment();
-            }
-
-        }
-
-        private void editCommentEventHandler(object sender, EventArgs e)
-        {
 
             //Nhấn vào link label
             LinkLabel linkLabel = (LinkLabel)sender;
@@ -323,6 +311,18 @@ namespace PBL3.Views.CommonForm
             {
                 PromptDialogForm prompt = new PromptDialogForm(customLinkLabel.ID);
                 prompt.ShowDialog();
+                LoadComment();
+            }
+        }
+
+        private void editCommentEventHandler(object sender, EventArgs e)
+        {
+            LinkLabel linkLabel = (LinkLabel)sender;
+            CustomLinkLabel customLinkLabel = (CustomLinkLabel)linkLabel.Parent;
+            int commentID = customLinkLabel.ID;
+            if (commentID != -1)
+            {
+                CommentBLL.Instance.DeleteCommentByID(commentID);
                 LoadComment();
             }
         }
@@ -350,15 +350,39 @@ namespace PBL3.Views.CommonForm
             LoadComment();
         }
 
-        private void btnHeart_Click(object sender, EventArgs e)
+
+        private void labelNameInfor_Click(object sender, EventArgs e)
         {
-           buttonNotHeart.BringToFront();
+
         }
 
-        private void buttonNotHeart_Click_1(object sender, EventArgs e)
+        private void btnDeleteFavour_Click(object sender, EventArgs e)
         {
-            btnHeart.BringToFront();
-            InforBLL.Instance.AddFavouriteInfor(UserID, InforID);
+            if (LoginInfor.UserID == -1)
+            {
+                MessageBox.Show("Bạn phải đăng nhập trước!");
+                return;
+            }
+            else
+            {
+                btnAddFavour.BringToFront();
+                FavoriteInforBLL.Instance.DeleteFavourite_Infor(LoginInfor.UserID, InforID);
+            }
         }
-    }   
+
+        private void btnAddFavour_Click(object sender, EventArgs e)
+        {
+            if (LoginInfor.UserID == -1)
+            {
+                MessageBox.Show("Bạn phải đăng nhập trước!");
+                return;
+            }
+            else
+            {
+                btnDeleteFavour.BringToFront();
+                FavoriteInforBLL.Instance.AddFavourite_Infor(LoginInfor.UserID, InforID);
+            }
+        }
+    }
 }
+

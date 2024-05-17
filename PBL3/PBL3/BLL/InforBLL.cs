@@ -33,7 +33,7 @@ namespace PBL3.BLL
         public void LoadApp() //tác động lên db để thao tác ban đầu mượt hơn
         {
             
-            db.AccommodationInformations.Count(); //ToList()
+            //db.AccommodationInformations.Count(); //ToList()
         }
         #endregion
 

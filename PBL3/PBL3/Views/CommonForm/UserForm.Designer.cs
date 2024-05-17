@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.customPanel1 = new PBL3.Views.CustomComponent.CustomPanel();
+            this.label2 = new System.Windows.Forms.Label();
             this.labelEmail = new System.Windows.Forms.Label();
             this.labelAddress = new System.Windows.Forms.Label();
             this.labelPhone = new System.Windows.Forms.Label();
@@ -42,6 +43,7 @@
             this.customPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.customPanel1.BackColor = System.Drawing.Color.White;
             this.customPanel1.BorderRadius = 35;
+            this.customPanel1.Controls.Add(this.label2);
             this.customPanel1.Controls.Add(this.labelEmail);
             this.customPanel1.Controls.Add(this.labelAddress);
             this.customPanel1.Controls.Add(this.labelPhone);
@@ -56,6 +58,16 @@
             this.customPanel1.Name = "customPanel1";
             this.customPanel1.Size = new System.Drawing.Size(748, 382);
             this.customPanel1.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(193, 277);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(455, 65);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "label2";
             // 
             // labelEmail
             // 
@@ -146,5 +158,6 @@
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.Label labelAddress;
         private System.Windows.Forms.Label labelPhone;
+        private System.Windows.Forms.Label label2;
     }
 }
