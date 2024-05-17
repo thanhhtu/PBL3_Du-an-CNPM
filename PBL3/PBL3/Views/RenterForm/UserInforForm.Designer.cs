@@ -34,6 +34,7 @@
             this.labelAddress = new System.Windows.Forms.Label();
             this.labelEmail = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,9 +47,13 @@
             this.houseInfoComponent3 = new PBL3.Views.CustomComponent.CustomInforComponent();
             this.houseInfoComponent2 = new PBL3.Views.CustomComponent.CustomInforComponent();
             this.houseInfoComponent1 = new PBL3.Views.CustomComponent.CustomInforComponent();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.cbbPageNumber = new PBL3.Views.CustomComponents.CustomComboBox();
             this.btnNextPage = new PBL3.Views.CustomComponent.CustomButton();
             this.btnPrevPage = new PBL3.Views.CustomComponent.CustomButton();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -119,6 +124,17 @@
             this.panel2.Size = new System.Drawing.Size(514, 464);
             this.panel2.TabIndex = 9;
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.richTextBox1.Location = new System.Drawing.Point(78, 143);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(324, 39);
+            this.richTextBox1.TabIndex = 14;
+            this.richTextBox1.Text = "";
+            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.SteelBlue;
@@ -127,6 +143,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1520, 70);
             this.label1.TabIndex = 6;
@@ -300,6 +317,34 @@
             this.houseInfoComponent1._DeleteEventHandler += new System.EventHandler(this.DeleteFavorite1);
             this.houseInfoComponent1._OnLabelClicked += new System.EventHandler(this.houseInfoComponent1__OnLabelClicked);
             // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.Location = new System.Drawing.Point(423, 57);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(717, 34);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Các trọ yêu thích";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.panel4.Controls.Add(this.cbbPageNumber);
+            this.panel4.Controls.Add(this.btnNextPage);
+            this.panel4.Controls.Add(this.btnPrevPage);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(717, 54);
+            this.panel4.TabIndex = 22;
+            // 
             // cbbPageNumber
             // 
             this.cbbPageNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
@@ -366,6 +411,24 @@
             this.btnPrevPage.UseVisualStyleBackColor = false;
             this.btnPrevPage.Click += new System.EventHandler(this.btnPrevPage_Click);
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.panel4);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(423, 378);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(717, 56);
+            this.panel6.TabIndex = 23;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.panel1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(423, 91);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(717, 287);
+            this.panel3.TabIndex = 16;
+            // 
             // UserInforForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -406,6 +469,7 @@
         private System.Windows.Forms.Panel panel4;
         private CustomComponent.CustomButton btnNextPage;
         private CustomComponent.CustomButton btnPrevPage;
+        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Panel panel6;
         private CustomComponent.CustomInforComponent houseInfoComponent5;
         private CustomComponent.CustomInforComponent houseInfoComponent4;
