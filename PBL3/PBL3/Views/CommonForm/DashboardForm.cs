@@ -148,10 +148,10 @@ namespace PBL3.Views.CommonForm
             //Sorting được ưu tiên nhất
             if (sorting)
             {
-                // SortFunction();
+                 SortFunction();
                 return;
             }
-            //SearchFunction();
+            SearchFunction();
         }
 
         #endregion

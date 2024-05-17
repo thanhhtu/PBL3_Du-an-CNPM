@@ -30,6 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -50,6 +54,8 @@
             this.btnInforLandLord = new PBL3.Views.CustomComponent.CustomButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnPreviousCmt = new PBL3.Views.CustomComponent.CustomButton();
+            this.btnNextCmt = new PBL3.Views.CustomComponent.CustomButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.txtComment = new PBL3.Views.CustomComponent.CustomTextBox();
             this.btnUpComment = new PBL3.Views.CustomComponent.CustomButton();
@@ -60,18 +66,16 @@
             this.customComment1 = new PBL3.Views.CustomComponents.CustomComment();
             this.txtDesInfor = new PBL3.Views.CustomComponent.CustomTextBox();
             this.customPanel1 = new PBL3.Views.CustomComponent.CustomPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.labelNameInfor = new System.Windows.Forms.Label();
-            this.btnPreviousCmt = new PBL3.Views.CustomComponent.CustomButton();
-            this.btnNextCmt = new PBL3.Views.CustomComponent.CustomButton();
-            this.btnBack = new PBL3.Views.CustomComponent.CustomButton();
             this.btnAddFavour = new PBL3.Views.CustomComponent.CustomButton();
             this.btnDeleteFavour = new PBL3.Views.CustomComponent.CustomButton();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.labelNameInfor = new System.Windows.Forms.Label();
+            this.btnBack = new PBL3.Views.CustomComponent.CustomButton();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -80,10 +84,6 @@
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.customPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -113,6 +113,38 @@
             this.panel1.Size = new System.Drawing.Size(1150, 239);
             this.panel1.TabIndex = 8;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(861, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(286, 224);
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(560, -2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(295, 227);
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(288, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(266, 227);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(14, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(268, 229);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -373,6 +405,48 @@
             this.panel5.Size = new System.Drawing.Size(200, 100);
             this.panel5.TabIndex = 4;
             // 
+            // btnPreviousCmt
+            // 
+            this.btnPreviousCmt.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnPreviousCmt.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.btnPreviousCmt.BorderColor = System.Drawing.Color.Transparent;
+            this.btnPreviousCmt.BorderRadius = 0;
+            this.btnPreviousCmt.BorderSize = 0;
+            this.btnPreviousCmt.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnPreviousCmt.FlatAppearance.BorderSize = 0;
+            this.btnPreviousCmt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPreviousCmt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPreviousCmt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.btnPreviousCmt.Image = global::PBL3.Properties.Resources.previous;
+            this.btnPreviousCmt.Location = new System.Drawing.Point(1048, 0);
+            this.btnPreviousCmt.Name = "btnPreviousCmt";
+            this.btnPreviousCmt.Size = new System.Drawing.Size(58, 44);
+            this.btnPreviousCmt.TabIndex = 25;
+            this.btnPreviousCmt.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.btnPreviousCmt.UseVisualStyleBackColor = false;
+            this.btnPreviousCmt.Click += new System.EventHandler(this.btnPreviousCmt_Click);
+            // 
+            // btnNextCmt
+            // 
+            this.btnNextCmt.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnNextCmt.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.btnNextCmt.BorderColor = System.Drawing.Color.Transparent;
+            this.btnNextCmt.BorderRadius = 0;
+            this.btnNextCmt.BorderSize = 0;
+            this.btnNextCmt.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnNextCmt.FlatAppearance.BorderSize = 0;
+            this.btnNextCmt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNextCmt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNextCmt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.btnNextCmt.Image = global::PBL3.Properties.Resources.next;
+            this.btnNextCmt.Location = new System.Drawing.Point(1106, 0);
+            this.btnNextCmt.Name = "btnNextCmt";
+            this.btnNextCmt.Size = new System.Drawing.Size(44, 44);
+            this.btnNextCmt.TabIndex = 26;
+            this.btnNextCmt.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.btnNextCmt.UseVisualStyleBackColor = false;
+            this.btnNextCmt.Click += new System.EventHandler(this.btnNextCmt_Click);
+            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.txtComment);
@@ -452,6 +526,8 @@
             this.customComment4.Size = new System.Drawing.Size(1150, 52);
             this.customComment4.TabIndex = 3;
             this.customComment4.Username = "Tên người dùng";
+            this.customComment4._EditEventHandler += new System.EventHandler(this.editCommentEventHandler);
+            this.customComment4._DeleteEventHandler += new System.EventHandler(this.deleteCommentEventHandler);
             // 
             // customComment3
             // 
@@ -464,6 +540,8 @@
             this.customComment3.Size = new System.Drawing.Size(1150, 52);
             this.customComment3.TabIndex = 2;
             this.customComment3.Username = "Tên người dùng";
+            this.customComment3._EditEventHandler += new System.EventHandler(this.editCommentEventHandler);
+            this.customComment3._DeleteEventHandler += new System.EventHandler(this.deleteCommentEventHandler);
             // 
             // customComment2
             // 
@@ -476,6 +554,8 @@
             this.customComment2.Size = new System.Drawing.Size(1150, 50);
             this.customComment2.TabIndex = 1;
             this.customComment2.Username = "Tên người dùng";
+            this.customComment2._EditEventHandler += new System.EventHandler(this.editCommentEventHandler);
+            this.customComment2._DeleteEventHandler += new System.EventHandler(this.deleteCommentEventHandler);
             // 
             // customComment1
             // 
@@ -500,6 +580,7 @@
             this.txtDesInfor.BorderRadius = 6;
             this.txtDesInfor.BorderSize = 1;
             this.txtDesInfor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtDesInfor.Enabled = false;
             this.txtDesInfor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDesInfor.ForeColor = System.Drawing.Color.DimGray;
             this.txtDesInfor.Location = new System.Drawing.Point(0, 418);
@@ -522,7 +603,7 @@
             this.customPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.customPanel1.Controls.Add(this.btnAddFavour);
             this.customPanel1.Controls.Add(this.btnDeleteFavour);
-            this.customPanel1.Controls.Add(this.label3);
+            this.customPanel1.Controls.Add(this.labelTitle);
             this.customPanel1.Controls.Add(this.labelNameInfor);
             this.customPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.customPanel1.ForeColor = System.Drawing.Color.DarkRed;
@@ -533,99 +614,6 @@
             this.customPanel1.Name = "customPanel1";
             this.customPanel1.Size = new System.Drawing.Size(1150, 45);
             this.customPanel1.TabIndex = 9;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1148, 43);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "tên của thông tin trọ";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelNameInfor
-            // 
-            this.labelNameInfor.BackColor = System.Drawing.Color.Transparent;
-            this.labelNameInfor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelNameInfor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelNameInfor.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNameInfor.ForeColor = System.Drawing.Color.Red;
-            this.labelNameInfor.Location = new System.Drawing.Point(0, 0);
-            this.labelNameInfor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelNameInfor.Name = "labelNameInfor";
-            this.labelNameInfor.Size = new System.Drawing.Size(1148, 43);
-            this.labelNameInfor.TabIndex = 7;
-            this.labelNameInfor.Text = "tên của thông tin trọ";
-            this.labelNameInfor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelNameInfor.Click += new System.EventHandler(this.labelNameInfor_Click);
-            // 
-            // btnPreviousCmt
-            // 
-            this.btnPreviousCmt.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnPreviousCmt.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.btnPreviousCmt.BorderColor = System.Drawing.Color.Transparent;
-            this.btnPreviousCmt.BorderRadius = 0;
-            this.btnPreviousCmt.BorderSize = 0;
-            this.btnPreviousCmt.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnPreviousCmt.FlatAppearance.BorderSize = 0;
-            this.btnPreviousCmt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPreviousCmt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPreviousCmt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.btnPreviousCmt.Image = global::PBL3.Properties.Resources.previous;
-            this.btnPreviousCmt.Location = new System.Drawing.Point(1048, 0);
-            this.btnPreviousCmt.Name = "btnPreviousCmt";
-            this.btnPreviousCmt.Size = new System.Drawing.Size(58, 44);
-            this.btnPreviousCmt.TabIndex = 25;
-            this.btnPreviousCmt.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.btnPreviousCmt.UseVisualStyleBackColor = false;
-            this.btnPreviousCmt.Click += new System.EventHandler(this.btnPreviousCmt_Click);
-            // 
-            // btnNextCmt
-            // 
-            this.btnNextCmt.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnNextCmt.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.btnNextCmt.BorderColor = System.Drawing.Color.Transparent;
-            this.btnNextCmt.BorderRadius = 0;
-            this.btnNextCmt.BorderSize = 0;
-            this.btnNextCmt.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnNextCmt.FlatAppearance.BorderSize = 0;
-            this.btnNextCmt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNextCmt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNextCmt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.btnNextCmt.Image = global::PBL3.Properties.Resources.next;
-            this.btnNextCmt.Location = new System.Drawing.Point(1106, 0);
-            this.btnNextCmt.Name = "btnNextCmt";
-            this.btnNextCmt.Size = new System.Drawing.Size(44, 44);
-            this.btnNextCmt.TabIndex = 26;
-            this.btnNextCmt.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.btnNextCmt.UseVisualStyleBackColor = false;
-            this.btnNextCmt.Click += new System.EventHandler(this.btnNextCmt_Click);
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnBack.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.btnBack.BorderColor = System.Drawing.Color.Transparent;
-            this.btnBack.BorderRadius = 0;
-            this.btnBack.BorderSize = 0;
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.btnBack.Image = global::PBL3.Properties.Resources.previous;
-            this.btnBack.Location = new System.Drawing.Point(1, 4);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(53, 33);
-            this.btnBack.TabIndex = 26;
-            this.btnBack.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnAddFavour
             // 
@@ -667,37 +655,56 @@
             this.btnDeleteFavour.UseVisualStyleBackColor = false;
             this.btnDeleteFavour.Click += new System.EventHandler(this.btnDeleteFavour_Click);
             // 
-            // pictureBox4
+            // labelTitle
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(861, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(286, 224);
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
+            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
+            this.labelTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.ForeColor = System.Drawing.Color.Red;
+            this.labelTitle.Location = new System.Drawing.Point(0, 0);
+            this.labelTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(1148, 43);
+            this.labelTitle.TabIndex = 32;
+            this.labelTitle.Text = "tên của thông tin trọ";
+            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox3
+            // labelNameInfor
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(560, -2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(295, 227);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            this.labelNameInfor.BackColor = System.Drawing.Color.Transparent;
+            this.labelNameInfor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelNameInfor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelNameInfor.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNameInfor.ForeColor = System.Drawing.Color.Red;
+            this.labelNameInfor.Location = new System.Drawing.Point(0, 0);
+            this.labelNameInfor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelNameInfor.Name = "labelNameInfor";
+            this.labelNameInfor.Size = new System.Drawing.Size(1148, 43);
+            this.labelNameInfor.TabIndex = 7;
+            this.labelNameInfor.Text = "tên của thông tin trọ";
+            this.labelNameInfor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelNameInfor.Click += new System.EventHandler(this.labelNameInfor_Click);
             // 
-            // pictureBox2
+            // btnBack
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(288, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(266, 227);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(14, -2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(268, 229);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnBack.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.btnBack.BorderColor = System.Drawing.Color.Transparent;
+            this.btnBack.BorderRadius = 0;
+            this.btnBack.BorderSize = 0;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.btnBack.Image = global::PBL3.Properties.Resources.previous;
+            this.btnBack.Location = new System.Drawing.Point(1, 4);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(53, 33);
+            this.btnBack.TabIndex = 26;
+            this.btnBack.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // InforForm
             // 
@@ -719,6 +726,10 @@
             this.Name = "InforForm";
             this.Text = "HouseInforForm";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -732,10 +743,6 @@
             this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.customPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -786,6 +793,6 @@
         private CustomComponents.CustomComment customComment1;
         private CustomComponent.CustomButton btnAddFavour;
         private CustomComponent.CustomButton btnDeleteFavour;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelTitle;
     }
 }

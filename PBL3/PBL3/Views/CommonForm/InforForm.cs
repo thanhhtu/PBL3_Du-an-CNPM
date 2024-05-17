@@ -86,10 +86,16 @@ namespace PBL3.Views.CommonForm
                 MessageBox.Show("Unable to open file " + exp.Message);
             }
         }
-        private void InitializeFormInfomation()
+        public void HideHeart()
         {
+            btnAddFavour.Visible = false;
+            btnDeleteFavour.Visible = false;
+        }
+        private void InitializeFormInfomation()
+        {   if (UserBLL.Instance.GetRoleIDByUserID(LoginInfor.UserID) == 1 || UserBLL.Instance.GetRoleIDByUserID(LoginInfor.UserID) == 2) { HideHeart(); }
             //Khởi tạo thông tin ban đầu của form
             InforViewDTO info = InforBLL.Instance.GetInforByID(InforID);
+            labelTitle.Text = info.Title;
             labelAddress.Text = info.Address;
             labelSquareArea.Text = "Diện tích: " + info.SquareArea.ToString() + " m\u00b2";
             labelNameInfor.Text = info.Title;
@@ -269,16 +275,26 @@ namespace PBL3.Views.CommonForm
 
         private void btnInforLandLord_Click(object sender, EventArgs e)
         {
-            UserForm form = new UserForm(UserID);
-            form.ShowDialog();
+            if (LoginInfor.UserID == -1)
+            {
+                MessageBox.Show("Bạn phải đăng nhập trước!");
+                UserForm form = new UserForm(UserID);
+                form.ShowDialog();
+                return;
+            }
+            
         }
         public delegate void back();
         public back goback;
+
+        public delegate void display();
+        public display Reload;
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Dispose();
             goback();
+            Reload();
         }
 
         private void btnUpComment_Click_1(object sender, EventArgs e)
@@ -302,6 +318,19 @@ namespace PBL3.Views.CommonForm
         private void deleteCommentEventHandler(object sender, EventArgs e)
         {
 
+            LinkLabel linkLabel = (LinkLabel)sender;
+            CustomLinkLabel customLinkLabel = (CustomLinkLabel)linkLabel.Parent;
+            int commentID = customLinkLabel.ID;
+            if (commentID != -1)
+            {
+                CommentBLL.Instance.DeleteCommentByID(commentID);
+                LoadComment();
+            }
+        }
+
+        private void editCommentEventHandler(object sender, EventArgs e)
+        {
+
             //Nhấn vào link label
             LinkLabel linkLabel = (LinkLabel)sender;
             //Vì custom link label chứa id của comment nên phải ép về.
@@ -311,18 +340,6 @@ namespace PBL3.Views.CommonForm
             {
                 PromptDialogForm prompt = new PromptDialogForm(customLinkLabel.ID);
                 prompt.ShowDialog();
-                LoadComment();
-            }
-        }
-
-        private void editCommentEventHandler(object sender, EventArgs e)
-        {
-            LinkLabel linkLabel = (LinkLabel)sender;
-            CustomLinkLabel customLinkLabel = (CustomLinkLabel)linkLabel.Parent;
-            int commentID = customLinkLabel.ID;
-            if (commentID != -1)
-            {
-                CommentBLL.Instance.DeleteCommentByID(commentID);
                 LoadComment();
             }
         }

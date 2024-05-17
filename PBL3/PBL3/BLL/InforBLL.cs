@@ -139,7 +139,7 @@ namespace PBL3.BLL
         public List<InforViewDTO> GetSearchedInfor(int skipNum, int inforNum, List<AccommodationInformation> data)
         {
             List<InforViewDTO> ls = new List<InforViewDTO>();
-            data.OrderByDescending(p => p.CreatedTime).Skip(skipNum).Take(inforNum)
+            data.OrderByDescending(p => p.ModifiedTime ?? p.CreatedTime).Skip(skipNum).Take(inforNum)
                 .ToList()
                 .ForEach(info => ls.Add(new InforViewDTO()
                 {
@@ -151,10 +151,10 @@ namespace PBL3.BLL
                     Address = AddressBLL.Instance.GetFullAddress(info.AddressID),
                     UserID = info.UserID,
                     ImagePaths = ImageBLL.Instance.GetImagePaths(info.InforID)
-
                 }));
             return ls;
         }
+
 
         //Sort infor trên dashboard
         public List<InforViewDTO> GetSortedPosts(int skipNum, int infoNum, List<AccommodationInformation> data, int sortCase)

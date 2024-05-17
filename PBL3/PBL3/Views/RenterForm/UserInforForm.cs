@@ -317,6 +317,10 @@ namespace PBL3.Views.RenterForm
         {
             this.Show();
         }
+        public void ReloadDisplay()
+        {
+            this.Display(UserID); 
+        } 
 
         private void houseInfoComponent1__OnLabelClicked(object sender, EventArgs e)
         {
@@ -324,6 +328,7 @@ namespace PBL3.Views.RenterForm
             {
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent1.PostID));
                 form.goback = ReOpen;
+                form.Reload = ReloadDisplay;
                 showInfo(form);
             }
         }
@@ -334,6 +339,7 @@ namespace PBL3.Views.RenterForm
             {
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent2.PostID));
                 form.goback = ReOpen;
+                form.Reload = ReloadDisplay;
                 showInfo(form);
             }
         }
@@ -344,6 +350,7 @@ namespace PBL3.Views.RenterForm
             {
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent3.PostID));
                 form.goback = ReOpen;
+                form.Reload = ReloadDisplay;
                 showInfo(form);
             }
         }
@@ -354,6 +361,7 @@ namespace PBL3.Views.RenterForm
             {
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent4.PostID));
                 form.goback = ReOpen;
+                form.Reload = ReloadDisplay;
                 showInfo(form);
             }
         }
@@ -364,6 +372,7 @@ namespace PBL3.Views.RenterForm
             {
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent5.PostID));
                 form.goback = ReOpen;
+                form.Reload = ReloadDisplay;
                 showInfo(form);
             }
         }
