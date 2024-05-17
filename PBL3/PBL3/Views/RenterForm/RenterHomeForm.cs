@@ -107,10 +107,7 @@ namespace PBL3.Views.RenterForm
 
         private void btnId_Click(object sender, EventArgs e)
         {
-            // OpenChildForm(new UserInforForm(LoginInfor.UserID));
-            UserInforForm form = new UserInforForm(LoginInfor.UserID);
-            form.showInfo = OpenHouseInfo;
-            OpenChildForm(form);
+            OpenChildForm(new UserForm(LoginInfor.UserID));
         }
 
         private void btnUserChange_Click(object sender, EventArgs e)
@@ -136,6 +133,13 @@ namespace PBL3.Views.RenterForm
             HomeForm form = new HomeForm();
             form.ShowDialog();
             this.Close();
+        }
+
+        private void btnFavorite_Click(object sender, EventArgs e)
+        {
+            UserInforForm form = new UserInforForm(LoginInfor.UserID);
+            form.showInfo = OpenHouseInfo;
+            OpenChildForm(form);
         }
         #endregion
     }

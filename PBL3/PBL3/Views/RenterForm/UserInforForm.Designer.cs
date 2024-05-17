@@ -34,26 +34,20 @@
             this.labelAddress = new System.Windows.Forms.Label();
             this.labelEmail = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.houseInfoComponent5 = new PBL3.Views.CustomComponent.CustomInforComponent();
             this.houseInfoComponent4 = new PBL3.Views.CustomComponent.CustomInforComponent();
             this.houseInfoComponent3 = new PBL3.Views.CustomComponent.CustomInforComponent();
             this.houseInfoComponent2 = new PBL3.Views.CustomComponent.CustomInforComponent();
             this.houseInfoComponent1 = new PBL3.Views.CustomComponent.CustomInforComponent();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.cbbPageNumber = new PBL3.Views.CustomComponents.CustomComboBox();
             this.btnNextPage = new PBL3.Views.CustomComponent.CustomButton();
             this.btnPrevPage = new PBL3.Views.CustomComponent.CustomButton();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -119,21 +113,20 @@
             this.panel2.Controls.Add(this.labelFullname);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 70);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(514, 464);
+            this.panel2.Size = new System.Drawing.Size(355, 464);
             this.panel2.TabIndex = 9;
             // 
-            // richTextBox1
+            // label3
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.richTextBox1.Location = new System.Drawing.Point(78, 143);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(324, 39);
-            this.richTextBox1.TabIndex = 14;
-            this.richTextBox1.Text = "";
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(89, 172);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(233, 116);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "label3";
             // 
             // label1
             // 
@@ -143,11 +136,10 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1520, 70);
             this.label1.TabIndex = 6;
-            this.label1.Text = "THÔNG TIN CÁ NHÂN";
+            this.label1.Text = "THÔNG TIN TRỌ YÊU THÍCH";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -160,24 +152,10 @@
             this.panel1.Controls.Add(this.houseInfoComponent1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1006, 353);
+            this.panel1.Size = new System.Drawing.Size(1165, 395);
             this.panel1.TabIndex = 10;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(514, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1006, 42);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Các trọ yêu thích";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel4
             // 
@@ -189,38 +167,28 @@
             this.panel4.Location = new System.Drawing.Point(0, 3);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1006, 66);
+            this.panel4.Size = new System.Drawing.Size(1165, 66);
             this.panel4.TabIndex = 22;
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.panel4);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(514, 465);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Location = new System.Drawing.Point(355, 465);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1006, 69);
+            this.panel6.Size = new System.Drawing.Size(1165, 69);
             this.panel6.TabIndex = 23;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(514, 112);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(355, 70);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1006, 353);
+            this.panel3.Size = new System.Drawing.Size(1165, 395);
             this.panel3.TabIndex = 16;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(89, 172);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(397, 65);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "label3";
             // 
             // houseInfoComponent5
             // 
@@ -236,7 +204,7 @@
             this.houseInfoComponent5.Name = "houseInfoComponent5";
             this.houseInfoComponent5.PictureBox = ((System.Drawing.Image)(resources.GetObject("houseInfoComponent5.PictureBox")));
             this.houseInfoComponent5.PostID = "postID";
-            this.houseInfoComponent5.Size = new System.Drawing.Size(985, 273);
+            this.houseInfoComponent5.Size = new System.Drawing.Size(1144, 273);
             this.houseInfoComponent5.TabIndex = 4;
             this.houseInfoComponent5._DeleteEventHandler += new System.EventHandler(this.DeleteFavorite5);
             this.houseInfoComponent5._OnLabelClicked += new System.EventHandler(this.houseInfoComponent5__OnLabelClicked);
@@ -255,7 +223,7 @@
             this.houseInfoComponent4.Name = "houseInfoComponent4";
             this.houseInfoComponent4.PictureBox = ((System.Drawing.Image)(resources.GetObject("houseInfoComponent4.PictureBox")));
             this.houseInfoComponent4.PostID = "postID";
-            this.houseInfoComponent4.Size = new System.Drawing.Size(985, 273);
+            this.houseInfoComponent4.Size = new System.Drawing.Size(1144, 273);
             this.houseInfoComponent4.TabIndex = 3;
             this.houseInfoComponent4._DeleteEventHandler += new System.EventHandler(this.DeleteFavorite4);
             this.houseInfoComponent4._OnLabelClicked += new System.EventHandler(this.houseInfoComponent4__OnLabelClicked);
@@ -274,7 +242,7 @@
             this.houseInfoComponent3.Name = "houseInfoComponent3";
             this.houseInfoComponent3.PictureBox = ((System.Drawing.Image)(resources.GetObject("houseInfoComponent3.PictureBox")));
             this.houseInfoComponent3.PostID = "postID";
-            this.houseInfoComponent3.Size = new System.Drawing.Size(985, 273);
+            this.houseInfoComponent3.Size = new System.Drawing.Size(1144, 273);
             this.houseInfoComponent3.TabIndex = 2;
             this.houseInfoComponent3._DeleteEventHandler += new System.EventHandler(this.DeleteFavorite3);
             this.houseInfoComponent3._OnLabelClicked += new System.EventHandler(this.houseInfoComponent3__OnLabelClicked);
@@ -293,7 +261,7 @@
             this.houseInfoComponent2.Name = "houseInfoComponent2";
             this.houseInfoComponent2.PictureBox = ((System.Drawing.Image)(resources.GetObject("houseInfoComponent2.PictureBox")));
             this.houseInfoComponent2.PostID = "postID";
-            this.houseInfoComponent2.Size = new System.Drawing.Size(985, 273);
+            this.houseInfoComponent2.Size = new System.Drawing.Size(1144, 273);
             this.houseInfoComponent2.TabIndex = 1;
             this.houseInfoComponent2._DeleteEventHandler += new System.EventHandler(this.DeleteFavorite2);
             this.houseInfoComponent2._OnLabelClicked += new System.EventHandler(this.houseInfoComponent2__OnLabelClicked);
@@ -312,38 +280,10 @@
             this.houseInfoComponent1.Name = "houseInfoComponent1";
             this.houseInfoComponent1.PictureBox = ((System.Drawing.Image)(resources.GetObject("houseInfoComponent1.PictureBox")));
             this.houseInfoComponent1.PostID = "postID";
-            this.houseInfoComponent1.Size = new System.Drawing.Size(985, 273);
+            this.houseInfoComponent1.Size = new System.Drawing.Size(1144, 273);
             this.houseInfoComponent1.TabIndex = 0;
             this.houseInfoComponent1._DeleteEventHandler += new System.EventHandler(this.DeleteFavorite1);
             this.houseInfoComponent1._OnLabelClicked += new System.EventHandler(this.houseInfoComponent1__OnLabelClicked);
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(423, 57);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(717, 34);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Các trọ yêu thích";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.panel4.Controls.Add(this.cbbPageNumber);
-            this.panel4.Controls.Add(this.btnNextPage);
-            this.panel4.Controls.Add(this.btnPrevPage);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 2);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(717, 54);
-            this.panel4.TabIndex = 22;
             // 
             // cbbPageNumber
             // 
@@ -357,7 +297,7 @@
             this.cbbPageNumber.IconColor = System.Drawing.Color.SteelBlue;
             this.cbbPageNumber.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbbPageNumber.ListTextColor = System.Drawing.Color.Black;
-            this.cbbPageNumber.Location = new System.Drawing.Point(806, 0);
+            this.cbbPageNumber.Location = new System.Drawing.Point(965, 0);
             this.cbbPageNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbPageNumber.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbbPageNumber.Name = "cbbPageNumber";
@@ -379,7 +319,7 @@
             this.btnNextPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNextPage.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNextPage.ForeColor = System.Drawing.Color.White;
-            this.btnNextPage.Location = new System.Drawing.Point(541, 14);
+            this.btnNextPage.Location = new System.Drawing.Point(620, 14);
             this.btnNextPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNextPage.Name = "btnNextPage";
             this.btnNextPage.Size = new System.Drawing.Size(200, 50);
@@ -401,7 +341,7 @@
             this.btnPrevPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrevPage.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrevPage.ForeColor = System.Drawing.Color.White;
-            this.btnPrevPage.Location = new System.Drawing.Point(53, 4);
+            this.btnPrevPage.Location = new System.Drawing.Point(132, 4);
             this.btnPrevPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPrevPage.Name = "btnPrevPage";
             this.btnPrevPage.Size = new System.Drawing.Size(200, 50);
@@ -410,24 +350,6 @@
             this.btnPrevPage.TextColor = System.Drawing.Color.White;
             this.btnPrevPage.UseVisualStyleBackColor = false;
             this.btnPrevPage.Click += new System.EventHandler(this.btnPrevPage_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.panel4);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(423, 378);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(717, 56);
-            this.panel6.TabIndex = 23;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.panel1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(423, 91);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(717, 287);
-            this.panel3.TabIndex = 16;
             // 
             // UserInforForm
             // 
@@ -438,10 +360,9 @@
             this.ClientSize = new System.Drawing.Size(1520, 534);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserInforForm";
             this.Text = "InforLanlordForm";
             this.panel2.ResumeLayout(false);
@@ -463,13 +384,11 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
         private CustomComponent.CustomInforComponent houseInfoComponent2;
         private CustomComponent.CustomInforComponent houseInfoComponent1;
         private System.Windows.Forms.Panel panel4;
         private CustomComponent.CustomButton btnNextPage;
         private CustomComponent.CustomButton btnPrevPage;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Panel panel6;
         private CustomComponent.CustomInforComponent houseInfoComponent5;
         private CustomComponent.CustomInforComponent houseInfoComponent4;

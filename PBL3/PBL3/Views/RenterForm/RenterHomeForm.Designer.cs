@@ -44,6 +44,7 @@
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnFavorite = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -257,7 +258,7 @@
             this.btnSignOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSignOut.IconSize = 45;
             this.btnSignOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSignOut.Location = new System.Drawing.Point(0, 474);
+            this.btnSignOut.Location = new System.Drawing.Point(0, 527);
             this.btnSignOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
@@ -271,6 +272,7 @@
             // 
             // panelUserSubmenu
             // 
+            this.panelUserSubmenu.Controls.Add(this.btnFavorite);
             this.panelUserSubmenu.Controls.Add(this.btnChangePwd);
             this.panelUserSubmenu.Controls.Add(this.btnUserChange);
             this.panelUserSubmenu.Controls.Add(this.btnId);
@@ -278,7 +280,7 @@
             this.panelUserSubmenu.Location = new System.Drawing.Point(0, 309);
             this.panelUserSubmenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelUserSubmenu.Name = "panelUserSubmenu";
-            this.panelUserSubmenu.Size = new System.Drawing.Size(244, 165);
+            this.panelUserSubmenu.Size = new System.Drawing.Size(244, 218);
             this.panelUserSubmenu.TabIndex = 9;
             // 
             // panelChildForm
@@ -323,6 +325,28 @@
             this.panelMenu.Size = new System.Drawing.Size(244, 675);
             this.panelMenu.TabIndex = 7;
             // 
+            // btnFavorite
+            // 
+            this.btnFavorite.BackColor = System.Drawing.Color.LightBlue;
+            this.btnFavorite.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFavorite.FlatAppearance.BorderSize = 0;
+            this.btnFavorite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFavorite.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnFavorite.IconChar = FontAwesome.Sharp.IconChar.Heart;
+            this.btnFavorite.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnFavorite.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnFavorite.IconSize = 35;
+            this.btnFavorite.Location = new System.Drawing.Point(0, 162);
+            this.btnFavorite.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFavorite.Name = "btnFavorite";
+            this.btnFavorite.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnFavorite.Size = new System.Drawing.Size(244, 54);
+            this.btnFavorite.TabIndex = 5;
+            this.btnFavorite.Text = "Thông tin yêu thích";
+            this.btnFavorite.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFavorite.UseVisualStyleBackColor = false;
+            this.btnFavorite.Click += new System.EventHandler(this.btnFavorite_Click);
+            // 
             // RenterHomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -364,5 +388,6 @@
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panelMenu;
+        private FontAwesome.Sharp.IconButton btnFavorite;
     }
 }
