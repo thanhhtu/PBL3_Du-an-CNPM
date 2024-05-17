@@ -107,7 +107,11 @@ namespace PBL3.Views.RenterForm
 
         private void btnId_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new UserForm(LoginInfor.UserID));
+            //,,OpenChildForm(new UserForm(LoginInfor.UserID));
+            HideSubmenu();
+            UserInforForm form = new UserInforForm(LoginInfor.UserID);
+            form.showInfo = OpenHouseInfo;
+            OpenChildForm(form);
         }
 
         private void btnUserChange_Click(object sender, EventArgs e)

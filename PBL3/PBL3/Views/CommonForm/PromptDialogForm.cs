@@ -29,7 +29,7 @@ namespace PBL3.Views.CommonForm
 
         private void customButton1_Click(object sender, EventArgs e)
         {
-            CommentBLL.Instance.UpdateComment(CommentID, customTextBox1.Text);
+            CommentBLL.Instance.UpdateComment(CommentID, customTextBox1.Texts);
             this.Dispose();
         }
     }
