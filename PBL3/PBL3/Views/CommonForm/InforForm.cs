@@ -256,8 +256,7 @@ namespace PBL3.Views.CommonForm
         private void btnPreviousCmt_Click(object sender, EventArgs e)
         {
             currentCommentPage = currentCommentPage - 1;
-            if (currentCommentPage < 0)
-                currentCommentPage = 0;
+            if (currentCommentPage < 0) currentCommentPage = 0;
             LoadComment();
         }
 
@@ -278,11 +277,12 @@ namespace PBL3.Views.CommonForm
             if (LoginInfor.UserID == -1)
             {
                 MessageBox.Show("Bạn phải đăng nhập trước!");
+            }
+            else
+            {
                 UserForm form = new UserForm(UserID);
                 form.ShowDialog();
-                return;
             }
-            
         }
         public delegate void back();
         public back goback;
