@@ -230,11 +230,11 @@
     <Compile Include="Views\CustomComponent\CustomToggleButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Views\LandlordForm\InforLanlordForm.cs">
+    <Compile Include="Views\LandlordForm\InforLandlordForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\LandlordForm\InforLanlordForm.Designer.cs">
-      <DependentUpon>InforLanlordForm.cs</DependentUpon>
+    <Compile Include="Views\LandlordForm\InforLandlordForm.Designer.cs">
+      <DependentUpon>InforLandlordForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\LandlordForm\InforManagementForm.cs">
       <SubType>Form</SubType>
@@ -330,8 +330,8 @@
     <EmbeddedResource Include="Views\CustomComponent\CustomTextbox.resx">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\LandlordForm\InforLanlordForm.resx">
-      <DependentUpon>InforLanlordForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\LandlordForm\InforLandlordForm.resx">
+      <DependentUpon>InforLandlordForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\LandlordForm\InforManagementForm.resx">
       <DependentUpon>InforManagementForm.cs</DependentUpon>

@@ -93,7 +93,6 @@ D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.SignInForm.r
 D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.CommonForm.UpdateUserForm.resources
 D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.CustomComponents.CustomComment.resources
 D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.CustomComponents.CustomLinkLabel.resources
-D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.LandlordForm.InforLanlordForm.resources
 D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.LandlordForm.UpdateInforForm.resources
 C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\PBL3.exe.config
 C:\Users\Admin\Documents\net\pbl 95\PBL3\PBL3\bin\Debug\PBL3.exe
@@ -355,3 +354,4 @@ E:\ki4\pbl3\pbl3 (ppull)\PBL3\PBL3\obj\Debug\PBL3.exe
 E:\ki4\pbl3\pbl3 (ppull)\PBL3\PBL3\obj\Debug\PBL3.pdb
 D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.AdminForm.InforManagementForm.resources
 D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.RenterForm.UserInforForm.resources
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.LandlordForm.InforLandlordForm.resources

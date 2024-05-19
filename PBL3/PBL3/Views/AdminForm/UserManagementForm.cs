@@ -1,6 +1,4 @@
-﻿using PBL3.BLL;
-using PBL3.DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Forms;
+using PBL3.BLL;
+using PBL3.DTO;
 using PBL3.Views.CommonForm;
+using PBL3.Views.LandlordForm;
+
 namespace PBL3.Views.AdminForm
 {
     public partial class UserManagementForm : Form
@@ -119,9 +121,19 @@ namespace PBL3.Views.AdminForm
                 return;
             }
             int userID = Convert.ToInt32(dgv.SelectedRows[0].Cells["UserID"].Value.ToString());
-            UserForm form = new UserForm(userID);
-            form.Visible = false;
-            form.ShowDialog();
+            int role = UserBLL.Instance.GetRoleIDByUserID(userID);
+            if (role == 2)
+            {
+                InforLandlordForm form2 = new InforLandlordForm(userID);
+                form2.Visible = false;
+                form2.ShowDialog();
+            }
+            else
+            {
+                UserForm form1 = new UserForm(userID);
+                form1.Visible = false;
+                form1.ShowDialog();
+            }
         }
 
         private void btnReverse_Click(object sender, EventArgs e)

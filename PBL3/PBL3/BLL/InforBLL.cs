@@ -136,10 +136,10 @@ namespace PBL3.BLL
         }
 
         //Lấy dữ liệu infor đã search được để hiển thị
-        public List<InforViewDTO> GetSearchedInfor(int skipNum, int inforNum, List<AccommodationInformation> data)
+        public List<InforViewDTO> GetSearchedInfor(int skipAllNum, int inforNum, List<AccommodationInformation> data)
         {
             List<InforViewDTO> ls = new List<InforViewDTO>();
-            data.OrderByDescending(p => p.ModifiedTime ?? p.CreatedTime).Skip(skipNum).Take(inforNum)
+            data.OrderByDescending(p => p.ModifiedTime ?? p.CreatedTime).Skip(skipAllNum).Take(inforNum)
                 .ToList()
                 .ForEach(info => ls.Add(new InforViewDTO()
                 {

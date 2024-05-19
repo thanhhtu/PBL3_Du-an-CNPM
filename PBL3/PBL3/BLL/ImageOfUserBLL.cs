@@ -68,7 +68,7 @@ namespace PBL3.BLL
         }
 
         //Lấy đường dẫn tới folder chứa image dựa trên InforID
-        public string GetImageOfUserStoragePath(int userID) //bỏ ?userID
+        public string GetImageOfUserStoragePath(int? userID)
         {
             if (userID == null)
             {

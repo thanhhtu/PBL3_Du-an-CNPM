@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.dgv = new System.Windows.Forms.DataGridView();
-            this.CLstt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnSearch = new PBL3.Views.CustomComponent.CustomButton();
             this.btnReverse = new PBL3.Views.CustomComponent.CustomButton();
             this.cbbSort = new PBL3.Views.CustomComponents.CustomComboBox();
             this.cbbUserRole = new PBL3.Views.CustomComponents.CustomComboBox();
             this.txtSearch = new PBL3.Views.CustomComponent.CustomTextBox();
+            this.dgv = new System.Windows.Forms.DataGridView();
+            this.CLstt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.AcceptHost = new PBL3.Views.CustomComponent.CustomButton();
             this.btnDeleteUser = new PBL3.Views.CustomComponent.CustomButton();
             this.btnViewUser = new PBL3.Views.CustomComponent.CustomButton();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.panel1.SuspendLayout();
@@ -60,57 +60,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(1411, 80);
             this.panelMenu.TabIndex = 20;
-            // 
-            // dgv
-            // 
-            this.dgv.AllowUserToAddRows = false;
-            this.dgv.AllowUserToDeleteRows = false;
-            this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CLstt});
-            this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv.Location = new System.Drawing.Point(0, 0);
-            this.dgv.Name = "dgv";
-            this.dgv.ReadOnly = true;
-            this.dgv.RowHeadersWidth = 51;
-            this.dgv.RowTemplate.Height = 24;
-            this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(1411, 493);
-            this.dgv.TabIndex = 10;
-            this.dgv.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgv_RowPostPaint);
-            // 
-            // CLstt
-            // 
-            this.CLstt.HeaderText = "STT";
-            this.CLstt.MinimumWidth = 6;
-            this.CLstt.Name = "CLstt";
-            this.CLstt.ReadOnly = true;
-            this.CLstt.Width = 63;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.AcceptHost);
-            this.panel1.Controls.Add(this.btnDeleteUser);
-            this.panel1.Controls.Add(this.btnViewUser);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 573);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1411, 90);
-            this.panel1.TabIndex = 21;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dgv);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 80);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1411, 493);
-            this.panel2.TabIndex = 31;
             // 
             // btnSearch
             // 
@@ -204,7 +153,7 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtSearch.AutoSize = true;
             this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
@@ -227,6 +176,48 @@
             this.txtSearch.Texts = "";
             this.txtSearch.UnderlinedStyle = false;
             // 
+            // dgv
+            // 
+            this.dgv.AllowUserToAddRows = false;
+            this.dgv.AllowUserToDeleteRows = false;
+            this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CLstt});
+            this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv.Location = new System.Drawing.Point(0, 0);
+            this.dgv.Name = "dgv";
+            this.dgv.ReadOnly = true;
+            this.dgv.RowHeadersWidth = 51;
+            this.dgv.RowTemplate.Height = 24;
+            this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv.Size = new System.Drawing.Size(1411, 493);
+            this.dgv.TabIndex = 10;
+            this.dgv.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgv_RowPostPaint);
+            // 
+            // CLstt
+            // 
+            this.CLstt.HeaderText = "STT";
+            this.CLstt.MinimumWidth = 6;
+            this.CLstt.Name = "CLstt";
+            this.CLstt.ReadOnly = true;
+            this.CLstt.Width = 63;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.AcceptHost);
+            this.panel1.Controls.Add(this.btnDeleteUser);
+            this.panel1.Controls.Add(this.btnViewUser);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 573);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1411, 90);
+            this.panel1.TabIndex = 21;
+            // 
             // AcceptHost
             // 
             this.AcceptHost.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -239,9 +230,9 @@
             this.AcceptHost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AcceptHost.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AcceptHost.ForeColor = System.Drawing.Color.White;
-            this.AcceptHost.Location = new System.Drawing.Point(627, 11);
+            this.AcceptHost.Location = new System.Drawing.Point(559, 11);
             this.AcceptHost.Name = "AcceptHost";
-            this.AcceptHost.Size = new System.Drawing.Size(286, 56);
+            this.AcceptHost.Size = new System.Drawing.Size(234, 56);
             this.AcceptHost.TabIndex = 8;
             this.AcceptHost.Text = "Duyệt Chủ Trọ";
             this.AcceptHost.TextColor = System.Drawing.Color.White;
@@ -260,11 +251,11 @@
             this.btnDeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteUser.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteUser.Location = new System.Drawing.Point(1044, 11);
+            this.btnDeleteUser.Location = new System.Drawing.Point(980, 11);
             this.btnDeleteUser.Name = "btnDeleteUser";
-            this.btnDeleteUser.Size = new System.Drawing.Size(300, 56);
+            this.btnDeleteUser.Size = new System.Drawing.Size(351, 56);
             this.btnDeleteUser.TabIndex = 7;
-            this.btnDeleteUser.Text = "Xóa tài khoản người dùng";
+            this.btnDeleteUser.Text = "Tạm ngưng tài khoản người dùng";
             this.btnDeleteUser.TextColor = System.Drawing.Color.White;
             this.btnDeleteUser.UseVisualStyleBackColor = false;
             this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
@@ -281,14 +272,23 @@
             this.btnViewUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewUser.ForeColor = System.Drawing.Color.White;
-            this.btnViewUser.Location = new System.Drawing.Point(194, 11);
+            this.btnViewUser.Location = new System.Drawing.Point(113, 11);
             this.btnViewUser.Name = "btnViewUser";
-            this.btnViewUser.Size = new System.Drawing.Size(286, 56);
+            this.btnViewUser.Size = new System.Drawing.Size(270, 56);
             this.btnViewUser.TabIndex = 6;
             this.btnViewUser.Text = "Thông tin người dùng";
             this.btnViewUser.TextColor = System.Drawing.Color.White;
             this.btnViewUser.UseVisualStyleBackColor = false;
             this.btnViewUser.Click += new System.EventHandler(this.btnViewUser_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dgv);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 80);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1411, 493);
+            this.panel2.TabIndex = 31;
             // 
             // UserManagementForm
             // 
