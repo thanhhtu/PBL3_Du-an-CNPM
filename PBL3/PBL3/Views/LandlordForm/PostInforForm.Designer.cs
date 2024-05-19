@@ -127,17 +127,17 @@
             this.btnAddImg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAddImg.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnAddImg.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.btnAddImg.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAddImg.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.btnAddImg.BorderRadius = 25;
             this.btnAddImg.BorderSize = 0;
             this.btnAddImg.FlatAppearance.BorderSize = 0;
             this.btnAddImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddImg.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddImg.ForeColor = System.Drawing.Color.Black;
-            this.btnAddImg.Location = new System.Drawing.Point(315, 203);
+            this.btnAddImg.Location = new System.Drawing.Point(334, 203);
             this.btnAddImg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddImg.Name = "btnAddImg";
-            this.btnAddImg.Size = new System.Drawing.Size(205, 50);
+            this.btnAddImg.Size = new System.Drawing.Size(171, 50);
             this.btnAddImg.TabIndex = 11;
             this.btnAddImg.Text = "Thêm ảnh";
             this.btnAddImg.TextColor = System.Drawing.Color.Black;
@@ -393,22 +393,22 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCancel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCancel.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnCancel.BackgroundColor = System.Drawing.Color.LightSkyBlue;
             this.btnCancel.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnCancel.BorderRadius = 30;
             this.btnCancel.BorderSize = 0;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.ForeColor = System.Drawing.Color.Black;
             this.btnCancel.Location = new System.Drawing.Point(709, 630);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(200, 50);
             this.btnCancel.TabIndex = 22;
             this.btnCancel.Text = "Hủy";
-            this.btnCancel.TextColor = System.Drawing.Color.White;
+            this.btnCancel.TextColor = System.Drawing.Color.Black;
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -476,7 +476,7 @@
             this.txtDeposit.PasswordChar = false;
             this.txtDeposit.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtDeposit.PlaceholderText = "";
-            this.txtDeposit.Size = new System.Drawing.Size(313, 38);
+            this.txtDeposit.Size = new System.Drawing.Size(313, 36);
             this.txtDeposit.TabIndex = 18;
             this.txtDeposit.Texts = "";
             this.txtDeposit.UnderlinedStyle = false;
@@ -511,7 +511,7 @@
             this.txtPrice.PasswordChar = false;
             this.txtPrice.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtPrice.PlaceholderText = "";
-            this.txtPrice.Size = new System.Drawing.Size(313, 38);
+            this.txtPrice.Size = new System.Drawing.Size(313, 36);
             this.txtPrice.TabIndex = 16;
             this.txtPrice.Texts = "";
             this.txtPrice.UnderlinedStyle = false;
@@ -532,7 +532,7 @@
             this.txtArea.PasswordChar = false;
             this.txtArea.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtArea.PlaceholderText = "";
-            this.txtArea.Size = new System.Drawing.Size(313, 38);
+            this.txtArea.Size = new System.Drawing.Size(313, 36);
             this.txtArea.TabIndex = 15;
             this.txtArea.Texts = "";
             this.txtArea.UnderlinedStyle = false;
@@ -574,7 +574,7 @@
             this.txtTitle.PasswordChar = false;
             this.txtTitle.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtTitle.PlaceholderText = "";
-            this.txtTitle.Size = new System.Drawing.Size(837, 38);
+            this.txtTitle.Size = new System.Drawing.Size(837, 36);
             this.txtTitle.TabIndex = 9;
             this.txtTitle.Texts = "";
             this.txtTitle.UnderlinedStyle = false;

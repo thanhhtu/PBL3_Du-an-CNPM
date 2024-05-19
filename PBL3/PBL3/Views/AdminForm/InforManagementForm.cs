@@ -18,7 +18,8 @@ namespace PBL3.Views.AdminForm
     {
         public delegate void showPostDetail(Form childForm);
         public showPostDetail showPost;
-        #region ->Delegate mở lại form
+
+        #region -> Delegate mở lại form
 
         public void ReOpen()
         {
@@ -26,6 +27,7 @@ namespace PBL3.Views.AdminForm
             ShowDTG();
         }
         #endregion
+
         private static bool checkAscending = true; //kiểm tra sort ascending hay descending
         public InforManagementForm()
         {
@@ -144,6 +146,7 @@ namespace PBL3.Views.AdminForm
             int inforID = Convert.ToInt32(dgv.SelectedRows[0].Cells["InforID"].Value.ToString());
             InforForm form = new InforForm(Convert.ToInt32(inforID), true);
             form.goback = ReOpen;
+            form.reload = ShowDTG; //thêm
             showPost(form);
         }
 

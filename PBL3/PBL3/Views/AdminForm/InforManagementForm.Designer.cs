@@ -203,7 +203,7 @@
             this.btnDeleteInfor.Name = "btnDeleteInfor";
             this.btnDeleteInfor.Size = new System.Drawing.Size(228, 56);
             this.btnDeleteInfor.TabIndex = 8;
-            this.btnDeleteInfor.Text = "Xóa trọ";
+            this.btnDeleteInfor.Text = "Xóa thông tin trọ";
             this.btnDeleteInfor.TextColor = System.Drawing.Color.White;
             this.btnDeleteInfor.UseVisualStyleBackColor = false;
             this.btnDeleteInfor.Click += new System.EventHandler(this.btnDeleteInfor_Click);

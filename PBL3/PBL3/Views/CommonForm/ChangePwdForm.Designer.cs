@@ -122,43 +122,43 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCancel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCancel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCancel.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnCancel.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.btnCancel.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.btnCancel.BorderRadius = 20;
             this.btnCancel.BorderSize = 0;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.ForeColor = System.Drawing.Color.Black;
             this.btnCancel.Location = new System.Drawing.Point(447, 319);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(124, 47);
             this.btnCancel.TabIndex = 13;
             this.btnCancel.Text = "Hủy";
-            this.btnCancel.TextColor = System.Drawing.Color.White;
+            this.btnCancel.TextColor = System.Drawing.Color.Black;
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSavePass
             // 
-            this.btnSavePass.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnSavePass.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.btnSavePass.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.btnSavePass.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnSavePass.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.btnSavePass.BorderColor = System.Drawing.Color.SteelBlue;
             this.btnSavePass.BorderRadius = 20;
             this.btnSavePass.BorderSize = 0;
             this.btnSavePass.FlatAppearance.BorderSize = 0;
             this.btnSavePass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSavePass.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSavePass.ForeColor = System.Drawing.Color.Black;
+            this.btnSavePass.ForeColor = System.Drawing.Color.White;
             this.btnSavePass.Location = new System.Drawing.Point(227, 319);
             this.btnSavePass.Margin = new System.Windows.Forms.Padding(4);
             this.btnSavePass.Name = "btnSavePass";
             this.btnSavePass.Size = new System.Drawing.Size(124, 47);
             this.btnSavePass.TabIndex = 12;
             this.btnSavePass.Text = "Lưu";
-            this.btnSavePass.TextColor = System.Drawing.Color.Black;
+            this.btnSavePass.TextColor = System.Drawing.Color.White;
             this.btnSavePass.UseVisualStyleBackColor = false;
             this.btnSavePass.Click += new System.EventHandler(this.btnSavePass_Click);
             // 

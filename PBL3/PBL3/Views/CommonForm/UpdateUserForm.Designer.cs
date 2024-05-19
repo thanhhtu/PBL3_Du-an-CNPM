@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.customPanel1 = new PBL3.Views.CustomComponent.CustomPanel();
+            this.btnDelete = new PBL3.Views.CustomComponent.CustomButton();
             this.btnCancel = new PBL3.Views.CustomComponent.CustomButton();
             this.btnUpdate = new PBL3.Views.CustomComponent.CustomButton();
             this.txtDetailedAddress = new PBL3.Views.CustomComponent.CustomTextBox();
@@ -50,6 +51,7 @@
             this.customPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.customPanel1.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.customPanel1.BorderRadius = 30;
+            this.customPanel1.Controls.Add(this.btnDelete);
             this.customPanel1.Controls.Add(this.btnCancel);
             this.customPanel1.Controls.Add(this.btnUpdate);
             this.customPanel1.Controls.Add(this.txtDetailedAddress);
@@ -73,45 +75,66 @@
             this.customPanel1.Size = new System.Drawing.Size(788, 549);
             this.customPanel1.TabIndex = 10;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDelete.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDelete.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.btnDelete.BorderRadius = 20;
+            this.btnDelete.BorderSize = 0;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(549, 471);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(171, 50);
+            this.btnDelete.TabIndex = 25;
+            this.btnDelete.Text = "Xóa tài khoản";
+            this.btnDelete.TextColor = System.Drawing.Color.White;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCancel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCancel.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnCancel.BackgroundColor = System.Drawing.Color.LightSkyBlue;
             this.btnCancel.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.btnCancel.BorderRadius = 20;
             this.btnCancel.BorderSize = 0;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(504, 471);
+            this.btnCancel.ForeColor = System.Drawing.Color.Black;
+            this.btnCancel.Location = new System.Drawing.Point(295, 471);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(204, 46);
+            this.btnCancel.Size = new System.Drawing.Size(171, 50);
             this.btnCancel.TabIndex = 24;
             this.btnCancel.Text = "Hủy";
-            this.btnCancel.TextColor = System.Drawing.Color.White;
+            this.btnCancel.TextColor = System.Drawing.Color.Black;
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnUpdate.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.btnUpdate.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnUpdate.BackgroundColor = System.Drawing.Color.SteelBlue;
             this.btnUpdate.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.btnUpdate.BorderRadius = 20;
             this.btnUpdate.BorderSize = 0;
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnUpdate.ForeColor = System.Drawing.Color.Black;
-            this.btnUpdate.Location = new System.Drawing.Point(228, 471);
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(42, 471);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(208, 46);
+            this.btnUpdate.Size = new System.Drawing.Size(171, 50);
             this.btnUpdate.TabIndex = 12;
             this.btnUpdate.Text = "Cập nhật";
-            this.btnUpdate.TextColor = System.Drawing.Color.Black;
+            this.btnUpdate.TextColor = System.Drawing.Color.White;
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -346,5 +369,6 @@
         private CustomComponent.CustomTextBox txtEmail;
         private System.Windows.Forms.Label label1;
         private CustomComponent.CustomButton btnCancel;
+        private CustomComponent.CustomButton btnDelete;
     }
 }

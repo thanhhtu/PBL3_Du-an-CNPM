@@ -11,14 +11,20 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 
 namespace PBL3.Views.CommonForm
 {
     public partial class UpdateUserForm : Form
     {
-
         public delegate void MyDel();
         public MyDel ReloadInformation;
+
+        //thêm
+        public delegate void CloseHome();
+        public CloseHome closeHome;
+        //thêm
+
         public UpdateUserForm()
         {
             InitializeComponent();
@@ -26,7 +32,7 @@ namespace PBL3.Views.CommonForm
             LoadUserInformation();
         }
 
-        #region ->Load CBB
+        #region -> Load CBB
         public void ResetCBB()
         {
             cbbDistrict.Items.Clear();
@@ -65,7 +71,6 @@ namespace PBL3.Views.CommonForm
             cbbWard.Items.Add(AllWard);
             cbbWard.SelectedItem = AllWard;
         }
-
         #endregion
 
         public void SetCBB()
@@ -110,9 +115,10 @@ namespace PBL3.Views.CommonForm
                 }
             }
         }
+
+        //Set thông tin ban đầu tương ứng với dữ liệu của người dùng trên db
         private void LoadUserInformation()
         {
-            //Set thông tin ban đầu tương ứng với dữ liệu của người dùng trên db
             User thisUser = UserBLL.Instance.GetUserByID(LoginInfor.UserID);
             txtFullName.Texts = thisUser.FullName;
             txtEmail.Texts = thisUser.Email;
@@ -120,11 +126,11 @@ namespace PBL3.Views.CommonForm
             txtDetailedAddress.Texts = AddressBLL.Instance.GetDetailAddress(thisUser.AddressID);
             SetCBB();
         }
+
+        //Check thông tin đầy đủ chưa
         private bool checkEmpty()
         {
-            //Check thông tin đầy đủ chưa
-            if (txtFullName.Texts == "" || txtEmail.Texts == "" || txtNumber.Texts == "" || cbbWard.SelectedIndex == 0 
-                || txtDetailedAddress.Texts == "")
+            if (txtFullName.Texts == "" || txtEmail.Texts == "" || txtNumber.Texts == "" || cbbWard.SelectedIndex == 0 || txtDetailedAddress.Texts == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ các thông tin!");
                 return true;
@@ -180,6 +186,20 @@ namespace PBL3.Views.CommonForm
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xoá tài khoản của mình? Sau khi thực hiện, tài khoản của bạn sẽ không còn trên hệ thống!", "Xác nhận", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                UserBLL.Instance.DeleteUser(LoginInfor.UserID);
+                MessageBox.Show("Xoá thành công!");
+
+                //Hiển thị lại HomeForm
+                closeHome();            
+            }
+            else return;
         }
 
         private void cbbDistrict_OnSelectionChangedCommited(object sender, EventArgs e)

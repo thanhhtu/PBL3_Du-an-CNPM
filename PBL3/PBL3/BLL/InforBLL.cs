@@ -61,7 +61,7 @@ namespace PBL3.BLL
 
         public void DeleteInfor(int inforID)
         {
-            AccommodationInformation infor = db.AccommodationInformations.FirstOrDefault(p => p.InforID == inforID);
+            AccommodationInformation infor = db.AccommodationInformations.FirstOrDefault(i => i.InforID == inforID);
             var temp = infor.AddressID;
            
             db.AccommodationInformations.Remove(infor);
@@ -71,9 +71,9 @@ namespace PBL3.BLL
             AddressBLL.Instance.DeleteAddress(temp);
         }
 
-        public void DeleteInforÒfUser(int userID)
+        public void DeleteInforOfUser(int userID)
         {
-            var ls = db.AccommodationInformations.Where(p => p.UserID == userID).ToList();
+            var ls = db.AccommodationInformations.Where(i => i.UserID == userID).ToList();
             ls.ForEach(post => DeleteInfor(post.InforID));
             db.SaveChanges();
         }

@@ -1,5 +1,4 @@
-﻿using PBL3.Views.CommonForm;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +27,20 @@ namespace PBL3.Views.RenterForm
             ReloadUserFullName();
             panelUserSubmenu.Visible = false; //Ban đầu không hiện chi tiết menu con
         }
+
+        //thêm nhóe
+        private void SignOut()
+        {
+            //Reset lại SignInInfor
+            LoginInfor.UserID = -1;
+
+            //Hiển thị lại HomeForm
+            this.Hide();
+            HomeForm form = new HomeForm();
+            form.ShowDialog();
+            this.Close();
+        }
+        //thêm nhóe
 
         private void ReloadUserFullName()
         {
@@ -107,17 +120,14 @@ namespace PBL3.Views.RenterForm
 
         private void btnId_Click(object sender, EventArgs e)
         {
-            //,,OpenChildForm(new UserForm(LoginInfor.UserID));
-            HideSubmenu();
-            UserInforForm form = new UserInforForm(LoginInfor.UserID);
-            form.showInfo = OpenHouseInfo;
-            OpenChildForm(form);
+            OpenChildForm(new UserForm(LoginInfor.UserID));
         }
 
         private void btnUserChange_Click(object sender, EventArgs e)
         {
             UpdateUserForm form = new UpdateUserForm();
             form.ReloadInformation = ReloadUserFullName;
+            form.closeHome = SignOut; //thêm nè
             OpenChildForm(form);
         }
 
@@ -129,14 +139,8 @@ namespace PBL3.Views.RenterForm
         private void btnSignOut_Click(object sender, EventArgs e)
         {
             HideSubmenu();
-            //Reset lại SignInInfor
-            LoginInfor.UserID = -1;
 
-            //Hiển thị lại HomeForm
-            this.Hide();
-            HomeForm form = new HomeForm();
-            form.ShowDialog();
-            this.Close();
+            SignOut();
         }
 
         private void btnFavorite_Click(object sender, EventArgs e)

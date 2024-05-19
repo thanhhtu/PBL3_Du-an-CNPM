@@ -279,8 +279,6 @@ namespace PBL3.Views.RenterForm
             Display(UserID);
         }
 
-
-
         private void DeleteFavorite2(object sender, EventArgs e)
         {
             FavoriteInforBLL.Instance.DeleteFavourite_Infor(LoginInfor.UserID, Convert.ToInt32(houseInfoComponent2.PostID));
@@ -328,7 +326,7 @@ namespace PBL3.Views.RenterForm
             {
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent1.PostID));
                 form.goback = ReOpen;
-                form.Reload = ReloadDisplay;
+                form.reload = ReloadDisplay;
                 showInfo(form);
             }
         }
@@ -339,7 +337,7 @@ namespace PBL3.Views.RenterForm
             {
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent2.PostID));
                 form.goback = ReOpen;
-                form.Reload = ReloadDisplay;
+                form.reload = ReloadDisplay;
                 showInfo(form);
             }
         }
@@ -350,7 +348,7 @@ namespace PBL3.Views.RenterForm
             {
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent3.PostID));
                 form.goback = ReOpen;
-                form.Reload = ReloadDisplay;
+                form.reload = ReloadDisplay;
                 showInfo(form);
             }
         }
@@ -361,7 +359,7 @@ namespace PBL3.Views.RenterForm
             {
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent4.PostID));
                 form.goback = ReOpen;
-                form.Reload = ReloadDisplay;
+                form.reload = ReloadDisplay;
                 showInfo(form);
             }
         }
@@ -372,7 +370,7 @@ namespace PBL3.Views.RenterForm
             {
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent5.PostID));
                 form.goback = ReOpen;
-                form.Reload = ReloadDisplay;
+                form.reload = ReloadDisplay;
                 showInfo(form);
             }
         }

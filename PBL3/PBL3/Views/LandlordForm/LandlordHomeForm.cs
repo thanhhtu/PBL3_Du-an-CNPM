@@ -26,6 +26,20 @@ namespace PBL3.Views.LandlordForm
             panelUserSubmenu.Visible = false; //Ban đầu không hiện chi tiết menu con
         }
 
+        //thêm nhóe
+        private void SignOut()
+        {
+            //Reset lại SignInInfor
+            LoginInfor.UserID = -1;
+
+            //Hiển thị lại HomeForm
+            this.Hide();
+            HomeForm form = new HomeForm();
+            form.ShowDialog();
+            this.Close();
+        }
+        //thêm nhóe
+
         #region -> Load form & show submenu
         private void ReloadUserFullName()
         {
@@ -121,6 +135,7 @@ namespace PBL3.Views.LandlordForm
         {
             UpdateUserForm form = new UpdateUserForm();
             form.ReloadInformation = ReloadUserFullName;
+            form.closeHome = SignOut; //thêm nè
             OpenChildForm(form);
         }
 
@@ -132,14 +147,7 @@ namespace PBL3.Views.LandlordForm
         private void btnSignOut_Click(object sender, EventArgs e)
         {
             HideSubmenu();
-            //Reset lại SignInInfor
-            LoginInfor.UserID = -1;
-
-            //Hiển thị lại HomeForm
-            this.Hide();
-            HomeForm form = new HomeForm();
-            form.ShowDialog();
-            this.Close();
+            SignOut();
         }
         #endregion
     }

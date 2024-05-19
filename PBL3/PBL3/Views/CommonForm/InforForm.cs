@@ -288,13 +288,13 @@ namespace PBL3.Views.CommonForm
         public back goback;
 
         public delegate void display();
-        public display Reload;
+        public display reload;
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Dispose();
             goback();
-            Reload();
+            reload();
         }
 
         private void btnUpComment_Click_1(object sender, EventArgs e)

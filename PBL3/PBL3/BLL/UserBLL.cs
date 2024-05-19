@@ -52,10 +52,10 @@ namespace PBL3.BLL
 
         public void DeleteUser(int userID)
         {
-            //Đầu tiên là xóa post, sau đó xóa account và address
+            //Đầu tiên là xóa infor, sau đó xóa account và address
             //Các dữ liệu theo các key phụ thuộc giữa các bảng sẽ bị xóa theo
             var user = db.Users.FirstOrDefault(u => u.UserID == userID);
-            //PostBLL.Instance.DeleteUserPost(user.UserID);
+            InforBLL.Instance.DeleteInforOfUser(user.UserID);
             AccountBLL.Instance.DeleteAccount(user.AccountID);
             AddressBLL.Instance.DeleteAddress(user.AddressID);
             db.SaveChanges();

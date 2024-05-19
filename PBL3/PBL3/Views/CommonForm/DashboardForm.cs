@@ -33,11 +33,12 @@ namespace PBL3.Views.CommonForm
         public DashboardForm()
         {
             InitializeComponent();
-            InforBLL.Instance.LoadApp();
-            LoadCBB();
-            SearchFunction();
-            LoadCBBPageNum();
-            HideAdd_DeleteFavouriteInfor();
+            //InforBLL.Instance.LoadApp();
+            //LoadCBB();
+            //SearchFunction();
+            //LoadCBBPageNum();
+            //HideAdd_DeleteFavouriteInfor();
+            ReloadForm();
         }
         #region-> LoadCBB quận + phường
         // Mặc định: Load quận trước (phường: hiện tất cả
@@ -118,7 +119,7 @@ namespace PBL3.Views.CommonForm
         }
         #endregion
 
-        #region Load CBB số trang
+        #region -> Load CBB số trang
         public void LoadCBBPageNum()
         {
             cbbPageNumber.Items.Clear();
@@ -155,10 +156,22 @@ namespace PBL3.Views.CommonForm
         }
 
         #endregion
-        #region ->Load Dashboard
+
+        #region -> Load Dashboard
+        //Thêm nè
+        private void ReloadForm()
+        {
+            InforBLL.Instance.LoadApp();
+            LoadCBB();
+            SearchFunction();
+            LoadCBBPageNum();
+            HideAdd_DeleteFavouriteInfor();
+        }
+        //Thêm nè
+
+        //Ẩn các house info component khi số post trên page đó ít hơn 5
         private void DisablePostViewWhenNotFound(int postNum)
         {
-            //Ẩn các house info component khi số post trên page đó ít hơn 5
             switch (postNum)
             {
                 case 4:
@@ -188,7 +201,8 @@ namespace PBL3.Views.CommonForm
                     break;
             }
         }
-        // hiển thị các customcomponenthouseinfor lên
+
+        //Hiển thị các customcomponenthouseinfor lên
         private void DisplayHouseInformation()
         {
             this.Visible = true;
@@ -200,9 +214,9 @@ namespace PBL3.Views.CommonForm
             houseInfoComponent5.Visible = true;
         }
 
+        //Khởi tạo và hiển thị thông tin lên
         private void InitalizeHouseInfomation(List<InforViewDTO> postView)
         {
-            //Khởi tạo và hiển thị thông tin lên
             string imagePath;
             if (postView.Count > 0 && houseInfoComponent1.Visible)
             {
@@ -320,9 +334,6 @@ namespace PBL3.Views.CommonForm
                 }
             }
         }
-
-
-
         #endregion
 
         private void btnPrevPage_Click(object sender, EventArgs e)
@@ -516,6 +527,7 @@ namespace PBL3.Views.CommonForm
                     //Chưa đăng nhập => ẩn cmt và rating
                     InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent1.PostID), true);
                     form.goback = ReOpen;
+                    form.reload = ReloadForm;//thêm
                     showInfo(form);
                 }
                 else
@@ -523,6 +535,7 @@ namespace PBL3.Views.CommonForm
                     InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent1.PostID));
                     //InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent1.PostID), true);
                     form.goback = ReOpen;
+                    form.reload = ReloadForm;//thêm
                     showInfo(form);
                 }
             }
@@ -535,12 +548,14 @@ namespace PBL3.Views.CommonForm
                 //Chưa đăng nhập => ẩn cmt và rating
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent2.PostID), true);
                 form.goback = ReOpen;
+                form.reload = ReloadForm;//thêm
                 showInfo(form);
             }
             else
             {
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent2.PostID));
                 form.goback = ReOpen;
+                form.reload = ReloadForm;//thêm
                 showInfo(form);
             }
         }
@@ -552,12 +567,14 @@ namespace PBL3.Views.CommonForm
                 //Chưa đăng nhập => ẩn cmt và rating
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent3.PostID), true);
                 form.goback = ReOpen;
+                form.reload = ReloadForm;//thêm
                 showInfo(form);
             }
             else
             {
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent3.PostID));
                 form.goback = ReOpen;
+                form.reload = ReloadForm;//thêm
                 showInfo(form);
             }
         }
@@ -569,12 +586,14 @@ namespace PBL3.Views.CommonForm
                 //Chưa đăng nhập => ẩn cmt và rating
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent4.PostID), true);
                 form.goback = ReOpen;
+                form.reload = ReloadForm;//thêm
                 showInfo(form);
             }
             else
             {
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent4.PostID));
                 form.goback = ReOpen;
+                form.reload = ReloadForm;//thêm
                 showInfo(form);
             }
         }
@@ -586,12 +605,14 @@ namespace PBL3.Views.CommonForm
                 //Chưa đăng nhập => ẩn cmt và rating
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent5.PostID), true);
                 form.goback = ReOpen;
+                form.reload = ReloadForm;//thêm
                 showInfo(form);
             }
             else
             {
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent5.PostID));
                 form.goback = ReOpen;
+                form.reload = ReloadForm;//thêm
                 showInfo(form);
             }
         }

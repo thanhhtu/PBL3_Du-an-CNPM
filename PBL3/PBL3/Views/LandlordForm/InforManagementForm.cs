@@ -26,7 +26,6 @@ namespace PBL3.Views.LandlordForm
             InitializeComponent();
             cbbSort.SelectedIndex = 0;
             cbbPostedFilter.SelectedIndex = 0;
-
             ShowDTG();
         }
 
@@ -111,6 +110,7 @@ namespace PBL3.Views.LandlordForm
             int inforID = Convert.ToInt32(dgv.SelectedRows[0].Cells["InforID"].Value.ToString());
             InforForm form = new InforForm(Convert.ToInt32(inforID), true);
             form.goback = ReOpen;
+            form.reload = ShowDTG;
             showPost(form);
         }
 
