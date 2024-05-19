@@ -57,13 +57,14 @@ namespace PBL3.BLL
         }
         #endregion
 
+        //Lấy ảnh dựa trên userID
         public List<string> GetImageOfUserPaths(int userID)
         {
-            //Lấy ảnh dựa trên userID
-            List<string> ls = new List<string>();
-            var imageOfUsers = db.ImageOfUsers.Where(i => i.UserID == userID);
-            imageOfUsers.ToList().ForEach(i => ls.Add(i.ImagePath));
-            return ls.Take(3).ToList();
+            var imagePaths = db.ImageOfUsers.Where(image => image.UserID == userID)
+                                        .Select(image => image.ImagePath)
+                                        .Take(2)
+                                        .ToList();
+            return imagePaths;
         }
 
         //Lấy đường dẫn tới folder chứa image dựa trên InforID
@@ -74,8 +75,7 @@ namespace PBL3.BLL
                 return "";
             }
             string path = Path.GetDirectoryName(Application.ExecutablePath);
-            string appPath = Path.GetFullPath(Path.Combine(path, @"..\..\")) 
-                            + @"Resources\Landlord" + userID.ToString();
+            string appPath = Path.GetFullPath(Path.Combine(path, @"..\..\")) + @"Resources\Landlord" + userID.ToString();
             return appPath;
         }
     }

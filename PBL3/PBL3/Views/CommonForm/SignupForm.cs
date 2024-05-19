@@ -268,7 +268,7 @@ namespace PBL3.Views.CommonForm
                         openFile.Dispose();
                     }
 
-                    IEnumerable<string> imagesIterator = openFile.FileNames.Take(3);
+                    IEnumerable<string> imagesIterator = openFile.FileNames.Take(2);
                     string[] images = imagesIterator.ToArray();
                     pictureBox1.Image = System.Drawing.Image.FromFile(images[0]);
                     pictureBox2.Image = System.Drawing.Image.FromFile(images[1]);

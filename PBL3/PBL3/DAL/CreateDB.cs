@@ -232,11 +232,11 @@ namespace PBL3.DAL
             });
             context.ImageOfUsers.AddRange(new ImageOfUser[]
             {
-                new ImageOfUser { ImageOfUserID = 1, UserID = 2, ImagePath = @"landlord1.jpg"},
-                new ImageOfUser { ImageOfUserID = 2, UserID = 2, ImagePath = @"landlord2.jpg"},
+                new ImageOfUser { ImageOfUserID = 1, UserID = 2, ImagePath = @"\landlord1.jpg"},
+                new ImageOfUser { ImageOfUserID = 2, UserID = 2, ImagePath = @"\landlord2.jpg"},
 
-                new ImageOfUser { ImageOfUserID = 3, UserID = 3, ImagePath = @"landlord1.jpg"},
-                new ImageOfUser { ImageOfUserID = 4, UserID = 3, ImagePath = @"landlord2.jpg"},
+                new ImageOfUser { ImageOfUserID = 3, UserID = 3, ImagePath = @"\landlord1.jpg"},
+                new ImageOfUser { ImageOfUserID = 4, UserID = 3, ImagePath = @"\landlord2.jpg"},
             });
         }
     }
