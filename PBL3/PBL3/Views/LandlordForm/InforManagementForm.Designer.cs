@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dgv = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnPostInfor = new PBL3.Views.CustomComponent.CustomButton();
             this.btnSearch = new PBL3.Views.CustomComponent.CustomButton();
             this.btnReverse = new PBL3.Views.CustomComponent.CustomButton();
             this.cbbSort = new PBL3.Views.CustomComponents.CustomComboBox();
             this.cbbPostedFilter = new PBL3.Views.CustomComponents.CustomComboBox();
             this.txtSearch = new PBL3.Views.CustomComponent.CustomTextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnDeleteInfor = new PBL3.Views.CustomComponent.CustomButton();
             this.btnUpdateInfor = new PBL3.Views.CustomComponent.CustomButton();
             this.btnReadInfor = new PBL3.Views.CustomComponent.CustomButton();
-            this.dgv = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
@@ -63,6 +63,52 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(1521, 80);
             this.panelMenu.TabIndex = 29;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnDeleteInfor);
+            this.panel1.Controls.Add(this.btnUpdateInfor);
+            this.panel1.Controls.Add(this.btnReadInfor);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 524);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1521, 91);
+            this.panel1.TabIndex = 28;
+            // 
+            // dgv
+            // 
+            this.dgv.AllowUserToAddRows = false;
+            this.dgv.AllowUserToDeleteRows = false;
+            this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1});
+            this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv.Location = new System.Drawing.Point(0, 0);
+            this.dgv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv.Name = "dgv";
+            this.dgv.ReadOnly = true;
+            this.dgv.RowHeadersWidth = 51;
+            this.dgv.RowTemplate.Height = 24;
+            this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv.Size = new System.Drawing.Size(1521, 444);
+            this.dgv.TabIndex = 30;
+            this.dgv.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgv_RowPostPaint);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dgv);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 80);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1521, 444);
+            this.panel2.TabIndex = 31;
             // 
             // btnPostInfor
             // 
@@ -204,20 +250,6 @@
             this.txtSearch.Texts = "";
             this.txtSearch.UnderlinedStyle = false;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btnDeleteInfor);
-            this.panel1.Controls.Add(this.btnUpdateInfor);
-            this.panel1.Controls.Add(this.btnReadInfor);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 524);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1521, 91);
-            this.panel1.TabIndex = 28;
-            // 
             // btnDeleteInfor
             // 
             this.btnDeleteInfor.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -284,45 +316,14 @@
             this.btnReadInfor.UseVisualStyleBackColor = false;
             this.btnReadInfor.Click += new System.EventHandler(this.btnReadInfor_Click);
             // 
-            // dgv
-            // 
-            this.dgv.AllowUserToAddRows = false;
-            this.dgv.AllowUserToDeleteRows = false;
-            this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
-            this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv.Location = new System.Drawing.Point(0, 0);
-            this.dgv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgv.Name = "dgv";
-            this.dgv.ReadOnly = true;
-            this.dgv.RowHeadersWidth = 51;
-            this.dgv.RowTemplate.Height = 24;
-            this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(1521, 444);
-            this.dgv.TabIndex = 30;
-            this.dgv.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgv_RowPostPaint);
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "STT";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.Column1.Width = 63;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dgv);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 80);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1521, 444);
-            this.panel2.TabIndex = 31;
             // 
             // InforManagementForm
             // 
