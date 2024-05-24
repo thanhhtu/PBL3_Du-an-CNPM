@@ -31,7 +31,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelHide = new System.Windows.Forms.Panel();
             this.btnDeleteFavour = new PBL3.Views.CustomComponent.CustomButton();
-            this.postID = new System.Windows.Forms.Label();
+            this.inforID = new System.Windows.Forms.Label();
             this.tenNhaLinkLabel = new System.Windows.Forms.LinkLabel();
             this.mieuTaLabel = new System.Windows.Forms.Label();
             this.diaChiLabel = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.panelHide);
-            this.panel2.Controls.Add(this.postID);
+            this.panel2.Controls.Add(this.inforID);
             this.panel2.Controls.Add(this.tenNhaLinkLabel);
             this.panel2.Controls.Add(this.mieuTaLabel);
             this.panel2.Controls.Add(this.diaChiLabel);
@@ -94,18 +94,18 @@
             this.btnDeleteFavour.UseVisualStyleBackColor = false;
             this.btnDeleteFavour.Click += new System.EventHandler(this.btnDeleteFavour_Click);
             // 
-            // postID
+            // inforID
             // 
-            this.postID.AutoSize = true;
-            this.postID.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.postID.ForeColor = System.Drawing.Color.SteelBlue;
-            this.postID.Location = new System.Drawing.Point(60, 15);
-            this.postID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.postID.Name = "postID";
-            this.postID.Size = new System.Drawing.Size(41, 13);
-            this.postID.TabIndex = 12;
-            this.postID.Text = "postID";
-            this.postID.Visible = false;
+            this.inforID.AutoSize = true;
+            this.inforID.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.inforID.ForeColor = System.Drawing.Color.SteelBlue;
+            this.inforID.Location = new System.Drawing.Point(60, 15);
+            this.inforID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.inforID.Name = "inforID";
+            this.inforID.Size = new System.Drawing.Size(43, 13);
+            this.inforID.TabIndex = 12;
+            this.inforID.Text = "inforID";
+            this.inforID.Visible = false;
             // 
             // tenNhaLinkLabel
             // 
@@ -217,7 +217,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label postID;
+        private System.Windows.Forms.Label inforID;
         private System.Windows.Forms.LinkLabel tenNhaLinkLabel;
         private System.Windows.Forms.Label mieuTaLabel;
         private System.Windows.Forms.Label diaChiLabel;
