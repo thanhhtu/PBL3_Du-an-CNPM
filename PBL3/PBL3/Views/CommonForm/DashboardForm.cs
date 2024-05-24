@@ -356,7 +356,7 @@ namespace PBL3.Views.CommonForm
             if (currentPage == totalPage)
             {
                 currentPage = totalPage - 1;
-                MessageBox.Show("Bạn đã xem hết các bài đăng!");
+                MessageBox.Show("Bạn đã xem hết thông tin trọ!");
             }
             LoadCBBPageNum();
 

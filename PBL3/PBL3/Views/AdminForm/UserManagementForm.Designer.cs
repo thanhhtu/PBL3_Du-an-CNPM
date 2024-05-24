@@ -37,8 +37,9 @@
             this.dgv = new System.Windows.Forms.DataGridView();
             this.CLstt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.AcceptHost = new PBL3.Views.CustomComponent.CustomButton();
-            this.btnDeleteUser = new PBL3.Views.CustomComponent.CustomButton();
+            this.btnActiveUser = new PBL3.Views.CustomComponent.CustomButton();
+            this.AcceptLandlord = new PBL3.Views.CustomComponent.CustomButton();
+            this.btnPauseUser = new PBL3.Views.CustomComponent.CustomButton();
             this.btnViewUser = new PBL3.Views.CustomComponent.CustomButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
@@ -111,17 +112,17 @@
             this.cbbSort.ForeColor = System.Drawing.Color.DimGray;
             this.cbbSort.IconColor = System.Drawing.Color.SteelBlue;
             this.cbbSort.Items.AddRange(new object[] {
-            "Thời gian được duyệt",
             "Thời gian tham gia",
-            "Số phòng trọ",
-            "Số comment"});
+            "Thời gian được duyệt",
+            "Số comment",
+            "Số phòng trọ"});
             this.cbbSort.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbbSort.ListTextColor = System.Drawing.Color.Black;
-            this.cbbSort.Location = new System.Drawing.Point(957, 18);
+            this.cbbSort.Location = new System.Drawing.Point(926, 18);
             this.cbbSort.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbbSort.Name = "cbbSort";
             this.cbbSort.Padding = new System.Windows.Forms.Padding(2);
-            this.cbbSort.Size = new System.Drawing.Size(220, 40);
+            this.cbbSort.Size = new System.Drawing.Size(251, 40);
             this.cbbSort.TabIndex = 3;
             this.cbbSort.Texts = "Sắp xếp theo";
             this.cbbSort.OnSelectionChangedCommited += new System.EventHandler(this.cbbSort_OnSelectionChangedCommited);
@@ -139,14 +140,15 @@
             "Tất cả",
             "Người cho thuê (Đã được duyệt)",
             "Người cho thuê (Chưa được duyệt)",
-            "Người đi thuê"});
+            "Người đi thuê",
+            "Tài khoản bị ngừng hoạt động"});
             this.cbbUserRole.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbbUserRole.ListTextColor = System.Drawing.Color.Black;
             this.cbbUserRole.Location = new System.Drawing.Point(539, 18);
             this.cbbUserRole.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbbUserRole.Name = "cbbUserRole";
             this.cbbUserRole.Padding = new System.Windows.Forms.Padding(2);
-            this.cbbUserRole.Size = new System.Drawing.Size(395, 40);
+            this.cbbUserRole.Size = new System.Drawing.Size(361, 40);
             this.cbbUserRole.TabIndex = 2;
             this.cbbUserRole.Texts = "Chọn loại tài khoản";
             this.cbbUserRole.OnSelectedIndexChanged += new System.EventHandler(this.cbbUserRole_OnSelectedIndexChanged);
@@ -188,6 +190,7 @@
             this.CLstt});
             this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv.Location = new System.Drawing.Point(0, 0);
+            this.dgv.MultiSelect = false;
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.RowHeadersWidth = 51;
@@ -209,8 +212,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.AcceptHost);
-            this.panel1.Controls.Add(this.btnDeleteUser);
+            this.panel1.Controls.Add(this.btnActiveUser);
+            this.panel1.Controls.Add(this.AcceptLandlord);
+            this.panel1.Controls.Add(this.btnPauseUser);
             this.panel1.Controls.Add(this.btnViewUser);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 573);
@@ -218,47 +222,68 @@
             this.panel1.Size = new System.Drawing.Size(1411, 90);
             this.panel1.TabIndex = 21;
             // 
-            // AcceptHost
+            // btnActiveUser
             // 
-            this.AcceptHost.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AcceptHost.BackColor = System.Drawing.Color.SteelBlue;
-            this.AcceptHost.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.AcceptHost.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.AcceptHost.BorderRadius = 30;
-            this.AcceptHost.BorderSize = 0;
-            this.AcceptHost.FlatAppearance.BorderSize = 0;
-            this.AcceptHost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AcceptHost.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AcceptHost.ForeColor = System.Drawing.Color.White;
-            this.AcceptHost.Location = new System.Drawing.Point(559, 11);
-            this.AcceptHost.Name = "AcceptHost";
-            this.AcceptHost.Size = new System.Drawing.Size(234, 56);
-            this.AcceptHost.TabIndex = 8;
-            this.AcceptHost.Text = "Duyệt Chủ Trọ";
-            this.AcceptHost.TextColor = System.Drawing.Color.White;
-            this.AcceptHost.UseVisualStyleBackColor = false;
-            this.AcceptHost.Click += new System.EventHandler(this.AcceptHost_Click);
+            this.btnActiveUser.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnActiveUser.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnActiveUser.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.btnActiveUser.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnActiveUser.BorderRadius = 30;
+            this.btnActiveUser.BorderSize = 0;
+            this.btnActiveUser.FlatAppearance.BorderSize = 0;
+            this.btnActiveUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActiveUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActiveUser.ForeColor = System.Drawing.Color.Black;
+            this.btnActiveUser.Location = new System.Drawing.Point(1057, 11);
+            this.btnActiveUser.Name = "btnActiveUser";
+            this.btnActiveUser.Size = new System.Drawing.Size(234, 56);
+            this.btnActiveUser.TabIndex = 9;
+            this.btnActiveUser.Text = "Cho phép hoạt động";
+            this.btnActiveUser.TextColor = System.Drawing.Color.Black;
+            this.btnActiveUser.UseVisualStyleBackColor = false;
+            this.btnActiveUser.Click += new System.EventHandler(this.btnActiveUser_Click);
             // 
-            // btnDeleteUser
+            // AcceptLandlord
             // 
-            this.btnDeleteUser.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDeleteUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDeleteUser.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDeleteUser.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnDeleteUser.BorderRadius = 30;
-            this.btnDeleteUser.BorderSize = 0;
-            this.btnDeleteUser.FlatAppearance.BorderSize = 0;
-            this.btnDeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteUser.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteUser.Location = new System.Drawing.Point(980, 11);
-            this.btnDeleteUser.Name = "btnDeleteUser";
-            this.btnDeleteUser.Size = new System.Drawing.Size(351, 56);
-            this.btnDeleteUser.TabIndex = 7;
-            this.btnDeleteUser.Text = "Tạm ngưng tài khoản người dùng";
-            this.btnDeleteUser.TextColor = System.Drawing.Color.White;
-            this.btnDeleteUser.UseVisualStyleBackColor = false;
-            this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
+            this.AcceptLandlord.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AcceptLandlord.BackColor = System.Drawing.Color.SteelBlue;
+            this.AcceptLandlord.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.AcceptLandlord.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.AcceptLandlord.BorderRadius = 30;
+            this.AcceptLandlord.BorderSize = 0;
+            this.AcceptLandlord.FlatAppearance.BorderSize = 0;
+            this.AcceptLandlord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AcceptLandlord.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AcceptLandlord.ForeColor = System.Drawing.Color.White;
+            this.AcceptLandlord.Location = new System.Drawing.Point(438, 11);
+            this.AcceptLandlord.Name = "AcceptLandlord";
+            this.AcceptLandlord.Size = new System.Drawing.Size(234, 56);
+            this.AcceptLandlord.TabIndex = 8;
+            this.AcceptLandlord.Text = "Duyệt Chủ Trọ";
+            this.AcceptLandlord.TextColor = System.Drawing.Color.White;
+            this.AcceptLandlord.UseVisualStyleBackColor = false;
+            this.AcceptLandlord.Click += new System.EventHandler(this.AcceptLandlord_Click);
+            // 
+            // btnPauseUser
+            // 
+            this.btnPauseUser.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPauseUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnPauseUser.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnPauseUser.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnPauseUser.BorderRadius = 30;
+            this.btnPauseUser.BorderSize = 0;
+            this.btnPauseUser.FlatAppearance.BorderSize = 0;
+            this.btnPauseUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPauseUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPauseUser.ForeColor = System.Drawing.Color.White;
+            this.btnPauseUser.Location = new System.Drawing.Point(746, 11);
+            this.btnPauseUser.Name = "btnPauseUser";
+            this.btnPauseUser.Size = new System.Drawing.Size(243, 56);
+            this.btnPauseUser.TabIndex = 7;
+            this.btnPauseUser.Text = "Tạm ngưng hoạt động";
+            this.btnPauseUser.TextColor = System.Drawing.Color.White;
+            this.btnPauseUser.UseVisualStyleBackColor = false;
+            this.btnPauseUser.Click += new System.EventHandler(this.btnPauseUser_Click);
             // 
             // btnViewUser
             // 
@@ -320,10 +345,11 @@
         private CustomComponent.CustomTextBox txtSearch;
         private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.Panel panel1;
-        private CustomComponent.CustomButton btnDeleteUser;
+        private CustomComponent.CustomButton btnPauseUser;
         private CustomComponent.CustomButton btnViewUser;
         private System.Windows.Forms.Panel panel2;
-        private CustomComponent.CustomButton AcceptHost;
+        private CustomComponent.CustomButton AcceptLandlord;
         private System.Windows.Forms.DataGridViewTextBoxColumn CLstt;
+        private CustomComponent.CustomButton btnActiveUser;
     }
 }

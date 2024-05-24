@@ -25,9 +25,10 @@ namespace PBL3.Views.AdminForm
             cbbSort.SelectedIndex = 0;
             ShowDTG();
         }
+
+        //Load các tên cột
         public void LoadHeader()
         {
-            //Load các tên cột
             var headername = new List<string>()
             {   "STT",
                 "User ID",
@@ -40,71 +41,119 @@ namespace PBL3.Views.AdminForm
                 "Số bình luận",
                 "Thời gian tạo tài khoản",
                 "Trạng thái duyệt",
-                "Thời gian duyệt"
-
+                "Thời gian duyệt",
+                "Tình trạng tài khoản"
             };
             for (int i = 0; i < dgv.Columns.Count; i++)
             {
                 dgv.Columns[i].HeaderText = headername[i];
             }
+            dgv.Columns["UserID"].Visible = false;
         }
-        // đạt sửa
+
+        //tt sửa
         public void ShowDTG()
         {
             string searchChars = txtSearch.Texts;
             int sortCase = cbbSort.SelectedIndex;
-            bool? published = true;
-            string rolename = "All";
-            if (cbbUserRole.SelectedIndex == 1) rolename = "Người cho thuê";
-            if (cbbUserRole.SelectedIndex == 2)
-            {
-                rolename = "Người cho thuê";
-                published = false;
-            }
-            if (cbbUserRole.SelectedIndex == 3) rolename = "Người đi thuê";
-            dgv.DataSource = UserBLL.Instance.SearchUser(searchChars, rolename, sortCase, checkAscending, published);
+
+            int userRole = cbbUserRole.SelectedIndex; //tt thêm
+            bool? beingPublished = true;
+            bool beingPaused = false; //tt thêm
+            
+            dgv.DataSource = UserBLL.Instance.SearchUser(searchChars, userRole, sortCase, checkAscending, beingPublished, beingPaused);
             LoadHeader();
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
             ShowDTG();
         }
-        private void AcceptHost_Click(object sender, EventArgs e)
-        { // Duyệt chủ trọ  
+        //tt đổi
+
+        //Duyệt chủ trọ
+        private void AcceptLandlord_Click(object sender, EventArgs e)
+        {
             int userID = Convert.ToInt32(dgv.SelectedRows[0].Cells["UserID"].Value.ToString());
-            DialogResult result = MessageBox.Show("Duyệt chủ trọ này?", "Xác nhận", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            if (!UserBLL.Instance.IsPublishedAccount(userID))
             {
-                UserBLL.Instance.PublishUser(userID);
-                MessageBox.Show("Duyệt thành công!");
-                ShowDTG();
+                DialogResult result = MessageBox.Show("Duyệt chủ trọ này?", "Xác nhận", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    UserBLL.Instance.PublishUser(userID);
+                    MessageBox.Show("Duyệt thành công!");
+                    ShowDTG();
+                }
+                else return;
             }
-            else return;
+            else
+            {
+                MessageBox.Show("Người dùng này đã được duyệt!");
+            }
         }
-        private void btnDeleteUser_Click(object sender, EventArgs e)
+
+        //Thay đổi từ delete sang pause
+        private void btnPauseUser_Click(object sender, EventArgs e)
         {
             if (dgv.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Hãy chọn 1 tài khoản cần xoá!");
+                MessageBox.Show("Hãy chọn 1 tài khoản cần ngừng hoạt động!");
                 return;
             }
             else if (dgv.SelectedRows.Count > 1)
             {
-                MessageBox.Show("Chỉ được xoá một lần 1 tài khoản");
+                MessageBox.Show("Chỉ được ngừng hoạt động mỗi lần 1 tài khoản");
                 return;
             }
             int userID = Convert.ToInt32(dgv.SelectedRows[0].Cells["UserID"].Value.ToString());
 
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xoá người dùng này không?",
-                "Xác nhận",
-                MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            if (!UserBLL.Instance.IsPausedAccount(userID))
             {
-                UserBLL.Instance.DeleteUser(userID);
-                MessageBox.Show("Xoá thành công!");
-                ShowDTG();
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn ngừng hoạt động người dùng này không?", "Xác nhận", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    UserBLL.Instance.PauseUser(userID);
+                    MessageBox.Show("Đã ngừng hoạt động tài khoản!");
+                    ShowDTG();
+                }
+                else return;
             }
-            else return;
+            else
+            {
+                MessageBox.Show("Người dùng này đã bị ngừng hoạt động!");
+            }
+        }
+
+        //tt thêm
+        private void btnActiveUser_Click(object sender, EventArgs e)
+        {
+            if (dgv.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Hãy chọn 1 tài khoản!");
+                return;
+            }
+            else if (dgv.SelectedRows.Count > 1)
+            {
+                MessageBox.Show("Chỉ được cho phép hoạt động trở lại mỗi lần 1 tài khoản");
+                return;
+            }
+            int userID = Convert.ToInt32(dgv.SelectedRows[0].Cells["UserID"].Value.ToString());
+
+            if (UserBLL.Instance.IsPausedAccount(userID))
+            {
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn cho phép người dùng này hoạt động trở lại không?", "Xác nhận", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    UserBLL.Instance.ActiveUser(userID);
+                    MessageBox.Show("Tài khoản hoạt động!");
+                    ShowDTG();
+                }
+                else return;
+            }
+            else
+            {
+                MessageBox.Show("Người dùng đang hoạt động!");
+            }
+            
         }
 
         private void btnViewUser_Click(object sender, EventArgs e)

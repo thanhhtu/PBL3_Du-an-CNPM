@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PBL3.DTO;
 using PBL3.DAL;
+using System.Runtime.InteropServices;
 
 namespace PBL3.BLL
 {
@@ -51,9 +52,19 @@ namespace PBL3.BLL
             db.SaveChanges();
         }
 
-        public bool IsAcceptedAccount(int accountID)
+        //Kiểm tra chủ trọ đã dược duyệt tài khoản chưa
+        public bool IsAcceptedLandlord(int accountID)
         {
             var acc = db.Accounts.FirstOrDefault(a => a.AccountID == accountID && a.BeingPublished == true);
+            if (acc == null) return false;
+            return true;
+        }
+
+        //tt thêm
+        //Kiểm tra tài khoản có bị dừng hoạt động không
+        public bool IsAcceptedAccount(int accountID)
+        {
+            var acc = db.Accounts.FirstOrDefault(a => a.AccountID == accountID && a.BeingPaused == false);
             if (acc == null) return false;
             return true;
         }
@@ -132,6 +143,36 @@ namespace PBL3.BLL
             db.SaveChanges();
         }
 
+        //tt thêm
+        public bool IsPublishedAccount(int accountID)
+        {
+            Account acc = db.Accounts.Where(a => a.AccountID == accountID).FirstOrDefault();
+            if (acc.BeingPublished) return true;
+            return false;
+        }
+
+        public bool IsPausedAccount(int accountID)
+        {
+            Account acc = db.Accounts.Where(a => a.AccountID == accountID).FirstOrDefault();
+            if (acc.BeingPaused) return true;
+            return false;
+        }
+
+        public void PauseAccount(int accountID)
+        {
+            Account acc = db.Accounts.Where(a => a.AccountID == accountID).FirstOrDefault();
+            acc.BeingPaused = true;
+            db.SaveChanges();
+        }
+        
+        public void ActiveAccount(int accountID)
+        {
+            Account acc = db.Accounts.Where(a => a.AccountID == accountID).FirstOrDefault();
+            acc.BeingPaused = false;
+            db.SaveChanges();
+        }
+        //tt thêm
+
         public string GetBeingPublished(int accID)
         {
             bool a = db.Accounts.FirstOrDefault(account => account.AccountID == accID).BeingPublished;
@@ -142,6 +183,14 @@ namespace PBL3.BLL
         public DateTime? GetPublishedAt(int accID)
         {
             return db.Accounts.FirstOrDefault(account => account.AccountID == accID).PublishedAt;
+        }
+
+        //tt thêm
+        public string GetBeingPaused(int accID)
+        {
+            bool a = db.Accounts.FirstOrDefault(account => account.AccountID == accID).BeingPaused;
+            if (a) return "Ngừng hoạt động";
+            else return "Hoạt động";
         }
     }
 }

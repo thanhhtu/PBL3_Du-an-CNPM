@@ -318,7 +318,8 @@ namespace PBL3.Views.CommonForm
                 Pwd = PwdHashing.EncodePwdToBase64(txtPwd.Texts),
                 RoleID = roleID,
                 CreatedAt = DateTime.Now,
-                BeingPublished = false
+                BeingPublished = false,
+                BeingPaused = false,
             });
 
             //Thêm địa chỉ

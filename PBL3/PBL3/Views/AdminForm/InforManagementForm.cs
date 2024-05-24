@@ -37,9 +37,9 @@ namespace PBL3.Views.AdminForm
             ShowDTG();
         }
 
+        //Load lại tên các cột
         public void LoadHeader()
         {
-            //Load lại tên các cột
             var headername = new List<string>()
             {
                 "STT",
@@ -62,16 +62,16 @@ namespace PBL3.Views.AdminForm
             dgv.Columns["Username"].Visible = false;
 
         }
+
+        //Hiển thị thông tin lên DTG theo các filter, search, sort
         public void ShowDTG()
         {
-            //Hiển thị thông tin lên DTG theo các filter, search, sort
             int searchFilter = cbbPostedFilter.SelectedIndex;
             string searchChars = txtSearch.Texts;
             int sortCase = cbbSort.SelectedIndex;
             dgv.DataSource = InforBLL.Instance.GetDTGView(searchFilter, sortCase, checkAscending, searchChars);
             LoadHeader();
         }
-
 
         private void btnViewUser_Click(object sender, EventArgs e)
         {
@@ -98,10 +98,8 @@ namespace PBL3.Views.AdminForm
 
         private void cbbSort_OnSelectionChangedCommited(object sender, EventArgs e)
         {
-
             checkAscending = true;
             ShowDTG();
-
         }
 
         private void btnDeleteInfor_Click(object sender, EventArgs e)

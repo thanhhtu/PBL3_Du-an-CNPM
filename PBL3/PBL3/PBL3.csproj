@@ -92,6 +92,7 @@
     <Compile Include="BLL\ImageBLL.cs" />
     <Compile Include="BLL\ImageOfUserBLL.cs" />
     <Compile Include="BLL\InforBLL.cs" />
+    <Compile Include="BLL\ModifiedHistoryBLL.cs" />
     <Compile Include="BLL\PwdHashing.cs" />
     <Compile Include="BLL\UserBLL.cs" />
     <Compile Include="BLL\WardBLL.cs" />
@@ -107,6 +108,7 @@
     <Compile Include="DTO\ImageOfUser.cs" />
     <Compile Include="DTO\Image.cs" />
     <Compile Include="DTO\LoginInfor.cs" />
+    <Compile Include="DTO\ModifiedHistory.cs" />
     <Compile Include="DTO\Role.cs" />
     <Compile Include="DTO\User.cs" />
     <Compile Include="DTO\ViewDTO\CommentViewDTO.cs" />
@@ -242,6 +244,12 @@
     <Compile Include="Views\LandlordForm\InforManagementForm.Designer.cs">
       <DependentUpon>InforManagementForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\LandlordForm\InforModifiedHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LandlordForm\InforModifiedHistoryForm.Designer.cs">
+      <DependentUpon>InforModifiedHistoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\LandlordForm\PostInforForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -335,6 +343,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\LandlordForm\InforManagementForm.resx">
       <DependentUpon>InforManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LandlordForm\InforModifiedHistoryForm.resx">
+      <DependentUpon>InforModifiedHistoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\LandlordForm\LandlordHomeForm.resx">
       <DependentUpon>LandlordHomeForm.cs</DependentUpon>

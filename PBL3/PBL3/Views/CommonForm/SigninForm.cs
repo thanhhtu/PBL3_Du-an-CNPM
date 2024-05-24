@@ -38,10 +38,17 @@ namespace PBL3.Views.CommonForm
                 return;
             }
 
-            //Nếu là người cho thuê kiểm tra có được duyệt tài khoản chưa
-            if (role == 2 && AccountBLL.Instance.IsAcceptedAccount(AccountBLL.Instance.GetAccountID(username, password)) == false)
+            //Nếu là chủ trọ kiểm tra có được duyệt tài khoản chưa
+            if (role == 2 && AccountBLL.Instance.IsAcceptedLandlord(AccountBLL.Instance.GetAccountID(username, password)) == false)
             {
                 MessageBox.Show("Tài khoản của bạn chưa được Admin duyệt. Xin vui lòng thử lại sau!");
+                return;
+            }
+
+            //Kiểm tra xem tài khoản có bị ngừng hoạt động không
+            if (AccountBLL.Instance.IsAcceptedAccount(AccountBLL.Instance.GetAccountID(username, password)) == false)
+            {
+                MessageBox.Show("Tài khoản của bạn đã bị ngừng hoạt động!");
                 return;
             }
 

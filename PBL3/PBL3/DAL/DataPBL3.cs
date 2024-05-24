@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Security.Principal;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Xml.Linq;
 using PBL3.DTO;
@@ -28,5 +29,6 @@ namespace PBL3.DAL
         public virtual DbSet<District> Districts { get; set; }
         public virtual DbSet<Address> Addresses { get; set; }
         public virtual DbSet<FavoriteInfor> FavoriteInfors { get; set; }
+        public virtual DbSet<ModifiedHistory> ModifierHistorys { get; set; }
     }
 }

@@ -170,5 +170,23 @@ namespace PBL3.Views.LandlordForm
             dgv.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
         }
         #endregion
+
+        //Xem lịch sử cho thuê trọ
+        private void btnModifiedHistory_Click(object sender, EventArgs e)
+        {
+            if (dgv.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Hãy chọn 1 bài thông tin trọ!");
+                return;
+            }
+            else if (dgv.SelectedRows.Count > 1)
+            {
+                MessageBox.Show("Chỉ được xem thông tin mỗi lần 1 bài!");
+                return;
+            }
+            int inforID = Convert.ToInt32(dgv.SelectedRows[0].Cells["InforID"].Value.ToString());
+            InforModifiedHistoryForm form = new InforModifiedHistoryForm(Convert.ToInt32(inforID));
+            form.ShowDialog(this);
+        }
     }
 }

@@ -93,7 +93,7 @@
             this.btnReverse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReverse.ForeColor = System.Drawing.Color.White;
             this.btnReverse.Image = global::PBL3.Properties.Resources.reverse;
-            this.btnReverse.Location = new System.Drawing.Point(1116, 14);
+            this.btnReverse.Location = new System.Drawing.Point(1127, 14);
             this.btnReverse.Name = "btnReverse";
             this.btnReverse.Size = new System.Drawing.Size(56, 48);
             this.btnReverse.TabIndex = 4;
@@ -121,7 +121,7 @@
             this.cbbSort.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbbSort.Name = "cbbSort";
             this.cbbSort.Padding = new System.Windows.Forms.Padding(2);
-            this.cbbSort.Size = new System.Drawing.Size(240, 40);
+            this.cbbSort.Size = new System.Drawing.Size(251, 40);
             this.cbbSort.TabIndex = 3;
             this.cbbSort.Texts = "Sắp xếp theo";
             this.cbbSort.OnSelectionChangedCommited += new System.EventHandler(this.cbbSort_OnSelectionChangedCommited);
@@ -142,11 +142,11 @@
             "Thông tin trọ đã có chỉnh sửa"});
             this.cbbPostedFilter.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbbPostedFilter.ListTextColor = System.Drawing.Color.Black;
-            this.cbbPostedFilter.Location = new System.Drawing.Point(574, 20);
+            this.cbbPostedFilter.Location = new System.Drawing.Point(546, 20);
             this.cbbPostedFilter.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbbPostedFilter.Name = "cbbPostedFilter";
             this.cbbPostedFilter.Padding = new System.Windows.Forms.Padding(2);
-            this.cbbPostedFilter.Size = new System.Drawing.Size(240, 40);
+            this.cbbPostedFilter.Size = new System.Drawing.Size(306, 40);
             this.cbbPostedFilter.TabIndex = 2;
             this.cbbPostedFilter.Texts = "Chọn bộ lọc";
             this.cbbPostedFilter.OnSelectionChangedCommited += new System.EventHandler(this.cbbPostedFilter_OnSelectionChangedCommited);
@@ -262,6 +262,7 @@
             this.STT});
             this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv.Location = new System.Drawing.Point(0, 0);
+            this.dgv.MultiSelect = false;
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.RowHeadersWidth = 51;

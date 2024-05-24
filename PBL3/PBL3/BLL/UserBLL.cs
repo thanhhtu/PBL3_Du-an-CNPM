@@ -32,7 +32,7 @@ namespace PBL3.BLL
         }
         #endregion
 
-        #region -> Add/Update/Delete/Published User
+        #region -> Add/Update/Delete/Publish/Pause User
         public int AddUser(User newUser)
         {
             db.Users.Add(newUser);
@@ -66,83 +66,128 @@ namespace PBL3.BLL
             var user = db.Users.FirstOrDefault(u => u.UserID == userID);
             AccountBLL.Instance.Published(user.AccountID);
         }
+
+        //tt thêm    
+        public void PauseUser(int userID)
+        {
+            var user = db.Users.FirstOrDefault(u => u.UserID == userID);
+            AccountBLL.Instance.PauseAccount(user.AccountID);
+
+            //Xóa infor
+            InforBLL.Instance.DeleteInforOfUser(userID);
+        }
+        
+        public void ActiveUser(int userID)
+        {
+            var user = db.Users.FirstOrDefault(u => u.UserID == userID);
+            AccountBLL.Instance.ActiveAccount(user.AccountID);
+        }
+        //
         #endregion
 
         #region -> Management user 
-        public List<UserViewDTO> SearchUser(string searchChars, string rolename, int sortCase, bool checkAscending, bool? published)
+        //tt đổi
+        public List<UserViewDTO> SearchUser(string searchChars, int userRole, int sortCase, bool checkAscending, bool? beingPublished, bool beingPaused)
         {
             List<UserViewDTO> data = new List<UserViewDTO>();
-            var raw = db.Users.ToList();
-            foreach (var u in raw)
+
+            switch (userRole)
             {
-                int roleID = AccountBLL.Instance.GetRoleIDByAccountID(u.AccountID);
-                if (roleID == 2 || roleID == 3)
-                {
-                    data.Add(new UserViewDTO
-                    {
-                        UserID = u.UserID,
-                        Rolename = AccountBLL.Instance.GetRoleNameByAccountID(u.AccountID),
-                        Fullname = u.FullName,
-                        Email = u.Email,
-                        Phone = u.Phone,
-                        Address = AddressBLL.Instance.GetFullAddress(u.AddressID),
-                        NumberOfInfor = UserBLL.Instance.CountUserPost(u.UserID),
-                        NumberOfComment = UserBLL.Instance.CountUserCMT(u.UserID),
-                        JoinedAt = AccountBLL.Instance.GetCreatedAt(u.AccountID),
-                        BeingPublished = AccountBLL.Instance.GetBeingPublished(u.AccountID),
-                        PublishedAt = AccountBLL.Instance.GetPublishedAt(u.AccountID), //thêm
-                    });
-                }
+                case 0: //Tất cả 
+                    data = UserBLL.Instance.GetAllUserView();
+                    break;
+                case 1: //Người cho thuê (Đã được duyệt)
+                    data = UserBLL.Instance.GetLandlord(true);
+                    break;
+                case 2: //Người cho thuê (Chưa được duyệt)
+                    data = UserBLL.Instance.GetLandlord(false);
+                    break;
+                case 3: //Người đi thuê
+                    data = UserBLL.Instance.GetRenter();
+                    break;
+                case 4: //Tài khoản bị ngừng hoạt động
+                    data = UserBLL.Instance.GetPausedUser();
+                    break;
+                default:
+                    data = UserBLL.Instance.GetAllUserView();
+                    break;
             }
+
             //Sau khi get ra, search theo char + rolename và sort lại kết quả 
-            List<UserViewDTO> temp = UserBLL.Instance.SearchCharsAndRoleName(searchChars, rolename, data, published);
+            List<UserViewDTO> temp = UserBLL.Instance.SearchCharsAndRoleName(searchChars, userRole, data, beingPublished, beingPaused);
             List<UserViewDTO> result = UserBLL.Instance.SortResult(sortCase, checkAscending, temp);
             return result;
         }
 
-        //có thêm
-        //Sau khi search theo filter, lọc các kết quả chứa char và có rolename cần tìm
-        public List<UserViewDTO> SearchCharsAndRoleName(string searchChars, string rolename, List<UserViewDTO> data, bool? published)
+        public UserViewDTO SetUserView(User u)
+        {
+            return new UserViewDTO
+            {
+                UserID = u.UserID,
+                Rolename = AccountBLL.Instance.GetRoleNameByAccountID(u.AccountID),
+                Fullname = u.FullName,
+                Email = u.Email,
+                Phone = u.Phone,
+                Address = AddressBLL.Instance.GetFullAddress(u.AddressID),
+                NumberOfInfor = UserBLL.Instance.CountUserPost(u.UserID),
+                NumberOfComment = UserBLL.Instance.CountUserCMT(u.UserID),
+                JoinedAt = AccountBLL.Instance.GetCreatedAt(u.AccountID),
+                BeingPublished = AccountBLL.Instance.GetBeingPublished(u.AccountID),
+                PublishedAt = AccountBLL.Instance.GetPublishedAt(u.AccountID), //thêm
+                BeingPaused = AccountBLL.Instance.GetBeingPaused(u.AccountID), //tt thêm
+            };
+        }
+
+        public List<UserViewDTO> GetAllUserView()
+        {
+            List<UserViewDTO> data = new List<UserViewDTO>();
+            
+            db.Users.Where(u => u.Account.RoleID == 2 || u.Account.RoleID == 3).ToList()
+                .ForEach(user => data.Add(SetUserView(user)));
+            return data;
+        }
+
+        public List<UserViewDTO> GetLandlord(bool publishedStatus)
+        {
+            List<UserViewDTO> data = new List<UserViewDTO>();
+
+            db.Users.Where(u => u.Account.RoleID == 2 && u.Account.BeingPublished == publishedStatus).ToList()
+                .ForEach(user => data.Add(SetUserView(user)));
+ 
+            return data;
+        }
+
+        public List<UserViewDTO> GetRenter()
+        {
+            List<UserViewDTO> data = new List<UserViewDTO>();
+
+            db.Users.Where(u => u.Account.RoleID == 3).ToList()
+                .ForEach(user => data.Add(SetUserView(user)));
+
+            return data;
+        }
+
+        public List<UserViewDTO> GetPausedUser()
+        {
+            List<UserViewDTO> data = new List<UserViewDTO>();
+
+            db.Users.Where(u => (u.Account.RoleID == 2 || u.Account.RoleID == 3) && u.Account.BeingPaused == true).ToList()
+                .ForEach(user => data.Add(SetUserView(user)));
+
+            return data;
+        }
+
+        public List<UserViewDTO> SearchCharsAndRoleName(string searchChars, int userRole, List<UserViewDTO> data, bool? beingPublished, bool beingPaused)
         {
             List<UserViewDTO> result = new List<UserViewDTO>();
-            if (rolename == "All")
+            foreach (var i in data)
             {
-                foreach (var i in data)
+                if (i.Address.Contains(searchChars) || i.Fullname.Contains(searchChars) || i.Phone.Contains(searchChars) || i.Email.Contains(searchChars))
                 {
-                    if (i.Address.Contains(searchChars) || i.Fullname.Contains(searchChars) || i.Phone.Contains(searchChars) || i.Email.Contains(searchChars))
-                    {
-                        result.Add(i);
-                    }
-                }
-                return result;
-            }
-            else
-            {
-                if (published == true)
-                {
-                    {
-                        foreach (var i in data)
-                        {
-                            if ((i.BeingPublished == "Đã Duyệt") && (i.Rolename == rolename) && (i.Address.Contains(searchChars) || i.Fullname.Contains(searchChars) || i.Phone.Contains(searchChars) || i.Email.Contains(searchChars)))
-                            {
-                                result.Add(i);
-                            }
-                        }
-                        return result;
-                    }
-                }
-                else
-                {
-                    foreach (var i in data)
-                    {
-                        if ((i.BeingPublished == "Chưa Duyệt") && (i.Rolename == rolename) && (i.Address.Contains(searchChars) || i.Fullname.Contains(searchChars) || i.Phone.Contains(searchChars) || i.Email.Contains(searchChars)))
-                        {
-                            result.Add(i);
-                        }
-                    }
-                    return result;
+                    result.Add(i);
                 }
             }
+            return result;
         }
 
         public List<UserViewDTO> SortResult(int sortCase, bool checkAscending, List<UserViewDTO> data)
@@ -150,14 +195,24 @@ namespace PBL3.BLL
             List<UserViewDTO> result = new List<UserViewDTO>();
             switch (sortCase)
             {
-                case 0: // Thời gian tham gia
-                    result = data.OrderBy(p => p.JoinedAt).ToList();
+                /*Thời gian tham gia
+                Số comment
+                Thời gian được duyệt
+                Số phòng trọ*/
+                case 0: //Thời gian tham gia
+                    result = data.OrderBy(u => u.JoinedAt).ToList();
                     break;
-                case 1: //Số infor
-                    result = data.OrderBy(p => p.NumberOfInfor).ToList();
+                case 1: //Thời gian được duyệt
+                    result = data.OrderBy(u => u.PublishedAt).ToList();
                     break;
                 case 2: //Số comment
-                    result = data.OrderBy(p => p.NumberOfComment).ToList();
+                    result = data.OrderBy(u => u.NumberOfComment).ToList();
+                    break;
+                case 3: //Số infor
+                    result = data.OrderBy(u => u.NumberOfInfor).ToList();
+                    break;
+                default: //Thời gian tham gia
+                    result = data.OrderBy(u => u.JoinedAt).ToList();
                     break;
             }
             if (!checkAscending)
@@ -167,6 +222,7 @@ namespace PBL3.BLL
             }
             return result;
         }
+        //tt đổi
         #endregion
 
         public int GetAddressIDByUserID(int userID)
@@ -220,5 +276,19 @@ namespace PBL3.BLL
             if (usercmt == null) return 0;
             else return usercmt.Count();
         }
+
+        //tt thêm
+        public bool IsPublishedAccount(int userID)
+        {
+            var user = db.Users.FirstOrDefault(u => u.UserID == userID);
+            return AccountBLL.Instance.IsPublishedAccount(user.AccountID);
+        }
+
+        public bool IsPausedAccount(int userID)
+        {
+            var user = db.Users.FirstOrDefault(u => u.UserID == userID);
+            return AccountBLL.Instance.IsPausedAccount(user.AccountID);
+        }
+        //
     }
 }

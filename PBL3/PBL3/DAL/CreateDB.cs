@@ -26,10 +26,10 @@ namespace PBL3.DAL
             });
             context.Accounts.AddRange(new Account[]
             {
-                new Account {AccountID = 1, RoleID = 1, Username = "Admin1", Pwd = "DeHOn0UsIwM=", CreatedAt = DateTime.Now, BeingPublished = true, PublishedAt = DateTime.Now},
-                new Account {AccountID = 2, RoleID = 2, Username = "Landlord1", Pwd = "DeHOn0UsIwM=", CreatedAt = DateTime.Now, BeingPublished = true, PublishedAt = DateTime.Now},
-                new Account {AccountID = 3, RoleID = 2, Username = "Landlord2", Pwd = "DeHOn0UsIwM=", CreatedAt = DateTime.Now, BeingPublished = false, PublishedAt = DateTime.Now},
-                new Account {AccountID = 4, RoleID = 3, Username = "Renter1", Pwd = "DeHOn0UsIwM=", CreatedAt = DateTime.Now, BeingPublished = true, PublishedAt = DateTime.Now},
+                new Account {AccountID = 1, RoleID = 1, Username = "Admin1", Pwd = "DeHOn0UsIwM=", CreatedAt = DateTime.Now, BeingPublished = true, PublishedAt = DateTime.Now, BeingPaused = false},
+                new Account {AccountID = 2, RoleID = 2, Username = "Landlord1", Pwd = "DeHOn0UsIwM=", CreatedAt = DateTime.Now, BeingPublished = true, PublishedAt = DateTime.Now, BeingPaused = false},
+                new Account {AccountID = 3, RoleID = 2, Username = "Landlord2", Pwd = "DeHOn0UsIwM=", CreatedAt = DateTime.Now, BeingPublished = false, PublishedAt = DateTime.Now, BeingPaused = false},
+                new Account {AccountID = 4, RoleID = 3, Username = "Renter1", Pwd = "DeHOn0UsIwM=", CreatedAt = DateTime.Now, BeingPublished = true, PublishedAt = DateTime.Now, BeingPaused = true},
             });
             context.Districts.AddRange(new District[]
             {
@@ -237,6 +237,11 @@ namespace PBL3.DAL
 
                 new ImageOfUser { ImageOfUserID = 3, UserID = 3, ImagePath = @"\landlord1.jpg"},
                 new ImageOfUser { ImageOfUserID = 4, UserID = 3, ImagePath = @"\landlord2.jpg"},
+            });
+            context.ModifierHistorys.AddRange(new ModifiedHistory[]
+            {
+                new ModifiedHistory { InforID = 2, Content= "Trọ trống", ModifiedTime = DateTime.Now}
+
             });
         }
     }

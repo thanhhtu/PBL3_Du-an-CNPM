@@ -29,19 +29,20 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dgv = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnPostInfor = new PBL3.Views.CustomComponent.CustomButton();
             this.btnSearch = new PBL3.Views.CustomComponent.CustomButton();
             this.btnReverse = new PBL3.Views.CustomComponent.CustomButton();
             this.cbbSort = new PBL3.Views.CustomComponents.CustomComboBox();
             this.cbbPostedFilter = new PBL3.Views.CustomComponents.CustomComboBox();
             this.txtSearch = new PBL3.Views.CustomComponent.CustomTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnModifiedHistory = new PBL3.Views.CustomComponent.CustomButton();
             this.btnDeleteInfor = new PBL3.Views.CustomComponent.CustomButton();
             this.btnUpdateInfor = new PBL3.Views.CustomComponent.CustomButton();
             this.btnReadInfor = new PBL3.Views.CustomComponent.CustomButton();
+            this.dgv = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
@@ -63,52 +64,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(1521, 80);
             this.panelMenu.TabIndex = 29;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btnDeleteInfor);
-            this.panel1.Controls.Add(this.btnUpdateInfor);
-            this.panel1.Controls.Add(this.btnReadInfor);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 524);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1521, 91);
-            this.panel1.TabIndex = 28;
-            // 
-            // dgv
-            // 
-            this.dgv.AllowUserToAddRows = false;
-            this.dgv.AllowUserToDeleteRows = false;
-            this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
-            this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv.Location = new System.Drawing.Point(0, 0);
-            this.dgv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgv.Name = "dgv";
-            this.dgv.ReadOnly = true;
-            this.dgv.RowHeadersWidth = 51;
-            this.dgv.RowTemplate.Height = 24;
-            this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(1521, 444);
-            this.dgv.TabIndex = 30;
-            this.dgv.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgv_RowPostPaint);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dgv);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 80);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1521, 444);
-            this.panel2.TabIndex = 31;
             // 
             // btnPostInfor
             // 
@@ -165,7 +120,7 @@
             this.btnReverse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReverse.ForeColor = System.Drawing.Color.White;
             this.btnReverse.Image = global::PBL3.Properties.Resources.reverse;
-            this.btnReverse.Location = new System.Drawing.Point(1090, 11);
+            this.btnReverse.Location = new System.Drawing.Point(1091, 11);
             this.btnReverse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReverse.Name = "btnReverse";
             this.btnReverse.Size = new System.Drawing.Size(56, 48);
@@ -237,7 +192,7 @@
             this.txtSearch.BorderSize = 2;
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtSearch.ForeColor = System.Drawing.Color.DimGray;
-            this.txtSearch.Location = new System.Drawing.Point(29, 19);
+            this.txtSearch.Location = new System.Drawing.Point(29, 18);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtSearch.Multiline = false;
             this.txtSearch.Name = "txtSearch";
@@ -249,6 +204,43 @@
             this.txtSearch.TabIndex = 1;
             this.txtSearch.Texts = "";
             this.txtSearch.UnderlinedStyle = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnModifiedHistory);
+            this.panel1.Controls.Add(this.btnDeleteInfor);
+            this.panel1.Controls.Add(this.btnUpdateInfor);
+            this.panel1.Controls.Add(this.btnReadInfor);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 524);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1521, 91);
+            this.panel1.TabIndex = 28;
+            // 
+            // btnModifiedHistory
+            // 
+            this.btnModifiedHistory.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnModifiedHistory.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnModifiedHistory.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.btnModifiedHistory.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnModifiedHistory.BorderRadius = 30;
+            this.btnModifiedHistory.BorderSize = 0;
+            this.btnModifiedHistory.FlatAppearance.BorderSize = 0;
+            this.btnModifiedHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModifiedHistory.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModifiedHistory.ForeColor = System.Drawing.Color.White;
+            this.btnModifiedHistory.Location = new System.Drawing.Point(796, 13);
+            this.btnModifiedHistory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnModifiedHistory.Name = "btnModifiedHistory";
+            this.btnModifiedHistory.Size = new System.Drawing.Size(259, 57);
+            this.btnModifiedHistory.TabIndex = 9;
+            this.btnModifiedHistory.Text = "Xem lịch sử cho thuê";
+            this.btnModifiedHistory.TextColor = System.Drawing.Color.White;
+            this.btnModifiedHistory.UseVisualStyleBackColor = false;
+            this.btnModifiedHistory.Click += new System.EventHandler(this.btnModifiedHistory_Click);
             // 
             // btnDeleteInfor
             // 
@@ -262,7 +254,7 @@
             this.btnDeleteInfor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteInfor.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteInfor.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteInfor.Location = new System.Drawing.Point(1016, 11);
+            this.btnDeleteInfor.Location = new System.Drawing.Point(1127, 13);
             this.btnDeleteInfor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeleteInfor.Name = "btnDeleteInfor";
             this.btnDeleteInfor.Size = new System.Drawing.Size(228, 57);
@@ -284,7 +276,7 @@
             this.btnUpdateInfor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateInfor.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateInfor.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateInfor.Location = new System.Drawing.Point(617, 11);
+            this.btnUpdateInfor.Location = new System.Drawing.Point(452, 13);
             this.btnUpdateInfor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdateInfor.Name = "btnUpdateInfor";
             this.btnUpdateInfor.Size = new System.Drawing.Size(259, 57);
@@ -306,7 +298,7 @@
             this.btnReadInfor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReadInfor.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReadInfor.ForeColor = System.Drawing.Color.White;
-            this.btnReadInfor.Location = new System.Drawing.Point(219, 11);
+            this.btnReadInfor.Location = new System.Drawing.Point(139, 13);
             this.btnReadInfor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReadInfor.Name = "btnReadInfor";
             this.btnReadInfor.Size = new System.Drawing.Size(228, 57);
@@ -316,14 +308,46 @@
             this.btnReadInfor.UseVisualStyleBackColor = false;
             this.btnReadInfor.Click += new System.EventHandler(this.btnReadInfor_Click);
             // 
+            // dgv
+            // 
+            this.dgv.AllowUserToAddRows = false;
+            this.dgv.AllowUserToDeleteRows = false;
+            this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1});
+            this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv.Location = new System.Drawing.Point(0, 0);
+            this.dgv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv.MultiSelect = false;
+            this.dgv.Name = "dgv";
+            this.dgv.ReadOnly = true;
+            this.dgv.RowHeadersWidth = 51;
+            this.dgv.RowTemplate.Height = 24;
+            this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv.Size = new System.Drawing.Size(1521, 444);
+            this.dgv.TabIndex = 30;
+            this.dgv.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgv_RowPostPaint);
+            // 
             // Column1
             // 
             this.Column1.HeaderText = "STT";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.Column1.Width = 63;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dgv);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 80);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1521, 444);
+            this.panel2.TabIndex = 31;
             // 
             // InforManagementForm
             // 
@@ -361,5 +385,6 @@
         private CustomComponent.CustomButton btnPostInfor;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private CustomComponent.CustomButton btnModifiedHistory;
     }
 }

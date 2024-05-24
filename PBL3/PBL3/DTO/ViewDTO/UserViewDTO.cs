@@ -19,5 +19,6 @@ namespace PBL3.DTO.ViewDTO
         public DateTime? JoinedAt { get; set; }
         public String BeingPublished { get; set; }
         public DateTime? PublishedAt { get; set; }
+        public String BeingPaused {  get; set; }
     }
 }

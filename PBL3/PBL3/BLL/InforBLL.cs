@@ -139,7 +139,8 @@ namespace PBL3.BLL
         public List<InforViewDTO> GetSearchedInfor(int skipAllNum, int inforNum, List<AccommodationInformation> data)
         {
             List<InforViewDTO> ls = new List<InforViewDTO>();
-            data.OrderByDescending(p => p.ModifiedTime ?? p.CreatedTime).Skip(skipAllNum).Take(inforNum)
+
+            data.OrderByDescending(i => GetRentedTime(i) ?? i.CreatedTime).Skip(skipAllNum).Take(inforNum)
                 .ToList()
                 .ForEach(info => ls.Add(new InforViewDTO()
                 {
@@ -155,6 +156,17 @@ namespace PBL3.BLL
             return ls;
         }
 
+        //tt thêm
+        public DateTime? GetRentedTime(AccommodationInformation infor)
+        {
+            var rentedInfor = db.ModifierHistorys.Where(i => i.InforID == infor.InforID)
+                .OrderByDescending(i => i.ModifiedTime)
+                .FirstOrDefault();
+
+            if (rentedInfor == null) return null;
+            return rentedInfor.ModifiedTime;
+        }
+        //
 
         //Sort infor trên dashboard
         public List<InforViewDTO> GetSortedPosts(int skipNum, int infoNum, List<AccommodationInformation> data, int sortCase)
@@ -228,6 +240,22 @@ namespace PBL3.BLL
             return result;
         }
 
+        public InforDTGViewDTO SetInforDTGView(AccommodationInformation infor)
+        {
+            return new InforDTGViewDTO
+            {
+                InforID = infor.InforID,
+                UserID = infor.UserID,
+                Username = UserBLL.Instance.GetUserFullname(infor.UserID),
+                Title = infor.Title,
+                Address = AddressBLL.Instance.GetFullAddress(infor.AddressID),
+                NumberOfComment = InforBLL.Instance.GetNumOfCommentInPost(infor.InforID),
+                BeingRented = InforBLL.Instance.CheckRented(infor.InforID),
+                CreatedTime = infor.CreatedTime,
+                ModifiedTime = infor.ModifiedTime
+            };
+        }
+
         //kiểu dynamic thay bằng  List<InforDTGViewDTO> //có chỉnh sửa
         //Lấy tất cả infor trong hệ thống, hoặc tất cả infor của 1 landlord
         public List<InforDTGViewDTO> GetAllInforView(int userID = -1)
@@ -237,36 +265,14 @@ namespace PBL3.BLL
             if (userID == -1)
             {
                 //Get tất cả infor trong hệ thống, dành cho Admin
-                db.AccommodationInformations.ToList().
-                    ForEach(infor => data.Add(new InforDTGViewDTO
-                    {
-                        InforID = infor.InforID,
-                        UserID = infor.UserID,
-                        Username = UserBLL.Instance.GetUserFullname(infor.UserID),
-                        Title = infor.Title,
-                        Address = AddressBLL.Instance.GetFullAddress(infor.AddressID),
-                        NumberOfComment = InforBLL.Instance.GetNumOfCommentInPost(infor.InforID),
-                        BeingRented = InforBLL.Instance.CheckRented(infor.InforID),
-                        CreatedTime = infor.CreatedTime,
-                        ModifiedTime = infor.ModifiedTime
-                    }));
+                db.AccommodationInformations.ToList()
+                    .ForEach(infor => data.Add(SetInforDTGView(infor)));
             }
             else
             {
                 //Get tất cả infor của 1 landlord đang đăng nhập
-                db.AccommodationInformations.Where(i => i.UserID == userID).ToList().
-                    ForEach(infor => data.Add(new InforDTGViewDTO
-                    {
-                        InforID = infor.InforID,
-                        UserID = infor.UserID,
-                        Username = UserBLL.Instance.GetUserFullname(infor.UserID),
-                        Title = infor.Title,
-                        Address = AddressBLL.Instance.GetFullAddress(infor.AddressID),
-                        NumberOfComment = InforBLL.Instance.GetNumOfCommentInPost(infor.InforID),
-                        BeingRented = InforBLL.Instance.CheckRented(infor.InforID),
-                        CreatedTime = infor.CreatedTime,
-                        ModifiedTime = infor.ModifiedTime
-                    }));
+                db.AccommodationInformations.Where(i => i.UserID == userID).ToList()
+                    .ForEach(infor => data.Add(SetInforDTGView(infor)));
             }
             return data;
         }
@@ -281,79 +287,34 @@ namespace PBL3.BLL
             {
                 //Get tất cả infor trong hệ thống -> dành cho admin
                 db.AccommodationInformations.Where(p => p.BeingRented == rentedStatus).ToList()
-                    .ForEach(infor => data.Add(new InforDTGViewDTO
-                    {
-                        InforID = infor.InforID,
-                        UserID = infor.UserID,
-                        Username = UserBLL.Instance.GetUserFullname(infor.UserID),
-                        Title = infor.Title,
-                        Address = AddressBLL.Instance.GetFullAddress(infor.AddressID),
-                        NumberOfComment = InforBLL.Instance.GetNumOfCommentInPost(infor.InforID),
-                        BeingRented = InforBLL.Instance.CheckRented(infor.InforID),
-                        CreatedTime = infor.CreatedTime,
-                        ModifiedTime = infor.ModifiedTime
-                    }));
+                    .ForEach(infor => data.Add(SetInforDTGView(infor)));
             }
             else
             {
                 //Get infor của landlord đang đăng nhập
                 db.AccommodationInformations.Where(i => i.UserID == userID && i.BeingRented == rentedStatus).ToList()
-                    .ForEach(infor => data.Add(new InforDTGViewDTO
-                    {
-                        InforID = infor.InforID,
-                        UserID = infor.UserID,
-                        Username = UserBLL.Instance.GetUserFullname(infor.UserID),
-                        Title = infor.Title,
-                        Address = AddressBLL.Instance.GetFullAddress(infor.AddressID),
-                        NumberOfComment = InforBLL.Instance.GetNumOfCommentInPost(infor.InforID),
-                        BeingRented = InforBLL.Instance.CheckRented(infor.InforID),
-                        CreatedTime = infor.CreatedTime,
-                        ModifiedTime = infor.ModifiedTime
-                    }));
+                    .ForEach(infor => data.Add(SetInforDTGView(infor)));
             }
 
             return data;
         }
 
-        //Get các bài infor đã bị chỉnh sửa
-        public dynamic GetEditedInfor(int userID = -1)
+        //Get các bài infor đã bị chỉnh sửa //đổi dynamic
+        public List<InforDTGViewDTO> GetEditedInfor(int userID = -1)
         {
             if (userID == -1)
             {
                 //Get tất cả infor trong hệ thống -> dành cho admin
                 List<InforDTGViewDTO> data = new List<InforDTGViewDTO>();
                 db.AccommodationInformations.Where(i => i.ModifiedTime != null).ToList()
-                    .ForEach(infor => data.Add(new InforDTGViewDTO
-                    {
-                        InforID = infor.InforID,
-                        UserID = infor.UserID,
-                        Username = UserBLL.Instance.GetUserFullname(infor.UserID),
-                        Title = infor.Title,
-                        Address = AddressBLL.Instance.GetFullAddress(infor.AddressID),
-                        NumberOfComment = InforBLL.Instance.GetNumOfCommentInPost(infor.InforID),
-                        // dat sua
-                        BeingRented = InforBLL.Instance.CheckRented(infor.InforID),
-                        CreatedTime = infor.CreatedTime,
-                        ModifiedTime = infor.ModifiedTime
-                    }));
+                    .ForEach(infor => data.Add(SetInforDTGView(infor)));
                 return data;
             }
             else //Get infor của landlord đang đăng nhập
             {
                 List<InforDTGViewDTO> data = new List<InforDTGViewDTO>();
                 db.AccommodationInformations.Where(p => p.UserID == userID && p.ModifiedTime != null).ToList()
-                    .ForEach(post => data.Add(new InforDTGViewDTO
-                    {
-                        InforID = post.InforID,
-                        UserID = post.UserID,
-                        Username = UserBLL.Instance.GetUserFullname(post.UserID),
-                        Title = post.Title,
-                        Address = AddressBLL.Instance.GetFullAddress(post.AddressID),
-                        NumberOfComment = InforBLL.Instance.GetNumOfCommentInPost(post.InforID),
-                        BeingRented = InforBLL.Instance.CheckRented(post.InforID),
-                        CreatedTime = post.CreatedTime,
-                        ModifiedTime = post.ModifiedTime
-                    }));
+                    .ForEach(infor => data.Add(SetInforDTGView(infor)));
                 return data;
             }
         }
@@ -406,7 +367,6 @@ namespace PBL3.BLL
             else return "Chưa thuê";
         }
 
-
         public string GetPublishedTime(int inforID)
         {
             var i = db.AccommodationInformations.FirstOrDefault(p => p.InforID == inforID);
@@ -436,6 +396,19 @@ namespace PBL3.BLL
             var data = db.Comments.Where(p => p.InforID == inforID).ToList();
             if (data == null) return 0;
             return data.Count();
+        }
+        //aitran thêm
+        public bool CheckRented_(int inforID)
+        {
+            bool a = db.AccommodationInformations.FirstOrDefault(p => p.InforID == inforID).BeingRented;
+            if (a) return true;
+            else return false;
+        }
+        public string GetInforTitle(int inforID)
+        {
+            var i = db.AccommodationInformations.FirstOrDefault(p => p.InforID == inforID);
+            string title = i.Title;
+            return title;
         }
     }
 }

@@ -32,5 +32,8 @@ namespace PBL3.DTO
 
         [ForeignKey("RoleID")]
         public virtual Role Role { get; set; }
+
+        //tt add
+        public bool BeingPaused { get; set; }
     }
 }
