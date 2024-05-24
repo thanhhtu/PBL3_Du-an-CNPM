@@ -57,6 +57,11 @@ namespace PBL3.DTO
         {
             this.Comments = new HashSet<Comment>();
             this.Images = new HashSet<Image>();
+            this.ModifiedHistories = new HashSet<ModifiedHistory>();
         }
+
+        //aitran thêm
+        public int? ModifierID { get; set; }
+        public virtual ICollection<ModifiedHistory> ModifiedHistories { get; set; }
     }
 }

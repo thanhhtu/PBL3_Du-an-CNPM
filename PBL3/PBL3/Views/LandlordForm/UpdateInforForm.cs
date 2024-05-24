@@ -16,7 +16,8 @@ using PBL3.DTO.ViewDTO;
 namespace PBL3.Views.LandlordForm
 {
     public partial class UpdateInforForm : Form
-    {
+    { //aitran thêm 1 biến
+        bool originalRentedStatus=false; // mặc định ban đầu là chưa cho thuê
         private int InforID;
         private List<string> ImagePathList;
         private List<string> imageFileName;
@@ -258,7 +259,15 @@ namespace PBL3.Views.LandlordForm
             if (CheckEmpty()) return;
             if (CheckValidMoney(txtPrice.Texts, txtDeposit.Texts)) return;
             if (CheckValidArea()) return;
+            //aitran thêm
+            bool newRentedStatus = radioBtnRented.Checked;
 
+            if (originalRentedStatus != newRentedStatus)
+            {
+                if (newRentedStatus) { ModifiedHistoryBLL.Instance.AddModified(InforID, 1); }
+                else { ModifiedHistoryBLL.Instance.AddModified(InforID, 0); }
+                
+            }
             Address tempAddress = new Address
             {
                 DetailAddress = txtDetailAddress.Texts,
@@ -318,7 +327,11 @@ namespace PBL3.Views.LandlordForm
             txtArea.Texts = inforView.SquareArea.ToString();
             txtDescribe.Texts = inforView.Description;
 
-            if (InforBLL.Instance.CheckRented(InforID) == "Đã thuê") radioBtnRented.Checked = true;
+            if (InforBLL.Instance.CheckRented(InforID) == "Đã thuê")
+            { 
+                radioBtnRented.Checked = true;
+                originalRentedStatus = true;
+            }
             else radioBtnNotRented.Checked = true;
             
             txtDeposit.Texts = inforView.Deposit.ToString();

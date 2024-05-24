@@ -406,7 +406,6 @@ namespace PBL3.BLL
             else return "Chưa thuê";
         }
 
-
         public string GetPublishedTime(int inforID)
         {
             var i = db.AccommodationInformations.FirstOrDefault(p => p.InforID == inforID);
@@ -436,6 +435,19 @@ namespace PBL3.BLL
             var data = db.Comments.Where(p => p.InforID == inforID).ToList();
             if (data == null) return 0;
             return data.Count();
+        }
+        //aitran thêm
+        public bool CheckRented_(int inforID)
+        {
+            bool a = db.AccommodationInformations.FirstOrDefault(p => p.InforID == inforID).BeingRented;
+            if (a) return true;
+            else return false;
+        }
+        public string GetInforTitle(int inforID)
+        {
+            var i = db.AccommodationInformations.FirstOrDefault(p => p.InforID == inforID);
+            string title = i.Title;
+            return title;
         }
     }
 }

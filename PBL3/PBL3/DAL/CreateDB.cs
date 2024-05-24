@@ -238,6 +238,11 @@ namespace PBL3.DAL
                 new ImageOfUser { ImageOfUserID = 3, UserID = 3, ImagePath = @"\landlord1.jpg"},
                 new ImageOfUser { ImageOfUserID = 4, UserID = 3, ImagePath = @"\landlord2.jpg"},
             });
+            context.ModifierHistorys.AddRange(new ModifiedHistory[]
+            {
+                new ModifiedHistory { InforID = 2, Content= "Trọ trống", ModifiedTime = DateTime.Now}
+
+            });
         }
     }
 }
