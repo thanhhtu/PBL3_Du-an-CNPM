@@ -80,12 +80,12 @@ namespace PBL3.Views.CustomComponent
             }
         }
 
-        public string PostID
+        public string InforID
         {
-            get => postID.Text;
+            get => inforID.Text;
             set
             {
-                postID.Text = value;
+                inforID.Text = value;
                 this.Invalidate();
             }
         }

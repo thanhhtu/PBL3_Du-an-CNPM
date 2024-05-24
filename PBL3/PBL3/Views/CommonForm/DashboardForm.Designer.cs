@@ -217,7 +217,7 @@
             this.cbbPrice.Size = new System.Drawing.Size(191, 32);
             this.cbbPrice.TabIndex = 5;
             this.cbbPrice.Texts = "Chọn giá";
-            this.cbbPrice.OnSelectedIndexChanged += new System.EventHandler(this.cbbPrice_OnSelectedIndexChanged);
+//            this.cbbPrice.OnSelectedIndexChanged += new System.EventHandler(this.cbbPrice_OnSelectedIndexChanged);
             // 
             // cbbWard
             // 
@@ -288,7 +288,7 @@
             this.houseInfoComponent5.MoneyLabel = "Số tiền: ";
             this.houseInfoComponent5.Name = "houseInfoComponent5";
             this.houseInfoComponent5.PictureBox = ((System.Drawing.Image)(resources.GetObject("houseInfoComponent5.PictureBox")));
-            this.houseInfoComponent5.PostID = "postID";
+            this.houseInfoComponent5.InforID = "postID";
             this.houseInfoComponent5.Size = new System.Drawing.Size(1186, 256);
             this.houseInfoComponent5.TabIndex = 24;
             this.houseInfoComponent5._OnLabelClicked += new System.EventHandler(this.houseInfoComponent5__OnLabelClicked);
@@ -306,7 +306,7 @@
             this.houseInfoComponent4.MoneyLabel = "Số tiền: ";
             this.houseInfoComponent4.Name = "houseInfoComponent4";
             this.houseInfoComponent4.PictureBox = ((System.Drawing.Image)(resources.GetObject("houseInfoComponent4.PictureBox")));
-            this.houseInfoComponent4.PostID = "postID";
+            this.houseInfoComponent4.InforID = "postID";
             this.houseInfoComponent4.Size = new System.Drawing.Size(1186, 256);
             this.houseInfoComponent4.TabIndex = 16;
             this.houseInfoComponent4._OnLabelClicked += new System.EventHandler(this.houseInfoComponent4__OnLabelClicked);
@@ -324,7 +324,7 @@
             this.houseInfoComponent3.MoneyLabel = "Số tiền: ";
             this.houseInfoComponent3.Name = "houseInfoComponent3";
             this.houseInfoComponent3.PictureBox = ((System.Drawing.Image)(resources.GetObject("houseInfoComponent3.PictureBox")));
-            this.houseInfoComponent3.PostID = "postID";
+            this.houseInfoComponent3.InforID = "postID";
             this.houseInfoComponent3.Size = new System.Drawing.Size(1186, 256);
             this.houseInfoComponent3.TabIndex = 16;
             this.houseInfoComponent3._OnLabelClicked += new System.EventHandler(this.houseInfoComponent3__OnLabelClicked);
@@ -342,7 +342,7 @@
             this.houseInfoComponent2.MoneyLabel = "Số tiền: ";
             this.houseInfoComponent2.Name = "houseInfoComponent2";
             this.houseInfoComponent2.PictureBox = ((System.Drawing.Image)(resources.GetObject("houseInfoComponent2.PictureBox")));
-            this.houseInfoComponent2.PostID = "postID";
+            this.houseInfoComponent2.InforID = "postID";
             this.houseInfoComponent2.Size = new System.Drawing.Size(1186, 256);
             this.houseInfoComponent2.TabIndex = 23;
             this.houseInfoComponent2._OnLabelClicked += new System.EventHandler(this.houseInfoComponent2__OnLabelClicked);
@@ -360,7 +360,7 @@
             this.houseInfoComponent1.MoneyLabel = "Số tiền: ";
             this.houseInfoComponent1.Name = "houseInfoComponent1";
             this.houseInfoComponent1.PictureBox = ((System.Drawing.Image)(resources.GetObject("houseInfoComponent1.PictureBox")));
-            this.houseInfoComponent1.PostID = "postID";
+            this.houseInfoComponent1.InforID = "postID";
             this.houseInfoComponent1.Size = new System.Drawing.Size(1186, 252);
             this.houseInfoComponent1.TabIndex = 22;
             this.houseInfoComponent1._OnLabelClicked += new System.EventHandler(this.houseInfoComponent1__OnLabelClicked);

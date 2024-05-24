@@ -12,7 +12,6 @@ using PBL3.BLL;
 using PBL3.DTO;
 using PBL3.DTO.ViewDTO;
 using PBL3.Views.CustomComponents;
-//using PBL3.DTO.ViewDTO;
 
 namespace PBL3.Views.CommonForm
 {
@@ -27,21 +26,17 @@ namespace PBL3.Views.CommonForm
         private int currentPage = 0; //Trang hiện tại
         private int totalPage; //Tổng số trang
         private int skipNum = 5; //1 lần chỉ có thể hiển thị 5 bài info
-        private int postNum; //Tổng số bài info ở trong trang hiện tại
-        private int numberOfPosts;
+        private int inforNums; //Tổng số bài info ở trong trang hiện tại
+        private int numberofInfor;
 
         public DashboardForm()
         {
             InitializeComponent();
-            //InforBLL.Instance.LoadApp();
-            //LoadCBB();
-            //SearchFunction();
-            //LoadCBBPageNum();
-            //HideAdd_DeleteFavouriteInfor();
             ReloadForm();
         }
+      
         #region-> LoadCBB quận + phường
-        // Mặc định: Load quận trước (phường: hiện tất cả
+        // Mặc định: Load quận trước (phường: hiện tất cả)
         // Khi selected item của cbb quận thay đổi thì load phường tương ứng với quận
         public void ResetCBB()
         {
@@ -70,7 +65,6 @@ namespace PBL3.Views.CommonForm
             };
 
             //load quận lên cbb
-
             cbbDistrict.Items.Add(AllDistricts);
             var listDistrict = DistrictBLL.Instance.GetAllDistricts();
 
@@ -121,7 +115,7 @@ namespace PBL3.Views.CommonForm
 
         #region -> Load CBB số trang
         public void LoadCBBPageNum()
-        {
+        { 
             cbbPageNumber.Items.Clear();
             cbbPageNumber.DataSource = null;
             cbbPageNumber.ResetText();
@@ -158,7 +152,6 @@ namespace PBL3.Views.CommonForm
         #endregion
 
         #region -> Load Dashboard
-        //Thêm nè
         private void ReloadForm()
         {
             InforBLL.Instance.LoadApp();
@@ -167,12 +160,11 @@ namespace PBL3.Views.CommonForm
             LoadCBBPageNum();
             HideAdd_DeleteFavouriteInfor();
         }
-        //Thêm nè
 
         //Ẩn các house info component khi số post trên page đó ít hơn 5
-        private void DisablePostViewWhenNotFound(int postNum)
+        private void DisablePostViewWhenNotFound(int inforNum)
         {
-            switch (postNum)
+            switch (inforNum)
             {
                 case 4:
                     houseInfoComponent5.Visible = false;
@@ -215,118 +207,118 @@ namespace PBL3.Views.CommonForm
         }
 
         //Khởi tạo và hiển thị thông tin lên
-        private void InitalizeHouseInfomation(List<InforViewDTO> postView)
+        private void InitalizeHouseInfomation(List<InforViewDTO> inforView)
         {
             string imagePath;
-            if (postView.Count > 0 && houseInfoComponent1.Visible)
+            if (inforView.Count > 0 && houseInfoComponent1.Visible)
             {
-                houseInfoComponent1.DescLabel = "Miêu tả : " + postView[0].Description;
-                houseInfoComponent1.AddressLabel = "Địa chỉ : " + postView[0].Address;
-                houseInfoComponent1.HomeLink = postView[0].Title;
+                houseInfoComponent1.DescLabel = "Miêu tả : " + inforView[0].Description;
+                houseInfoComponent1.AddressLabel = "Địa chỉ : " + inforView[0].Address;
+                houseInfoComponent1.HomeLink = inforView[0].Title;
                 houseInfoComponent1.MoneyLabel = "Số tiền : "
-                    + postView[0].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
-                houseInfoComponent1.AreaLabel = "Diện tích : " + postView[0].SquareArea + " m\u00b2";
-                houseInfoComponent1.PostID = postView[0].InforID.ToString();
+                    + inforView[0].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
+                houseInfoComponent1.AreaLabel = "Diện tích : " + inforView[0].SquareArea + " m\u00b2";
+                houseInfoComponent1.InforID = inforView[0].InforID.ToString();
 
-                imagePath = ImageBLL.Instance.GetImageStoragePathsOfPost(postView[0].InforID);
+                imagePath = ImageBLL.Instance.GetImageStoragePathsOfPost(inforView[0].InforID);
                 if (!Directory.Exists(imagePath))
                     Directory.CreateDirectory(imagePath);
-                if (postView[0].ImagePaths.Count > 0)
+                if (inforView[0].ImagePaths.Count > 0)
                 {
                     System.Drawing.Image image1;
-                    using (Stream stream = File.OpenRead(imagePath + postView[0].ImagePaths[0]))
+                    using (Stream stream = File.OpenRead(imagePath + inforView[0].ImagePaths[0]))
                     {
                         image1 = System.Drawing.Image.FromStream(stream);
                     }
                     houseInfoComponent1.PictureBox = image1;
                 }
             }
-            if (postView.Count > 0 && houseInfoComponent2.Visible)
+            if (inforView.Count > 0 && houseInfoComponent2.Visible)
             {
-                houseInfoComponent2.DescLabel = "Miêu tả : " + postView[1].Description;
-                houseInfoComponent2.AddressLabel = "Địa chỉ : " + postView[1].Address;
-                houseInfoComponent2.HomeLink = postView[1].Title;
+                houseInfoComponent2.DescLabel = "Miêu tả : " + inforView[1].Description;
+                houseInfoComponent2.AddressLabel = "Địa chỉ : " + inforView[1].Address;
+                houseInfoComponent2.HomeLink = inforView[1].Title;
                 houseInfoComponent2.MoneyLabel = "Số tiền : "
-                    + postView[1].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
-                houseInfoComponent2.AreaLabel = "Diện tích : " + postView[1].SquareArea + " m\u00b2";
-                houseInfoComponent2.PostID = postView[1].InforID.ToString();
+                    + inforView[1].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
+                houseInfoComponent2.AreaLabel = "Diện tích : " + inforView[1].SquareArea + " m\u00b2";
+                houseInfoComponent2.InforID = inforView[1].InforID.ToString();
 
-                imagePath = ImageBLL.Instance.GetImageStoragePathsOfPost(postView[1].InforID);
+                imagePath = ImageBLL.Instance.GetImageStoragePathsOfPost(inforView[1].InforID);
                 if (!Directory.Exists(imagePath))
                     Directory.CreateDirectory(imagePath);
-                if (postView[1].ImagePaths.Count > 0)
+                if (inforView[1].ImagePaths.Count > 0)
                 {
                     System.Drawing.Image image1;
-                    using (Stream stream = File.OpenRead(imagePath + postView[1].ImagePaths[0]))
+                    using (Stream stream = File.OpenRead(imagePath + inforView[1].ImagePaths[0]))
                     {
                         image1 = System.Drawing.Image.FromStream(stream);
                     }
                     houseInfoComponent2.PictureBox = image1;
                 }
             }
-            if (postView.Count > 2 && houseInfoComponent3.Visible)
+            if (inforView.Count > 2 && houseInfoComponent3.Visible)
             {
-                houseInfoComponent3.DescLabel = "Miêu tả : " + postView[2].Description;
-                houseInfoComponent3.AddressLabel = "Địa chỉ : " + postView[2].Address;
-                houseInfoComponent3.HomeLink = postView[2].Title;
+                houseInfoComponent3.DescLabel = "Miêu tả : " + inforView[2].Description;
+                houseInfoComponent3.AddressLabel = "Địa chỉ : " + inforView[2].Address;
+                houseInfoComponent3.HomeLink = inforView[2].Title;
                 houseInfoComponent3.MoneyLabel = "Số tiền : "
-                    + postView[2].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
-                houseInfoComponent3.AreaLabel = "Diện tích : " + postView[2].SquareArea + " m\u00b2";
-                houseInfoComponent3.PostID = postView[2].InforID.ToString();
+                    + inforView[2].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
+                houseInfoComponent3.AreaLabel = "Diện tích : " + inforView[2].SquareArea + " m\u00b2";
+                houseInfoComponent3.InforID = inforView[2].InforID.ToString();
 
-                imagePath = ImageBLL.Instance.GetImageStoragePathsOfPost(postView[2].InforID);
+                imagePath = ImageBLL.Instance.GetImageStoragePathsOfPost(inforView[2].InforID);
                 if (!Directory.Exists(imagePath))
                     Directory.CreateDirectory(imagePath);
-                if (postView[2].ImagePaths.Count > 0)
+                if (inforView[2].ImagePaths.Count > 0)
                 {
                     System.Drawing.Image image1;
-                    using (Stream stream = File.OpenRead(imagePath + postView[2].ImagePaths[0]))
+                    using (Stream stream = File.OpenRead(imagePath + inforView[2].ImagePaths[0]))
                     {
                         image1 = System.Drawing.Image.FromStream(stream);
                     }
                     houseInfoComponent3.PictureBox = image1;
                 }
             }
-            if (postView.Count > 3 && houseInfoComponent4.Visible)
+            if (inforView.Count > 3 && houseInfoComponent4.Visible)
             {
-                houseInfoComponent4.DescLabel = "Miêu tả : " + postView[3].Description;
-                houseInfoComponent4.AddressLabel = "Địa chỉ : " + postView[3].Address;
-                houseInfoComponent4.HomeLink = postView[3].Title;
+                houseInfoComponent4.DescLabel = "Miêu tả : " + inforView[3].Description;
+                houseInfoComponent4.AddressLabel = "Địa chỉ : " + inforView[3].Address;
+                houseInfoComponent4.HomeLink = inforView[3].Title;
                 houseInfoComponent4.MoneyLabel = "Số tiền : "
-                    + postView[3].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
-                houseInfoComponent4.AreaLabel = "Diện tích : " + postView[3].SquareArea + " m\u00b2";
-                houseInfoComponent4.PostID = postView[3].InforID.ToString();
+                    + inforView[3].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
+                houseInfoComponent4.AreaLabel = "Diện tích : " + inforView[3].SquareArea + " m\u00b2";
+                houseInfoComponent4.InforID = inforView[3].InforID.ToString();
 
-                imagePath = ImageBLL.Instance.GetImageStoragePathsOfPost(postView[3].InforID);
+                imagePath = ImageBLL.Instance.GetImageStoragePathsOfPost(inforView[3].InforID);
                 if (!Directory.Exists(imagePath))
                     Directory.CreateDirectory(imagePath);
-                if (postView[3].ImagePaths.Count > 0)
+                if (inforView[3].ImagePaths.Count > 0)
                 {
                     System.Drawing.Image image1;
-                    using (Stream stream = File.OpenRead(imagePath + postView[3].ImagePaths[0]))
+                    using (Stream stream = File.OpenRead(imagePath + inforView[3].ImagePaths[0]))
                     {
                         image1 = System.Drawing.Image.FromStream(stream);
                     }
                     houseInfoComponent4.PictureBox = image1;
                 }
             }
-            if (postView.Count > 4 && houseInfoComponent5.Visible)
+            if (inforView.Count > 4 && houseInfoComponent5.Visible)
             {
-                houseInfoComponent5.DescLabel = "Miêu tả : " + postView[4].Description;
-                houseInfoComponent5.AddressLabel = "Địa chỉ : " + postView[4].Address;
-                houseInfoComponent5.HomeLink = postView[4].Title;
+                houseInfoComponent5.DescLabel = "Miêu tả : " + inforView[4].Description;
+                houseInfoComponent5.AddressLabel = "Địa chỉ : " + inforView[4].Address;
+                houseInfoComponent5.HomeLink = inforView[4].Title;
                 houseInfoComponent5.MoneyLabel = "Số tiền : "
-                    + postView[4].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
-                houseInfoComponent5.AreaLabel = "Diện tích : " + postView[4].SquareArea + " m\u00b2";
-                houseInfoComponent5.PostID = postView[4].InforID.ToString();
+                    + inforView[4].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
+                houseInfoComponent5.AreaLabel = "Diện tích : " + inforView[4].SquareArea + " m\u00b2";
+                houseInfoComponent5.InforID = inforView[4].InforID.ToString();
 
-                imagePath = ImageBLL.Instance.GetImageStoragePathsOfPost(postView[4].InforID);
+                imagePath = ImageBLL.Instance.GetImageStoragePathsOfPost(inforView[4].InforID);
                 if (!Directory.Exists(imagePath))
                     Directory.CreateDirectory(imagePath);
-                if (postView[4].ImagePaths.Count > 0)
+                if (inforView[4].ImagePaths.Count > 0)
                 {
                     System.Drawing.Image image1;
-                    using (Stream stream = File.OpenRead(imagePath + postView[4].ImagePaths[0]))
+                    using (Stream stream = File.OpenRead(imagePath + inforView[4].ImagePaths[0]))
                     {
                         image1 = System.Drawing.Image.FromStream(stream);
                     }
@@ -335,7 +327,7 @@ namespace PBL3.Views.CommonForm
             }
         }
         #endregion
-
+        #region -> Chức năng các nút
         private void btnPrevPage_Click(object sender, EventArgs e)
         {
             currentPage = currentPage - 1;
@@ -366,8 +358,33 @@ namespace PBL3.Views.CommonForm
                 return;
             }
             SearchFunction();
-        }
-        public List<AccommodationInformation> GetSearchPost()
+            }
+            private void btnSearch_Click(object sender, EventArgs e)
+            {
+                currentPage = 0;
+                searching = true;
+                SearchFunction();
+                LoadCBBPageNum();
+            }
+
+            private void cbbSort_OnSelectionChangedCommited(object sender, EventArgs e)
+            {
+                currentPage = 0;
+                sorting = true;
+                SortFunction();
+                LoadCBBPageNum();
+            }
+
+            private void btnReset_Click(object sender, EventArgs e)
+            {
+                LoadCBB();
+                LoadCBBPageNum();
+                searching = false;
+                sorting = false;
+                SearchFunction();
+            }
+        #endregion
+        public List<AccommodationInformation> GetSearchInfor()
         {
             //Search post theo giá trị các cbb địa chỉ, giá, diện tích
             //Mặc định giá trị trái là 0, phải là rất lớn
@@ -459,58 +476,30 @@ namespace PBL3.Views.CommonForm
         {
             //Lấy dữ liệu hiện tại
             int sortCase = cbbSort.SelectedIndex;
-            var allSearchData = GetSearchPost();
+            var allSearchData = GetSearchInfor();
             //Sort và hiển thị
-            numberOfPosts = allSearchData.Count();
-            postNum = (numberOfPosts - currentPage * 5 < 5) ? numberOfPosts - currentPage * 5 : 5;
-            totalPage = (int)Math.Ceiling(numberOfPosts / Convert.ToDouble(skipNum));
+            numberofInfor = allSearchData.Count();
+            inforNums = (numberofInfor - currentPage * 5 < 5) ? numberofInfor - currentPage * 5 : 5;
+            totalPage = (int)Math.Ceiling(numberofInfor / Convert.ToDouble(skipNum));
             DisplayHouseInformation();
-            List<InforViewDTO> postView = InforBLL.Instance.GetSortedPosts(currentPage * skipNum, postNum, allSearchData, sortCase);
-            DisablePostViewWhenNotFound(postNum);
-            InitalizeHouseInfomation(postView);
+            List<InforViewDTO> inforView = InforBLL.Instance.GetSortedPosts(currentPage * skipNum, inforNums, allSearchData, sortCase);
+            DisablePostViewWhenNotFound(inforNums);
+            InitalizeHouseInfomation(inforView);
         }
         private void SearchFunction()
         {
             //Lấy kết quả search
-            var allSearchData = GetSearchPost();
+            var allSearchData = GetSearchInfor();
             //Lấy và hiển thị search data
-            numberOfPosts = allSearchData.Count();
-            postNum = (numberOfPosts - currentPage * 5 < 5) ? numberOfPosts - currentPage * 5 : 5;
-            totalPage = (int)Math.Ceiling(numberOfPosts / Convert.ToDouble(skipNum));
+            numberofInfor = allSearchData.Count();
+            inforNums = (numberofInfor - currentPage * 5 < 5) ? numberofInfor - currentPage * 5 : 5;
+            totalPage = (int)Math.Ceiling(numberofInfor / Convert.ToDouble(skipNum));
             DisplayHouseInformation();
-            List<InforViewDTO> postView = InforBLL.Instance.GetSearchedInfor(currentPage * skipNum, postNum, allSearchData);
-            DisablePostViewWhenNotFound(postNum);
+            List<InforViewDTO> postView = InforBLL.Instance.GetSearchedInfor(currentPage * skipNum, inforNums, allSearchData);
+            DisablePostViewWhenNotFound(inforNums);
             InitalizeHouseInfomation(postView);
         }
-        private void cbbPrice_OnSelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            currentPage = 0;
-            searching = true;
-            SearchFunction();
-            LoadCBBPageNum();
-        }
-
-        private void cbbSort_OnSelectionChangedCommited(object sender, EventArgs e)
-        {
-            currentPage = 0;
-            sorting = true;
-            SortFunction();
-            LoadCBBPageNum();
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            LoadCBB();
-            LoadCBBPageNum();
-            searching = false;
-            sorting = false;
-            SearchFunction();
-        }
+      
 
         public delegate void showPostDetail(Form childForm);
         public showPostDetail showInfo;
@@ -525,14 +514,14 @@ namespace PBL3.Views.CommonForm
                 if (LoginInfor.UserID == -1)
                 {
                     //Chưa đăng nhập => ẩn cmt và rating
-                    InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent1.PostID), true);
+                    InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent1.InforID), true);
                     form.goback = ReOpen;
                     form.reload = ReloadForm;//thêm
                     showInfo(form);
                 }
                 else
                 {
-                    InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent1.PostID));
+                    InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent1.InforID));
                     //InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent1.PostID), true);
                     form.goback = ReOpen;
                     form.reload = ReloadForm;//thêm
@@ -546,15 +535,15 @@ namespace PBL3.Views.CommonForm
             if (LoginInfor.UserID == -1)
             {
                 //Chưa đăng nhập => ẩn cmt và rating
-                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent2.PostID), true);
+                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent2.InforID), true);
                 form.goback = ReOpen;
                 form.reload = ReloadForm;//thêm
                 showInfo(form);
             }
             else
             {
-                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent2.PostID));
-                form.goback = ReOpen;
+                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent2.InforID));
+                form.goback = ReOpen;                                                        
                 form.reload = ReloadForm;//thêm
                 showInfo(form);
             }
@@ -565,14 +554,14 @@ namespace PBL3.Views.CommonForm
             if (LoginInfor.UserID == -1)
             {
                 //Chưa đăng nhập => ẩn cmt và rating
-                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent3.PostID), true);
+                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent3.InforID), true);
                 form.goback = ReOpen;
                 form.reload = ReloadForm;//thêm
                 showInfo(form);
             }
             else
             {
-                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent3.PostID));
+                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent3.InforID));
                 form.goback = ReOpen;
                 form.reload = ReloadForm;//thêm
                 showInfo(form);
@@ -584,14 +573,14 @@ namespace PBL3.Views.CommonForm
             if (LoginInfor.UserID == -1)
             {
                 //Chưa đăng nhập => ẩn cmt và rating
-                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent4.PostID), true);
+                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent4.InforID), true);
                 form.goback = ReOpen;
                 form.reload = ReloadForm;//thêm
                 showInfo(form);
             }
             else
             {
-                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent4.PostID));
+                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent4.InforID));
                 form.goback = ReOpen;
                 form.reload = ReloadForm;//thêm
                 showInfo(form);
@@ -603,20 +592,20 @@ namespace PBL3.Views.CommonForm
             if (LoginInfor.UserID == -1)
             {
                 //Chưa đăng nhập => ẩn cmt và rating
-                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent5.PostID), true);
+                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent5.InforID), true);
                 form.goback = ReOpen;
                 form.reload = ReloadForm;//thêm
                 showInfo(form);
             }
             else
             {
-                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent5.PostID));
+                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent5.InforID));
                 form.goback = ReOpen;
                 form.reload = ReloadForm;//thêm
                 showInfo(form);
             }
         }
-        // ẩn các trái tim // aitran
+        // ẩn các trái tim
         private void HideAdd_DeleteFavouriteInfor()
         {
             houseInfoComponent1.HideUtilityPanel();

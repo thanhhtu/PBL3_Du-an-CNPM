@@ -98,7 +98,7 @@ namespace PBL3.Views.RenterForm
                 houseInfoComponent1.MoneyLabel = "Số tiền : "
                     + postView[0].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
                 houseInfoComponent1.AreaLabel = "Diện tích : " + postView[0].SquareArea + " m\u00b2";
-                houseInfoComponent1.PostID = postView[0].InforID.ToString();
+                houseInfoComponent1.InforID = postView[0].InforID.ToString();
                 imagePath = ImageBLL.Instance.GetImageStoragePathsOfPost(postView[0].InforID);
                 if (!Directory.Exists(imagePath))
                     Directory.CreateDirectory(imagePath);
@@ -120,7 +120,7 @@ namespace PBL3.Views.RenterForm
                 houseInfoComponent2.MoneyLabel = "Số tiền : "
                     + postView[1].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
                 houseInfoComponent2.AreaLabel = "Diện tích : " + postView[1].SquareArea + " m\u00b2";
-                houseInfoComponent2.PostID = postView[1].InforID.ToString();
+                houseInfoComponent2.InforID = postView[1].InforID.ToString();
 
                 imagePath = ImageBLL.Instance.GetImageStoragePathsOfPost(postView[1].InforID);
                 if (!Directory.Exists(imagePath))
@@ -143,7 +143,7 @@ namespace PBL3.Views.RenterForm
                 houseInfoComponent3.MoneyLabel = "Số tiền : "
                     + postView[2].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
                 houseInfoComponent3.AreaLabel = "Diện tích : " + postView[2].SquareArea + " m\u00b2";
-                houseInfoComponent3.PostID = postView[2].InforID.ToString();
+                houseInfoComponent3.InforID = postView[2].InforID.ToString();
 
                 imagePath = ImageBLL.Instance.GetImageStoragePathsOfPost(postView[2].InforID);
                 if (!Directory.Exists(imagePath))
@@ -166,7 +166,7 @@ namespace PBL3.Views.RenterForm
                 houseInfoComponent4.MoneyLabel = "Số tiền : "
                     + postView[3].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
                 houseInfoComponent4.AreaLabel = "Diện tích : " + postView[3].SquareArea + " m\u00b2";
-                houseInfoComponent4.PostID = postView[3].InforID.ToString();
+                houseInfoComponent4.InforID = postView[3].InforID.ToString();
 
                 imagePath = ImageBLL.Instance.GetImageStoragePathsOfPost(postView[3].InforID);
                 if (!Directory.Exists(imagePath))
@@ -189,7 +189,7 @@ namespace PBL3.Views.RenterForm
                 houseInfoComponent5.MoneyLabel = "Số tiền : "
                     + postView[4].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
                 houseInfoComponent5.AreaLabel = "Diện tích : " + postView[4].SquareArea + " m\u00b2";
-                houseInfoComponent5.PostID = postView[4].InforID.ToString();
+                houseInfoComponent5.InforID = postView[4].InforID.ToString();
 
                 imagePath = ImageBLL.Instance.GetImageStoragePathsOfPost(postView[4].InforID);
                 if (!Directory.Exists(imagePath))
@@ -281,31 +281,31 @@ namespace PBL3.Views.RenterForm
 
         private void DeleteFavorite2(object sender, EventArgs e)
         {
-            FavoriteInforBLL.Instance.DeleteFavourite_Infor(LoginInfor.UserID, Convert.ToInt32(houseInfoComponent2.PostID));
+            FavoriteInforBLL.Instance.DeleteFavourite_Infor(LoginInfor.UserID, Convert.ToInt32(houseInfoComponent2.InforID));
             Display(UserID);
         }
 
         private void DeleteFavorite3(object sender, EventArgs e)
         {
-            FavoriteInforBLL.Instance.DeleteFavourite_Infor(LoginInfor.UserID, Convert.ToInt32(houseInfoComponent3.PostID));
+            FavoriteInforBLL.Instance.DeleteFavourite_Infor(LoginInfor.UserID, Convert.ToInt32(houseInfoComponent3.InforID));
             Display(UserID);
         }
 
         private void DeleteFavorite4(object sender, EventArgs e)
         {
-            FavoriteInforBLL.Instance.DeleteFavourite_Infor(LoginInfor.UserID, Convert.ToInt32(houseInfoComponent4.PostID));
+            FavoriteInforBLL.Instance.DeleteFavourite_Infor(LoginInfor.UserID, Convert.ToInt32(houseInfoComponent4.InforID));
             Display(UserID);
         }
 
         private void DeleteFavorite5(object sender, EventArgs e)
         {
-            FavoriteInforBLL.Instance.DeleteFavourite_Infor(LoginInfor.UserID, Convert.ToInt32(houseInfoComponent5.PostID));
+            FavoriteInforBLL.Instance.DeleteFavourite_Infor(LoginInfor.UserID, Convert.ToInt32(houseInfoComponent5.InforID));
             Display(UserID);
         }
 
         private void DeleteFavorite1(object sender, EventArgs e)
         {
-            FavoriteInforBLL.Instance.DeleteFavourite_Infor(LoginInfor.UserID, Convert.ToInt32(houseInfoComponent1.PostID));
+            FavoriteInforBLL.Instance.DeleteFavourite_Infor(LoginInfor.UserID, Convert.ToInt32(houseInfoComponent1.InforID));
             Display(UserID);
         }
 
@@ -324,7 +324,7 @@ namespace PBL3.Views.RenterForm
         {
             if (houseInfoComponent1 != null)
             {
-                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent1.PostID));
+                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent1.InforID));
                 form.goback = ReOpen;
                 form.reload = ReloadDisplay;
                 showInfo(form);
@@ -335,7 +335,7 @@ namespace PBL3.Views.RenterForm
         {
             if (houseInfoComponent2 != null)
             {
-                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent2.PostID));
+                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent2.InforID));
                 form.goback = ReOpen;
                 form.reload = ReloadDisplay;
                 showInfo(form);
@@ -346,7 +346,7 @@ namespace PBL3.Views.RenterForm
         {
             if (houseInfoComponent3 != null)
             {
-                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent3.PostID));
+                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent3.InforID));
                 form.goback = ReOpen;
                 form.reload = ReloadDisplay;
                 showInfo(form);
@@ -357,7 +357,7 @@ namespace PBL3.Views.RenterForm
         {
             if (houseInfoComponent4 != null)
             {
-                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent4.PostID));
+                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent4.InforID));
                 form.goback = ReOpen;
                 form.reload = ReloadDisplay;
                 showInfo(form);
@@ -368,7 +368,7 @@ namespace PBL3.Views.RenterForm
         {
             if (houseInfoComponent4 != null)
             {
-                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent5.PostID));
+                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent5.InforID));
                 form.goback = ReOpen;
                 form.reload = ReloadDisplay;
                 showInfo(form);

@@ -203,7 +203,7 @@
             this.houseInfoComponent5.MoneyLabel = "Số tiền: ";
             this.houseInfoComponent5.Name = "houseInfoComponent5";
             this.houseInfoComponent5.PictureBox = ((System.Drawing.Image)(resources.GetObject("houseInfoComponent5.PictureBox")));
-            this.houseInfoComponent5.PostID = "postID";
+            this.houseInfoComponent5.InforID = "postID";
             this.houseInfoComponent5.Size = new System.Drawing.Size(1144, 273);
             this.houseInfoComponent5.TabIndex = 4;
             this.houseInfoComponent5._DeleteEventHandler += new System.EventHandler(this.DeleteFavorite5);
@@ -222,7 +222,7 @@
             this.houseInfoComponent4.MoneyLabel = "Số tiền: ";
             this.houseInfoComponent4.Name = "houseInfoComponent4";
             this.houseInfoComponent4.PictureBox = ((System.Drawing.Image)(resources.GetObject("houseInfoComponent4.PictureBox")));
-            this.houseInfoComponent4.PostID = "postID";
+            this.houseInfoComponent4.InforID = "postID";
             this.houseInfoComponent4.Size = new System.Drawing.Size(1144, 273);
             this.houseInfoComponent4.TabIndex = 3;
             this.houseInfoComponent4._DeleteEventHandler += new System.EventHandler(this.DeleteFavorite4);
@@ -241,7 +241,7 @@
             this.houseInfoComponent3.MoneyLabel = "Số tiền: ";
             this.houseInfoComponent3.Name = "houseInfoComponent3";
             this.houseInfoComponent3.PictureBox = ((System.Drawing.Image)(resources.GetObject("houseInfoComponent3.PictureBox")));
-            this.houseInfoComponent3.PostID = "postID";
+            this.houseInfoComponent3.InforID = "postID";
             this.houseInfoComponent3.Size = new System.Drawing.Size(1144, 273);
             this.houseInfoComponent3.TabIndex = 2;
             this.houseInfoComponent3._DeleteEventHandler += new System.EventHandler(this.DeleteFavorite3);
@@ -260,7 +260,7 @@
             this.houseInfoComponent2.MoneyLabel = "Số tiền: ";
             this.houseInfoComponent2.Name = "houseInfoComponent2";
             this.houseInfoComponent2.PictureBox = ((System.Drawing.Image)(resources.GetObject("houseInfoComponent2.PictureBox")));
-            this.houseInfoComponent2.PostID = "postID";
+            this.houseInfoComponent2.InforID = "postID";
             this.houseInfoComponent2.Size = new System.Drawing.Size(1144, 273);
             this.houseInfoComponent2.TabIndex = 1;
             this.houseInfoComponent2._DeleteEventHandler += new System.EventHandler(this.DeleteFavorite2);
@@ -279,7 +279,7 @@
             this.houseInfoComponent1.MoneyLabel = "Số tiền: ";
             this.houseInfoComponent1.Name = "houseInfoComponent1";
             this.houseInfoComponent1.PictureBox = ((System.Drawing.Image)(resources.GetObject("houseInfoComponent1.PictureBox")));
-            this.houseInfoComponent1.PostID = "postID";
+            this.houseInfoComponent1.InforID = "postID";
             this.houseInfoComponent1.Size = new System.Drawing.Size(1144, 273);
             this.houseInfoComponent1.TabIndex = 0;
             this.houseInfoComponent1._DeleteEventHandler += new System.EventHandler(this.DeleteFavorite1);
