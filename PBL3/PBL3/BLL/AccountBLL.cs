@@ -138,7 +138,7 @@ namespace PBL3.BLL
 
         public void Published(int accountID)
         {
-            Account acc = db.Accounts.Where(a => a.AccountID == accountID).FirstOrDefault();
+            Account acc = db.Accounts.FirstOrDefault(a => a.AccountID == accountID);
             acc.BeingPublished = true;
             db.SaveChanges();
         }
@@ -146,28 +146,28 @@ namespace PBL3.BLL
         //tt thêm
         public bool IsPublishedAccount(int accountID)
         {
-            Account acc = db.Accounts.Where(a => a.AccountID == accountID).FirstOrDefault();
+            Account acc = db.Accounts.FirstOrDefault(a => a.AccountID == accountID);
             if (acc.BeingPublished) return true;
             return false;
         }
 
         public bool IsPausedAccount(int accountID)
         {
-            Account acc = db.Accounts.Where(a => a.AccountID == accountID).FirstOrDefault();
+            Account acc = db.Accounts.FirstOrDefault(a => a.AccountID == accountID);
             if (acc.BeingPaused) return true;
             return false;
         }
 
         public void PauseAccount(int accountID)
         {
-            Account acc = db.Accounts.Where(a => a.AccountID == accountID).FirstOrDefault();
+            Account acc = db.Accounts.FirstOrDefault(a => a.AccountID == accountID);
             acc.BeingPaused = true;
             db.SaveChanges();
         }
         
         public void ActiveAccount(int accountID)
         {
-            Account acc = db.Accounts.Where(a => a.AccountID == accountID).FirstOrDefault();
+            Account acc = db.Accounts.FirstOrDefault(a => a.AccountID == accountID);
             acc.BeingPaused = false;
             db.SaveChanges();
         }
