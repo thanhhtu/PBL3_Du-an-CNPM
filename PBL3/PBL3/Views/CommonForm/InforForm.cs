@@ -98,7 +98,6 @@ namespace PBL3.Views.CommonForm
             labelTitle.Text = info.Title;
             labelAddress.Text = info.Address;
             labelSquareArea.Text = "Diện tích: " + info.SquareArea.ToString() + " m\u00b2";
-            labelNameInfor.Text = info.Title;
             labelMoney.Text = "Số tiền: " + info.Price.ToString() + "/Tháng";
             txtDesInfor.Text = info.Description;
             labelCreateTime.Text = "Ngày đăng: " + InforBLL.Instance.GetPublishedTime(InforID);
@@ -230,11 +229,6 @@ namespace PBL3.Views.CommonForm
             }
         }
 
-        private void checkBoxLivewOwner_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnUpComment_Click(object sender, EventArgs e)
         {
             //Đăng cmt
@@ -259,7 +253,6 @@ namespace PBL3.Views.CommonForm
             if (currentCommentPage < 0) currentCommentPage = 0;
             LoadComment();
         }
-
 
         private void btnNextCmt_Click(object sender, EventArgs e)
         {
@@ -344,11 +337,6 @@ namespace PBL3.Views.CommonForm
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnUpComment_Click_2(object sender, EventArgs e)
         {
             //Đăng cmt
@@ -367,11 +355,6 @@ namespace PBL3.Views.CommonForm
             LoadComment();
         }
 
-
-        private void labelNameInfor_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnDeleteFavour_Click(object sender, EventArgs e)
         {
