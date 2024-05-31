@@ -311,6 +311,7 @@ namespace PBL3.Views.CommonForm
 
             //Thêm tài khoản
             int roleID = radioBtnLandlord.Checked ? 2 : 3;
+            bool beingPublished = (roleID == 2) ? false : true;
 
             int accID = AccountBLL.Instance.AddAccount(new Account
             {
@@ -318,7 +319,7 @@ namespace PBL3.Views.CommonForm
                 Pwd = PwdHashing.EncodePwdToBase64(txtPwd.Texts),
                 RoleID = roleID,
                 CreatedAt = DateTime.Now,
-                BeingPublished = false,
+                BeingPublished = beingPublished,
                 BeingPaused = false,
             });
 

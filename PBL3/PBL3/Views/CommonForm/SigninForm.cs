@@ -39,7 +39,7 @@ namespace PBL3.Views.CommonForm
             }
 
             //Nếu là chủ trọ kiểm tra có được duyệt tài khoản chưa
-            if (role == 2 && AccountBLL.Instance.IsAcceptedLandlord(AccountBLL.Instance.GetAccountID(username, password)) == false)
+            if (AccountBLL.Instance.IsAcceptedLandlord(AccountBLL.Instance.GetAccountID(username, password)) == false)
             {
                 MessageBox.Show("Tài khoản của bạn chưa được Admin duyệt. Xin vui lòng thử lại sau!");
                 return;
