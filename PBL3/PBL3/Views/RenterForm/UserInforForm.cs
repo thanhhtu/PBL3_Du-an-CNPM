@@ -281,31 +281,31 @@ namespace PBL3.Views.RenterForm
 
         private void DeleteFavorite2(object sender, EventArgs e)
         {
-            FavoriteInforBLL.Instance.DeleteFavourite_Infor(LoginInfor.UserID, Convert.ToInt32(houseInfoComponent2.InforID));
+            FavoriteInforBLL.Instance.DeleteFavoriteInfor(LoginInfor.UserID, Convert.ToInt32(houseInfoComponent2.InforID));
             Display(UserID);
         }
 
         private void DeleteFavorite3(object sender, EventArgs e)
         {
-            FavoriteInforBLL.Instance.DeleteFavourite_Infor(LoginInfor.UserID, Convert.ToInt32(houseInfoComponent3.InforID));
+            FavoriteInforBLL.Instance.DeleteFavoriteInfor(LoginInfor.UserID, Convert.ToInt32(houseInfoComponent3.InforID));
             Display(UserID);
         }
 
         private void DeleteFavorite4(object sender, EventArgs e)
         {
-            FavoriteInforBLL.Instance.DeleteFavourite_Infor(LoginInfor.UserID, Convert.ToInt32(houseInfoComponent4.InforID));
+            FavoriteInforBLL.Instance.DeleteFavoriteInfor(LoginInfor.UserID, Convert.ToInt32(houseInfoComponent4.InforID));
             Display(UserID);
         }
 
         private void DeleteFavorite5(object sender, EventArgs e)
         {
-            FavoriteInforBLL.Instance.DeleteFavourite_Infor(LoginInfor.UserID, Convert.ToInt32(houseInfoComponent5.InforID));
+            FavoriteInforBLL.Instance.DeleteFavoriteInfor(LoginInfor.UserID, Convert.ToInt32(houseInfoComponent5.InforID));
             Display(UserID);
         }
 
         private void DeleteFavorite1(object sender, EventArgs e)
         {
-            FavoriteInforBLL.Instance.DeleteFavourite_Infor(LoginInfor.UserID, Convert.ToInt32(houseInfoComponent1.InforID));
+            FavoriteInforBLL.Instance.DeleteFavoriteInfor(LoginInfor.UserID, Convert.ToInt32(houseInfoComponent1.InforID));
             Display(UserID);
         }
 

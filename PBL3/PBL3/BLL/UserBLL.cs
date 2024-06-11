@@ -64,7 +64,7 @@ namespace PBL3.BLL
         public void PublishUser(int userID)
         {
             var user = db.Users.FirstOrDefault(u => u.UserID == userID);
-            AccountBLL.Instance.Published(user.AccountID);
+            AccountBLL.Instance.PublishAccount(user.AccountID);
         }
 
         //tt thêm    
@@ -131,9 +131,9 @@ namespace PBL3.BLL
                 Address = AddressBLL.Instance.GetFullAddress(u.AddressID),
                 NumberOfInfor = UserBLL.Instance.CountUserPost(u.UserID),
                 NumberOfComment = UserBLL.Instance.CountUserCMT(u.UserID),
-                JoinedAt = AccountBLL.Instance.GetCreatedAt(u.AccountID),
+                JoinTime = AccountBLL.Instance.GetCreatedTime(u.AccountID),
                 BeingPublished = AccountBLL.Instance.GetBeingPublished(u.AccountID),
-                PublishedAt = AccountBLL.Instance.GetPublishedAt(u.AccountID), //thêm
+                PublishedTime = AccountBLL.Instance.GetPublishedTime(u.AccountID), //thêm
                 BeingPaused = AccountBLL.Instance.GetBeingPaused(u.AccountID), //tt thêm
             };
         }
@@ -200,10 +200,10 @@ namespace PBL3.BLL
                 Thời gian được duyệt
                 Số phòng trọ*/
                 case 0: //Thời gian tham gia
-                    result = data.OrderBy(u => u.JoinedAt).ToList();
+                    result = data.OrderBy(u => u.JoinTime).ToList();
                     break;
                 case 1: //Thời gian được duyệt
-                    result = data.OrderBy(u => u.PublishedAt).ToList();
+                    result = data.OrderBy(u => u.PublishedTime).ToList();
                     break;
                 case 2: //Số comment
                     result = data.OrderBy(u => u.NumberOfComment).ToList();
@@ -212,7 +212,7 @@ namespace PBL3.BLL
                     result = data.OrderBy(u => u.NumberOfInfor).ToList();
                     break;
                 default: //Thời gian tham gia
-                    result = data.OrderBy(u => u.JoinedAt).ToList();
+                    result = data.OrderBy(u => u.JoinTime).ToList();
                     break;
             }
             if (!checkAscending)

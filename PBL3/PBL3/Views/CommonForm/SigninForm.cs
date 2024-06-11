@@ -39,14 +39,14 @@ namespace PBL3.Views.CommonForm
             }
 
             //Nếu là chủ trọ kiểm tra có được duyệt tài khoản chưa
-            if (AccountBLL.Instance.IsAcceptedLandlord(AccountBLL.Instance.GetAccountID(username, password)) == false)
+            if (!AccountBLL.Instance.IsPublishedAccount(AccountBLL.Instance.GetAccountID(username, password)))
             {
                 MessageBox.Show("Tài khoản của bạn chưa được Admin duyệt. Xin vui lòng thử lại sau!");
                 return;
             }
 
             //Kiểm tra xem tài khoản có bị ngừng hoạt động không
-            if (AccountBLL.Instance.IsAcceptedAccount(AccountBLL.Instance.GetAccountID(username, password)) == false)
+            if (AccountBLL.Instance.IsPausedAccount(AccountBLL.Instance.GetAccountID(username, password))) //đổi
             {
                 MessageBox.Show("Tài khoản của bạn đã bị ngừng hoạt động!");
                 return;

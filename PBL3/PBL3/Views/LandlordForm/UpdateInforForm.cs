@@ -275,7 +275,7 @@ namespace PBL3.Views.LandlordForm
             };
 
             string description = txtDetailAddress.Texts;
-            int deposit = Convert.ToInt32(txtDeposit.Texts);
+            double deposit = Convert.ToDouble(txtDeposit.Texts);
 
             //Cập nhật infor
             AccommodationInformation editedInfor = new AccommodationInformation()

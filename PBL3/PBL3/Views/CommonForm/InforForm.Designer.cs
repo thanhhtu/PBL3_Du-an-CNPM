@@ -667,10 +667,10 @@
             this.btnAddFavour.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddFavour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.btnAddFavour.Image = global::PBL3.Properties.Resources.heart;
-            this.btnAddFavour.Location = new System.Drawing.Point(1411, 4);
+            this.btnAddFavour.Location = new System.Drawing.Point(1427, 6);
             this.btnAddFavour.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddFavour.Name = "btnAddFavour";
-            this.btnAddFavour.Size = new System.Drawing.Size(63, 43);
+            this.btnAddFavour.Size = new System.Drawing.Size(70, 37);
             this.btnAddFavour.TabIndex = 34;
             this.btnAddFavour.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.btnAddFavour.UseVisualStyleBackColor = false;
@@ -688,10 +688,10 @@
             this.btnDeleteFavour.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteFavour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.btnDeleteFavour.Image = global::PBL3.Properties.Resources.heart_full;
-            this.btnDeleteFavour.Location = new System.Drawing.Point(1396, 6);
+            this.btnDeleteFavour.Location = new System.Drawing.Point(1427, 6);
             this.btnDeleteFavour.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteFavour.Name = "btnDeleteFavour";
-            this.btnDeleteFavour.Size = new System.Drawing.Size(77, 37);
+            this.btnDeleteFavour.Size = new System.Drawing.Size(70, 37);
             this.btnDeleteFavour.TabIndex = 33;
             this.btnDeleteFavour.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.btnDeleteFavour.UseVisualStyleBackColor = false;

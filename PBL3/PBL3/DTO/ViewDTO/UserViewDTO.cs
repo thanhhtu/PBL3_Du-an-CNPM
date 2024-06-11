@@ -16,9 +16,9 @@ namespace PBL3.DTO.ViewDTO
         public string Address { get; set; }
         public int NumberOfInfor { get; set; }
         public int NumberOfComment { get; set; }
-        public DateTime? JoinedAt { get; set; }
+        public DateTime? JoinTime { get; set; }
         public String BeingPublished { get; set; }
-        public DateTime? PublishedAt { get; set; }
+        public DateTime? PublishedTime { get; set; }
         public String BeingPaused {  get; set; }
     }
 }

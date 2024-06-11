@@ -29,6 +29,6 @@ namespace PBL3.DTO
         public string Content { get; set; }
 
         [Required]
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedTime { get; set; }
     }
 }

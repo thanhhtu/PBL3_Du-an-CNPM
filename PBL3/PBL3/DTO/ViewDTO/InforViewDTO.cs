@@ -14,7 +14,7 @@ namespace PBL3.DTO.ViewDTO
         public int InforID { get; set; }
         public string Description { get; set; }
         public double SquareArea { get; set; }
-        public int? Deposit { get; set; }
+        public double Deposit { get; set; }
         public double Price { get; set; }
         public List<string> ImagePaths { get; set; }
         public bool LivingWithOwner { get; set; }

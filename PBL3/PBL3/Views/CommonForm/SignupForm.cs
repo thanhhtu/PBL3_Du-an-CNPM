@@ -312,15 +312,16 @@ namespace PBL3.Views.CommonForm
             //Thêm tài khoản
             int roleID = radioBtnLandlord.Checked ? 2 : 3;
             bool beingPublished = (roleID == 2) ? false : true;
-
+            DateTime? publishedTime = (roleID == 2) ? (DateTime?)null : DateTime.Now;
             int accID = AccountBLL.Instance.AddAccount(new Account
             {
                 Username = txtUserName.Texts,
                 Pwd = PwdHashing.EncodePwdToBase64(txtPwd.Texts),
                 RoleID = roleID,
-                CreatedAt = DateTime.Now,
+                CreatedTime = DateTime.Now,
                 BeingPublished = beingPublished,
                 BeingPaused = false,
+                PublishedTime = publishedTime,
             });
 
             //Thêm địa chỉ
@@ -330,7 +331,7 @@ namespace PBL3.Views.CommonForm
                 WardID = ((CBBItem)cbbWard.SelectedItem).Value
             });
 
-            string cccd = "00000";
+            string cccd = null;
             if (radioBtnLandlord.Checked == true)
             {
                 cccd = txtCCCD.Texts;

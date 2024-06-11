@@ -36,7 +36,7 @@ namespace PBL3.BLL
                 Content = content,
                 UserID = userID,
                 InforID = inforID,
-                CreatedAt = DateTime.Now,
+                CreatedTime = DateTime.Now,
             };
             db.Comments.Add(comment);
             db.SaveChanges();
@@ -55,13 +55,6 @@ namespace PBL3.BLL
             db.Comments.Remove(comment);
             db.SaveChanges();
         }
-
-        //
-        public void DeleteUserComment(int userID)
-        {
-            List<Comment> ls = db.Comments.Where(c => c.UserID == userID).ToList();
-            ls.ForEach(comment => db.Comments.Remove(comment));
-        }
         #endregion
 
         public int GetNumberOfComments(int infoID)
@@ -70,11 +63,12 @@ namespace PBL3.BLL
         }
 
         //Hiển thị comment mới nhất lên trước
-        public List<CommentViewDTO> GetCommentsView(int postID, int skipNum, int commentNum)
+        public List<CommentViewDTO> GetCommentsView(int inforID, int skipNum, int commentNum)
         {
             List<CommentViewDTO> ls = new List<CommentViewDTO>();
-            db.Comments.Where(c => c.InforID == postID).OrderByDescending(c => c.CreatedAt) //Sx giảm dần theo tgian tạo
-                .Skip(skipNum).Take(commentNum).ToList() //phân trang
+            db.Comments.Where(c => c.InforID == inforID)
+                .OrderByDescending(c => c.CreatedTime) //Sx giảm dần theo tgian tạo
+                .Skip(skipNum).Take(commentNum).ToList() //Phân trang
                 .ForEach(c =>
                 {
                     ls.Add(new CommentViewDTO()

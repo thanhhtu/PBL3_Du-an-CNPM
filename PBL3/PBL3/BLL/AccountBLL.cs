@@ -30,14 +30,7 @@ namespace PBL3.BLL
         }
         #endregion
 
-        #region -> Change password and Add/Delete/Accept account
-        public void ChangePassword(int accountID, string newPassword)
-        {
-            Account acc = db.Accounts.FirstOrDefault(a => a.AccountID == accountID);
-            acc.Pwd = PwdHashing.EncodePwdToBase64(newPassword);
-            db.SaveChanges();
-        }
-
+        #region -> Add/Delete/Publish/Pause/Active account
         public int AddAccount(Account newAccount)
         {
             db.Accounts.Add(newAccount);
@@ -52,23 +45,76 @@ namespace PBL3.BLL
             db.SaveChanges();
         }
 
-        //Kiểm tra chủ trọ đã dược duyệt tài khoản chưa
-        public bool IsAcceptedLandlord(int accountID)
+        public void PublishAccount(int accountID)
         {
-            var acc = db.Accounts.FirstOrDefault(a => a.AccountID == accountID && a.BeingPublished == true);
-            if (acc == null) return false;
-            return true;
+            Account acc = db.Accounts.FirstOrDefault(a => a.AccountID == accountID);
+            acc.BeingPublished = true;
+            acc.PublishedTime = DateTime.Now;
+            db.SaveChanges();
         }
 
-        //tt thêm
-        //Kiểm tra tài khoản có bị dừng hoạt động không
-        public bool IsAcceptedAccount(int accountID)
+        public void PauseAccount(int accountID)
         {
-            var acc = db.Accounts.FirstOrDefault(a => a.AccountID == accountID && a.BeingPaused == false);
-            if (acc == null) return false;
-            return true;
+            Account acc = db.Accounts.FirstOrDefault(a => a.AccountID == accountID);
+            acc.BeingPaused = true;
+            db.SaveChanges();
+        }
+
+        public void ActiveAccount(int accountID)
+        {
+            Account acc = db.Accounts.FirstOrDefault(a => a.AccountID == accountID);
+            acc.BeingPaused = false;
+            db.SaveChanges();
         }
         #endregion
+
+        public void ChangePassword(int accountID, string newPassword)
+        {
+            Account acc = db.Accounts.FirstOrDefault(a => a.AccountID == accountID);
+            acc.Pwd = PwdHashing.EncodePwdToBase64(newPassword);
+            db.SaveChanges();
+        }
+
+        //Kiểm tra chủ trọ đã được duyệt chưa (true: đã duyệt)
+        public bool IsPublishedAccount(int accountID)
+        {
+            return db.Accounts.Any(a => a.AccountID == accountID && a.BeingPublished == true);
+        }
+
+        //Kiểm tra tài khoản có bị admin dừng hoạt động không (true: bị dừng)
+        public bool IsPausedAccount(int accountID)
+        {
+            return db.Accounts.Any(a => a.AccountID == accountID && a.BeingPaused == true);
+        }
+
+        public bool CheckExistingUsername(string username)
+        {
+            return db.Accounts.Any(p => p.Username == username);
+        }
+
+        public bool CheckPassword(int accountID, string password)
+        {
+            foreach (var account in db.Accounts)
+            {
+                if (account.AccountID == accountID && PwdHashing.DecodePwdFromBase64(account.Pwd) == password)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public int GetRole(string username, string password)
+        {
+            foreach (var account in db.Accounts)
+            {
+                if (account.Username == username && PwdHashing.DecodePwdFromBase64(account.Pwd) == password)
+                {
+                    return account.RoleID;
+                }
+            }
+            return 0;
+        }
 
         public string GetRoleNameByAccountID(int accID)
         {
@@ -90,23 +136,6 @@ namespace PBL3.BLL
             return db.Accounts.FirstOrDefault(account => account.AccountID == accountID).RoleID;
         }
 
-        public DateTime GetCreatedAt(int accID)
-        {
-            return db.Accounts.FirstOrDefault(account => account.AccountID == accID).CreatedAt;
-        }
-
-        public int GetRole(string username, string password)
-        {
-            foreach (var account in db.Accounts)
-            {
-                if (account.Username == username && PwdHashing.DecodePwdFromBase64(account.Pwd) == password)
-                {
-                    return account.RoleID;
-                }
-            }
-            return 0;
-        }
-
         public int GetAccountID(string username, string password)
         {
             foreach (var account in db.Accounts)
@@ -119,59 +148,10 @@ namespace PBL3.BLL
             return -1;
         }
 
-        public bool CheckExistingUsername(string username)
+        public DateTime GetCreatedTime(int accID)
         {
-            return db.Accounts.Any(p => p.Username == username);
+            return db.Accounts.FirstOrDefault(account => account.AccountID == accID).CreatedTime;
         }
-
-        public bool CheckPassword(int accountID, string password)
-        {
-            foreach (var account in db.Accounts)
-            {
-                if (account.AccountID == accountID && PwdHashing.DecodePwdFromBase64(account.Pwd) == password)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        public void Published(int accountID)
-        {
-            Account acc = db.Accounts.FirstOrDefault(a => a.AccountID == accountID);
-            acc.BeingPublished = true;
-            db.SaveChanges();
-        }
-
-        //tt thêm
-        public bool IsPublishedAccount(int accountID)
-        {
-            Account acc = db.Accounts.FirstOrDefault(a => a.AccountID == accountID);
-            if (acc.BeingPublished) return true;
-            return false;
-        }
-
-        public bool IsPausedAccount(int accountID)
-        {
-            Account acc = db.Accounts.FirstOrDefault(a => a.AccountID == accountID);
-            if (acc.BeingPaused) return true;
-            return false;
-        }
-
-        public void PauseAccount(int accountID)
-        {
-            Account acc = db.Accounts.FirstOrDefault(a => a.AccountID == accountID);
-            acc.BeingPaused = true;
-            db.SaveChanges();
-        }
-        
-        public void ActiveAccount(int accountID)
-        {
-            Account acc = db.Accounts.FirstOrDefault(a => a.AccountID == accountID);
-            acc.BeingPaused = false;
-            db.SaveChanges();
-        }
-        //tt thêm
 
         public string GetBeingPublished(int accID)
         {
@@ -180,12 +160,11 @@ namespace PBL3.BLL
             else return "Chưa Duyệt";
         }
 
-        public DateTime? GetPublishedAt(int accID)
+        public DateTime? GetPublishedTime(int accID)
         {
-            return db.Accounts.FirstOrDefault(account => account.AccountID == accID).PublishedAt;
+            return db.Accounts.FirstOrDefault(account => account.AccountID == accID).PublishedTime;
         }
 
-        //tt thêm
         public string GetBeingPaused(int accID)
         {
             bool a = db.Accounts.FirstOrDefault(account => account.AccountID == accID).BeingPaused;

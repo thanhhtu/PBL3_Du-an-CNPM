@@ -74,10 +74,7 @@ namespace PBL3.BLL
             if (addressID == null) return 0;
             var addr = db.Addresses.FirstOrDefault(a => a.AddressID == addressID);
             if (addr == null) return 0;
-            else
-            {
-                return addr.WardID;
-            }
+            else return addr.WardID;
         }
 
         public int GetDistrictIDByAddressID(int? addressID)

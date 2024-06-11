@@ -229,7 +229,7 @@ namespace PBL3.Views.LandlordForm
             int addressID = AddressBLL.Instance.AddAddress(temp);
 
             string description = txtDetailAddress.Texts;
-            int deposit = Convert.ToInt32(txtDeposit.Texts);
+            double deposit = Convert.ToDouble(txtDeposit.Texts);
 
             //Thêm infor
             AccommodationInformation infor = new AccommodationInformation()

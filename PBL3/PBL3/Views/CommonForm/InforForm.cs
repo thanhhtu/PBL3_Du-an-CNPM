@@ -366,7 +366,7 @@ namespace PBL3.Views.CommonForm
             else
             {
                 btnAddFavour.BringToFront();
-                FavoriteInforBLL.Instance.DeleteFavourite_Infor(LoginInfor.UserID, InforID);
+                FavoriteInforBLL.Instance.DeleteFavoriteInfor(LoginInfor.UserID, InforID);
             }
         }
 
@@ -380,7 +380,7 @@ namespace PBL3.Views.CommonForm
             else
             {
                 btnDeleteFavour.BringToFront();
-                FavoriteInforBLL.Instance.AddFavourite_Infor(LoginInfor.UserID, InforID);
+                FavoriteInforBLL.Instance.AddFavoriteInfor(LoginInfor.UserID, InforID);
             }
         }
     }

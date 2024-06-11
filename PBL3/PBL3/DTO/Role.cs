@@ -16,10 +16,10 @@ namespace PBL3.DTO
         [Required]
         public string RoleName { get; set; }
 
-        //đoạn dưới ni A có: để định nghĩa một mối quan hệ 1 - nhiều giữa 2 bảng role với accounts
+        //Định nghĩa mối quan hệ 1 - nhiều giữa 2 bảng role với accounts
         public virtual ICollection<Account> Accounts { get; set; }
 
-        //tạo một đối tượng Role, thuộc tính Accounts sẽ được khởi tạo với một danh sách rỗng các tài khoản
+        //Tạo một đối tượng Role, thuộc tính Accounts sẽ được khởi tạo với một danh sách rỗng các tài khoản (Role tạo trước Account)
         public Role()
         {
             this.Accounts = new HashSet<Account>();

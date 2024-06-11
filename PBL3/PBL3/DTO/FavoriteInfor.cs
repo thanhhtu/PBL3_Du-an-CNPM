@@ -13,7 +13,7 @@ namespace PBL3.DTO
     {
         [Key]
         [Required]
-        public int IDFavoriteInfor { get; set; }
+        public int FavoriteInforID { get; set; }
 
         [Required]
         public int UserID { get; set; }

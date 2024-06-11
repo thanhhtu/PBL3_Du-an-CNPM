@@ -12,6 +12,7 @@ namespace PBL3.DTO
     public class ImageOfUser
     {
         [Key]
+        [Required]
         public int ImageOfUserID { get; set; }
 
         [Required]
@@ -22,5 +23,4 @@ namespace PBL3.DTO
         [Required]
         public string ImagePath { get; set; }
     }
-
 }

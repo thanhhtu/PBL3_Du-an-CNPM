@@ -14,9 +14,10 @@ using PBL3.DTO;
 
 namespace PBL3.DAL
 {
-    public class CreateDB : DropCreateDatabaseAlways<DataPBL3> //CreateDatabaseIfNotExists<MyData>
+    public class CreateDB : DropCreateDatabaseAlways<DataPBL3> //Chiến lược khởi tạo CSDL
+        //CreateDatabaseIfNotExists<DataPBL3> 
     {
-        protected override void Seed(DataPBL3 context)
+        protected override void Seed(DataPBL3 context) //EF mặc định key có kiểu int là tự tăng
         {
             context.Roles.AddRange(new Role[]
             {
@@ -26,10 +27,10 @@ namespace PBL3.DAL
             });
             context.Accounts.AddRange(new Account[]
             {
-                new Account {AccountID = 1, RoleID = 1, Username = "Admin1", Pwd = "DeHOn0UsIwM=", CreatedAt = DateTime.Now, BeingPublished = true, PublishedAt = DateTime.Now, BeingPaused = false},
-                new Account {AccountID = 2, RoleID = 2, Username = "Landlord1", Pwd = "DeHOn0UsIwM=", CreatedAt = DateTime.Now, BeingPublished = true, PublishedAt = DateTime.Now, BeingPaused = false},
-                new Account {AccountID = 3, RoleID = 2, Username = "Landlord2", Pwd = "DeHOn0UsIwM=", CreatedAt = DateTime.Now, BeingPublished = false, PublishedAt = DateTime.Now, BeingPaused = false},
-                new Account {AccountID = 4, RoleID = 3, Username = "Renter1", Pwd = "DeHOn0UsIwM=", CreatedAt = DateTime.Now, BeingPublished = true, PublishedAt = DateTime.Now, BeingPaused = true},
+                new Account {AccountID = 1, RoleID = 1, Username = "Admin1", Pwd = "DeHOn0UsIwM=", CreatedTime = DateTime.Now, BeingPublished = true, PublishedTime = DateTime.Now, BeingPaused = false},
+                new Account {AccountID = 2, RoleID = 2, Username = "Landlord1", Pwd = "DeHOn0UsIwM=", CreatedTime = DateTime.Now, BeingPublished = true, PublishedTime = DateTime.Now, BeingPaused = false},
+                new Account {AccountID = 3, RoleID = 2, Username = "Landlord2", Pwd = "DeHOn0UsIwM=", CreatedTime = DateTime.Now, BeingPublished = false, PublishedTime = null, BeingPaused = false},
+                new Account {AccountID = 4, RoleID = 3, Username = "Renter1", Pwd = "DeHOn0UsIwM=", CreatedTime = DateTime.Now, BeingPublished = true, PublishedTime = DateTime.Now, BeingPaused = true},
             });
             context.Districts.AddRange(new District[]
             {
@@ -43,18 +44,6 @@ namespace PBL3.DAL
             });
             context.Wards.AddRange(new Ward[]
             {
-                //huyện hòa vang
-                new Ward {WardID = 1, WardName = "Xã Hòa Phong", DistrictID = 7},
-                new Ward {WardID = 2, WardName = "Xã Hòa Bắc", DistrictID = 7},
-                new Ward {WardID = 3, WardName = "Xã Hòa Châu", DistrictID = 7},
-                new Ward {WardID = 4, WardName = "Xã Hòa Khương", DistrictID = 7},
-                new Ward {WardID = 5, WardName = "Xã Hòa Liên", DistrictID = 7},
-                new Ward {WardID = 6, WardName = "Xã Hòa Nhơn", DistrictID = 7},
-                new Ward {WardID = 7, WardName = "Xã Hòa Ninh", DistrictID = 7},
-                new Ward {WardID = 8, WardName = "Xã Hòa Phú", DistrictID = 7},
-                new Ward {WardID = 9, WardName = "Xã Hòa Phước", DistrictID = 7},
-                new Ward {WardID = 10, WardName = "Xã Hòa Sơn", DistrictID = 7},
-                new Ward {WardID = 11, WardName = "Xã Hòa Tiến", DistrictID = 7},
                 //quận hải châu
                 new Ward {WardID = 12, WardName = "Phường Bình Hiên", DistrictID = 1},
                 new Ward {WardID = 13, WardName = "Phường Bình Thuận", DistrictID = 1},
@@ -106,6 +95,18 @@ namespace PBL3.DAL
                 new Ward {WardID = 54, WardName = "Phường Nại Hiên Đông", DistrictID = 6},
                 new Ward {WardID = 55, WardName = "Phường Phước Mỹ", DistrictID = 6},
                 new Ward {WardID = 56, WardName = "Phường Thọ Quang", DistrictID = 6},
+                //huyện hòa vang
+                new Ward {WardID = 1, WardName = "Xã Hòa Phong", DistrictID = 7},
+                new Ward {WardID = 2, WardName = "Xã Hòa Bắc", DistrictID = 7},
+                new Ward {WardID = 3, WardName = "Xã Hòa Châu", DistrictID = 7},
+                new Ward {WardID = 4, WardName = "Xã Hòa Khương", DistrictID = 7},
+                new Ward {WardID = 5, WardName = "Xã Hòa Liên", DistrictID = 7},
+                new Ward {WardID = 6, WardName = "Xã Hòa Nhơn", DistrictID = 7},
+                new Ward {WardID = 7, WardName = "Xã Hòa Ninh", DistrictID = 7},
+                new Ward {WardID = 8, WardName = "Xã Hòa Phú", DistrictID = 7},
+                new Ward {WardID = 9, WardName = "Xã Hòa Phước", DistrictID = 7},
+                new Ward {WardID = 10, WardName = "Xã Hòa Sơn", DistrictID = 7},
+                new Ward {WardID = 11, WardName = "Xã Hòa Tiến", DistrictID = 7},
             });
 
             context.Addresses.AddRange(new Address[]
@@ -130,118 +131,122 @@ namespace PBL3.DAL
                 new User {UserID = 1, FullName = "Hà Văn Khánh Đạt", Email ="hadatalex@gmail.com", AddressID = 9, Phone = "0123501235", AccountID = 1, IDcard = "123123123123"},
                 new User {UserID = 2, FullName = "Võ Thanh Tú", Email ="tu@gmail.com", AddressID = 10, Phone = "0123123124", AccountID = 2, IDcard = "123123123123"},
                 new User {UserID = 3, FullName = "Lê Nguyễn Ái Trân", Email ="tran@gmail.com", AddressID = 11, Phone = "0124124124", AccountID = 3, IDcard = "123123123123"},
-                new User {UserID = 4, FullName = "Hoàng", Email ="hoang@gmail.com", AddressID = 12, Phone = "0789307893", AccountID = 4, IDcard = "123123123123"},
+                new User {UserID = 4, FullName = "Dương Quang Minh Hoàng", Email ="hoang@gmail.com", AddressID = 12, Phone = "0789307893", AccountID = 4, IDcard = null},
             });
 
             context.AccommodationInformations.AddRange(new AccommodationInformation[]
             {
-                new AccommodationInformation {InforID = 1, UserID = 2, AddressID = 1, Title = "Cho thuê trọ gần Đại Học Bách Khoa", Description = "Trọ mới xây, an toàn, đẹp, mát mẻ",
-                            Price = 1300000, SquareArea = 22.5, BeingRented = true,
-                            CreatedTime = DateTime.Now, ModifiedTime = null,
-                            LivingWithOwner = true, Deposit = 100
+                new AccommodationInformation 
+                {
+                    InforID = 1, UserID = 2, AddressID = 1, Title = "Cho thuê trọ gần Đại Học Bách Khoa", Description = "Trọ mới xây, an toàn, đẹp, mát mẻ",
+                    Price = 1300000, SquareArea = 22.5, LivingWithOwner = true, Deposit = 1000000,
+                    BeingRented = true, CreatedTime = DateTime.Now, ModifiedTime = null
                 },
-                new AccommodationInformation {InforID = 2, UserID = 2, AddressID = 2, Title = "Cho thuê trọ tại ĐH KT ĐN", Description = "Trọ an toàn, đẹp",
-                            Price = 2100000, SquareArea = 15, BeingRented = false,
-                            CreatedTime = DateTime.Now, ModifiedTime = null,
-                            LivingWithOwner = false, Deposit = 0
+                new AccommodationInformation 
+                {
+                    InforID = 2, UserID = 2, AddressID = 2, Title = "Cho thuê trọ tại ĐH KT ĐN", Description = "Trọ an toàn, đẹp",
+                    Price = 2100000, SquareArea = 15, LivingWithOwner = false, Deposit = 0,
+                    BeingRented = false, CreatedTime = DateTime.Now, ModifiedTime = null
                 },
-                new AccommodationInformation {InforID = 3, UserID = 2, AddressID = 3, Title = "Cho thuê trọ gần ĐH SP DN", Description = "Trọ gần trường, an ninh, nhiều bạn nữ",
-                            Price = 1200000, SquareArea = 23, BeingRented = false,
-                            CreatedTime = DateTime.Now, ModifiedTime = null,
-                            LivingWithOwner = false, Deposit = 0
+                new AccommodationInformation 
+                {
+                    InforID = 3, UserID = 2, AddressID = 3, Title = "Cho thuê trọ gần ĐH SP DN", Description = "Trọ gần trường, an ninh, nhiều bạn nữ",
+                    Price = 1200000, SquareArea = 23, LivingWithOwner = false, Deposit = 0,
+                    BeingRented = false, CreatedTime = DateTime.Now, ModifiedTime = null
                 },
-                new AccommodationInformation {InforID = 4, UserID = 2, AddressID = 4, Title = "Trọ gần Co.op Mart", Description = "Trọ gần Co.op mart, sạch sẽ, an ninh",
-                            Price = 1500000, SquareArea = 20, BeingRented = false,
-                            CreatedTime = DateTime.Now, ModifiedTime = null,
-                            LivingWithOwner = false, Deposit = 400
+                new AccommodationInformation 
+                {   
+                    InforID = 4, UserID = 2, AddressID = 4, Title = "Trọ gần Co.op Mart", Description = "Trọ gần Co.op mart, sạch sẽ, an ninh",
+                    Price = 1500000, SquareArea = 20, LivingWithOwner = false, Deposit = 400000,
+                    BeingRented = false, CreatedTime = DateTime.Now, ModifiedTime = null
                 },
-                new AccommodationInformation {InforID = 5, UserID = 3, AddressID = 5, Title = "Cho thuê trọ Hòa Nhơn, Hòa Vang", Description = "Trọ gần bệnh viện, trường học",
-                            Price = 900000, SquareArea = 17.5, BeingRented = false,
-                            CreatedTime = DateTime.Now, ModifiedTime = null,
-                            LivingWithOwner = false, Deposit = 500
+                new AccommodationInformation 
+                {
+                    InforID = 5, UserID = 3, AddressID = 5, Title = "Cho thuê trọ Hòa Nhơn, Hòa Vang", Description = "Trọ gần bệnh viện, trường học",
+                    Price = 900000, SquareArea = 17.5,  LivingWithOwner = false, Deposit = 500000,
+                    BeingRented = false, CreatedTime = DateTime.Now, ModifiedTime = null
                 },
-                new AccommodationInformation {InforID = 6, UserID = 3, AddressID = 6, Title = "Trọ gần ĐH Duy Tân Hòa Khánh Nam", Description = "Trọ một bên trường, tiện cho việc đi lại",
-                            Price = 1400000, SquareArea = 15.5, BeingRented = false,
-                            CreatedTime = DateTime.Now, ModifiedTime = null,
-                            LivingWithOwner = false, Deposit = 600
+                new AccommodationInformation 
+                {
+                    InforID = 6, UserID = 3, AddressID = 6, Title = "Trọ gần ĐH Duy Tân Hòa Khánh Nam", Description = "Trọ một bên trường, tiện cho việc đi lại",
+                    Price = 1400000, SquareArea = 15.5, LivingWithOwner = false, Deposit = 600000,
+                    BeingRented = false, CreatedTime = DateTime.Now, ModifiedTime = null
                 },
-                new AccommodationInformation {InforID = 7, UserID = 3, AddressID = 7, Title = "Trọ kiệt Nguyễn Văn Linh", Description = "Trọ ở trung tâm, đảm bảo an ninh trật tự",
-                            Price = 700000, SquareArea = 10.5, BeingRented = false,
-                            CreatedTime = DateTime.Now, ModifiedTime = null,
-                            LivingWithOwner = false, Deposit = 200
+                new AccommodationInformation 
+                {
+                    InforID = 7, UserID = 3, AddressID = 7, Title = "Trọ kiệt Nguyễn Văn Linh", Description = "Trọ ở trung tâm, đảm bảo an ninh trật tự",
+                    Price = 700000, SquareArea = 10.5, LivingWithOwner = false, Deposit = 200000,
+                    BeingRented = false, CreatedTime = DateTime.Now, ModifiedTime = null
                 },
-                new AccommodationInformation {InforID = 8, UserID = 3, AddressID = 8, Title = "Trọ cần cầu Sông Hàn", Description = "Trọ ở gần cầu sông Hàn, view đẹp",
-                            Price = 1100000, SquareArea = 10.5, BeingRented = false,
-                            CreatedTime = DateTime.Now, ModifiedTime = null,
-                            LivingWithOwner = false, Deposit = 100
+                new AccommodationInformation 
+                {
+                    InforID = 8, UserID = 3, AddressID = 8, Title = "Trọ cần cầu Sông Hàn", Description = "Trọ ở gần cầu sông Hàn, view đẹp",
+                    Price = 1100000, SquareArea = 10.5, LivingWithOwner = false, Deposit = 500000,
+                    BeingRented = false, CreatedTime = DateTime.Now, ModifiedTime = null
                 }
             });
             context.Images.AddRange(new Image[] //1 bài Infor có đúng 3 ảnh
             {
-                new Image { ImageID = 1, InforID = 1, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 2, InforID = 1, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 3, InforID = 1, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 1, InforID = 1, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 2, InforID = 1, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 3, InforID = 1, ImagePath = @"\phongtro1.jpg"},
 
-                new Image { ImageID = 4, InforID = 2, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 5, InforID = 2, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 6, InforID = 2, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 4, InforID = 2, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 5, InforID = 2, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 6, InforID = 2, ImagePath = @"\phongtro1.jpg"},
 
-                new Image { ImageID = 7, InforID = 3, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 8, InforID = 3, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 9, InforID = 3, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 7, InforID = 3, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 8, InforID = 3, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 9, InforID = 3, ImagePath = @"\phongtro1.jpg"},
 
-                new Image { ImageID = 10, InforID = 4, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 11, InforID = 4, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 12, InforID = 4, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 10, InforID = 4, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 11, InforID = 4, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 12, InforID = 4, ImagePath = @"\phongtro1.jpg"},
 
-                new Image { ImageID = 13, InforID = 5, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 14, InforID = 5, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 15, InforID = 5, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 13, InforID = 5, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 14, InforID = 5, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 15, InforID = 5, ImagePath = @"\phongtro1.jpg"},
 
-                new Image { ImageID = 16, InforID = 6, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 17, InforID = 6, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 18, InforID = 6, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 16, InforID = 6, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 17, InforID = 6, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 18, InforID = 6, ImagePath = @"\phongtro1.jpg"},
 
-                new Image { ImageID = 19, InforID = 7, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 20, InforID = 7, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 21, InforID = 7, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 19, InforID = 7, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 20, InforID = 7, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 21, InforID = 7, ImagePath = @"\phongtro1.jpg"},
 
-                new Image { ImageID = 22, InforID = 8, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 23, InforID = 8, ImagePath = @"\phongtro1.jpg"},
-                new Image { ImageID = 24, InforID = 8, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 22, InforID = 8, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 23, InforID = 8, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 24, InforID = 8, ImagePath = @"\phongtro1.jpg"},
             });
             context.Comments.AddRange(new Comment[]
             {
-                new Comment {CommentID = 1, InforID = 1, UserID = 2, Content = "Haha", CreatedAt = DateTime.Now},
-                new Comment {CommentID = 2, InforID = 1, UserID = 2, Content = "Hihi", CreatedAt = DateTime.Now},
-                new Comment {CommentID = 3, InforID = 2, UserID = 3, Content = "Hehe", CreatedAt = DateTime.Now},
-                new Comment {CommentID = 4, InforID = 2, UserID = 3, Content = "Huhu", CreatedAt = DateTime.Now},
-                new Comment {CommentID = 5, InforID = 3, UserID = 1, Content = "Huhu", CreatedAt = DateTime.Now},
-                new Comment {CommentID = 6, InforID = 3, UserID = 3, Content = "HicHic", CreatedAt = DateTime.Now},
+                new Comment {CommentID = 1, InforID = 1, UserID = 2, Content = "Haha", CreatedTime = DateTime.Now},
+                new Comment {CommentID = 2, InforID = 1, UserID = 3, Content = "Hihi", CreatedTime = DateTime.Now},
+                new Comment {CommentID = 3, InforID = 2, UserID = 2, Content = "Hehe", CreatedTime = DateTime.Now},
+                new Comment {CommentID = 4, InforID = 2, UserID = 3, Content = "Huhu", CreatedTime = DateTime.Now},
+                new Comment {CommentID = 5, InforID = 3, UserID = 2, Content = "Huhu", CreatedTime = DateTime.Now},
+                new Comment {CommentID = 6, InforID = 3, UserID = 3, Content = "HicHic", CreatedTime = DateTime.Now},
             });
             context.FavoriteInfors.AddRange(new FavoriteInfor[]
             {
-                new FavoriteInfor{ UserID = 2, InforID = 1},
-                new FavoriteInfor{ UserID = 2, InforID = 2},
-                new FavoriteInfor{ UserID = 2, InforID = 3},
-                new FavoriteInfor{ UserID = 3, InforID = 4},
-                new FavoriteInfor{ UserID = 3, InforID = 5},
-                new FavoriteInfor{ UserID = 4, InforID = 6},
-                new FavoriteInfor{ UserID = 4, InforID = 7},
-                new FavoriteInfor{ UserID = 4, InforID = 8},
+                new FavoriteInfor {FavoriteInforID = 1, UserID = 4, InforID = 1},
+                new FavoriteInfor {FavoriteInforID = 2, UserID = 4, InforID = 2},
+                new FavoriteInfor {FavoriteInforID = 3, UserID = 4, InforID = 3},
+                new FavoriteInfor {FavoriteInforID = 4, UserID = 4, InforID = 4},
+                new FavoriteInfor {FavoriteInforID = 5, UserID = 4, InforID = 5},
             });
             context.ImageOfUsers.AddRange(new ImageOfUser[]
             {
-                new ImageOfUser { ImageOfUserID = 1, UserID = 2, ImagePath = @"\landlord1.jpg"},
-                new ImageOfUser { ImageOfUserID = 2, UserID = 2, ImagePath = @"\landlord2.jpg"},
+                new ImageOfUser {ImageOfUserID = 1, UserID = 2, ImagePath = @"\landlord1.jpg"},
+                new ImageOfUser {ImageOfUserID = 2, UserID = 2, ImagePath = @"\landlord2.jpg"},
 
-                new ImageOfUser { ImageOfUserID = 3, UserID = 3, ImagePath = @"\landlord1.jpg"},
-                new ImageOfUser { ImageOfUserID = 4, UserID = 3, ImagePath = @"\landlord2.jpg"},
+                new ImageOfUser {ImageOfUserID = 3, UserID = 3, ImagePath = @"\landlord1.jpg"},
+                new ImageOfUser {ImageOfUserID = 4, UserID = 3, ImagePath = @"\landlord2.jpg"},
             });
             context.ModifierHistorys.AddRange(new ModifiedHistory[]
             {
-                new ModifiedHistory { InforID = 2, Content= "Trọ trống", ModifiedTime = DateTime.Now}
-
+                new ModifiedHistory {ModifiedID = 1, InforID = 1, Content= "Trọ trống", ModifiedTime = DateTime.Now} 
             });
         }
     }
