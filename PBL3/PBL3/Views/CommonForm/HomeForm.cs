@@ -67,8 +67,19 @@ namespace PBL3.Views.CommonForm
         public void OpenSignUp()
         {
             SignUpForm form = new SignUpForm();
-            form.OpenForm = OpenSignIn;
+            form.openForm = OpenSignIn;
             OpenChildForm(form);
+        }
+
+        //CloseHomeForm và HideHomeForm được truyền là delegate cho SignInForm để nó sử dụng khi người dùng đăng nhập thành công
+        private void CloseHomeForm()
+        {
+            this.Close();
+        }
+
+        private void HideHomeForm()
+        {
+            this.Hide();
         }
 
         #region -> Click Button
@@ -91,19 +102,9 @@ namespace PBL3.Views.CommonForm
         private void btnSignUp_Click(object sender, EventArgs e)
         {
             SignUpForm form = new SignUpForm();
-            form.OpenForm = OpenSignIn;
+            form.openForm = OpenSignIn;
             OpenChildForm(form);
         }
         #endregion
-
-        //CloseHomeForm và HideHomeForm được truyền là delegate cho SignInForm để nó sử dụng khi người dùng đăng nhập thành công
-        private void CloseHomeForm()
-        {
-            this.Close();
-        }
-        private void HideHomeForm()
-        {
-            this.Hide();
-        }
     }
 }

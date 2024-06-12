@@ -55,9 +55,7 @@ namespace PBL3.Views.LandlordForm
 
         private void dgv_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
-            {
-                dgv.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
-            }
+            dgv.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
         }
     }
 }

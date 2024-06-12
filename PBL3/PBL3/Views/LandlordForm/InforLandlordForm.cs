@@ -12,14 +12,14 @@ using System.Windows.Forms;
 
 namespace PBL3.Views.LandlordForm
 {
-    public partial class InforLandlordForm : Form
+    public partial class InforLandlordForm : Form //Form hiển thị thông tin cá nhân của chủ trọ
     {
-        //Form hiển thị thông tin cá nhân
         public InforLandlordForm(int userID)
         {
             InitializeComponent();
             InitializeInformation(userID);
         }
+
         private void InitializeInformation(int userID)
         {
             User user = UserBLL.Instance.GetUserByID(userID);

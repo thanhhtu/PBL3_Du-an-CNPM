@@ -19,31 +19,32 @@ namespace PBL3.Views.CommonForm
         {
             InitializeComponent();
         }
-        private bool validatePassword()
+
+        #region -> Validate
+        //Kiểm tra pass cũ và confirm giống nhau chưa
+        private bool ValidatePassword()
         {
-            //Kiểm tra pass cũ và confirm giống nhau chưa
-            if (txtNewPass.Texts != txtConfirmPass.Texts)
-                return false;
+            if (txtNewPass.Texts != txtConfirmPass.Texts) return false;
             return true;
         }
+
+        //Kiểm tra các thông tin đã đầy đủ chưa
         public bool CheckEmpty()
         {
-            //Kiểm tra các thông tin đã đầy đủ chưa
             if (txtOldPass.Texts == "" || txtNewPass.Texts == "" || txtConfirmPass.Texts == "") return true;
             return false;
         }
-   
+        #endregion
 
-
- 
-      private void btnSavePass_Click(object sender, EventArgs e)
+        #region -> Click Button + Show/Hide Password   
+        private void btnSavePass_Click(object sender, EventArgs e)
         {
             if (CheckEmpty())
             {
                 MessageBox.Show("Bạn cần nhập đủ thông tin!");
                 return;
             }
-            if (!validatePassword())
+            if (!ValidatePassword())
                 MessageBox.Show("Mật khẩu xác nhận không chính xác!");
             else
             {
@@ -73,7 +74,7 @@ namespace PBL3.Views.CommonForm
                 btnHideOldPass.BringToFront();
                 txtOldPass.PasswordChar = true;
             }
-        }//
+        }
 
         private void btnHideOldPass_Click(object sender, EventArgs e)
         {
@@ -119,5 +120,6 @@ namespace PBL3.Views.CommonForm
                 txtConfirmPass.PasswordChar = false;
             }
         }
+        #endregion
     }
 }

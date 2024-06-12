@@ -274,11 +274,11 @@
     <Compile Include="Views\RenterForm\RenterHomeForm.Designer.cs">
       <DependentUpon>RenterHomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\RenterForm\UserInforForm.cs">
+    <Compile Include="Views\RenterForm\UserFavoriteInforForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\RenterForm\UserInforForm.Designer.cs">
-      <DependentUpon>UserInforForm.cs</DependentUpon>
+    <Compile Include="Views\RenterForm\UserFavoriteInforForm.Designer.cs">
+      <DependentUpon>UserFavoriteInforForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -359,8 +359,8 @@
     <EmbeddedResource Include="Views\RenterForm\RenterHomeForm.resx">
       <DependentUpon>RenterHomeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\RenterForm\UserInforForm.resx">
-      <DependentUpon>UserInforForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\RenterForm\UserFavoriteInforForm.resx">
+      <DependentUpon>UserFavoriteInforForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

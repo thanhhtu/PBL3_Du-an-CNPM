@@ -224,17 +224,17 @@ namespace PBL3.BLL
             {
                 case 1: //Lấy hết tất cả infor thỏa mãn điều kiện
                     data = db.AccommodationInformations.Where(p => p.Price >= lPrice && p.Price <= rPrice
-                    && p.SquareArea >= lSquareArea && p.SquareArea <= rSquareArea && p.BeingRented == false).ToList();
+                            && p.SquareArea >= lSquareArea && p.SquareArea <= rSquareArea && p.BeingRented == false).ToList();
                     break;
                 case 2: //inputID = id của quận. Lấy hết infor trong quận
                     data = db.AccommodationInformations.Where(p => p.Address.Ward.DistrictID == inputID && p.Price >= lPrice
-                    && p.Price <= rPrice && p.SquareArea >= lSquareArea && p.SquareArea <= rSquareArea
-                    && p.BeingRented == false).ToList();
+                            && p.Price <= rPrice && p.SquareArea >= lSquareArea && p.SquareArea <= rSquareArea
+                            && p.BeingRented == false).ToList();
                     break;
                 case 3: //inputID = id của phường. Lấy hết infor trong phường
                     data = db.AccommodationInformations.Where(p => p.Address.Ward.WardID == inputID && p.Price >= lPrice
-                    && p.Price <= rPrice && p.SquareArea >= lSquareArea && p.SquareArea <= rSquareArea
-                    && p.BeingRented == false).ToList();
+                            && p.Price <= rPrice && p.SquareArea >= lSquareArea && p.SquareArea <= rSquareArea
+                            && p.BeingRented == false).ToList();
                     break;
                 default:
                     data = db.AccommodationInformations.Where(item => item.BeingRented == false).ToList();

@@ -28,25 +28,6 @@ namespace PBL3.Views.RenterForm
             panelUserSubmenu.Visible = false; //Ban đầu không hiện chi tiết menu con
         }
 
-        //thêm nhóe
-        private void SignOut()
-        {
-            //Reset lại SignInInfor
-            LoginInfor.UserID = -1;
-
-            //Hiển thị lại HomeForm
-            this.Hide();
-            HomeForm form = new HomeForm();
-            form.ShowDialog();
-            this.Close();
-        }
-        //thêm nhóe
-
-        private void ReloadUserFullName()
-        {
-            labelUserFullname.Text = UserBLL.Instance.GetUserFullname(LoginInfor.UserID).ToString();
-        }
-
         //Tắt form hiện tại đang hiển thị trên childPanel và hiển thị form tương ứng được truyền vào là đối số
         public void OpenChildForm(Form form)
         {
@@ -54,7 +35,7 @@ namespace PBL3.Views.RenterForm
 
             activeForm = form;
 
-            //set properties cho form truyền vào
+            //Set properties cho form truyền vào
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
@@ -87,7 +68,7 @@ namespace PBL3.Views.RenterForm
             }
         }
 
-        //Đóng mở Submenu
+        //Đóng/Mở Submenu
         private void toggleSubmenu(Panel panel)
         {
             if (panel.Visible == false)
@@ -99,6 +80,23 @@ namespace PBL3.Views.RenterForm
             {
                 panel.Visible = false;
             }
+        }
+
+        private void SignOut()
+        {
+            //Reset lại SignInInfor
+            LoginInfor.UserID = -1;
+
+            //Hiển thị lại HomeForm
+            this.Hide();
+            HomeForm form = new HomeForm();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void ReloadUserFullName()
+        {
+            labelUserFullname.Text = UserBLL.Instance.GetUserFullname(LoginInfor.UserID).ToString();
         }
 
         #region -> Click Button
@@ -136,13 +134,12 @@ namespace PBL3.Views.RenterForm
         private void btnSignOut_Click(object sender, EventArgs e)
         {
             HideSubmenu();
-
             SignOut();
         }
 
         private void btnFavorite_Click(object sender, EventArgs e)
         {
-            UserInforForm form = new UserInforForm(LoginInfor.UserID);
+            UserFavoriteInforForm form = new UserFavoriteInforForm(LoginInfor.UserID);
             form.showInfo = OpenHouseInfo;
             OpenChildForm(form);
         }

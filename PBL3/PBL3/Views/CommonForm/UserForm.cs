@@ -12,9 +12,8 @@ using System.Windows.Forms;
 
 namespace PBL3.Views.CommonForm
 {
-    public partial class UserForm : Form
+    public partial class UserForm : Form //Form hiển thị thông tin cá nhân
     {
-            //Form hiển thị thông tin cá nhân
             public UserForm(int userID)
             {
                 InitializeComponent();

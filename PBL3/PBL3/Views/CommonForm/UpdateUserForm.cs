@@ -20,10 +20,8 @@ namespace PBL3.Views.CommonForm
         public delegate void MyDel();
         public MyDel ReloadInformation;
 
-        //thêm
         public delegate void CloseHome();
         public CloseHome closeHome;
-        //thêm
 
         public UpdateUserForm()
         {
@@ -39,26 +37,25 @@ namespace PBL3.Views.CommonForm
             cbbDistrict.DataSource = null;
             cbbDistrict.ResetText();
 
-            cbbDistrict.Items.Clear();
-            cbbDistrict.DataSource = null;
-            cbbDistrict.ResetText();
+            cbbWard.Items.Clear();
+            cbbWard.DataSource = null;
+            cbbWard.ResetText();
         }
+
         public void LoadCBB()
         {
             ResetCBB();
+
             CBBItem AllDistrict = new CBBItem
             {
                 Value = 0,
                 Text = "Tất cả quận"
             };
-            CBBItem AllWard = new CBBItem
-            {
-                Value = 0,
-                Text = "Tất cả phường"
-            };
             cbbDistrict.Items.Add(AllDistrict);
-            var listDistrict = DistrictBLL.Instance.GetAllDistricts();
+            cbbDistrict.SelectedItem = AllDistrict;
 
+            //Hiện tất cả các quận lên cbbDistrict
+            var listDistrict = DistrictBLL.Instance.GetAllDistricts();
             foreach (var i in listDistrict)
             {
                 cbbDistrict.Items.Add(new CBBItem
@@ -67,15 +64,21 @@ namespace PBL3.Views.CommonForm
                     Text = i.DistrictName.ToString()
                 });
             }
-            cbbDistrict.SelectedItem = AllDistrict;
+
+            CBBItem AllWard = new CBBItem
+            {
+                Value = 0,
+                Text = "Tất cả phường"
+            };
             cbbWard.Items.Add(AllWard);
             cbbWard.SelectedItem = AllWard;
         }
         #endregion
 
+        #region -> Set data
+        //Khởi tạo giá trị ban đầu cho CBB tương ứng với dữ liệu của user trên db
         public void SetCBB()
         {
-            //Khởi tạo giá trị ban đầu cho CBB tương ứng với dữ liệu của user trên database
             int addressID = UserBLL.Instance.GetAddressIDByUserID(LoginInfor.UserID);
             int districtID = AddressBLL.Instance.GetDistrictIDByAddressID(addressID);
             int wardID = AddressBLL.Instance.GetWardIDByAddressID(addressID);
@@ -126,7 +129,9 @@ namespace PBL3.Views.CommonForm
             txtDetailedAddress.Texts = AddressBLL.Instance.GetDetailAddress(thisUser.AddressID);
             SetCBB();
         }
+        #endregion
 
+        #region -> Validate
         //Check thông tin đầy đủ chưa
         private bool checkEmpty()
         {
@@ -137,6 +142,7 @@ namespace PBL3.Views.CommonForm
             }
             return false;
         }
+
         private bool checkIsValidEmailAddress(string emailAddress)
         {
             try
@@ -150,6 +156,7 @@ namespace PBL3.Views.CommonForm
                 return false;
             }
         }
+
         public bool CheckPhoneNumber(string phoneNumber)
         {
             if (!Regex.IsMatch(phoneNumber, @"^\d{10}$"))
@@ -159,9 +166,11 @@ namespace PBL3.Views.CommonForm
             }
             return true;
         }
+        #endregion
+
+        #region -> Click components
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            //validate thông tin có empty không
             if (checkEmpty()) return;
             if (!checkIsValidEmailAddress(txtEmail.Texts)) return;
             if (!CheckPhoneNumber(txtNumber.Texts)) return;
@@ -202,6 +211,8 @@ namespace PBL3.Views.CommonForm
             else return;
         }
 
+        //Nếu người dùng chọn "Tất cả quận" (mặc định) -> phường chỉ hiển thị "Tất cả phường"
+        //Nếu người dùng chọn quận cụ thể -> hiện tất cả phường thuộc quận đó
         private void cbbDistrict_OnSelectionChangedCommited(object sender, EventArgs e)
         {
             if (((CBBItem)cbbDistrict.SelectedItem).Value == 0)
@@ -215,9 +226,13 @@ namespace PBL3.Views.CommonForm
                     Value = 0,
                     Text = "Tất cả phường"
                 };
-                int districtID = ((CBBItem)cbbDistrict.SelectedItem).Value;
+
                 cbbWard.Items.Clear();
                 cbbWard.Items.Add(AllWard);
+
+                int districtID = ((CBBItem)cbbDistrict.SelectedItem).Value;
+
+                //Hiện tất cả các phường thuộc 1 quận
                 var WardInDistrict = DistrictBLL.Instance.GetWardsInDistrict(districtID);
                 foreach (var i in WardInDistrict)
                 {
@@ -230,5 +245,6 @@ namespace PBL3.Views.CommonForm
                 cbbWard.SelectedItem = AllWard;
             }
         }
+        #endregion
     }
 }

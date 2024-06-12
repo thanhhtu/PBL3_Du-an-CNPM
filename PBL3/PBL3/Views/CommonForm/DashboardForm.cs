@@ -17,8 +17,8 @@ namespace PBL3.Views.CommonForm
 {
     public partial class DashboardForm : Form
     {
-        // sort (cbbPageNumber, cbb Sort sẽ được ưu tiên hơn nút tìm kiếm)
-        // lưu trữ trang thái, = true thì đang ở trạng thái đó (searching/sorting)
+        //Sort (cbbPageNumber, cbb Sort sẽ được ưu tiên hơn nút tìm kiếm)
+        //Lưu trữ trang thái, = true thì đang ở trạng thái đó (searching/sorting)
         private bool searching = false;
         private bool sorting = false;
 
@@ -34,122 +34,6 @@ namespace PBL3.Views.CommonForm
             InitializeComponent();
             ReloadForm();
         }
-      
-        #region-> LoadCBB quận + phường
-        // Mặc định: Load quận trước (phường: hiện tất cả)
-        // Khi selected item của cbb quận thay đổi thì load phường tương ứng với quận
-        public void ResetCBB()
-        {
-            cbbDistrict.Items.Clear(); // xoa cac item hien co trong cbb
-            cbbDistrict.DataSource = null; // xoa toan bo du lieu dang ket noi voi cbb
-            cbbWard.Items.Clear();
-            cbbWard.DataSource = null;
-        }
-        public void LoadCBB()
-        {
-            ResetCBB();
-            cbbSort.SelectedIndex = -1;
-            cbbArea.SelectedIndex = -1;
-            cbbArea.SelectedIndex = -1;
-
-            //CBB Item được định nghĩa ở DTO
-            CBBItem AllDistricts = new CBBItem
-            {
-                Value = 0,
-                Text = "Tất cả quận"
-            };
-            CBBItem AllWards = new CBBItem
-            {
-                Value = 0,
-                Text = "Tất cả phường"
-            };
-
-            //load quận lên cbb
-            cbbDistrict.Items.Add(AllDistricts);
-            var listDistrict = DistrictBLL.Instance.GetAllDistricts();
-
-            foreach (var i in listDistrict)
-            {
-                cbbDistrict.Items.Add(new CBBItem
-                {
-                    Value = i.DistrictID,
-                    Text = i.DistrictName.ToString()
-                });
-            }
-            // mặc định là hiện "tất cả quận"
-            cbbDistrict.SelectedItem = AllDistricts;
-            //load và set cbb phường
-            cbbWard.Items.Add(AllWards);
-            cbbWard.SelectedItem = AllWards;
-        }
-        private void cbbDistrict_OnSelectionChangedCommited(object sender, EventArgs e)
-        {
-            if (((CBBItem)cbbDistrict.SelectedItem).Value == 0)
-            {
-                LoadCBB();
-            }
-            else
-            {
-                CBBItem AllWards = new CBBItem
-                {
-                    Value = 0,
-                    Text = "Tất cả phường"
-                };
-                int districtID = ((CBBItem)cbbDistrict.SelectedItem).Value;
-                //load phuong
-                cbbWard.Items.Clear();
-                cbbWard.Items.Add(AllWards);
-                var WardInDistrict = DistrictBLL.Instance.GetWardsInDistrict(districtID);
-                foreach (var i in WardInDistrict)
-                {
-                    cbbWard.Items.Add(new CBBItem
-                    {
-                        Value = i.WardID,
-                        Text = i.WardName
-                    });
-                }
-                cbbWard.SelectedItem = AllWards;
-            }
-        }
-        #endregion
-
-        #region -> Load CBB số trang
-        public void LoadCBBPageNum()
-        { 
-            cbbPageNumber.Items.Clear();
-            cbbPageNumber.DataSource = null;
-            cbbPageNumber.ResetText();
-            int i;
-            //ở mỗi trang thêm 1 cbb, nếu trang hiện tại được hiển thị thì đó là mục trong cbbPageNumber đc chọn
-            for (i = 0; i < totalPage; i++)
-            {
-                CBBItem temp = new CBBItem
-                {
-                    Value = i,
-                    Text = "Trang " + (i + 1).ToString()
-                };
-                cbbPageNumber.Items.Add(temp);
-                if (temp.Value == currentPage)
-                {
-                    cbbPageNumber.SelectedItem = temp;
-                }
-            }
-        }
-        private void cbbPageNumber_OnSelectionChangedCommited(object sender, EventArgs e)
-        {
-            currentPage = ((CBBItem)cbbPageNumber.SelectedItem).Value;
-            if (currentPage < 0)
-                currentPage = totalPage - 1;
-            //Sorting được ưu tiên nhất
-            if (sorting)
-            {
-                 SortFunction();
-                return;
-            }
-            SearchFunction();
-        }
-
-        #endregion
 
         #region -> Load Dashboard
         private void ReloadForm()
@@ -162,7 +46,7 @@ namespace PBL3.Views.CommonForm
         }
 
         //Ẩn các house info component khi số post trên page đó ít hơn 5
-        private void DisablePostViewWhenNotFound(int inforNum)
+        private void DisableInforViewWhenNotFound(int inforNum)
         {
             switch (inforNum)
             {
@@ -195,7 +79,7 @@ namespace PBL3.Views.CommonForm
         }
 
         //Hiển thị các customcomponenthouseinfor lên
-        private void DisplayHouseInformation()
+        private void DisplayInfor()
         {
             this.Visible = true;
             panel2.Visible = true;
@@ -207,7 +91,7 @@ namespace PBL3.Views.CommonForm
         }
 
         //Khởi tạo và hiển thị thông tin lên
-        private void InitalizeHouseInfomation(List<InforViewDTO> inforView)
+        private void InitalizeInfor(List<InforViewDTO> inforView)
         {
             string imagePath;
             if (inforView.Count > 0 && houseInfoComponent1.Visible)
@@ -327,6 +211,127 @@ namespace PBL3.Views.CommonForm
             }
         }
         #endregion
+
+        #region -> Load CBB quận + phường
+        //Mặc định: Load quận trước (phường: hiện tất cả)
+        //Khi selected item của cbb quận thay đổi thì load phường tương ứng với quận
+        public void ResetCBB()
+        {
+            cbbDistrict.Items.Clear(); //Xóa các item hiện có trong cbb
+            cbbDistrict.DataSource = null; //Xóa toàn bộ dữ liệu đang kết nối với cbb
+            cbbDistrict.ResetText();
+
+            cbbWard.Items.Clear();
+            cbbWard.DataSource = null;
+            cbbWard.ResetText();
+        }
+        public void LoadCBB()
+        {
+            ResetCBB();
+            cbbSort.SelectedIndex = 0;
+            cbbArea.SelectedIndex = 0;
+            cbbPrice.SelectedIndex = 0;
+
+            //CBB Item được định nghĩa ở DTO
+            CBBItem AllDistricts = new CBBItem
+            {
+                Value = 0,
+                Text = "Tất cả quận"
+            };
+            CBBItem AllWards = new CBBItem
+            {
+                Value = 0,
+                Text = "Tất cả phường"
+            };
+
+            //Load quận lên cbb
+            cbbDistrict.Items.Add(AllDistricts);
+            var listDistrict = DistrictBLL.Instance.GetAllDistricts();
+
+            foreach (var i in listDistrict)
+            {
+                cbbDistrict.Items.Add(new CBBItem
+                {
+                    Value = i.DistrictID,
+                    Text = i.DistrictName.ToString()
+                });
+            }
+            //Mặc định là hiện "tất cả quận"
+            cbbDistrict.SelectedItem = AllDistricts;
+            //Load và set cbb phường
+            cbbWard.Items.Add(AllWards);
+            cbbWard.SelectedItem = AllWards;
+        }
+
+        private void cbbDistrict_OnSelectionChangedCommited(object sender, EventArgs e)
+        {
+            if (((CBBItem)cbbDistrict.SelectedItem).Value == 0)
+            {
+                LoadCBB();
+            }
+            else
+            {
+                CBBItem AllWards = new CBBItem
+                {
+                    Value = 0,
+                    Text = "Tất cả phường"
+                };
+                int districtID = ((CBBItem)cbbDistrict.SelectedItem).Value;
+                //load phuong
+                cbbWard.Items.Clear();
+                cbbWard.Items.Add(AllWards);
+                var WardInDistrict = DistrictBLL.Instance.GetWardsInDistrict(districtID);
+                foreach (var i in WardInDistrict)
+                {
+                    cbbWard.Items.Add(new CBBItem
+                    {
+                        Value = i.WardID,
+                        Text = i.WardName
+                    });
+                }
+                cbbWard.SelectedItem = AllWards;
+            }
+        }
+        #endregion
+
+        #region -> Load CBB số trang
+        public void LoadCBBPageNum()
+        {
+            cbbPageNumber.Items.Clear();
+            cbbPageNumber.DataSource = null;
+            cbbPageNumber.ResetText();
+            int i;
+            //Ở mỗi trang thêm 1 cbb, nếu trang hiện tại được hiển thị thì đó là mục trong cbbPageNumber đc chọn
+            for (i = 0; i < totalPage; i++)
+            {
+                CBBItem temp = new CBBItem
+                {
+                    Value = i,
+                    Text = "Trang " + (i + 1).ToString()
+                };
+                cbbPageNumber.Items.Add(temp);
+                if (temp.Value == currentPage)
+                {
+                    cbbPageNumber.SelectedItem = temp;
+                }
+            }
+        }
+
+        private void cbbPageNumber_OnSelectionChangedCommited(object sender, EventArgs e)
+        {
+            currentPage = ((CBBItem)cbbPageNumber.SelectedItem).Value;
+            if (currentPage < 0)
+                currentPage = totalPage - 1;
+            //Sorting được ưu tiên nhất
+            if (sorting)
+            {
+                SortFunction();
+                return;
+            }
+            SearchFunction();
+        }
+        #endregion
+
         #region -> Chức năng các nút
         private void btnPrevPage_Click(object sender, EventArgs e)
         {
@@ -358,40 +363,42 @@ namespace PBL3.Views.CommonForm
                 return;
             }
             SearchFunction();
-            }
-            private void btnSearch_Click(object sender, EventArgs e)
-            {
-                currentPage = 0;
-                searching = true;
-                SearchFunction();
-                LoadCBBPageNum();
-            }
+        }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            currentPage = 0;
+            searching = true;
+            SearchFunction();
+            LoadCBBPageNum();
+        }
 
-            private void cbbSort_OnSelectionChangedCommited(object sender, EventArgs e)
-            {
-                currentPage = 0;
-                sorting = true;
-                SortFunction();
-                LoadCBBPageNum();
-            }
+        private void cbbSort_OnSelectionChangedCommited(object sender, EventArgs e)
+        {
+            currentPage = 0;
+            sorting = true;
+            SortFunction();
+            LoadCBBPageNum();
+        }
 
-            private void btnReset_Click(object sender, EventArgs e)
-            {
-                LoadCBB();
-                LoadCBBPageNum();
-                searching = false;
-                sorting = false;
-                SearchFunction();
-            }
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            LoadCBB();
+            LoadCBBPageNum();
+            searching = false;
+            sorting = false;
+            SearchFunction();
+        }
         #endregion
+
         public List<AccommodationInformation> GetSearchInfor()
         {
-            //Search post theo giá trị các cbb địa chỉ, giá, diện tích
-            //Mặc định giá trị trái là 0, phải là rất lớn
+            //Search infor theo giá trị các cbb địa chỉ, giá, diện tích
+            //Mặc định giá trị từ 0 (left) tới rất lớn (right)
             int lPrice = 0, rPrice = 999999999;
             float lArea = 0, rArea = 999999999;
             int priceChoice = cbbPrice.SelectedIndex;
             int areaChoice = cbbArea.SelectedIndex;
+
             //Set left right cho giá
             switch (priceChoice)
             {
@@ -420,6 +427,7 @@ namespace PBL3.Views.CommonForm
                     rPrice = 999999999;
                     break;
             }
+
             //Set left right cho diện tích
             switch (areaChoice)
             {
@@ -448,30 +456,29 @@ namespace PBL3.Views.CommonForm
                     rArea = 999999999;
                     break;
             }
+
             int searchCase = 0, searchID = 0;
             int districtID = ((CBBItem)cbbDistrict.SelectedItem).Value;
             int wardID = ((CBBItem)cbbWard.SelectedItem).Value;
-            if (districtID == 0)
+            if (districtID == 0) //Case 1: District ID == 0 <=> search trong toàn thành phố
             {
-                //Case 1: District ID == 0 <=> search trong toàn thành phố
                 searchCase = 1;
                 searchID = 0;
             }
-            else if (wardID == 0)
+            else if (wardID == 0) //Case 2: District ID != 0 và ward ID == 0  <=> search trong quận
             {
-                //Case 2: District ID != 0 và ward ID == 0  <=> search trong quận
                 searchCase = 2;
                 searchID = districtID;
             }
-            else
+            else //Case 3: ward ID != 0  <=> search trong phường
             {
-                //Case 3: ward ID != 0  <=> search trong phường
                 searchCase = 3;
                 searchID = wardID;
             }
             if (!searching) searchCase = 100; //không phải đang search nên cho search case rơi vào default
             return InforBLL.Instance.SearchInfor(searchCase, searchID, lPrice, rPrice, lArea, rArea);
         }
+
         private void SortFunction()
         {
             //Lấy dữ liệu hiện tại
@@ -481,11 +488,12 @@ namespace PBL3.Views.CommonForm
             numberofInfor = allSearchData.Count();
             inforNums = (numberofInfor - currentPage * 5 < 5) ? numberofInfor - currentPage * 5 : 5;
             totalPage = (int)Math.Ceiling(numberofInfor / Convert.ToDouble(skipNum));
-            DisplayHouseInformation();
+            DisplayInfor();
             List<InforViewDTO> inforView = InforBLL.Instance.GetSortedInfors(currentPage * skipNum, inforNums, allSearchData, sortCase);
-            DisablePostViewWhenNotFound(inforNums);
-            InitalizeHouseInfomation(inforView);
+            DisableInforViewWhenNotFound(inforNums);
+            InitalizeInfor(inforView);
         }
+
         private void SearchFunction()
         {
             //Lấy kết quả search
@@ -494,39 +502,35 @@ namespace PBL3.Views.CommonForm
             numberofInfor = allSearchData.Count();
             inforNums = (numberofInfor - currentPage * 5 < 5) ? numberofInfor - currentPage * 5 : 5;
             totalPage = (int)Math.Ceiling(numberofInfor / Convert.ToDouble(skipNum));
-            DisplayHouseInformation();
-            List<InforViewDTO> postView = InforBLL.Instance.GetSearchedInfor(currentPage * skipNum, inforNums, allSearchData);
-            DisablePostViewWhenNotFound(inforNums);
-            InitalizeHouseInfomation(postView);
+            DisplayInfor();
+            List<InforViewDTO> inforView = InforBLL.Instance.GetSearchedInfor(currentPage * skipNum, inforNums, allSearchData);
+            DisableInforViewWhenNotFound(inforNums);
+            InitalizeInfor(inforView);
         }
-      
 
-        public delegate void showPostDetail(Form childForm);
-        public showPostDetail showInfo;
+        public delegate void showInforDetail(Form childForm);
+        public showInforDetail showInfo;
         public void ReOpen()
         {
             this.Show();
         }
+        
         private void houseInfoComponent1__OnLabelClicked(object sender, EventArgs e)
         {
-            if (houseInfoComponent1 != null)
+            if (LoginInfor.UserID == -1)
             {
-                if (LoginInfor.UserID == -1)
-                {
-                    //Chưa đăng nhập => ẩn cmt và rating
-                    InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent1.InforID), true);
-                    form.goback = ReOpen;
-                    form.reload = ReloadForm;//thêm
-                    showInfo(form);
-                }
-                else
-                {
-                    InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent1.InforID));
-                    //InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent1.PostID), true);
-                    form.goback = ReOpen;
-                    form.reload = ReloadForm;//thêm
-                    showInfo(form);
-                }
+                //Chưa đăng nhập => ẩn cmt và rating
+                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent1.InforID), true);
+                form.goback = ReOpen;
+                form.reload = ReloadForm;
+                showInfo(form);
+            }
+            else
+            {
+                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent1.InforID));
+                form.goback = ReOpen;
+                form.reload = ReloadForm;
+                showInfo(form);
             }
         }
 
@@ -534,17 +538,17 @@ namespace PBL3.Views.CommonForm
         {
             if (LoginInfor.UserID == -1)
             {
-                //Chưa đăng nhập => ẩn cmt và rating
+                //Chưa đăng nhập thì ẩn cmt
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent2.InforID), true);
                 form.goback = ReOpen;
-                form.reload = ReloadForm;//thêm
+                form.reload = ReloadForm;
                 showInfo(form);
             }
             else
             {
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent2.InforID));
                 form.goback = ReOpen;                                                        
-                form.reload = ReloadForm;//thêm
+                form.reload = ReloadForm;
                 showInfo(form);
             }
         }
@@ -553,17 +557,16 @@ namespace PBL3.Views.CommonForm
         {
             if (LoginInfor.UserID == -1)
             {
-                //Chưa đăng nhập => ẩn cmt và rating
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent3.InforID), true);
                 form.goback = ReOpen;
-                form.reload = ReloadForm;//thêm
+                form.reload = ReloadForm;
                 showInfo(form);
             }
             else
             {
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent3.InforID));
                 form.goback = ReOpen;
-                form.reload = ReloadForm;//thêm
+                form.reload = ReloadForm;
                 showInfo(form);
             }
         }
@@ -572,17 +575,16 @@ namespace PBL3.Views.CommonForm
         {
             if (LoginInfor.UserID == -1)
             {
-                //Chưa đăng nhập => ẩn cmt và rating
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent4.InforID), true);
                 form.goback = ReOpen;
-                form.reload = ReloadForm;//thêm
+                form.reload = ReloadForm;
                 showInfo(form);
             }
             else
             {
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent4.InforID));
                 form.goback = ReOpen;
-                form.reload = ReloadForm;//thêm
+                form.reload = ReloadForm;
                 showInfo(form);
             }
         }
@@ -591,21 +593,20 @@ namespace PBL3.Views.CommonForm
         {
             if (LoginInfor.UserID == -1)
             {
-                //Chưa đăng nhập => ẩn cmt và rating
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent5.InforID), true);
                 form.goback = ReOpen;
-                form.reload = ReloadForm;//thêm
+                form.reload = ReloadForm;
                 showInfo(form);
             }
             else
             {
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent5.InforID));
                 form.goback = ReOpen;
-                form.reload = ReloadForm;//thêm
+                form.reload = ReloadForm;
                 showInfo(form);
             }
         }
-        // ẩn các trái tim
+        //Ẩn các trái tim
         private void HideAdd_DeleteFavouriteInfor()
         {
             houseInfoComponent1.HideUtilityPanel();

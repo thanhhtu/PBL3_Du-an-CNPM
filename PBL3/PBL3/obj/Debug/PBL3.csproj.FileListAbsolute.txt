@@ -353,7 +353,6 @@ E:\ki4\pbl3\pbl3 (ppull)\PBL3\PBL3\obj\Debug\PBL3.csproj.Up2Date
 E:\ki4\pbl3\pbl3 (ppull)\PBL3\PBL3\obj\Debug\PBL3.exe
 E:\ki4\pbl3\pbl3 (ppull)\PBL3\PBL3\obj\Debug\PBL3.pdb
 D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.AdminForm.InforManagementForm.resources
-D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.RenterForm.UserInforForm.resources
 D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.LandlordForm.InforLandlordForm.resources
 E:\ki4\pbl3\pbl3_finalize\PBL3\PBL3\bin\Debug\PBL3.exe.config
 E:\ki4\pbl3\pbl3_finalize\PBL3\PBL3\bin\Debug\PBL3.exe
@@ -407,3 +406,4 @@ E:\ki4\pbl3\pbl3_finalize\PBL3\PBL3\obj\Debug\PBL3.exe
 E:\ki4\pbl3\pbl3_finalize\PBL3\PBL3\obj\Debug\PBL3.pdb
 E:\ki4\pbl3\pbl3_finalize\PBL3\PBL3\obj\Debug\PBL3.Views.LandlordForm.InforModifiedHistoryForm.resources
 D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.LandlordForm.InforModifiedHistoryForm.resources
+D:\IT\GIT\PBL3_Du-an-CNPM\PBL3\PBL3\obj\Debug\PBL3.Views.RenterForm.UserFavoriteInforForm.resources

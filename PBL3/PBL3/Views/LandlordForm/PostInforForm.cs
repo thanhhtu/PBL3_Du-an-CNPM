@@ -71,42 +71,6 @@ namespace PBL3.Views.LandlordForm
             cbbWard.Items.Add(AllWard);
             cbbWard.SelectedItem = AllWard;
         }
-
-        //Nếu người dùng chọn "Tất cả quận" -> phường chỉ hiển thị "Tất cả phường"
-        //Nếu người dùng chọn quận cụ thể -> hiện tất cả phường thuộc quận đó
-        private void cbbDistrict_OnSelectionChangedCommited(object sender, EventArgs e)
-        {
-
-            if (((CBBItem)cbbDistrict.SelectedItem).Value == 0)
-            {
-                LoadCBB();
-            }
-            else
-            {
-                CBBItem AllWard = new CBBItem
-                {
-                    Value = 0,
-                    Text = "Tất cả phường"
-                };
-
-                cbbWard.Items.Clear();
-                cbbWard.Items.Add(AllWard);
-
-                int districtID = ((CBBItem)cbbDistrict.SelectedItem).Value;
-
-                //Hiện tất cả các phường thuộc 1 quận
-                var WardInDistrict = DistrictBLL.Instance.GetWardsInDistrict(districtID);
-                foreach (var i in WardInDistrict)
-                {
-                    cbbWard.Items.Add(new CBBItem
-                    {
-                        Value = i.WardID,
-                        Text = i.WardName
-                    });
-                }
-                cbbWard.SelectedItem = AllWard;
-            }
-        }
         #endregion
 
         #region -> Validate
@@ -168,7 +132,43 @@ namespace PBL3.Views.LandlordForm
         }
         #endregion
 
-        #region -> Click Button
+        #region -> Click components
+        //Nếu người dùng chọn "Tất cả quận" -> phường chỉ hiển thị "Tất cả phường"
+        //Nếu người dùng chọn quận cụ thể -> hiện tất cả phường thuộc quận đó
+        private void cbbDistrict_OnSelectionChangedCommited(object sender, EventArgs e)
+        {
+
+            if (((CBBItem)cbbDistrict.SelectedItem).Value == 0)
+            {
+                LoadCBB();
+            }
+            else
+            {
+                CBBItem AllWard = new CBBItem
+                {
+                    Value = 0,
+                    Text = "Tất cả phường"
+                };
+
+                cbbWard.Items.Clear();
+                cbbWard.Items.Add(AllWard);
+
+                int districtID = ((CBBItem)cbbDistrict.SelectedItem).Value;
+
+                //Hiện tất cả các phường thuộc 1 quận
+                var WardInDistrict = DistrictBLL.Instance.GetWardsInDistrict(districtID);
+                foreach (var i in WardInDistrict)
+                {
+                    cbbWard.Items.Add(new CBBItem
+                    {
+                        Value = i.WardID,
+                        Text = i.WardName
+                    });
+                }
+                cbbWard.SelectedItem = AllWard;
+            }
+        }
+
         private void btnAddImg_Click(object sender, EventArgs e)
         {
             OpenFileDialog opFile = new OpenFileDialog();

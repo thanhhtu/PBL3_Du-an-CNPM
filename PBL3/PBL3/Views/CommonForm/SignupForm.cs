@@ -239,11 +239,11 @@ namespace PBL3.Views.CommonForm
         #endregion
 
         public delegate void openlinklabel();
-        public openlinklabel OpenForm;
+        public openlinklabel openForm;
 
         private void LabelSignIn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            OpenForm();
+            openForm();
         }
 
         private void btnAddImg_Click(object sender, EventArgs e)
@@ -303,10 +303,6 @@ namespace PBL3.Views.CommonForm
             {
                 if (!CheckCCCD(txtCCCD.Texts)) return;
                 if (CheckFailImage()) return;
-            }
-            else
-            {
-
             }
 
             //Thêm tài khoản

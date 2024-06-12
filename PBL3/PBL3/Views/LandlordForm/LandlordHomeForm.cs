@@ -26,26 +26,6 @@ namespace PBL3.Views.LandlordForm
             panelUserSubmenu.Visible = false; //Ban đầu không hiện chi tiết menu con
         }
 
-        //thêm nhóe
-        private void SignOut()
-        {
-            //Reset lại SignInInfor
-            LoginInfor.UserID = -1;
-
-            //Hiển thị lại HomeForm
-            this.Hide();
-            HomeForm form = new HomeForm();
-            form.ShowDialog();
-            this.Close();
-        }
-        //thêm nhóe
-
-        #region -> Load form & show submenu
-        private void ReloadUserFullName()
-        {
-            labelUserFullname.Text = UserBLL.Instance.GetUserFullname(LoginInfor.UserID).ToString();
-        }
-
         //Tắt form hiện tại đang hiển thị trên childPanel và hiển thị form tương ứng được truyền vào là đối số
         public void OpenChildForm(Form form)
         {
@@ -99,7 +79,23 @@ namespace PBL3.Views.LandlordForm
                 panel.Visible = false;
             }
         }
-        #endregion
+
+        private void SignOut()
+        {
+            //Reset lại SignInInfor
+            LoginInfor.UserID = -1;
+
+            //Hiển thị lại HomeForm
+            this.Hide();
+            HomeForm form = new HomeForm();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void ReloadUserFullName()
+        {
+            labelUserFullname.Text = UserBLL.Instance.GetUserFullname(LoginInfor.UserID).ToString();
+        }
 
         #region -> Click Components
         private void btnHome_Click(object sender, EventArgs e)
@@ -115,7 +111,7 @@ namespace PBL3.Views.LandlordForm
             HideSubmenu();
             LandlordForm.InforManagementForm form = new LandlordForm.InforManagementForm();
             OpenChildForm(form);
-            form.showPost = OpenHouseInfo;
+            form.showInfor = OpenHouseInfo;
         }
 
         private void btnUser_Click(object sender, EventArgs e)

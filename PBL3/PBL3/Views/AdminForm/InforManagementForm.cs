@@ -16,19 +16,17 @@ namespace PBL3.Views.AdminForm
 {
     public partial class InforManagementForm : Form
     {
-        public delegate void showPostDetail(Form childForm);
-        public showPostDetail showPost;
+        public delegate void showInforDetail(Form childForm);
+        public showInforDetail showInfor;
 
-        #region -> Delegate mở lại form
-
+        //Delegate mở lại form
         public void ReOpen()
         {
             this.Show();
             ShowDTG();
         }
-        #endregion
 
-        private static bool checkAscending = true; //kiểm tra sort ascending hay descending
+        private static bool checkAscending = true; //Kiểm tra sort ascending hay descending
         public InforManagementForm()
         {
             InitializeComponent();
@@ -73,6 +71,7 @@ namespace PBL3.Views.AdminForm
             LoadHeader();
         }
 
+        #region -> Click components
         private void btnViewUser_Click(object sender, EventArgs e)
         {
             if (dgv.SelectedRows.Count == 0)
@@ -145,7 +144,7 @@ namespace PBL3.Views.AdminForm
             InforForm form = new InforForm(Convert.ToInt32(inforID), true);
             form.goback = ReOpen;
             form.reload = ShowDTG; //thêm
-            showPost(form);
+            showInfor(form);
         }
 
         private void cbbPostedFilter_OnSelectionChangedCommited(object sender, EventArgs e)
@@ -154,5 +153,6 @@ namespace PBL3.Views.AdminForm
             checkAscending = true;
             ShowDTG();
         }
+        #endregion
     }
 }

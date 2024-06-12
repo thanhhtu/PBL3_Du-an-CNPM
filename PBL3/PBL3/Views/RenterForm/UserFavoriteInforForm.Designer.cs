@@ -1,6 +1,6 @@
 ﻿namespace PBL3.Views.RenterForm
 {
-    partial class UserInforForm
+    partial class UserFavoriteInforForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserInforForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserFavoriteInforForm));
             this.labelFullname = new System.Windows.Forms.Label();
             this.labelPhone = new System.Windows.Forms.Label();
             this.labelAddress = new System.Windows.Forms.Label();

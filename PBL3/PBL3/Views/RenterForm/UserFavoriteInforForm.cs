@@ -16,7 +16,7 @@ using PBL3.Views;
 
 namespace PBL3.Views.RenterForm
 {
-    public partial class UserInforForm : Form
+    public partial class UserFavoriteInforForm : Form
     {
         //Phần này được sử dụng để hiển thị các bài info
         private int currentPage = 0; //Trang hiện tại
@@ -25,7 +25,7 @@ namespace PBL3.Views.RenterForm
         private int postNum; //Tổng số bài info ở trong trang hiện tại
         private int numberOfPosts;
         public static int UserID;
-        public UserInforForm(int userID)
+        public UserFavoriteInforForm(int userID)
         {
             InitializeComponent();
             InitializeInformation(userID);
@@ -374,6 +374,5 @@ namespace PBL3.Views.RenterForm
                 showInfo(form);
             }
         }
-
     }
 }

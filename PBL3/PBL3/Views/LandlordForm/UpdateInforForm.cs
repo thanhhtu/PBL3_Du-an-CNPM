@@ -16,11 +16,12 @@ using PBL3.DTO.ViewDTO;
 namespace PBL3.Views.LandlordForm
 {
     public partial class UpdateInforForm : Form
-    { //aitran thêm 1 biến
-        bool originalRentedStatus=false; // mặc định ban đầu là chưa cho thuê
+    { 
+        bool originalRentedStatus = false; //Mặc định ban đầu là chưa cho thuê
         private int InforID;
         private List<string> ImagePathList;
         private List<string> imageFileName;
+
         public UpdateInforForm(int inforID)
         {
             InitializeComponent();
@@ -32,7 +33,7 @@ namespace PBL3.Views.LandlordForm
             InitializeInfor();
         }
 
-        #region -> Load and set CBB
+        #region -> Load CBB
         public void ResetCBB()
         {
             cbbDistrict.Items.Clear();
@@ -75,43 +76,9 @@ namespace PBL3.Views.LandlordForm
             cbbWard.Items.Add(AllWard);
             cbbWard.SelectedItem = AllWard;
         }
+        #endregion
 
-        //Nếu người dùng chọn "Tất cả quận" -> phường chỉ hiển thị "Tất cả phường"
-        //Nếu người dùng chọn quận cụ thể -> hiện tất cả phường thuộc quận đó
-        private void cbbDistrict_OnSelectionChangedCommited(object sender, EventArgs e)
-        {
-
-            if (((CBBItem)cbbDistrict.SelectedItem).Value == 0)
-            {
-                LoadCBB();
-            }
-            else
-            {
-                CBBItem AllWard = new CBBItem
-                {
-                    Value = 0,
-                    Text = "Tất cả phường"
-                };
-
-                cbbWard.Items.Clear();
-                cbbWard.Items.Add(AllWard);
-
-                int districtID = ((CBBItem)cbbDistrict.SelectedItem).Value;
-
-                //Hiện tất cả các phường thuộc 1 quận
-                var WardInDistrict = DistrictBLL.Instance.GetWardsInDistrict(districtID);
-                foreach (var i in WardInDistrict)
-                {
-                    cbbWard.Items.Add(new CBBItem
-                    {
-                        Value = i.WardID,
-                        Text = i.WardName
-                    });
-                }
-                cbbWard.SelectedItem = AllWard;
-            }
-        }
-
+        #region -> Set data
         //Set CBB
         public void InitializeCBB()
         {
@@ -155,6 +122,62 @@ namespace PBL3.Views.LandlordForm
                     cbbWard.SelectedItem = i;
                     break;
                 }
+            }
+        }
+
+        //Khởi tạo thông tin trọ thông qua bài thông tin
+        private void InitializeInfor()
+        {
+            InforViewDTO inforView = InforBLL.Instance.GetInforByID(InforID);
+            txtTitle.Texts = inforView.Title;
+            txtDetailAddress.Texts = AddressBLL.Instance.GetDetailAddress(InforBLL.Instance.GetAddressIDByInforID(InforID));
+            txtPrice.Texts = inforView.Price.ToString();
+            txtArea.Texts = inforView.SquareArea.ToString();
+            txtDescribe.Texts = inforView.Description;
+
+            if (InforBLL.Instance.CheckRented(InforID) == "Đã thuê")
+            {
+                radioBtnRented.Checked = true;
+                originalRentedStatus = true;
+            }
+            else radioBtnNotRented.Checked = true;
+
+            txtDeposit.Texts = inforView.Deposit.ToString();
+            radioBtnLiveWithOwner.Checked = InforBLL.Instance.CheckLivingwOwner(InforID);
+            radioBtnNotLiveWithOwner.Checked = !InforBLL.Instance.CheckLivingwOwner(InforID);
+            InitializeImage(inforView);
+            InitializeCBB();
+        }
+
+        //Khởi tạo img
+        private void InitializeImage(InforViewDTO infor)
+        {
+            try
+            {
+                string imagePath = ImageBLL.Instance.GetImageStoragePathsOfInfor(InforID);
+                System.Drawing.Image image1;
+                using (Stream stream = File.OpenRead(imagePath + infor.ImagePaths[0]))
+                {
+                    image1 = System.Drawing.Image.FromStream(stream);
+                }
+                pictureBox1.Image = image1;
+                System.Drawing.Image image2;
+                using (Stream stream = File.OpenRead(imagePath + infor.ImagePaths[1]))
+                {
+                    image2 = System.Drawing.Image.FromStream(stream);
+                }
+                pictureBox2.Image = image2;
+
+                System.Drawing.Image image3;
+                using (Stream stream = File.OpenRead(imagePath + infor.ImagePaths[2]))
+                {
+                    image3 = System.Drawing.Image.FromStream(stream);
+                }
+                pictureBox3.Image = image3;
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show("Unable to open file " + exp.Message);
             }
         }
         #endregion
@@ -209,6 +232,41 @@ namespace PBL3.Views.LandlordForm
         #endregion
 
         #region -> Click components
+        //Nếu người dùng chọn "Tất cả quận" (mặc định) -> phường chỉ hiển thị "Tất cả phường"
+        //Nếu người dùng chọn quận cụ thể -> hiện tất cả phường thuộc quận đó
+        private void cbbDistrict_OnSelectionChangedCommited(object sender, EventArgs e)
+        {
+            if (((CBBItem)cbbDistrict.SelectedItem).Value == 0)
+            {
+                LoadCBB();
+            }
+            else
+            {
+                CBBItem AllWard = new CBBItem
+                {
+                    Value = 0,
+                    Text = "Tất cả phường"
+                };
+
+                cbbWard.Items.Clear();
+                cbbWard.Items.Add(AllWard);
+
+                int districtID = ((CBBItem)cbbDistrict.SelectedItem).Value;
+
+                //Hiện tất cả các phường thuộc 1 quận
+                var WardInDistrict = DistrictBLL.Instance.GetWardsInDistrict(districtID);
+                foreach (var i in WardInDistrict)
+                {
+                    cbbWard.Items.Add(new CBBItem
+                    {
+                        Value = i.WardID,
+                        Text = i.WardName
+                    });
+                }
+                cbbWard.SelectedItem = AllWard;
+            }
+        }
+
         //Thay đổi ảnh
         private void btnUpdateImg_Click(object sender, EventArgs e)
         {
@@ -316,61 +374,5 @@ namespace PBL3.Views.LandlordForm
             this.Close();
         }
         #endregion
-
-        //Khởi tạo thông tin trọ thông qua bài thông tin
-        private void InitializeInfor()
-        {
-            InforViewDTO inforView = InforBLL.Instance.GetInforByID(InforID);
-            txtTitle.Texts = inforView.Title;
-            txtDetailAddress.Texts = AddressBLL.Instance.GetDetailAddress(InforBLL.Instance.GetAddressIDByInforID(InforID));
-            txtPrice.Texts = inforView.Price.ToString();
-            txtArea.Texts = inforView.SquareArea.ToString();
-            txtDescribe.Texts = inforView.Description;
-
-            if (InforBLL.Instance.CheckRented(InforID) == "Đã thuê")
-            { 
-                radioBtnRented.Checked = true;
-                originalRentedStatus = true;
-            }
-            else radioBtnNotRented.Checked = true;
-            
-            txtDeposit.Texts = inforView.Deposit.ToString();
-            radioBtnLiveWithOwner.Checked = InforBLL.Instance.CheckLivingwOwner(InforID);
-            radioBtnNotLiveWithOwner.Checked = !InforBLL.Instance.CheckLivingwOwner(InforID);
-            InitializeImage(inforView);
-            InitializeCBB();
-        }
-
-        //Khởi tạo img
-        private void InitializeImage(InforViewDTO post)
-        {
-            try
-            {
-                string imagePath = ImageBLL.Instance.GetImageStoragePathsOfInfor(InforID);
-                System.Drawing.Image image1;
-                using (Stream stream = File.OpenRead(imagePath + post.ImagePaths[0]))
-                {
-                    image1 = System.Drawing.Image.FromStream(stream);
-                }
-                pictureBox1.Image = image1;
-                System.Drawing.Image image2;
-                using (Stream stream = File.OpenRead(imagePath + post.ImagePaths[1]))
-                {
-                    image2 = System.Drawing.Image.FromStream(stream);
-                }
-                pictureBox2.Image = image2;
-
-                System.Drawing.Image image3;
-                using (Stream stream = File.OpenRead(imagePath + post.ImagePaths[2]))
-                {
-                    image3 = System.Drawing.Image.FromStream(stream);
-                }
-                pictureBox3.Image = image3;
-            }
-            catch (Exception exp)
-            {
-                MessageBox.Show("Unable to open file " + exp.Message);
-            }
-        }
     }
 }

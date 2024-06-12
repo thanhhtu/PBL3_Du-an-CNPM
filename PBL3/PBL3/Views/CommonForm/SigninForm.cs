@@ -38,7 +38,7 @@ namespace PBL3.Views.CommonForm
                 return;
             }
 
-            //Nếu là chủ trọ kiểm tra có được duyệt tài khoản chưa
+            //Nếu là chủ trọ thì kiểm tra có được duyệt tài khoản chưa
             if (!AccountBLL.Instance.IsPublishedAccount(AccountBLL.Instance.GetAccountID(username, password)))
             {
                 MessageBox.Show("Tài khoản của bạn chưa được Admin duyệt. Xin vui lòng thử lại sau!");
@@ -55,7 +55,7 @@ namespace PBL3.Views.CommonForm
             //Gán thông tin người dùng cho SignInInforBLL để tạo phiên làm việc với user
             LoginInfor.UserID = UserBLL.Instance.GetUserIDByAccountID(AccountBLL.Instance.GetAccountID(username, password));
 
-            //Thông tin nhập đúng thì sẽ dựa trên role của người dùng sẽ mở form tương ứng
+            //Thông tin nhập đúng thì sẽ dựa trên role của người dùng để mở form tương ứng
             hideParentForm();
             if (role == 1)
             {

@@ -51,24 +51,23 @@ namespace PBL3.Views.AdminForm
             dgv.Columns["UserID"].Visible = false;
         }
 
-        //tt sửa
         public void ShowDTG()
         {
             string searchChars = txtSearch.Texts;
             int sortCase = cbbSort.SelectedIndex;
-
-            int userRole = cbbUserRole.SelectedIndex; //tt thêm
+            int userRole = cbbUserRole.SelectedIndex; 
             bool? beingPublished = true;
-            bool beingPaused = false; //tt thêm
+            bool beingPaused = false; 
             
             dgv.DataSource = UserBLL.Instance.SearchUser(searchChars, userRole, sortCase, checkAscending, beingPublished, beingPaused);
             LoadHeader();
         }
+
+        #region -> Click components
         private void btnSearch_Click(object sender, EventArgs e)
         {
             ShowDTG();
         }
-        //tt đổi
 
         //Duyệt chủ trọ
         private void AcceptLandlord_Click(object sender, EventArgs e)
@@ -123,7 +122,6 @@ namespace PBL3.Views.AdminForm
             }
         }
 
-        //tt thêm
         private void btnActiveUser_Click(object sender, EventArgs e)
         {
             if (dgv.SelectedRows.Count == 0)
@@ -156,9 +154,9 @@ namespace PBL3.Views.AdminForm
             
         }
 
+        //Xem thông tin người dùng
         private void btnViewUser_Click(object sender, EventArgs e)
         {
-            //Xem thông tin người dùng
             if (dgv.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Hãy chọn 1 người dùng!");
@@ -208,5 +206,6 @@ namespace PBL3.Views.AdminForm
         {
             dgv.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
         }
+        #endregion
     }
 }

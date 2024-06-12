@@ -17,34 +17,36 @@ namespace PBL3.Views.CommonForm
 {
     public partial class InforForm : Form
     {
-        //ID người đăng và ID bài post
+        //ID người đăng và ID bài infor
         private int UserID;
         private int InforID;
 
         private int commentNum; //Số lượng comment có trong trang
-        private int totalCommentNum; //Tổng số lượng comment của bài post
+        private int totalCommentNum; //Tổng số lượng comment của bài infor
         private int currentCommentPage = 0; //Trang hiện tại của phần comment
         private int totalPage; //Số trang tổng cộng
         private int skipNum = 4; //Một lần chỉ có thể load được 4 comment
-                                 // private int load 
-        public InforForm(int infoID, bool HideRating = true)
+
+        public InforForm(int infoID, bool HideCmt = false)
         {
             InforID = infoID;
             InitializeComponent();
             InitializeFormInfomation();
             InitializeImage();
             LoadComment();
-            if (HideRating) //Ẩn cmt
+            if (HideCmt) //Ẩn cmt
             {
-                panel8.Visible = true;
+                panel7.Visible = false;
             }
         }
+
+        //Khởi tạo ảnh của infor
         private void InitializeImage()
         {
-            //Khởi tạo ảnh của bài đăng
             try
             {
                 InforViewDTO post = InforBLL.Instance.GetInforByID(InforID);
+
                 //Get folder path chứa ảnh của bài đăng có InforID
                 string imagePath = ImageBLL.Instance.GetImageStoragePathsOfInfor(InforID);
 
@@ -86,11 +88,13 @@ namespace PBL3.Views.CommonForm
                 MessageBox.Show("Unable to open file " + exp.Message);
             }
         }
+
         public void HideHeart()
         {
             btnAddFavour.Visible = false;
             btnDeleteFavour.Visible = false;
         }
+        
         private void InitializeFormInfomation()
         {   if (UserBLL.Instance.GetRoleIDByUserID(LoginInfor.UserID) == 1 || UserBLL.Instance.GetRoleIDByUserID(LoginInfor.UserID) == 2) { HideHeart(); }
             //Khởi tạo thông tin ban đầu của form

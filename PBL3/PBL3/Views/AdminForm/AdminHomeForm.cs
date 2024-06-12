@@ -24,11 +24,6 @@ namespace PBL3.Views.AdminForm
             ReloadUserFullName();
         }
 
-        private void ReloadUserFullName()
-        {
-            labelUserFullname.Text = UserBLL.Instance.GetUserFullname(LoginInfor.UserID).ToString();
-        }
-
         //Tắt form hiện tại đang hiển thị trên childPanel và hiển thị form tương ứng được truyền vào là đối số
         public void OpenChildForm(Form form)
         {
@@ -61,6 +56,11 @@ namespace PBL3.Views.AdminForm
             form.Show();
         }
 
+        private void ReloadUserFullName()
+        {
+            labelUserFullname.Text = UserBLL.Instance.GetUserFullname(LoginInfor.UserID).ToString();
+        }
+
         #region -> Click Button
         private void btnHome_Click(object sender, EventArgs e)
         {
@@ -73,7 +73,7 @@ namespace PBL3.Views.AdminForm
         {
             InforManagementForm form = new InforManagementForm();
             OpenChildForm(form);
-            form.showPost = OpenHouseInfo;
+            form.showInfor = OpenHouseInfo;
         }
 
         private void btnUserManagement_Click(object sender, EventArgs e)

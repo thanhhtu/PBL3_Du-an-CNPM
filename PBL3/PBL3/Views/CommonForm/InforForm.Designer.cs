@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -43,7 +42,6 @@
             this.labelCreateTime = new System.Windows.Forms.Label();
             this.labelSquareArea = new System.Windows.Forms.Label();
             this.labelMoney = new System.Windows.Forms.Label();
-            this.btnInforLanlord = new PBL3.Views.CustomComponent.CustomButton();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.labelLivewOwner = new System.Windows.Forms.Label();
             this.labelSquare = new System.Windows.Forms.Label();
@@ -51,27 +49,27 @@
             this.label7 = new System.Windows.Forms.Label();
             this.labelAddress = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnInforLandLord = new PBL3.Views.CustomComponent.CustomButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnPreviousCmt = new PBL3.Views.CustomComponent.CustomButton();
-            this.btnNextCmt = new PBL3.Views.CustomComponent.CustomButton();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.txtComment = new PBL3.Views.CustomComponent.CustomTextBox();
-            this.btnUpComment = new PBL3.Views.CustomComponent.CustomButton();
             this.panel8 = new System.Windows.Forms.Panel();
             this.customComment4 = new PBL3.Views.CustomComponents.CustomComment();
             this.customComment3 = new PBL3.Views.CustomComponents.CustomComment();
             this.customComment2 = new PBL3.Views.CustomComponents.CustomComment();
             this.customComment1 = new PBL3.Views.CustomComponents.CustomComment();
+            this.txtComment = new PBL3.Views.CustomComponent.CustomTextBox();
+            this.btnUpComment = new PBL3.Views.CustomComponent.CustomButton();
+            this.btnPreviousCmt = new PBL3.Views.CustomComponent.CustomButton();
+            this.btnNextCmt = new PBL3.Views.CustomComponent.CustomButton();
             this.btnBack = new PBL3.Views.CustomComponent.CustomButton();
             this.txtDesInfor = new PBL3.Views.CustomComponent.CustomTextBox();
+            this.btnInforLandLord = new PBL3.Views.CustomComponent.CustomButton();
+            this.btnInforLanlord = new PBL3.Views.CustomComponent.CustomButton();
             this.customPanel1 = new PBL3.Views.CustomComponent.CustomPanel();
             this.btnAddFavour = new PBL3.Views.CustomComponent.CustomButton();
             this.btnDeleteFavour = new PBL3.Views.CustomComponent.CustomButton();
             this.labelTitle = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -101,7 +99,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -109,42 +106,36 @@
             this.panel1.Location = new System.Drawing.Point(0, 52);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1758, 294);
+            this.panel1.Size = new System.Drawing.Size(1758, 348);
             this.panel1.TabIndex = 8;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Location = new System.Drawing.Point(1141, 4);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(357, 282);
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(767, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(1264, 14);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(357, 282);
+            this.pictureBox3.Size = new System.Drawing.Size(357, 318);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(393, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(680, 14);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(357, 282);
+            this.pictureBox2.Size = new System.Drawing.Size(357, 318);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(19, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(73, 14);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(357, 282);
+            this.pictureBox1.Size = new System.Drawing.Size(357, 318);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -156,7 +147,7 @@
             this.panel2.Controls.Add(this.labelLivewOwner);
             this.panel2.Controls.Add(this.labelSquare);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 401);
+            this.panel2.Location = new System.Drawing.Point(0, 455);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1758, 57);
@@ -271,26 +262,6 @@
             this.labelMoney.TabIndex = 25;
             this.labelMoney.Text = "Số tiền:";
             // 
-            // btnInforLanlord
-            // 
-            this.btnInforLanlord.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnInforLanlord.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.btnInforLanlord.BorderColor = System.Drawing.Color.LightSkyBlue;
-            this.btnInforLanlord.BorderRadius = 20;
-            this.btnInforLanlord.BorderSize = 0;
-            this.btnInforLanlord.FlatAppearance.BorderSize = 0;
-            this.btnInforLanlord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInforLanlord.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnInforLanlord.ForeColor = System.Drawing.Color.Transparent;
-            this.btnInforLanlord.Location = new System.Drawing.Point(713, 7);
-            this.btnInforLanlord.Margin = new System.Windows.Forms.Padding(4);
-            this.btnInforLanlord.Name = "btnInforLanlord";
-            this.btnInforLanlord.Size = new System.Drawing.Size(239, 38);
-            this.btnInforLanlord.TabIndex = 13;
-            this.btnInforLanlord.Text = "Thông tin chủ trọ";
-            this.btnInforLanlord.TextColor = System.Drawing.Color.Transparent;
-            this.btnInforLanlord.UseVisualStyleBackColor = false;
-            // 
             // checkBox1
             // 
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -366,33 +337,11 @@
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.btnInforLandLord);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 458);
+            this.panel4.Location = new System.Drawing.Point(0, 512);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1758, 56);
             this.panel4.TabIndex = 11;
-            // 
-            // btnInforLandLord
-            // 
-            this.btnInforLandLord.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnInforLandLord.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.btnInforLandLord.BorderColor = System.Drawing.Color.LightSkyBlue;
-            this.btnInforLandLord.BorderRadius = 20;
-            this.btnInforLandLord.BorderSize = 0;
-            this.btnInforLandLord.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnInforLandLord.FlatAppearance.BorderSize = 0;
-            this.btnInforLandLord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInforLandLord.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnInforLandLord.ForeColor = System.Drawing.Color.Black;
-            this.btnInforLandLord.Location = new System.Drawing.Point(1456, 0);
-            this.btnInforLandLord.Margin = new System.Windows.Forms.Padding(4, 4, 13, 11);
-            this.btnInforLandLord.Name = "btnInforLandLord";
-            this.btnInforLandLord.Size = new System.Drawing.Size(300, 54);
-            this.btnInforLandLord.TabIndex = 13;
-            this.btnInforLandLord.Text = "Thông tin chủ trọ";
-            this.btnInforLandLord.TextColor = System.Drawing.Color.Black;
-            this.btnInforLandLord.UseVisualStyleBackColor = false;
-            this.btnInforLandLord.Click += new System.EventHandler(this.btnInforLandLord_Click);
             // 
             // panel6
             // 
@@ -401,7 +350,7 @@
             this.panel6.Controls.Add(this.btnPreviousCmt);
             this.panel6.Controls.Add(this.btnNextCmt);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 577);
+            this.panel6.Location = new System.Drawing.Point(0, 631);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1758, 54);
@@ -415,107 +364,16 @@
             this.panel5.Size = new System.Drawing.Size(267, 123);
             this.panel5.TabIndex = 4;
             // 
-            // btnPreviousCmt
-            // 
-            this.btnPreviousCmt.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnPreviousCmt.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.btnPreviousCmt.BorderColor = System.Drawing.Color.Transparent;
-            this.btnPreviousCmt.BorderRadius = 0;
-            this.btnPreviousCmt.BorderSize = 0;
-            this.btnPreviousCmt.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnPreviousCmt.FlatAppearance.BorderSize = 0;
-            this.btnPreviousCmt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPreviousCmt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPreviousCmt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.btnPreviousCmt.Image = global::PBL3.Properties.Resources.previous;
-            this.btnPreviousCmt.Location = new System.Drawing.Point(1622, 0);
-            this.btnPreviousCmt.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPreviousCmt.Name = "btnPreviousCmt";
-            this.btnPreviousCmt.Size = new System.Drawing.Size(77, 54);
-            this.btnPreviousCmt.TabIndex = 25;
-            this.btnPreviousCmt.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.btnPreviousCmt.UseVisualStyleBackColor = false;
-            this.btnPreviousCmt.Click += new System.EventHandler(this.btnPreviousCmt_Click);
-            // 
-            // btnNextCmt
-            // 
-            this.btnNextCmt.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnNextCmt.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.btnNextCmt.BorderColor = System.Drawing.Color.Transparent;
-            this.btnNextCmt.BorderRadius = 0;
-            this.btnNextCmt.BorderSize = 0;
-            this.btnNextCmt.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnNextCmt.FlatAppearance.BorderSize = 0;
-            this.btnNextCmt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNextCmt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNextCmt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.btnNextCmt.Image = global::PBL3.Properties.Resources.next;
-            this.btnNextCmt.Location = new System.Drawing.Point(1699, 0);
-            this.btnNextCmt.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNextCmt.Name = "btnNextCmt";
-            this.btnNextCmt.Size = new System.Drawing.Size(59, 54);
-            this.btnNextCmt.TabIndex = 26;
-            this.btnNextCmt.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.btnNextCmt.UseVisualStyleBackColor = false;
-            this.btnNextCmt.Click += new System.EventHandler(this.btnNextCmt_Click);
-            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.txtComment);
             this.panel7.Controls.Add(this.btnUpComment);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(0, 887);
+            this.panel7.Location = new System.Drawing.Point(0, 941);
             this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1758, 57);
             this.panel7.TabIndex = 27;
-            // 
-            // txtComment
-            // 
-            this.txtComment.AutoSize = true;
-            this.txtComment.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.txtComment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.txtComment.BorderColor = System.Drawing.Color.SteelBlue;
-            this.txtComment.BorderFocusColor = System.Drawing.Color.SlateBlue;
-            this.txtComment.BorderRadius = 6;
-            this.txtComment.BorderSize = 1;
-            this.txtComment.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtComment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComment.ForeColor = System.Drawing.Color.DimGray;
-            this.txtComment.Location = new System.Drawing.Point(0, 0);
-            this.txtComment.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
-            this.txtComment.Multiline = true;
-            this.txtComment.Name = "txtComment";
-            this.txtComment.Padding = new System.Windows.Forms.Padding(27, 5, 9, 5);
-            this.txtComment.PasswordChar = false;
-            this.txtComment.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.txtComment.PlaceholderText = "Bình luạn ở đây";
-            this.txtComment.Size = new System.Drawing.Size(1621, 57);
-            this.txtComment.TabIndex = 33;
-            this.txtComment.Texts = "";
-            this.txtComment.UnderlinedStyle = false;
-            // 
-            // btnUpComment
-            // 
-            this.btnUpComment.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnUpComment.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.btnUpComment.BorderColor = System.Drawing.Color.LightSkyBlue;
-            this.btnUpComment.BorderRadius = 20;
-            this.btnUpComment.BorderSize = 0;
-            this.btnUpComment.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnUpComment.FlatAppearance.BorderSize = 0;
-            this.btnUpComment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpComment.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnUpComment.ForeColor = System.Drawing.Color.Black;
-            this.btnUpComment.Location = new System.Drawing.Point(1621, 0);
-            this.btnUpComment.Margin = new System.Windows.Forms.Padding(4);
-            this.btnUpComment.Name = "btnUpComment";
-            this.btnUpComment.Size = new System.Drawing.Size(137, 57);
-            this.btnUpComment.TabIndex = 32;
-            this.btnUpComment.Text = "Bình luận";
-            this.btnUpComment.TextColor = System.Drawing.Color.Black;
-            this.btnUpComment.UseVisualStyleBackColor = false;
-            this.btnUpComment.Click += new System.EventHandler(this.btnUpComment_Click_2);
             // 
             // panel8
             // 
@@ -524,7 +382,7 @@
             this.panel8.Controls.Add(this.customComment2);
             this.panel8.Controls.Add(this.customComment1);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 631);
+            this.panel8.Location = new System.Drawing.Point(0, 685);
             this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1758, 256);
@@ -590,6 +448,97 @@
             this.customComment1._EditEventHandler += new System.EventHandler(this.editCommentEventHandler);
             this.customComment1._DeleteEventHandler += new System.EventHandler(this.deleteCommentEventHandler);
             // 
+            // txtComment
+            // 
+            this.txtComment.AutoSize = true;
+            this.txtComment.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.txtComment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.txtComment.BorderColor = System.Drawing.Color.SteelBlue;
+            this.txtComment.BorderFocusColor = System.Drawing.Color.SlateBlue;
+            this.txtComment.BorderRadius = 6;
+            this.txtComment.BorderSize = 1;
+            this.txtComment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtComment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComment.ForeColor = System.Drawing.Color.DimGray;
+            this.txtComment.Location = new System.Drawing.Point(0, 0);
+            this.txtComment.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
+            this.txtComment.Multiline = true;
+            this.txtComment.Name = "txtComment";
+            this.txtComment.Padding = new System.Windows.Forms.Padding(27, 5, 9, 5);
+            this.txtComment.PasswordChar = false;
+            this.txtComment.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.txtComment.PlaceholderText = "Bình luạn ở đây";
+            this.txtComment.Size = new System.Drawing.Size(1621, 57);
+            this.txtComment.TabIndex = 33;
+            this.txtComment.Texts = "";
+            this.txtComment.UnderlinedStyle = false;
+            // 
+            // btnUpComment
+            // 
+            this.btnUpComment.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnUpComment.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.btnUpComment.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.btnUpComment.BorderRadius = 20;
+            this.btnUpComment.BorderSize = 0;
+            this.btnUpComment.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnUpComment.FlatAppearance.BorderSize = 0;
+            this.btnUpComment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpComment.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnUpComment.ForeColor = System.Drawing.Color.Black;
+            this.btnUpComment.Location = new System.Drawing.Point(1621, 0);
+            this.btnUpComment.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpComment.Name = "btnUpComment";
+            this.btnUpComment.Size = new System.Drawing.Size(137, 57);
+            this.btnUpComment.TabIndex = 32;
+            this.btnUpComment.Text = "Bình luận";
+            this.btnUpComment.TextColor = System.Drawing.Color.Black;
+            this.btnUpComment.UseVisualStyleBackColor = false;
+            this.btnUpComment.Click += new System.EventHandler(this.btnUpComment_Click_2);
+            // 
+            // btnPreviousCmt
+            // 
+            this.btnPreviousCmt.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnPreviousCmt.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.btnPreviousCmt.BorderColor = System.Drawing.Color.Transparent;
+            this.btnPreviousCmt.BorderRadius = 0;
+            this.btnPreviousCmt.BorderSize = 0;
+            this.btnPreviousCmt.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnPreviousCmt.FlatAppearance.BorderSize = 0;
+            this.btnPreviousCmt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPreviousCmt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPreviousCmt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.btnPreviousCmt.Image = global::PBL3.Properties.Resources.previous;
+            this.btnPreviousCmt.Location = new System.Drawing.Point(1622, 0);
+            this.btnPreviousCmt.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPreviousCmt.Name = "btnPreviousCmt";
+            this.btnPreviousCmt.Size = new System.Drawing.Size(77, 54);
+            this.btnPreviousCmt.TabIndex = 25;
+            this.btnPreviousCmt.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.btnPreviousCmt.UseVisualStyleBackColor = false;
+            this.btnPreviousCmt.Click += new System.EventHandler(this.btnPreviousCmt_Click);
+            // 
+            // btnNextCmt
+            // 
+            this.btnNextCmt.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnNextCmt.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.btnNextCmt.BorderColor = System.Drawing.Color.Transparent;
+            this.btnNextCmt.BorderRadius = 0;
+            this.btnNextCmt.BorderSize = 0;
+            this.btnNextCmt.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnNextCmt.FlatAppearance.BorderSize = 0;
+            this.btnNextCmt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNextCmt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNextCmt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.btnNextCmt.Image = global::PBL3.Properties.Resources.next;
+            this.btnNextCmt.Location = new System.Drawing.Point(1699, 0);
+            this.btnNextCmt.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNextCmt.Name = "btnNextCmt";
+            this.btnNextCmt.Size = new System.Drawing.Size(59, 54);
+            this.btnNextCmt.TabIndex = 26;
+            this.btnNextCmt.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.btnNextCmt.UseVisualStyleBackColor = false;
+            this.btnNextCmt.Click += new System.EventHandler(this.btnNextCmt_Click);
+            // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
@@ -623,7 +572,7 @@
             this.txtDesInfor.Enabled = false;
             this.txtDesInfor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDesInfor.ForeColor = System.Drawing.Color.DimGray;
-            this.txtDesInfor.Location = new System.Drawing.Point(0, 514);
+            this.txtDesInfor.Location = new System.Drawing.Point(0, 568);
             this.txtDesInfor.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
             this.txtDesInfor.Multiline = true;
             this.txtDesInfor.Name = "txtDesInfor";
@@ -635,6 +584,48 @@
             this.txtDesInfor.TabIndex = 24;
             this.txtDesInfor.Texts = "";
             this.txtDesInfor.UnderlinedStyle = false;
+            // 
+            // btnInforLandLord
+            // 
+            this.btnInforLandLord.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnInforLandLord.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.btnInforLandLord.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.btnInforLandLord.BorderRadius = 20;
+            this.btnInforLandLord.BorderSize = 0;
+            this.btnInforLandLord.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnInforLandLord.FlatAppearance.BorderSize = 0;
+            this.btnInforLandLord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInforLandLord.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnInforLandLord.ForeColor = System.Drawing.Color.Black;
+            this.btnInforLandLord.Location = new System.Drawing.Point(1456, 0);
+            this.btnInforLandLord.Margin = new System.Windows.Forms.Padding(4, 4, 13, 11);
+            this.btnInforLandLord.Name = "btnInforLandLord";
+            this.btnInforLandLord.Size = new System.Drawing.Size(300, 54);
+            this.btnInforLandLord.TabIndex = 13;
+            this.btnInforLandLord.Text = "Thông tin chủ trọ";
+            this.btnInforLandLord.TextColor = System.Drawing.Color.Black;
+            this.btnInforLandLord.UseVisualStyleBackColor = false;
+            this.btnInforLandLord.Click += new System.EventHandler(this.btnInforLandLord_Click);
+            // 
+            // btnInforLanlord
+            // 
+            this.btnInforLanlord.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnInforLanlord.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.btnInforLanlord.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.btnInforLanlord.BorderRadius = 20;
+            this.btnInforLanlord.BorderSize = 0;
+            this.btnInforLanlord.FlatAppearance.BorderSize = 0;
+            this.btnInforLanlord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInforLanlord.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnInforLanlord.ForeColor = System.Drawing.Color.Transparent;
+            this.btnInforLanlord.Location = new System.Drawing.Point(713, 7);
+            this.btnInforLanlord.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInforLanlord.Name = "btnInforLanlord";
+            this.btnInforLanlord.Size = new System.Drawing.Size(239, 38);
+            this.btnInforLanlord.TabIndex = 13;
+            this.btnInforLanlord.Text = "Thông tin chủ trọ";
+            this.btnInforLanlord.TextColor = System.Drawing.Color.Transparent;
+            this.btnInforLanlord.UseVisualStyleBackColor = false;
             // 
             // customPanel1
             // 
@@ -649,7 +640,7 @@
             this.customPanel1.GradientAngle = 90F;
             this.customPanel1.GradientBottonColor = System.Drawing.Color.Transparent;
             this.customPanel1.GradientTopColor = System.Drawing.Color.Transparent;
-            this.customPanel1.Location = new System.Drawing.Point(0, 346);
+            this.customPanel1.Location = new System.Drawing.Point(0, 400);
             this.customPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.customPanel1.Name = "customPanel1";
             this.customPanel1.Size = new System.Drawing.Size(1758, 55);
@@ -732,7 +723,6 @@
             this.Name = "InforForm";
             this.Text = "HouseInforForm";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -757,7 +747,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;

@@ -16,8 +16,8 @@ namespace PBL3.Views.LandlordForm
 {
     public partial class InforManagementForm : Form
     {
-        public delegate void showPostDetail(Form childForm);
-        public showPostDetail showPost;
+        public delegate void showInforDetail(Form childForm);
+        public showInforDetail showInfor;
 
         private static bool checkAscending = true;
 
@@ -111,7 +111,7 @@ namespace PBL3.Views.LandlordForm
             InforForm form = new InforForm(Convert.ToInt32(inforID), true);
             form.goback = ReOpen;
             form.reload = ShowDTG;
-            showPost(form);
+            showInfor(form);
         }
 
         //Update thông tin trọ
@@ -169,7 +169,6 @@ namespace PBL3.Views.LandlordForm
         {
             dgv.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
         }
-        #endregion
 
         //Xem lịch sử cho thuê trọ
         private void btnModifiedHistory_Click(object sender, EventArgs e)
@@ -188,5 +187,6 @@ namespace PBL3.Views.LandlordForm
             InforModifiedHistoryForm form = new InforModifiedHistoryForm(Convert.ToInt32(inforID));
             form.ShowDialog(this);
         }
+        #endregion
     }
 }
