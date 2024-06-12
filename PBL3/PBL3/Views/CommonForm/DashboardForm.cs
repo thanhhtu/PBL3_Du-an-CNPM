@@ -34,7 +34,7 @@ namespace PBL3.Views.CommonForm
             InitializeComponent();
             ReloadForm();
         }
-      
+
         #region-> LoadCBB quận + phường
         // Mặc định: Load quận trước (phường: hiện tất cả)
         // Khi selected item của cbb quận thay đổi thì load phường tương ứng với quận
@@ -115,7 +115,7 @@ namespace PBL3.Views.CommonForm
 
         #region -> Load CBB số trang
         public void LoadCBBPageNum()
-        { 
+        {
             cbbPageNumber.Items.Clear();
             cbbPageNumber.DataSource = null;
             cbbPageNumber.ResetText();
@@ -143,7 +143,7 @@ namespace PBL3.Views.CommonForm
             //Sorting được ưu tiên nhất
             if (sorting)
             {
-                 SortFunction();
+                SortFunction();
                 return;
             }
             SearchFunction();
@@ -162,7 +162,7 @@ namespace PBL3.Views.CommonForm
         }
 
         //Ẩn các house info component khi số post trên page đó ít hơn 5
-        private void DisablePostViewWhenNotFound(int inforNum)
+        private void DisableInforViewWhenNotFound(int inforNum)
         {
             switch (inforNum)
             {
@@ -358,31 +358,31 @@ namespace PBL3.Views.CommonForm
                 return;
             }
             SearchFunction();
-            }
-            private void btnSearch_Click(object sender, EventArgs e)
-            {
-                currentPage = 0;
-                searching = true;
-                SearchFunction();
-                LoadCBBPageNum();
-            }
+        }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            currentPage = 0;
+            searching = true;
+            SearchFunction();
+            LoadCBBPageNum();
+        }
 
-            private void cbbSort_OnSelectionChangedCommited(object sender, EventArgs e)
-            {
-                currentPage = 0;
-                sorting = true;
-                SortFunction();
-                LoadCBBPageNum();
-            }
+        private void cbbSort_OnSelectionChangedCommited(object sender, EventArgs e)
+        {
+            currentPage = 0;
+            sorting = true;
+            SortFunction();
+            LoadCBBPageNum();
+        }
 
-            private void btnReset_Click(object sender, EventArgs e)
-            {
-                LoadCBB();
-                LoadCBBPageNum();
-                searching = false;
-                sorting = false;
-                SearchFunction();
-            }
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            LoadCBB();
+            LoadCBBPageNum();
+            searching = false;
+            sorting = false;
+            SearchFunction();
+        }
         #endregion
         public List<AccommodationInformation> GetSearchInfor()
         {
@@ -483,7 +483,7 @@ namespace PBL3.Views.CommonForm
             totalPage = (int)Math.Ceiling(numberofInfor / Convert.ToDouble(skipNum));
             DisplayHouseInformation();
             List<InforViewDTO> inforView = InforBLL.Instance.GetSortedInfors(currentPage * skipNum, inforNums, allSearchData, sortCase);
-            DisablePostViewWhenNotFound(inforNums);
+            DisableInforViewWhenNotFound(inforNums);
             InitalizeHouseInfomation(inforView);
         }
         private void SearchFunction()
@@ -495,38 +495,35 @@ namespace PBL3.Views.CommonForm
             inforNums = (numberofInfor - currentPage * 5 < 5) ? numberofInfor - currentPage * 5 : 5;
             totalPage = (int)Math.Ceiling(numberofInfor / Convert.ToDouble(skipNum));
             DisplayHouseInformation();
-            List<InforViewDTO> postView = InforBLL.Instance.GetSearchedInfor(currentPage * skipNum, inforNums, allSearchData);
-            DisablePostViewWhenNotFound(inforNums);
-            InitalizeHouseInfomation(postView);
+            List<InforViewDTO> inforView = InforBLL.Instance.GetSearchedInfor(currentPage * skipNum, inforNums, allSearchData);
+            DisableInforViewWhenNotFound(inforNums);
+            InitalizeHouseInfomation(inforView);
         }
-      
 
-        public delegate void showPostDetail(Form childForm);
-        public showPostDetail showInfo;
+
+        public delegate void showInforDetail(Form childForm);
+        public showInforDetail showInfo;
         public void ReOpen()
         {
             this.Show();
         }
         private void houseInfoComponent1__OnLabelClicked(object sender, EventArgs e)
         {
-            if (houseInfoComponent1 != null)
+            if (LoginInfor.UserID == -1)
             {
-                if (LoginInfor.UserID == -1)
-                {
-                    //Chưa đăng nhập => ẩn cmt và rating
-                    InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent1.InforID), true);
-                    form.goback = ReOpen;
-                    form.reload = ReloadForm;//thêm
-                    showInfo(form);
-                }
-                else
-                {
-                    InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent1.InforID));
-                    //InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent1.PostID), true);
-                    form.goback = ReOpen;
-                    form.reload = ReloadForm;//thêm
-                    showInfo(form);
-                }
+                //Chưa đăng nhập => ẩn cmt và rating
+                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent1.InforID), true);
+                form.goback = ReOpen;
+                form.reload = ReloadForm;//thêm
+                showInfo(form);
+            }
+            else
+            {
+                InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent1.InforID));
+                //InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent1.PostID), true);
+                form.goback = ReOpen;
+                form.reload = ReloadForm;//thêm
+                showInfo(form);
             }
         }
 
@@ -543,7 +540,7 @@ namespace PBL3.Views.CommonForm
             else
             {
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent2.InforID));
-                form.goback = ReOpen;                                                        
+                form.goback = ReOpen;
                 form.reload = ReloadForm;//thêm
                 showInfo(form);
             }

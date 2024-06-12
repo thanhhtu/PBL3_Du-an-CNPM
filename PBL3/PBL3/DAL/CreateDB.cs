@@ -30,8 +30,8 @@ namespace PBL3.DAL
             {
                 new Account {AccountID = 1, RoleID = 1, Username = "Admin1", Pwd = "DeHOn0UsIwM=", CreatedTime = DateTime.Now, BeingPublished = true, PublishedTime = DateTime.Now, BeingPaused = false},
                 new Account {AccountID = 2, RoleID = 2, Username = "Landlord1", Pwd = "DeHOn0UsIwM=", CreatedTime = DateTime.Now, BeingPublished = true, PublishedTime = DateTime.Now, BeingPaused = false},
-                new Account {AccountID = 3, RoleID = 2, Username = "Landlord2", Pwd = "DeHOn0UsIwM=", CreatedTime = DateTime.Now, BeingPublished = false, PublishedTime = null, BeingPaused = false},
-                new Account {AccountID = 4, RoleID = 3, Username = "Renter1", Pwd = "DeHOn0UsIwM=", CreatedTime = DateTime.Now, BeingPublished = true, PublishedTime = DateTime.Now, BeingPaused = true},
+                new Account {AccountID = 3, RoleID = 2, Username = "Landlord2", Pwd = "DeHOn0UsIwM=", CreatedTime = DateTime.Now, BeingPublished = true, PublishedTime = DateTime.Now, BeingPaused = false},
+                new Account {AccountID = 4, RoleID = 3, Username = "Renter1", Pwd = "DeHOn0UsIwM=", CreatedTime = DateTime.Now, BeingPublished = true, PublishedTime = DateTime.Now, BeingPaused = false},
             });
             context.Districts.AddRange(new District[]
             {
@@ -189,11 +189,11 @@ namespace PBL3.DAL
             context.Images.AddRange(new Image[] //1 bài Infor có đúng 3 ảnh
             {
                 new Image {ImageID = 1, InforID = 1, ImagePath = @"\phongtro1.jpg"},
-                new Image {ImageID = 2, InforID = 1, ImagePath = @"\phongtro1.jpg"},
-                new Image {ImageID = 3, InforID = 1, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 2, InforID = 1, ImagePath = @"\phongtro2.jpg"},
+                new Image {ImageID = 3, InforID = 1, ImagePath = @"\phongtro3.jpg"},
 
                 new Image {ImageID = 4, InforID = 2, ImagePath = @"\phongtro1.jpg"},
-                new Image {ImageID = 5, InforID = 2, ImagePath = @"\phongtro1.jpg"},
+                new Image {ImageID = 5, InforID = 2, ImagePath = @"\phongtro4.jpg"},
                 new Image {ImageID = 6, InforID = 2, ImagePath = @"\phongtro1.jpg"},
 
                 new Image {ImageID = 7, InforID = 3, ImagePath = @"\phongtro1.jpg"},
