@@ -15,7 +15,8 @@ using PBL3.DTO;
 namespace PBL3.DAL
 {
     public class CreateDB : DropCreateDatabaseAlways<DataPBL3> //Chiến lược khởi tạo CSDL
-        //CreateDatabaseIfNotExists<DataPBL3> 
+                                                               //CreateDatabaseIfNotExists<DataPBL3> 
+                                                               //DropCreateDatabaseIfModelChanges<DataPBL3> 
     {
         protected override void Seed(DataPBL3 context) //EF mặc định key có kiểu int là tự tăng
         {

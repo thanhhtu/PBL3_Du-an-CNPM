@@ -36,25 +36,22 @@ namespace PBL3.Views.AdminForm
 
             activeForm = form;
 
-            //set properties cho form truyền vào
+            //Set properties cho form truyền vào
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
             panelChildForm.Controls.Add(form);
             panelChildForm.Tag = form;
             form.BringToFront();
-
             form.Show();
         }
 
         public void OpenHouseInfo(Form form)
         {
-            if (activeForm != null)
-            {
-                activeForm.Hide();
-            }
+            if (activeForm != null) activeForm.Hide();
 
             activeForm = form;
+
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;

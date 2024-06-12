@@ -55,6 +55,8 @@ namespace PBL3.BLL
             //Đầu tiên là xóa infor, sau đó xóa account và address
             //Các dữ liệu theo các key phụ thuộc giữa các bảng sẽ bị xóa theo
             var user = db.Users.FirstOrDefault(u => u.UserID == userID);
+            if (AccountBLL.Instance.GetRoleIDByAccountID(user.AccountID) == 2) //Nếu là chủ trọ thì xóa ảnh cccd
+                ImageOfUserBLL.Instance.DeleteImageOfUserFromFolder(ImageOfUserBLL.Instance.GetImageOfUserStoragePath(userID)); 
             InforBLL.Instance.DeleteInforOfUser(user.UserID);
             AccountBLL.Instance.DeleteAccount(user.AccountID);
             AddressBLL.Instance.DeleteAddress(user.AddressID);
@@ -66,15 +68,12 @@ namespace PBL3.BLL
             var user = db.Users.FirstOrDefault(u => u.UserID == userID);
             AccountBLL.Instance.PublishAccount(user.AccountID);
         }
-
-        //tt thêm    
+ 
         public void PauseUser(int userID)
         {
             var user = db.Users.FirstOrDefault(u => u.UserID == userID);
             AccountBLL.Instance.PauseAccount(user.AccountID);
-
-            //Xóa infor
-            InforBLL.Instance.DeleteInforOfUser(userID);
+            InforBLL.Instance.DeleteInforOfUser(userID); //Xóa infor
         }
         
         public void ActiveUser(int userID)
@@ -82,11 +81,9 @@ namespace PBL3.BLL
             var user = db.Users.FirstOrDefault(u => u.UserID == userID);
             AccountBLL.Instance.ActiveAccount(user.AccountID);
         }
-        //
         #endregion
 
         #region -> Management user 
-        //tt đổi
         public List<UserViewDTO> SearchUser(string searchChars, int userRole, int sortCase, bool checkAscending, bool? beingPublished, bool beingPaused)
         {
             List<UserViewDTO> data = new List<UserViewDTO>();
@@ -195,10 +192,6 @@ namespace PBL3.BLL
             List<UserViewDTO> result = new List<UserViewDTO>();
             switch (sortCase)
             {
-                /*Thời gian tham gia
-                Số comment
-                Thời gian được duyệt
-                Số phòng trọ*/
                 case 0: //Thời gian tham gia
                     result = data.OrderBy(u => u.JoinTime).ToList();
                     break;
@@ -222,7 +215,6 @@ namespace PBL3.BLL
             }
             return result;
         }
-        //tt đổi
         #endregion
 
         public int GetAddressIDByUserID(int userID)
@@ -277,7 +269,6 @@ namespace PBL3.BLL
             else return usercmt.Count();
         }
 
-        //tt thêm
         public bool IsPublishedAccount(int userID)
         {
             var user = db.Users.FirstOrDefault(u => u.UserID == userID);
@@ -289,6 +280,5 @@ namespace PBL3.BLL
             var user = db.Users.FirstOrDefault(u => u.UserID == userID);
             return AccountBLL.Instance.IsPausedAccount(user.AccountID);
         }
-        //
     }
 }

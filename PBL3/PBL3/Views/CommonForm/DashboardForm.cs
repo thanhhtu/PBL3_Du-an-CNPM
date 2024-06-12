@@ -220,7 +220,7 @@ namespace PBL3.Views.CommonForm
                 houseInfoComponent1.AreaLabel = "Diện tích : " + inforView[0].SquareArea + " m\u00b2";
                 houseInfoComponent1.InforID = inforView[0].InforID.ToString();
 
-                imagePath = ImageBLL.Instance.GetImageStoragePathsOfPost(inforView[0].InforID);
+                imagePath = ImageBLL.Instance.GetImageStoragePathsOfInfor(inforView[0].InforID);
                 if (!Directory.Exists(imagePath))
                     Directory.CreateDirectory(imagePath);
                 if (inforView[0].ImagePaths.Count > 0)
@@ -243,7 +243,7 @@ namespace PBL3.Views.CommonForm
                 houseInfoComponent2.AreaLabel = "Diện tích : " + inforView[1].SquareArea + " m\u00b2";
                 houseInfoComponent2.InforID = inforView[1].InforID.ToString();
 
-                imagePath = ImageBLL.Instance.GetImageStoragePathsOfPost(inforView[1].InforID);
+                imagePath = ImageBLL.Instance.GetImageStoragePathsOfInfor(inforView[1].InforID);
                 if (!Directory.Exists(imagePath))
                     Directory.CreateDirectory(imagePath);
                 if (inforView[1].ImagePaths.Count > 0)
@@ -266,7 +266,7 @@ namespace PBL3.Views.CommonForm
                 houseInfoComponent3.AreaLabel = "Diện tích : " + inforView[2].SquareArea + " m\u00b2";
                 houseInfoComponent3.InforID = inforView[2].InforID.ToString();
 
-                imagePath = ImageBLL.Instance.GetImageStoragePathsOfPost(inforView[2].InforID);
+                imagePath = ImageBLL.Instance.GetImageStoragePathsOfInfor(inforView[2].InforID);
                 if (!Directory.Exists(imagePath))
                     Directory.CreateDirectory(imagePath);
                 if (inforView[2].ImagePaths.Count > 0)
@@ -289,7 +289,7 @@ namespace PBL3.Views.CommonForm
                 houseInfoComponent4.AreaLabel = "Diện tích : " + inforView[3].SquareArea + " m\u00b2";
                 houseInfoComponent4.InforID = inforView[3].InforID.ToString();
 
-                imagePath = ImageBLL.Instance.GetImageStoragePathsOfPost(inforView[3].InforID);
+                imagePath = ImageBLL.Instance.GetImageStoragePathsOfInfor(inforView[3].InforID);
                 if (!Directory.Exists(imagePath))
                     Directory.CreateDirectory(imagePath);
                 if (inforView[3].ImagePaths.Count > 0)
@@ -312,7 +312,7 @@ namespace PBL3.Views.CommonForm
                 houseInfoComponent5.AreaLabel = "Diện tích : " + inforView[4].SquareArea + " m\u00b2";
                 houseInfoComponent5.InforID = inforView[4].InforID.ToString();
 
-                imagePath = ImageBLL.Instance.GetImageStoragePathsOfPost(inforView[4].InforID);
+                imagePath = ImageBLL.Instance.GetImageStoragePathsOfInfor(inforView[4].InforID);
                 if (!Directory.Exists(imagePath))
                     Directory.CreateDirectory(imagePath);
                 if (inforView[4].ImagePaths.Count > 0)
@@ -482,7 +482,7 @@ namespace PBL3.Views.CommonForm
             inforNums = (numberofInfor - currentPage * 5 < 5) ? numberofInfor - currentPage * 5 : 5;
             totalPage = (int)Math.Ceiling(numberofInfor / Convert.ToDouble(skipNum));
             DisplayHouseInformation();
-            List<InforViewDTO> inforView = InforBLL.Instance.GetSortedPosts(currentPage * skipNum, inforNums, allSearchData, sortCase);
+            List<InforViewDTO> inforView = InforBLL.Instance.GetSortedInfors(currentPage * skipNum, inforNums, allSearchData, sortCase);
             DisablePostViewWhenNotFound(inforNums);
             InitalizeHouseInfomation(inforView);
         }

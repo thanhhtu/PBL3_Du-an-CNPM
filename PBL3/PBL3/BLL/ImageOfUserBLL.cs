@@ -57,7 +57,7 @@ namespace PBL3.BLL
         }
         #endregion
 
-        //Lấy ảnh dựa trên userID
+        //Lấy 2 link ảnh
         public List<string> GetImageOfUserPaths(int userID)
         {
             var imagePaths = db.ImageOfUsers.Where(image => image.UserID == userID)
@@ -67,13 +67,10 @@ namespace PBL3.BLL
             return imagePaths;
         }
 
-        //Lấy đường dẫn tới folder chứa image dựa trên InforID
+        //Lấy link tới folder chứa image
         public string GetImageOfUserStoragePath(int? userID)
         {
-            if (userID == null)
-            {
-                return "";
-            }
+            if (userID == null) return "";
             string path = Path.GetDirectoryName(Application.ExecutablePath);
             string appPath = Path.GetFullPath(Path.Combine(path, @"..\..\")) + @"Resources\Landlord" + userID.ToString();
             return appPath;

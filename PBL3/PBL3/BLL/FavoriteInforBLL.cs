@@ -76,7 +76,7 @@ namespace PBL3.BLL
                         InforID = info.InforID,
                         Title = accommodationInfo.Title,
                         Description = accommodationInfo.Description,
-                        SquareArea = accommodationInfo.SquareArea, 
+                        SquareArea = accommodationInfo.SquareArea,
                         Price = accommodationInfo.Price,
                         Address = AddressBLL.Instance.GetFullAddress(accommodationInfo.AddressID),
                         UserID = info.UserID,
@@ -86,28 +86,6 @@ namespace PBL3.BLL
                     ls.Add(inforDTO);
                 }
             }
-
-            //db.FavoriteInfors
-            //    .Where(fi => fi.UserID == userID)
-            //    .OrderByDescending(fi => fi.InforID)
-            //    .Skip(skipNum)
-            //    .Take(inforNum)
-            //    .ToList()
-            //    .ForEach(info =>
-            //    {
-            //        ls.Add(new InforViewDTO()
-            //        {
-            //            InforID = info.InforID,
-            //            Title = info.AccommodationInformation.Title,
-            //            Description = info.AccommodationInformation.Description,
-            //            SquareArea = info.AccommodationInformation.SquareArea,
-            //            Price = info.AccommodationInformation.Price,
-            //            Address = AddressBLL.Instance.GetFullAddress(info.AccommodationInformation.AddressID),
-            //            UserID = info.UserID,
-            //            ImagePaths = ImageBLL.Instance.GetImagePaths(info.InforID)
-            //        });
-            //    });
-
             return ls;
         }
 

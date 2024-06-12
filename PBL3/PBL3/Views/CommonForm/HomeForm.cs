@@ -20,7 +20,6 @@ namespace PBL3.Views.CommonForm
         public HomeForm()
         {
             InitializeComponent();
-
             InforBLL.Instance.LoadApp();
         }
 
@@ -38,18 +37,15 @@ namespace PBL3.Views.CommonForm
             panelChildForm.Controls.Add(form);
             panelChildForm.Tag = form;
             form.BringToFront();
-
             form.Show();
         }
 
         public void OpenHouseInfo(Form form)
         {
-            if (activeForm != null)
-            {
-                activeForm.Hide();
-            }
+            if (activeForm != null) activeForm.Hide();
 
             activeForm = form;
+            
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;

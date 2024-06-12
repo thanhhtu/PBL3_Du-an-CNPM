@@ -16,11 +16,11 @@ namespace PBL3.DTO
         public int ImageOfUserID { get; set; }
 
         [Required]
-        public int UserID { get; set; }
-        [ForeignKey("UserID")]        
-        public virtual User User { get; set; }
+        public string ImagePath { get; set; }
 
         [Required]
-        public string ImagePath { get; set; }
+        public int UserID { get; set; }
+        [ForeignKey("UserID")]
+        public virtual User User { get; set; }
     }
 }

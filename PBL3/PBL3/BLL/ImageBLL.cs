@@ -46,16 +46,16 @@ namespace PBL3.BLL
         public void DeleteImageFromFolder(string appPath)
         {
             appPath = appPath + @"\";
-            DirectoryInfo fo = new DirectoryInfo(appPath);
-            FileInfo[] files = fo.GetFiles();
+            DirectoryInfo fo = new DirectoryInfo(appPath); //Tạo đối tượng đại diện cho folder
+            FileInfo[] files = fo.GetFiles(); //Lấy danh sách các file trong folder
             foreach (FileInfo file in files)
             {
-                File.Delete(appPath + file.Name); //Xóa file (đường dẫn tới file = đường dẫn tới folder/tên file)
+                File.Delete(appPath + file.Name); //Xóa file trong folder (đường dẫn tới file = đường dẫn tới folder\file)
             }
             Directory.Delete(appPath); //Xóa folder
         }
 
-        public void DeleteImageFromPost(int inforID)
+        public void DeleteImageFromInfor(int inforID)
         {
             List<Image> images = db.Images.Where(i => i.InforID == inforID).ToList();
             images.ForEach(image => db.Images.Remove(image));
@@ -63,6 +63,7 @@ namespace PBL3.BLL
         }
         #endregion
 
+        //Lấy 3 link ảnh
         public List<string> GetImagePaths(int inforID)
         {
             var imagePaths = db.Images.Where(image => image.InforID == inforID)
@@ -72,19 +73,15 @@ namespace PBL3.BLL
             return imagePaths;
         }
 
-        //Lấy đường dẫn tới folder chứa image dựa trên InforID
-        public string GetImageStoragePathsOfPost(int? inforID)
+        //Lấy link tới folder chứa image dựa trên InforID
+        public string GetImageStoragePathsOfInfor(int? inforID) //bỏ ?
         {
-            if (inforID == null)
-            {
-                return "";
-            }
-
+            if (inforID == null) return "";
             string path = Path.GetDirectoryName(Application.ExecutablePath); //Lấy đường dẫn của folder chứa file đang chạy chương trình
 
-            string appPath = Path.GetFullPath(Path.Combine(path, @"..\..\")) //Lên 2 cấp từ folder chứa file đang chạy //Thêm GetFullPath và Combine để tạo đường dẫn 1 cách an toàn hơn 
-                            + @"Resources\Infor" + inforID.ToString();
-            
+            string appPath = Path.GetFullPath(Path.Combine(path, @"..\..\")) //Lên 2 cấp từ folder chứa file đang chạy 
+                            + @"Resources\Infor" + inforID.ToString(); //Thêm GetFullPath (chuyển đường dẫn tương đối thành đường dẫn tuyệt đối) và Combine để tạo đường dẫn 1 cách an toàn hơn 
+
             return appPath;
         }
     }

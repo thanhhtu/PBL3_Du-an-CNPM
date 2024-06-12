@@ -61,18 +61,15 @@ namespace PBL3.Views.RenterForm
             panelChildForm.Controls.Add(form);
             panelChildForm.Tag = form;
             form.BringToFront();
-
             form.Show();
         }
 
         public void OpenHouseInfo(Form form)
         {
-            if (activeForm != null)
-            {
-                activeForm.Hide();
-            }
+            if (activeForm != null) activeForm.Hide();
 
             activeForm = form;
+
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;

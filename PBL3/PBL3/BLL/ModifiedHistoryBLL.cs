@@ -30,7 +30,6 @@ namespace PBL3.BLL
         }
         #endregion
 
-        #region 
         public void AddModified(int inforID, int checkRented)
         {
             ModifiedHistory modifiedHistory = new ModifiedHistory()
@@ -42,10 +41,10 @@ namespace PBL3.BLL
             db.ModifierHistorys.Add(modifiedHistory);
             db.SaveChanges();
         }
+
         public List<ModifiedHistory> GetAllModifiedHistories(int InforID)
         {
             return db.ModifierHistorys.Where(history => history.InforID == InforID).ToList();
         }
-        #endregion
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PBL3.DTO.ViewDTO
 {
-    public class InforDTGViewDTO //Class hiển thị thông tin quản lý infor cho Admin
+    public class InforDTGViewDTO //Class hiển thị thông tin quản lý infor cho Admin, Landlord
     {
         public int InforID { get; set; }
         public int? UserID { get; set; }

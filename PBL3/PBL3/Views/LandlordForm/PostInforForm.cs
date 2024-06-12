@@ -248,7 +248,7 @@ namespace PBL3.Views.LandlordForm
             int inforID = InforBLL.Instance.AddInfor(infor);
 
             //Thêm img
-            string imagePathStorage = ImageBLL.Instance.GetImageStoragePathsOfPost(inforID);
+            string imagePathStorage = ImageBLL.Instance.GetImageStoragePathsOfInfor(inforID);
             if (!Directory.Exists(imagePathStorage)) Directory.CreateDirectory(imagePathStorage);
             for (int i = 0; i < 3; i++)
             {

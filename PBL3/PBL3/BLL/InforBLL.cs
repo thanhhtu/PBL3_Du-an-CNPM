@@ -12,6 +12,11 @@ namespace PBL3.BLL
 {
     internal class InforBLL
     {
+        public void LoadApp() //Tác động lên db để thao tác ban đầu
+        {
+            db.AccommodationInformations.ToList();
+        }
+
         #region -> Singleton Pattern
         private static DataPBL3 db;
         private static InforBLL _Instance;
@@ -29,12 +34,6 @@ namespace PBL3.BLL
         {
             db = new DataPBL3();
         }
-
-        public void LoadApp() //tác động lên db để thao tác ban đầu mượt hơn
-        {
-            
-            //db.AccommodationInformations.Count(); //ToList()
-        }
         #endregion
 
         #region -> Add/Update/Delete infor
@@ -47,67 +46,176 @@ namespace PBL3.BLL
 
         public void UpdateInfor(AccommodationInformation editedInfor)
         {
-            AccommodationInformation post = db.AccommodationInformations.FirstOrDefault(p => p.InforID == editedInfor.InforID);
-            post.Title = editedInfor.Title;
-            post.Description = editedInfor.Description;
-            post.Price = editedInfor.Price;
-            post.Deposit = editedInfor.Deposit;
-            post.SquareArea = editedInfor.SquareArea;
-            post.LivingWithOwner = editedInfor.LivingWithOwner;
-            post.BeingRented = editedInfor.BeingRented;
-            post.ModifiedTime = editedInfor.ModifiedTime;
+            AccommodationInformation infor = db.AccommodationInformations.FirstOrDefault(c => c.InforID == editedInfor.InforID);
+            infor.Title = editedInfor.Title;
+            infor.Description = editedInfor.Description;
+            infor.Price = editedInfor.Price;
+            infor.Deposit = editedInfor.Deposit;
+            infor.SquareArea = editedInfor.SquareArea;
+            infor.LivingWithOwner = editedInfor.LivingWithOwner;
+            infor.BeingRented = editedInfor.BeingRented;
+            infor.ModifiedTime = editedInfor.ModifiedTime;
             db.SaveChanges();
         }
 
         public void DeleteInfor(int inforID)
         {
-            AccommodationInformation infor = db.AccommodationInformations.FirstOrDefault(i => i.InforID == inforID);
+            AccommodationInformation infor = db.AccommodationInformations.FirstOrDefault(c => c.InforID == inforID);
             var temp = infor.AddressID;
-           
             db.AccommodationInformations.Remove(infor);
             db.SaveChanges();
 
-            ImageBLL.Instance.DeleteImageFromFolder(ImageBLL.Instance.GetImageStoragePathsOfPost(inforID));
+            ImageBLL.Instance.DeleteImageFromFolder(ImageBLL.Instance.GetImageStoragePathsOfInfor(inforID));
             AddressBLL.Instance.DeleteAddress(temp);
         }
 
         public void DeleteInforOfUser(int userID)
         {
-            var ls = db.AccommodationInformations.Where(i => i.UserID == userID).ToList();
-            ls.ForEach(post => DeleteInfor(post.InforID));
-            db.SaveChanges();
-        }
-
-        public void AddFavouriteInfor(int userID, int inforID)
-        {
-            FavoriteInfor favoriteInfor = new FavoriteInfor()
-            {
-                UserID = userID,
-                InforID = inforID,
-            };
-            db.FavoriteInfors.Add(favoriteInfor);
+            var ls = db.AccommodationInformations.Where(c => c.UserID == userID).ToList();
+            ls.ForEach(info => DeleteInfor(info.InforID));
             db.SaveChanges();
         }
         #endregion
 
-        #region -> Search infor
-        public InforViewDTO GetInforByID(int inforID)
+        #region -> Management infor
+        public List<InforDTGViewDTO> GetDTGView(int searchFilter, int sortCase, bool checkAscending, string searchChars, int userID = -1)
         {
-            var info = db.AccommodationInformations.FirstOrDefault(p => p.InforID == inforID);
-            return new InforViewDTO()
+            List<InforDTGViewDTO> data = new List<InforDTGViewDTO>();
+            switch (searchFilter)
             {
-                InforID = info.InforID,
-                Title = info.Title,
-                Description = info.Description,
-                SquareArea = info.SquareArea,
-                Price = info.Price,
-                Address = AddressBLL.Instance.GetFullAddress(info.AddressID),
-                UserID = info.UserID,
-                ImagePaths = ImageBLL.Instance.GetImagePaths(info.InforID),
-                LivingWithOwner = info.LivingWithOwner,
-                Deposit = info.Deposit
+                case 0: //Tất cả 
+                    data = InforBLL.Instance.GetAllInforView(userID);
+                    break;
+                case 1: //Chưa cho thuê
+                    data = InforBLL.Instance.GetRentedInfor(false, userID);
+                    break;
+                case 2: //Đã cho thuê
+                    data = InforBLL.Instance.GetRentedInfor(true, userID);
+                    break;
+                case 3: //Đã chỉnh sửa
+                    data = InforBLL.Instance.GetEditedInfor(userID);
+                    break;
+                default:
+                    data = InforBLL.Instance.GetAllInforView();
+                    break;
+            }
+            List<InforDTGViewDTO> temp = InforBLL.Instance.SearchByChars(searchChars, data);
+            List<InforDTGViewDTO> result = InforBLL.Instance.SortResult(sortCase, checkAscending, temp);
+            return result;
+        }
+
+        public InforDTGViewDTO GetInforDTGView(AccommodationInformation infor)
+        {
+            return new InforDTGViewDTO
+            {
+                InforID = infor.InforID,
+                UserID = infor.UserID,
+                Username = UserBLL.Instance.GetUserFullname(infor.UserID),
+                Title = infor.Title,
+                Address = AddressBLL.Instance.GetFullAddress(infor.AddressID),
+                NumberOfComment = InforBLL.Instance.GetNumOfCommentInInfor(infor.InforID),
+                BeingRented = InforBLL.Instance.CheckRented(infor.InforID),
+                CreatedTime = infor.CreatedTime,
+                ModifiedTime = infor.ModifiedTime
             };
         }
+
+        //Lấy tất cả infor trong hệ thống, hoặc tất cả infor của 1 landlord
+        public List<InforDTGViewDTO> GetAllInforView(int userID = -1)
+        {
+            List<InforDTGViewDTO> data = new List<InforDTGViewDTO>();
+
+            if (userID == -1) //Lấy tất cả infor trong hệ thống -> dành cho Admin
+            {
+                db.AccommodationInformations.ToList()
+                    .ForEach(infor => data.Add(GetInforDTGView(infor)));
+            }
+            else //Lấy tất cả infor của 1 landlord đang đăng nhập
+            {
+                db.AccommodationInformations.Where(i => i.UserID == userID).ToList()
+                    .ForEach(infor => data.Add(GetInforDTGView(infor)));
+            }
+            return data;
+        }
+
+        //Lấy các bài infor đã được chủ trọ cập nhật là đã cho thuê
+        public List<InforDTGViewDTO> GetRentedInfor(bool rentedStatus, int userID = -1)
+        {
+            List<InforDTGViewDTO> data = new List<InforDTGViewDTO>();
+
+            if (userID == -1) //Lấy tất cả infor trong hệ thống -> dành cho admin
+            {
+                db.AccommodationInformations.Where(p => p.BeingRented == rentedStatus).ToList()
+                    .ForEach(infor => data.Add(GetInforDTGView(infor)));
+            }
+            else //Lấy infor của landlord đang đăng nhập
+            {
+                db.AccommodationInformations.Where(i => i.UserID == userID && i.BeingRented == rentedStatus).ToList()
+                    .ForEach(infor => data.Add(GetInforDTGView(infor)));
+            }
+
+            return data;
+        }
+
+        //Lấy các bài infor đã được chỉnh sửa 
+        public List<InforDTGViewDTO> GetEditedInfor(int userID = -1)
+        {
+            if (userID == -1) //Lấy tất cả infor trong hệ thống -> dành cho admin
+            {
+                List<InforDTGViewDTO> data = new List<InforDTGViewDTO>();
+                db.AccommodationInformations.Where(i => i.ModifiedTime != null).ToList()
+                    .ForEach(infor => data.Add(GetInforDTGView(infor)));
+                return data;
+            }
+            else //Lấy infor của landlord đang đăng nhập
+            {
+                List<InforDTGViewDTO> data = new List<InforDTGViewDTO>();
+                db.AccommodationInformations.Where(p => p.UserID == userID && p.ModifiedTime != null).ToList()
+                    .ForEach(infor => data.Add(GetInforDTGView(infor)));
+                return data;
+            }
+        }
+
+        //Từ dữ liệu search, lọc ra những infor chứa char người dùng đã nhập
+        public List<InforDTGViewDTO> SearchByChars(string searchChar, List<InforDTGViewDTO> data)
+        {
+            List<InforDTGViewDTO> result = new List<InforDTGViewDTO>();
+            foreach (var i in data)
+            {
+                if (i.Username.Contains(searchChar) || i.Title.Contains(searchChar) || i.Address.Contains(searchChar))
+                {
+                    result.Add(i);
+                }
+            }
+            return result;
+        }
+
+        public List<InforDTGViewDTO> SortResult(int sortCase, bool checkAscending, List<InforDTGViewDTO> data)
+        {
+            List<InforDTGViewDTO> result = new List<InforDTGViewDTO>();
+            switch (sortCase)
+            {
+                case 0: //Thời gian tạo
+                    result = data.OrderByDescending(p => p.CreatedTime).ToList();
+                    break;
+                case 1: //Thời gian chỉnh sửa
+                    result = data.OrderBy(p => p.ModifiedTime).ToList();
+                    break;
+                case 2: //Số comment
+                    result = data.OrderBy(p => p.NumberOfComment).ToList();
+                    break;
+                default: //Thời gian tạo
+                    result = data.OrderByDescending(p => p.CreatedTime).ToList();
+                    break;
+            }
+
+            if (!checkAscending) //Nếu checkAscending == false -> sắp xếp ngược lại
+            {
+                result.Reverse();
+            }
+            return result;
+        }
+        #endregion
 
         public List<AccommodationInformation> SearchInfor(int searchCase, int inputID, int lPrice, int rPrice, float lSquareArea, float rSquareArea)
         {
@@ -156,7 +264,6 @@ namespace PBL3.BLL
             return ls;
         }
 
-        //tt thêm
         public DateTime? GetRentedTime(AccommodationInformation infor)
         {
             var rentedInfor = db.ModifierHistorys.Where(i => i.InforID == infor.InforID)
@@ -166,10 +273,9 @@ namespace PBL3.BLL
             if (rentedInfor == null) return null;
             return rentedInfor.ModifiedTime;
         }
-        //
 
         //Sort infor trên dashboard
-        public List<InforViewDTO> GetSortedPosts(int skipNum, int infoNum, List<AccommodationInformation> data, int sortCase)
+        public List<InforViewDTO> GetSortedInfors(int skipNum, int infoNum, List<AccommodationInformation> data, int sortCase)
         {
             List<InforViewDTO> ls = new List<InforViewDTO>();
             List<AccommodationInformation> sorted = new List<AccommodationInformation>();
@@ -211,154 +317,24 @@ namespace PBL3.BLL
                 }));
             return ls;
         }
-        #endregion
 
-        #region -> Management infor
-        public List<InforDTGViewDTO> GetDTGView(int searchFilter, int sortCase, bool checkAscending, string searchChars, int userID = -1)
+        public InforViewDTO GetInforByID(int inforID)
         {
-            List<InforDTGViewDTO> data = new List<InforDTGViewDTO>();
-            switch (searchFilter)
+            var info = db.AccommodationInformations.FirstOrDefault(p => p.InforID == inforID);
+            return new InforViewDTO()
             {
-                case 0: //Tất cả 
-                    data = InforBLL.Instance.GetAllInforView(userID);
-                    break;
-                case 1: //Chưa cho thuê
-                    data = InforBLL.Instance.GetRentedInfor(false, userID);
-                    break;
-                case 2: //Đã cho thuê
-                    data = InforBLL.Instance.GetRentedInfor(true, userID);
-                    break;
-                case 3: //Đã chỉnh sửa
-                    data = InforBLL.Instance.GetEditedInfor(userID);
-                    break;
-                default:
-                    data = InforBLL.Instance.GetAllInforView();
-                    break;
-            }
-            List<InforDTGViewDTO> temp = InforBLL.Instance.SearchByChars(searchChars, data);
-            List<InforDTGViewDTO> result = InforBLL.Instance.SortResult(sortCase, checkAscending, temp);
-            return result;
-        }
-
-        public InforDTGViewDTO SetInforDTGView(AccommodationInformation infor)
-        {
-            return new InforDTGViewDTO
-            {
-                InforID = infor.InforID,
-                UserID = infor.UserID,
-                Username = UserBLL.Instance.GetUserFullname(infor.UserID),
-                Title = infor.Title,
-                Address = AddressBLL.Instance.GetFullAddress(infor.AddressID),
-                NumberOfComment = InforBLL.Instance.GetNumOfCommentInPost(infor.InforID),
-                BeingRented = InforBLL.Instance.CheckRented(infor.InforID),
-                CreatedTime = infor.CreatedTime,
-                ModifiedTime = infor.ModifiedTime
+                InforID = info.InforID,
+                Title = info.Title,
+                Description = info.Description,
+                SquareArea = info.SquareArea,
+                Price = info.Price,
+                Address = AddressBLL.Instance.GetFullAddress(info.AddressID),
+                UserID = info.UserID,
+                ImagePaths = ImageBLL.Instance.GetImagePaths(info.InforID),
+                LivingWithOwner = info.LivingWithOwner,
+                Deposit = info.Deposit
             };
         }
-
-        //kiểu dynamic thay bằng  List<InforDTGViewDTO> //có chỉnh sửa
-        //Lấy tất cả infor trong hệ thống, hoặc tất cả infor của 1 landlord
-        public List<InforDTGViewDTO> GetAllInforView(int userID = -1)
-        {
-            List<InforDTGViewDTO> data = new List<InforDTGViewDTO>();
-
-            if (userID == -1)
-            {
-                //Get tất cả infor trong hệ thống, dành cho Admin
-                db.AccommodationInformations.ToList()
-                    .ForEach(infor => data.Add(SetInforDTGView(infor)));
-            }
-            else
-            {
-                //Get tất cả infor của 1 landlord đang đăng nhập
-                db.AccommodationInformations.Where(i => i.UserID == userID).ToList()
-                    .ForEach(infor => data.Add(SetInforDTGView(infor)));
-            }
-            return data;
-        }
-
-        //thay dynamic
-        //Lấy các bài infor đã được chủ trọ cập nhật là đã cho thuê
-        public List<InforDTGViewDTO> GetRentedInfor(bool rentedStatus, int userID = -1)
-        {
-            List<InforDTGViewDTO> data = new List<InforDTGViewDTO>();
-
-            if (userID == -1)
-            {
-                //Get tất cả infor trong hệ thống -> dành cho admin
-                db.AccommodationInformations.Where(p => p.BeingRented == rentedStatus).ToList()
-                    .ForEach(infor => data.Add(SetInforDTGView(infor)));
-            }
-            else
-            {
-                //Get infor của landlord đang đăng nhập
-                db.AccommodationInformations.Where(i => i.UserID == userID && i.BeingRented == rentedStatus).ToList()
-                    .ForEach(infor => data.Add(SetInforDTGView(infor)));
-            }
-
-            return data;
-        }
-
-        //Get các bài infor đã bị chỉnh sửa //đổi dynamic
-        public List<InforDTGViewDTO> GetEditedInfor(int userID = -1)
-        {
-            if (userID == -1)
-            {
-                //Get tất cả infor trong hệ thống -> dành cho admin
-                List<InforDTGViewDTO> data = new List<InforDTGViewDTO>();
-                db.AccommodationInformations.Where(i => i.ModifiedTime != null).ToList()
-                    .ForEach(infor => data.Add(SetInforDTGView(infor)));
-                return data;
-            }
-            else //Get infor của landlord đang đăng nhập
-            {
-                List<InforDTGViewDTO> data = new List<InforDTGViewDTO>();
-                db.AccommodationInformations.Where(p => p.UserID == userID && p.ModifiedTime != null).ToList()
-                    .ForEach(infor => data.Add(SetInforDTGView(infor)));
-                return data;
-            }
-        }
-
-        //Từ dữ liệu search, lọc ra những infor chứa char người dùng đã nhập
-        public List<InforDTGViewDTO> SearchByChars(string searchChar, List<InforDTGViewDTO> data)
-        {
-            List<InforDTGViewDTO> result = new List<InforDTGViewDTO>();
-            foreach (var i in data)
-            {
-                if (i.Username.Contains(searchChar) || i.Title.Contains(searchChar) || i.Address.Contains(searchChar))
-                {
-                    result.Add(i);
-                }
-            }
-            return result;
-        }
-
-        public List<InforDTGViewDTO> SortResult(int sortCase, bool checkAscending, List<InforDTGViewDTO> data)
-        {
-            List<InforDTGViewDTO> result = new List<InforDTGViewDTO>();
-            switch (sortCase)
-            {
-                case 0: //Thời gian tạo
-                    result = data.OrderByDescending(p => p.CreatedTime).ToList();
-                    break;
-                case 1: //Thời gian chỉnh sửa
-                    result = data.OrderBy(p => p.ModifiedTime).ToList();
-                    break;
-                case 2: //Số comment
-                    result = data.OrderBy(p => p.NumberOfComment).ToList();
-                    break;
-                default: //Thời gian tạo
-                    result = data.OrderByDescending(p => p.CreatedTime).ToList();
-                    break;
-            }
-            if (!checkAscending)
-            {
-                //Nếu checkAscending == false -> sắp xếp ngược lại
-                result.Reverse();
-            }
-            return result;
-        }
-        #endregion
 
         public string CheckRented(int inforID)
         {
@@ -374,36 +350,23 @@ namespace PBL3.BLL
             return datetime;
         }
 
-        public int? GetAddressIDByPostID(int inforID)
+        public int? GetAddressIDByInforID(int inforID)
         {
-            return db.AccommodationInformations.FirstOrDefault(i => i.InforID == inforID).AddressID;
+            return db.AccommodationInformations.FirstOrDefault(c => c.InforID == inforID).AddressID;
         }
         
-        public bool CheckLivingwOwwer(int inforID)
+        public bool CheckLivingwOwner(int inforID)
         {
-            return db.AccommodationInformations.FirstOrDefault(i => i.InforID == inforID).LivingWithOwner;
+            return db.AccommodationInformations.FirstOrDefault(c => c.InforID == inforID).LivingWithOwner;
         }
 
         public int GetNumOfCommentInInfor(int inforID)
         {
-            var data = db.Comments.Where(i => i.InforID == inforID).ToList();
+            var data = db.Comments.Where(c => c.InforID == inforID).ToList();
             if (data == null) return 0;
             return data.Count();
         }
 
-        public int GetNumOfCommentInPost(int inforID)
-        {
-            var data = db.Comments.Where(p => p.InforID == inforID).ToList();
-            if (data == null) return 0;
-            return data.Count();
-        }
-        //aitran thêm
-        public bool CheckRented_(int inforID)
-        {
-            bool a = db.AccommodationInformations.FirstOrDefault(p => p.InforID == inforID).BeingRented;
-            if (a) return true;
-            else return false;
-        }
         public string GetInforTitle(int inforID)
         {
             var i = db.AccommodationInformations.FirstOrDefault(p => p.InforID == inforID);

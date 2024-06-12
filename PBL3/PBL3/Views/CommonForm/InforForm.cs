@@ -46,7 +46,7 @@ namespace PBL3.Views.CommonForm
             {
                 InforViewDTO post = InforBLL.Instance.GetInforByID(InforID);
                 //Get folder path chứa ảnh của bài đăng có InforID
-                string imagePath = ImageBLL.Instance.GetImageStoragePathsOfPost(InforID);
+                string imagePath = ImageBLL.Instance.GetImageStoragePathsOfInfor(InforID);
 
                 System.Drawing.Image image1;
                 /*

@@ -115,7 +115,7 @@ namespace PBL3.Views.LandlordForm
         //Set CBB
         public void InitializeCBB()
         {
-            int addressID = (int)InforBLL.Instance.GetAddressIDByPostID(InforID);
+            int addressID = (int)InforBLL.Instance.GetAddressIDByInforID(InforID);
             int districtID = AddressBLL.Instance.GetDistrictIDByAddressID(addressID);
             int wardID = AddressBLL.Instance.GetWardIDByAddressID(addressID);
 
@@ -293,11 +293,11 @@ namespace PBL3.Views.LandlordForm
             };
             InforBLL.Instance.UpdateInfor(editedInfor);
 
-            string imagePathStorage = ImageBLL.Instance.GetImageStoragePathsOfPost(InforID);
+            string imagePathStorage = ImageBLL.Instance.GetImageStoragePathsOfInfor(InforID);
             if (ImagePathList.Count != 0)
             {
                 ImageBLL.Instance.DeleteImageFromFolder(imagePathStorage);
-                ImageBLL.Instance.DeleteImageFromPost(InforID);
+                ImageBLL.Instance.DeleteImageFromInfor(InforID);
 
                 if (!Directory.Exists(imagePathStorage)) Directory.CreateDirectory(imagePathStorage);
                 for (int i = 0; i < 3; i++)
@@ -322,7 +322,7 @@ namespace PBL3.Views.LandlordForm
         {
             InforViewDTO inforView = InforBLL.Instance.GetInforByID(InforID);
             txtTitle.Texts = inforView.Title;
-            txtDetailAddress.Texts = AddressBLL.Instance.GetDetailAddress(InforBLL.Instance.GetAddressIDByPostID(InforID));
+            txtDetailAddress.Texts = AddressBLL.Instance.GetDetailAddress(InforBLL.Instance.GetAddressIDByInforID(InforID));
             txtPrice.Texts = inforView.Price.ToString();
             txtArea.Texts = inforView.SquareArea.ToString();
             txtDescribe.Texts = inforView.Description;
@@ -335,8 +335,8 @@ namespace PBL3.Views.LandlordForm
             else radioBtnNotRented.Checked = true;
             
             txtDeposit.Texts = inforView.Deposit.ToString();
-            radioBtnLiveWithOwner.Checked = InforBLL.Instance.CheckLivingwOwwer(InforID);
-            radioBtnNotLiveWithOwner.Checked = !InforBLL.Instance.CheckLivingwOwwer(InforID);
+            radioBtnLiveWithOwner.Checked = InforBLL.Instance.CheckLivingwOwner(InforID);
+            radioBtnNotLiveWithOwner.Checked = !InforBLL.Instance.CheckLivingwOwner(InforID);
             InitializeImage(inforView);
             InitializeCBB();
         }
@@ -346,7 +346,7 @@ namespace PBL3.Views.LandlordForm
         {
             try
             {
-                string imagePath = ImageBLL.Instance.GetImageStoragePathsOfPost(InforID);
+                string imagePath = ImageBLL.Instance.GetImageStoragePathsOfInfor(InforID);
                 System.Drawing.Image image1;
                 using (Stream stream = File.OpenRead(imagePath + post.ImagePaths[0]))
                 {
