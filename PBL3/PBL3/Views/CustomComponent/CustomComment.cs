@@ -15,7 +15,6 @@ namespace PBL3.Views.CustomComponents
         public CustomComment()
         {
             InitializeComponent();
-           
         }
 
         //Event

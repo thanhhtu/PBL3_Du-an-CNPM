@@ -22,9 +22,10 @@ namespace PBL3.Views.RenterForm
         private int currentPage = 0; //Trang hiện tại
         private int totalPage; //Tổng số trang
         private int skipNum = 5; //1 lần chỉ có thể hiển thị 5 bài info
-        private int postNum; //Tổng số bài info ở trong trang hiện tại
-        private int numberOfPosts;
+        private int inforNum; //Tổng số bài info ở trong trang hiện tại
+        private int numberOfInfors;
         public static int UserID;
+
         public UserFavoriteInforForm(int userID)
         {
             InitializeComponent();
@@ -33,19 +34,20 @@ namespace PBL3.Views.RenterForm
             UserID = userID;
             LoadCBBPageNum();
         }
+
         private void InitializeInformation(int userID)
         {
-
             User user = UserBLL.Instance.GetUserByID(userID);
             labelFullname.Text += " " + user.FullName;
             labelPhone.Text += " " + user.Phone;
             labelEmail.Text += " " + user.Email;
             label3.Text = AddressBLL.Instance.GetFullAddress(user.AddressID);
         }
-        private void DisablePostViewWhenNotFound(int postNum)
+
+        private void DisableInforViewWhenNotFound(int ifoNum)
         {
-            //Ẩn các house info component khi số post trên page đó ít hơn 5
-            switch (postNum)
+            //Ẩn các house info component khi số infor trên page đó ít hơn 5
+            switch (ifoNum)
             {
                 case 4:
                     houseInfoComponent5.Visible = false;
@@ -74,8 +76,9 @@ namespace PBL3.Views.RenterForm
                     break;
             }
         }
-        // hiển thị các customcomponenthouseinfor lên
-        private void DisplayHouseInformation()
+
+        //Hiển thị các customcomponenthouseinfor lên
+        private void DisplayInfor()
         {
             this.Visible = true;
             panel1.Visible = true;
@@ -86,118 +89,114 @@ namespace PBL3.Views.RenterForm
             houseInfoComponent5.Visible = true;
         }
 
-        private void InitalizeHouseInfomation(List<InforViewDTO> postView)
+        private void InitalizeInfor(List<InforViewDTO> infoView)
         {
             //Khởi tạo và hiển thị thông tin lên
             string imagePath;
-            if (postView.Count > 0 && houseInfoComponent1.Visible)
+            if (infoView.Count > 0 && houseInfoComponent1.Visible)
             {
-                houseInfoComponent1.DescLabel = "Miêu tả : " + postView[0].Description;
-                houseInfoComponent1.AddressLabel = "Địa chỉ : " + postView[0].Address;
-                houseInfoComponent1.HomeLink = postView[0].Title;
-                houseInfoComponent1.MoneyLabel = "Số tiền : "
-                    + postView[0].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
-                houseInfoComponent1.AreaLabel = "Diện tích : " + postView[0].SquareArea + " m\u00b2";
-                houseInfoComponent1.InforID = postView[0].InforID.ToString();
-                imagePath = ImageBLL.Instance.GetImageStoragePathsOfInfor(postView[0].InforID);
+                houseInfoComponent1.DescLabel = "Miêu tả : " + infoView[0].Description;
+                houseInfoComponent1.AddressLabel = "Địa chỉ : " + infoView[0].Address;
+                houseInfoComponent1.HomeLink = infoView[0].Title;
+                houseInfoComponent1.MoneyLabel = "Số tiền : " + infoView[0].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
+                houseInfoComponent1.AreaLabel = "Diện tích : " + infoView[0].SquareArea + " m\u00b2";
+                houseInfoComponent1.InforID = infoView[0].InforID.ToString();
+                
+                imagePath = ImageBLL.Instance.GetImageStoragePathsOfInfor(infoView[0].InforID);
                 if (!Directory.Exists(imagePath))
                     Directory.CreateDirectory(imagePath);
-                if (postView[0].ImagePaths.Count > 0)
+                if (infoView[0].ImagePaths.Count > 0)
                 {
                     System.Drawing.Image image1;
-                    using (Stream stream = File.OpenRead(imagePath + postView[0].ImagePaths[0]))
+                    using (Stream stream = File.OpenRead(imagePath + infoView[0].ImagePaths[0]))
                     {
                         image1 = System.Drawing.Image.FromStream(stream);
                     }
                     houseInfoComponent1.PictureBox = image1;
                 }
             }
-            if (postView.Count > 0 && houseInfoComponent2.Visible)
+            if (infoView.Count > 0 && houseInfoComponent2.Visible)
             {
-                houseInfoComponent2.DescLabel = "Miêu tả : " + postView[1].Description;
-                houseInfoComponent2.AddressLabel = "Địa chỉ : " + postView[1].Address;
-                houseInfoComponent2.HomeLink = postView[1].Title;
-                houseInfoComponent2.MoneyLabel = "Số tiền : "
-                    + postView[1].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
-                houseInfoComponent2.AreaLabel = "Diện tích : " + postView[1].SquareArea + " m\u00b2";
-                houseInfoComponent2.InforID = postView[1].InforID.ToString();
+                houseInfoComponent2.DescLabel = "Miêu tả : " + infoView[1].Description;
+                houseInfoComponent2.AddressLabel = "Địa chỉ : " + infoView[1].Address;
+                houseInfoComponent2.HomeLink = infoView[1].Title;
+                houseInfoComponent2.MoneyLabel = "Số tiền : " + infoView[1].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
+                houseInfoComponent2.AreaLabel = "Diện tích : " + infoView[1].SquareArea + " m\u00b2";
+                houseInfoComponent2.InforID = infoView[1].InforID.ToString();
 
-                imagePath = ImageBLL.Instance.GetImageStoragePathsOfInfor(postView[1].InforID);
+                imagePath = ImageBLL.Instance.GetImageStoragePathsOfInfor(infoView[1].InforID);
                 if (!Directory.Exists(imagePath))
                     Directory.CreateDirectory(imagePath);
-                if (postView[1].ImagePaths.Count > 0)
+                if (infoView[1].ImagePaths.Count > 0)
                 {
                     System.Drawing.Image image1;
-                    using (Stream stream = File.OpenRead(imagePath + postView[1].ImagePaths[0]))
+                    using (Stream stream = File.OpenRead(imagePath + infoView[1].ImagePaths[0]))
                     {
                         image1 = System.Drawing.Image.FromStream(stream);
                     }
                     houseInfoComponent2.PictureBox = image1;
                 }
             }
-            if (postView.Count > 2 && houseInfoComponent3.Visible)
+            if (infoView.Count > 2 && houseInfoComponent3.Visible)
             {
-                houseInfoComponent3.DescLabel = "Miêu tả : " + postView[2].Description;
-                houseInfoComponent3.AddressLabel = "Địa chỉ : " + postView[2].Address;
-                houseInfoComponent3.HomeLink = postView[2].Title;
-                houseInfoComponent3.MoneyLabel = "Số tiền : "
-                    + postView[2].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
-                houseInfoComponent3.AreaLabel = "Diện tích : " + postView[2].SquareArea + " m\u00b2";
-                houseInfoComponent3.InforID = postView[2].InforID.ToString();
+                houseInfoComponent3.DescLabel = "Miêu tả : " + infoView[2].Description;
+                houseInfoComponent3.AddressLabel = "Địa chỉ : " + infoView[2].Address;
+                houseInfoComponent3.HomeLink = infoView[2].Title;
+                houseInfoComponent3.MoneyLabel = "Số tiền : " + infoView[2].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
+                houseInfoComponent3.AreaLabel = "Diện tích : " + infoView[2].SquareArea + " m\u00b2";
+                houseInfoComponent3.InforID = infoView[2].InforID.ToString();
 
-                imagePath = ImageBLL.Instance.GetImageStoragePathsOfInfor(postView[2].InforID);
+                imagePath = ImageBLL.Instance.GetImageStoragePathsOfInfor(infoView[2].InforID);
                 if (!Directory.Exists(imagePath))
                     Directory.CreateDirectory(imagePath);
-                if (postView[2].ImagePaths.Count > 0)
+                if (infoView[2].ImagePaths.Count > 0)
                 {
                     System.Drawing.Image image1;
-                    using (Stream stream = File.OpenRead(imagePath + postView[2].ImagePaths[0]))
+                    using (Stream stream = File.OpenRead(imagePath + infoView[2].ImagePaths[0]))
                     {
                         image1 = System.Drawing.Image.FromStream(stream);
                     }
                     houseInfoComponent3.PictureBox = image1;
                 }
             }
-            if (postView.Count > 3 && houseInfoComponent4.Visible)
+            if (infoView.Count > 3 && houseInfoComponent4.Visible)
             {
-                houseInfoComponent4.DescLabel = "Miêu tả : " + postView[3].Description;
-                houseInfoComponent4.AddressLabel = "Địa chỉ : " + postView[3].Address;
-                houseInfoComponent4.HomeLink = postView[3].Title;
-                houseInfoComponent4.MoneyLabel = "Số tiền : "
-                    + postView[3].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
-                houseInfoComponent4.AreaLabel = "Diện tích : " + postView[3].SquareArea + " m\u00b2";
-                houseInfoComponent4.InforID = postView[3].InforID.ToString();
+                houseInfoComponent4.DescLabel = "Miêu tả : " + infoView[3].Description;
+                houseInfoComponent4.AddressLabel = "Địa chỉ : " + infoView[3].Address;
+                houseInfoComponent4.HomeLink = infoView[3].Title;
+                houseInfoComponent4.MoneyLabel = "Số tiền : " + infoView[3].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
+                houseInfoComponent4.AreaLabel = "Diện tích : " + infoView[3].SquareArea + " m\u00b2";
+                houseInfoComponent4.InforID = infoView[3].InforID.ToString();
 
-                imagePath = ImageBLL.Instance.GetImageStoragePathsOfInfor(postView[3].InforID);
+                imagePath = ImageBLL.Instance.GetImageStoragePathsOfInfor(infoView[3].InforID);
                 if (!Directory.Exists(imagePath))
                     Directory.CreateDirectory(imagePath);
-                if (postView[3].ImagePaths.Count > 0)
+                if (infoView[3].ImagePaths.Count > 0)
                 {
                     System.Drawing.Image image1;
-                    using (Stream stream = File.OpenRead(imagePath + postView[3].ImagePaths[0]))
+                    using (Stream stream = File.OpenRead(imagePath + infoView[3].ImagePaths[0]))
                     {
                         image1 = System.Drawing.Image.FromStream(stream);
                     }
                     houseInfoComponent4.PictureBox = image1;
                 }
             }
-            if (postView.Count > 4 && houseInfoComponent5.Visible)
+            if (infoView.Count > 4 && houseInfoComponent5.Visible)
             {
-                houseInfoComponent5.DescLabel = "Miêu tả : " + postView[4].Description;
-                houseInfoComponent5.AddressLabel = "Địa chỉ : " + postView[4].Address;
-                houseInfoComponent5.HomeLink = postView[4].Title;
-                houseInfoComponent5.MoneyLabel = "Số tiền : "
-                    + postView[4].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
-                houseInfoComponent5.AreaLabel = "Diện tích : " + postView[4].SquareArea + " m\u00b2";
-                houseInfoComponent5.InforID = postView[4].InforID.ToString();
+                houseInfoComponent5.DescLabel = "Miêu tả : " + infoView[4].Description;
+                houseInfoComponent5.AddressLabel = "Địa chỉ : " + infoView[4].Address;
+                houseInfoComponent5.HomeLink = infoView[4].Title;
+                houseInfoComponent5.MoneyLabel = "Số tiền : " + infoView[4].Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) + "/Tháng";
+                houseInfoComponent5.AreaLabel = "Diện tích : " + infoView[4].SquareArea + " m\u00b2";
+                houseInfoComponent5.InforID = infoView[4].InforID.ToString();
 
-                imagePath = ImageBLL.Instance.GetImageStoragePathsOfInfor(postView[4].InforID);
+                imagePath = ImageBLL.Instance.GetImageStoragePathsOfInfor(infoView[4].InforID);
                 if (!Directory.Exists(imagePath))
                     Directory.CreateDirectory(imagePath);
-                if (postView[4].ImagePaths.Count > 0)
+                if (infoView[4].ImagePaths.Count > 0)
                 {
                     System.Drawing.Image image1;
-                    using (Stream stream = File.OpenRead(imagePath + postView[4].ImagePaths[0]))
+                    using (Stream stream = File.OpenRead(imagePath + infoView[4].ImagePaths[0]))
                     {
                         image1 = System.Drawing.Image.FromStream(stream);
                     }
@@ -205,16 +204,19 @@ namespace PBL3.Views.RenterForm
                 }
             }
         }
+
         private void Display(int userID)
-        {   //tổng số bài
-            numberOfPosts = FavoriteInforBLL.Instance.GetFavoriteCount(userID);
-            // tổng số bài trong trang hiện tại
-            postNum = (numberOfPosts - currentPage * 5 < 5) ? numberOfPosts - currentPage * 5 : 5;
-            totalPage = (int)Math.Ceiling(numberOfPosts / Convert.ToDouble(skipNum));
-            DisplayHouseInformation();
-            List<InforViewDTO> inforFavourite = FavoriteInforBLL.Instance.GetFavoriteInfor(currentPage * skipNum, postNum, userID);
-            DisablePostViewWhenNotFound(postNum);
-            InitalizeHouseInfomation(inforFavourite);
+        {
+            FavoriteInforBLL.Instance.DeleteAllRentedFavoriteInfor(userID); //thêm
+            //Tổng số bài
+            numberOfInfors = FavoriteInforBLL.Instance.GetFavoriteCount(userID);
+            //Tổng số bài trong trang hiện tại
+            inforNum = (numberOfInfors - currentPage * 5 < 5) ? numberOfInfors - currentPage * 5 : 5;
+            totalPage = (int)Math.Ceiling(numberOfInfors / Convert.ToDouble(skipNum));
+            DisplayInfor();
+            List<InforViewDTO> inforFavourite = FavoriteInforBLL.Instance.GetFavoriteInfor(currentPage * skipNum, inforNum, userID);
+            DisableInforViewWhenNotFound(inforNum);
+            InitalizeInfor(inforFavourite);
         }
 
         private void customInforComponent3__OnLabelClicked(object sender, EventArgs e)
@@ -229,7 +231,6 @@ namespace PBL3.Views.RenterForm
                 currentPage = 0;
             Display(UserID);
             LoadCBBPageNum();
-
         }
 
         private void btnNextPage_Click(object sender, EventArgs e)
@@ -247,9 +248,8 @@ namespace PBL3.Views.RenterForm
                 LoadCBBPageNum();
                 Display(UserID);
             }
-
-
         }
+
         public void LoadCBBPageNum()
         {
             cbbPageNumber.Items.Clear();
@@ -271,6 +271,7 @@ namespace PBL3.Views.RenterForm
                 }
             }
         }
+
         private void cbbPageNumber_OnSelectionChangedCommited(object sender, EventArgs e)
         {
             currentPage = ((CBBItem)cbbPageNumber.SelectedItem).Value;
@@ -309,8 +310,8 @@ namespace PBL3.Views.RenterForm
             Display(UserID);
         }
 
-        public delegate void showPostDetail(Form childForm);
-        public showPostDetail showInfo;
+        public delegate void showInforDetail(Form childForm);
+        public showInforDetail showInfo;
         public void ReOpen()
         {
             this.Show();
@@ -366,7 +367,7 @@ namespace PBL3.Views.RenterForm
 
         private void houseInfoComponent5__OnLabelClicked(object sender, EventArgs e)
         {
-            if (houseInfoComponent4 != null)
+            if (houseInfoComponent5 != null)
             {
                 InforForm form = new InforForm(Convert.ToInt32(houseInfoComponent5.InforID));
                 form.goback = ReOpen;

@@ -26,8 +26,8 @@ namespace PBL3.Views.CommonForm
         private int currentPage = 0; //Trang hiện tại
         private int totalPage; //Tổng số trang
         private int skipNum = 5; //1 lần chỉ có thể hiển thị 5 bài info
-        private int inforNums; //Tổng số bài info ở trong trang hiện tại
-        private int numberofInfor;
+        private int inforNum; //Tổng số bài info ở trong trang hiện tại
+        private int numberOfInfors;
 
         public DashboardForm()
         {
@@ -332,7 +332,7 @@ namespace PBL3.Views.CommonForm
         }
         #endregion
 
-        #region -> Chức năng các nút
+        #region -> Click button
         private void btnPrevPage_Click(object sender, EventArgs e)
         {
             currentPage = currentPage - 1;
@@ -485,12 +485,12 @@ namespace PBL3.Views.CommonForm
             int sortCase = cbbSort.SelectedIndex;
             var allSearchData = GetSearchInfor();
             //Sort và hiển thị
-            numberofInfor = allSearchData.Count();
-            inforNums = (numberofInfor - currentPage * 5 < 5) ? numberofInfor - currentPage * 5 : 5;
-            totalPage = (int)Math.Ceiling(numberofInfor / Convert.ToDouble(skipNum));
+            numberOfInfors = allSearchData.Count();
+            inforNum = (numberOfInfors - currentPage * 5 < 5) ? numberOfInfors - currentPage * 5 : 5;
+            totalPage = (int)Math.Ceiling(numberOfInfors / Convert.ToDouble(skipNum));
             DisplayInfor();
-            List<InforViewDTO> inforView = InforBLL.Instance.GetSortedInfors(currentPage * skipNum, inforNums, allSearchData, sortCase);
-            DisableInforViewWhenNotFound(inforNums);
+            List<InforViewDTO> inforView = InforBLL.Instance.GetSortedInfors(currentPage * skipNum, inforNum, allSearchData, sortCase);
+            DisableInforViewWhenNotFound(inforNum);
             InitalizeInfor(inforView);
         }
 
@@ -499,12 +499,12 @@ namespace PBL3.Views.CommonForm
             //Lấy kết quả search
             var allSearchData = GetSearchInfor();
             //Lấy và hiển thị search data
-            numberofInfor = allSearchData.Count();
-            inforNums = (numberofInfor - currentPage * 5 < 5) ? numberofInfor - currentPage * 5 : 5;
-            totalPage = (int)Math.Ceiling(numberofInfor / Convert.ToDouble(skipNum));
+            numberOfInfors = allSearchData.Count();
+            inforNum = (numberOfInfors - currentPage * 5 < 5) ? numberOfInfors - currentPage * 5 : 5;
+            totalPage = (int)Math.Ceiling(numberOfInfors / Convert.ToDouble(skipNum));
             DisplayInfor();
-            List<InforViewDTO> inforView = InforBLL.Instance.GetSearchedInfor(currentPage * skipNum, inforNums, allSearchData);
-            DisableInforViewWhenNotFound(inforNums);
+            List<InforViewDTO> inforView = InforBLL.Instance.GetSearchedInfor(currentPage * skipNum, inforNum, allSearchData);
+            DisableInforViewWhenNotFound(inforNum);
             InitalizeInfor(inforView);
         }
 
@@ -606,6 +606,7 @@ namespace PBL3.Views.CommonForm
                 showInfo(form);
             }
         }
+
         //Ẩn các trái tim
         private void HideAdd_DeleteFavouriteInfor()
         {

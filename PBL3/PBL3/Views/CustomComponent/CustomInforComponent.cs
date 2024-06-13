@@ -13,7 +13,7 @@ namespace PBL3.Views.CustomComponent
     [DefaultEvent("_OnLabelClicked")]
     public partial class CustomInforComponent : UserControl
     {
-        public event EventHandler _AddEventHandler;
+        //public event EventHandler _AddEventHandler;
         public event EventHandler _DeleteEventHandler;
         public CustomInforComponent()
         {
@@ -103,12 +103,13 @@ namespace PBL3.Views.CustomComponent
                 _OnLabelClicked.Invoke(sender, e);
         }
 
-        private void btnAddFavour_Click(object sender, EventArgs e)
-        {
-            // btnDeleteFavour.BringToFront();
-            if (_AddEventHandler != null)
-                _AddEventHandler.Invoke(sender, e);
-        }
+        //private void btnAddFavour_Click(object sender, EventArgs e)
+        //{
+        //    // btnDeleteFavour.BringToFront();
+        //    if (_AddEventHandler != null)
+        //        _AddEventHandler.Invoke(sender, e);
+        //}
+
         public void HideUtilityPanel()
         {
             panelHide.Visible = false;
@@ -119,6 +120,5 @@ namespace PBL3.Views.CustomComponent
             if (_DeleteEventHandler != null)
                 _DeleteEventHandler.Invoke(sender, e);
         }
-
     }
 }

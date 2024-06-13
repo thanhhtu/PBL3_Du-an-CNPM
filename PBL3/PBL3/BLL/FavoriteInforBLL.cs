@@ -44,10 +44,22 @@ namespace PBL3.BLL
 
         public void DeleteFavoriteInfor(int userID, int inforID)
         {
-            var acc = db.FavoriteInfors.FirstOrDefault(a => a.UserID == userID && a.InforID == inforID);
-            db.FavoriteInfors.Remove(acc);
+            var fi = db.FavoriteInfors.FirstOrDefault(a => a.UserID == userID && a.InforID == inforID);
+            db.FavoriteInfors.Remove(fi);
             db.SaveChanges();
         }
+
+        //Thêm
+        public void DeleteAllRentedFavoriteInfor(int userID)
+        {
+            var favoriteInfors = db.FavoriteInfors.Where(a => a.UserID == userID).ToList();
+            foreach(var fi in favoriteInfors)
+            {
+                if (InforBLL.Instance.IsRentedInfor(fi.InforID)) db.FavoriteInfors.Remove(fi);
+                db.SaveChanges();
+            }  
+        }
+        //Thêm
         #endregion
 
         public bool IsInFavorite(int userID, int inforID)

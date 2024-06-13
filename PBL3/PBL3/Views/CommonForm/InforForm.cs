@@ -45,39 +45,39 @@ namespace PBL3.Views.CommonForm
         {
             try
             {
-                InforViewDTO post = InforBLL.Instance.GetInforByID(InforID);
+                InforViewDTO infor = InforBLL.Instance.GetInforByID(InforID);
 
                 //Get folder path chứa ảnh của bài đăng có InforID
                 string imagePath = ImageBLL.Instance.GetImageStoragePathsOfInfor(InforID);
 
                 System.Drawing.Image image1;
                 /*
-                 * Khai báo using sẽ gọi phương thức Dispose trên đối tượng khi nó ra khỏi scope.
+                 * Khai báo using sẽ gọi phương thức Dispose trên đối tượng khi nó ra khỏi scope. Dispose() được sử dụng để giải phóng tài nguyên không quản lý
                  * Và câu lệnh using cũng sẽ bắt đối tượng phải ra khỏi scope khi phương thức Dispose được gọi
                  * Ở trong block của using thì đối tượng là read-only và không thể modify nó
                  * Câu lệnh using cũng đảm bảo rằng phương thức Dispose() được gọi khi exception xảy ra
                  * Ví dụ dưới đây : đối tượng stream nó gọi phương thức Dispose() khi nó ra khỏi block of code
                  * Đoạn code tương ứng khi sử dụng try, finally
-                 * var stream = File.OpenRead(imagePath + post.ImagePaths[0])
+                 * var stream = File.OpenRead(imagePath + infor.ImagePaths[0])
                  * try{
                  * image1 = System.Drawing.Image.FromStream(stream);
                     pictureBox1.Image = image1;
                  * } finally 
                  *      stream.Dispose();
                  */
-                using (Stream stream = File.OpenRead(imagePath + post.ImagePaths[0]))
+                using (Stream stream = File.OpenRead(imagePath + infor.ImagePaths[0]))
                 {
                     image1 = System.Drawing.Image.FromStream(stream);
                     pictureBox1.Image = image1;
                 }
 
-                using (Stream stream = File.OpenRead(imagePath + post.ImagePaths[1]))
+                using (Stream stream = File.OpenRead(imagePath + infor.ImagePaths[1]))
                 {
                     image1 = System.Drawing.Image.FromStream(stream);
                     pictureBox2.Image = image1;
                 }
 
-                using (Stream stream = File.OpenRead(imagePath + post.ImagePaths[2]))
+                using (Stream stream = File.OpenRead(imagePath + infor.ImagePaths[2]))
                 {
                     image1 = System.Drawing.Image.FromStream(stream);
                     pictureBox3.Image = image1;
@@ -114,17 +114,18 @@ namespace PBL3.Views.CommonForm
                 checkBoxLivewOwner.Visible = false;
                 labelLiving.Text = "Không sống chung chủ";
             }
-            //aitrancute đã thêm
+
             bool isInFavorite = FavoriteInforBLL.Instance.IsInFavorite(LoginInfor.UserID, InforID);
             if (isInFavorite)
             {
-                btnDeleteFavour.BringToFront(); // Nếu có, hiển thị nút xóa yêu thích
+                btnDeleteFavour.BringToFront(); //Nếu có, hiển thị nút xóa yêu thích
             }
             else
             {
-                btnAddFavour.BringToFront(); // Nếu không, hiển thị nút thêm yêu thích
-            } //end
+                btnAddFavour.BringToFront(); //Nếu không, hiển thị nút thêm yêu thích
+            }
         }
+
         //Hàm được sử dụng để giấu đi phần edit và
         //delete comment nếu như comment đó không phải là của user này
         private void HideCommentUtilityFunction()
@@ -134,6 +135,7 @@ namespace PBL3.Views.CommonForm
             customComment3.HideUtilityPanel();
             customComment4.HideUtilityPanel();
         }
+
         private void DisplayAllCommentComponent()
         {
             this.Visible = true;
@@ -143,6 +145,7 @@ namespace PBL3.Views.CommonForm
             customComment3.Visible = true;
             customComment4.Visible = true;
         }
+
         private void HideComment(int commentNum)
         {
             //Ẩn comment khi số cmt trên 1 page < 4
@@ -168,6 +171,7 @@ namespace PBL3.Views.CommonForm
                     break;
             }
         }
+
         private void LoadComment()
         {
             HideCommentUtilityFunction();
@@ -281,6 +285,7 @@ namespace PBL3.Views.CommonForm
                 form.ShowDialog();
             }
         }
+
         public delegate void back();
         public back goback;
 
@@ -327,7 +332,6 @@ namespace PBL3.Views.CommonForm
 
         private void editCommentEventHandler(object sender, EventArgs e)
         {
-
             //Nhấn vào link label
             LinkLabel linkLabel = (LinkLabel)sender;
             //Vì custom link label chứa id của comment nên phải ép về.
@@ -358,7 +362,6 @@ namespace PBL3.Views.CommonForm
                 MessageBox.Show("Vui lòng nhập comment!");
             LoadComment();
         }
-
 
         private void btnDeleteFavour_Click(object sender, EventArgs e)
         {
