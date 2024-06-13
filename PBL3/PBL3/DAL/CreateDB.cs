@@ -66,7 +66,7 @@ namespace PBL3.DAL
                 new Ward {WardID = 28, WardName = "Phường Hòa Thọ Tây", DistrictID = 2},
                 new Ward {WardID = 29, WardName = "Phường Hòa Xuân", DistrictID = 2},
                 new Ward {WardID = 30, WardName = "Phường Khuê Trung", DistrictID = 2},
-                 //quận thanh khê dis id = 3
+                //quận thanh khê dis id = 3
                 new Ward {WardID = 31, WardName = "Phường An Khê", DistrictID = 3},
                 new Ward {WardID = 32, WardName = "Phường Chính Gián", DistrictID = 3},
                 new Ward {WardID = 33, WardName = "Phường Hòa Khê", DistrictID = 3},

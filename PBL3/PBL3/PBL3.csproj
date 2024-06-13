@@ -202,9 +202,6 @@
     <Compile Include="Views\CustomComponent\CustomComment.Designer.cs">
       <DependentUpon>CustomComment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\CustomComponent\CustomDateTimePicker.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Views\CustomComponent\CustomInforComponent.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -228,9 +225,6 @@
     </Compile>
     <Compile Include="Views\CustomComponent\CustomTextBox.Designer.cs">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\CustomComponent\CustomToggleButton.cs">
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Views\LandlordForm\InforLandlordForm.cs">
       <SubType>Form</SubType>

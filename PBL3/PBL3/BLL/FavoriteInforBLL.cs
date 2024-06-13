@@ -49,7 +49,6 @@ namespace PBL3.BLL
             db.SaveChanges();
         }
 
-        //Thêm
         public void DeleteAllRentedFavoriteInfor(int userID)
         {
             var favoriteInfors = db.FavoriteInfors.Where(a => a.UserID == userID).ToList();
@@ -59,7 +58,6 @@ namespace PBL3.BLL
                 db.SaveChanges();
             }  
         }
-        //Thêm
         #endregion
 
         public bool IsInFavorite(int userID, int inforID)

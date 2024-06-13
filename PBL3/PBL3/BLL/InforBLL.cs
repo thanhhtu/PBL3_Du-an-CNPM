@@ -343,12 +343,10 @@ namespace PBL3.BLL
             else return "Chưa thuê";
         }
 
-        //Thêm
         public bool IsRentedInfor(int inforID)
         {
             return db.AccommodationInformations.FirstOrDefault(p => p.InforID == inforID).BeingRented;
         }
-        //Thêm
 
         public string GetPublishedTime(int inforID)
         {

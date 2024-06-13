@@ -143,7 +143,7 @@ namespace PBL3.Views.AdminForm
             int inforID = Convert.ToInt32(dgv.SelectedRows[0].Cells["InforID"].Value.ToString());
             InforForm form = new InforForm(Convert.ToInt32(inforID), true);
             form.goback = ReOpen;
-            form.reload = ShowDTG; //thêm
+            form.reload = ShowDTG;
             showInfor(form);
         }
 
